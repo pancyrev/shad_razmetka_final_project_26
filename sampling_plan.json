@@ -1,0 +1,39 @@
+{
+  "seed": 20261107,
+  "groups": [
+    {
+      "name": "butterfly_observations",
+      "taxon_id": 47224,
+      "target_count": 240,
+      "training_exam_count": 60,
+      "candidate_count": 420,
+      "pages": [1, 6, 11, 16]
+    },
+    {
+      "name": "moth_observations",
+      "taxon_id": 47157,
+      "without_taxon_id": 47224,
+      "target_count": 60,
+      "training_exam_count": 15,
+      "candidate_count": 105,
+      "pages": [1, 6, 11]
+    },
+    {
+      "name": "other_insect_observations",
+      "taxon_id": 47158,
+      "without_taxon_id": 47157,
+      "target_count": 50,
+      "training_exam_count": 13,
+      "candidate_count": 90,
+      "pages": [1, 6, 11]
+    },
+    {
+      "name": "flower_observations",
+      "taxon_id": 47604,
+      "target_count": 50,
+      "training_exam_count": 12,
+      "candidate_count": 85,
+      "pages": [1, 6, 11]
+    }
+  ]
+}
