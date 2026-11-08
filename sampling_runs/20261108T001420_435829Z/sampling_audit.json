@@ -1,0 +1,30 @@
+{
+  "status": "technical_checks_passed; visual_review_pending",
+  "retrieved_at": "2026-11-08T00:14:20.436179+00:00",
+  "seed": 20261107,
+  "plan_sha256": "4c9f42c192b32e5ba08bef56d71e021ccc91f012bfe97578ec93b47806076a42",
+  "contest_sha256": "3c06a1728cd3d7b163486153f3978d987c3fa90fa35b97b68a6ae848de03684b",
+  "candidate_count": 700,
+  "main_count": 400,
+  "worker_count": 100,
+  "main_by_source_stratum": {
+    "butterfly_observations": 240,
+    "moth_observations": 60,
+    "other_insect_observations": 50,
+    "flower_observations": 50
+  },
+  "worker_by_source_stratum": {
+    "butterfly_observations": 60,
+    "moth_observations": 15,
+    "other_insect_observations": 13,
+    "flower_observations": 12
+  },
+  "contest_id_overlap": 0,
+  "contest_url_overlap": 0,
+  "main_worker_id_overlap": 0,
+  "main_worker_url_overlap": 0,
+  "new_download_bytes": 432631666,
+  "main_sha256": "ba8b9302cfc3918af3f09051ac08a05933cb0e543abd878af61ad876bba6c1c1",
+  "worker_sha256": "2dc2a87573a4e503814690b11a758a9eaef416984651ae608025846122511823",
+  "perceptual_similarity_pairs_for_review": 0
+}
