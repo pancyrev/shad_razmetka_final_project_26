@@ -169,6 +169,7 @@ class LlamaCppVLM:
                    "--n-gpu-layers", str(cfg.gpu_layers), "--main-gpu", str(cfg.main_gpu),
                    "--ctx-size", str(cfg.context_size), "--batch-size", str(cfg.batch_size),
                    "--ubatch-size", str(cfg.ubatch_size), "--threads", str(cfg.threads),
+                   "--image-max-tokens", str(cfg.image_max_tokens), "--verbosity", "4",
                    "--parallel", "1", "--flash-attn", "on", "--no-warmup",
                    "--fit", "off", "--jinja", *map(str, cfg.extra_args)]
         self.metadata["server_command"] = command

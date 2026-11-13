@@ -1,0 +1,6 @@
+{
+  "revision": "cfd3195ba4ea9592eec887ded089f4c08eff231d",
+  "dtype": "torch.float32",
+  "device": "cuda:0",
+  "quantized": false
+}

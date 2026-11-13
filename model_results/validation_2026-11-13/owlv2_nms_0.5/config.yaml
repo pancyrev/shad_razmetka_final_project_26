@@ -1,0 +1,42 @@
+model:
+  name: owlv2
+  backend: transformers_detector
+  repo_id: google/owlv2-base-patch16-ensemble
+  revision: cfd3195ba4ea9592eec887ded089f4c08eff231d
+  dtype: float32
+  device: cuda:0
+  prompt: butterfly
+  threshold: 0.1
+  text_threshold: 0.25
+  clip_boxes: true
+data:
+  source: hf
+  repo_id: xartik/inaturalist_butterflies
+  revision: 1316e3c7147d4399a03f90684e191aae4d798f09
+  split: validation
+  parquet_file: data/validation-00000-of-00001.parquet
+  limit: null
+  photo_ids: null
+  shuffle: false
+comet:
+  mode: auto
+  project_name: butterfly-bench
+  workspace: null
+  experiment_name: null
+  tags:
+  - butterfly-detection
+  log_images: 0
+  log_raw_responses: true
+mode: test
+seed: 42
+deterministic: true
+output_dir: outputs/validation_owlv2_nms
+retries:
+  max_attempts: 3
+postprocess:
+  nms_iou: 0.5
+evaluation:
+  iou_thresholds:
+  - 0.5
+  - 0.75
+  primary_iou: 0.5

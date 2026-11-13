@@ -1,0 +1,42 @@
+model:
+  name: grounding_dino
+  backend: transformers_detector
+  repo_id: IDEA-Research/grounding-dino-tiny
+  revision: a2bb814dd30d776dcf7e30523b00659f4f141c71
+  dtype: float32
+  device: cuda:0
+  prompt: butterfly
+  threshold: 0.3
+  text_threshold: 0.25
+  clip_boxes: true
+data:
+  source: hf
+  repo_id: xartik/inaturalist_butterflies
+  revision: 1316e3c7147d4399a03f90684e191aae4d798f09
+  split: validation
+  parquet_file: data/validation-00000-of-00001.parquet
+  limit: null
+  photo_ids: null
+  shuffle: false
+comet:
+  mode: auto
+  project_name: butterfly-bench
+  workspace: null
+  experiment_name: null
+  tags:
+  - butterfly-detection
+  log_images: 0
+  log_raw_responses: true
+mode: test
+seed: 42
+deterministic: true
+output_dir: /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/outputs/validation_transformers/1_grounding_dino
+retries:
+  max_attempts: 3
+postprocess:
+  nms_iou: null
+evaluation:
+  iou_thresholds:
+  - 0.5
+  - 0.75
+  primary_iou: 0.5

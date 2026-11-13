@@ -2,6 +2,8 @@ import logging
 
 import hydra
 from dotenv import load_dotenv
+from hydra.core.hydra_config import HydraConfig
+from hydra.types import RunMode
 from omegaconf import DictConfig
 
 
@@ -14,4 +16,9 @@ def main(cfg: DictConfig):
     logging.getLogger("httpx").setLevel(logging.WARNING)
     result = run(cfg)
     if result["metrics"]["processing_errors"]:
-        raise SystemExit(2)
+        if HydraConfig.get().mode == RunMode.MULTIRUN:
+            logging.getLogger(__name__).error(
+                "Run has processing errors; results: %s. Continuing remaining models.", result["output_dir"])
+        else:
+            raise SystemExit(2)
+    return result

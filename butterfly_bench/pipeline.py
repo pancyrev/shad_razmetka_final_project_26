@@ -168,6 +168,7 @@ def run(cfg):
                          len(samples), sample.photo_id,
                          len(record["boxes"]) if record["boxes"] is not None else "ERROR",
                          timing["attempts"], timing["seconds"])
+        trace.close()
         processing_seconds = sum(t["seconds"] for t in timings)
         metrics = {"images": len(samples), "processing_seconds": processing_seconds,
                    "mean_image_seconds": processing_seconds / len(samples),
