@@ -1,0 +1,9 @@
+source: manifest
+path: dataset.jsonl
+image_root: images
+cache_dir: .cache/images
+limit: null
+photo_ids: null
+shuffle: false
+request_timeout: 60
+

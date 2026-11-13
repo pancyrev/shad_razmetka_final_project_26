@@ -1,0 +1,9 @@
+source: hf
+repo_id: xartik/inaturalist_butterflies
+revision: main
+split: validation
+parquet_file: data/${.split}-00000-of-00001.parquet
+limit: null
+photo_ids: null
+shuffle: false
+

@@ -1,0 +1,26 @@
+defaults:
+  - model: owlv2
+  - data: hf
+  - comet: default
+  - _self_
+
+mode: test
+seed: 42
+deterministic: true
+output_dir: ${hydra:runtime.output_dir}
+retries:
+  max_attempts: 3
+postprocess:
+  nms_iou: null
+evaluation:
+  iou_thresholds: [0.5, 0.75]
+  primary_iou: 0.5
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S-%f}_${model.name}_${mode}
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S-%f}
+    subdir: ${hydra.job.num}_${model.name}
+

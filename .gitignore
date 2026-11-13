@@ -7,3 +7,12 @@ __pycache__/
 *.part
 .DS_Store
 .ipynb_checkpoints/
+.venv/
+.cache/
+outputs/
+multirun/
+tools/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+comet-offline/

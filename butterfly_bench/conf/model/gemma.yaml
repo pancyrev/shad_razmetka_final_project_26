@@ -1,0 +1,26 @@
+defaults:
+  - qwen
+  - _self_
+name: gemma
+backend: llama_cpp
+repo_id: unsloth/gemma-4-12B-it-qat-GGUF
+revision: main
+dtype: UD-Q4_K_XL
+device: cuda:0
+gguf_file: gemma-4-12B-it-qat-UD-Q4_K_XL.gguf
+mmproj_file: mmproj-F16.gguf
+server_binary: tools/llama.cpp/build/bin/llama-server
+server_url: null
+host: 127.0.0.1
+port: 0
+gpu_layers: 999
+main_gpu: 0
+context_size: 8192
+batch_size: 512
+ubatch_size: 128
+threads: 8
+image_max_side: 1280
+startup_timeout: 300
+request_timeout: 300
+extra_args: []
+

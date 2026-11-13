@@ -1,0 +1,11 @@
+name: owlv2
+backend: transformers_detector
+repo_id: google/owlv2-base-patch16-ensemble
+revision: main
+dtype: float32
+device: cuda:0
+prompt: butterfly
+threshold: 0.1
+text_threshold: 0.25
+clip_boxes: true
+

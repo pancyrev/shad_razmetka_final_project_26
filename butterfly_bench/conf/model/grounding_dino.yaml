@@ -1,0 +1,11 @@
+name: grounding_dino
+backend: transformers_detector
+repo_id: IDEA-Research/grounding-dino-tiny
+revision: main
+dtype: float32
+device: cuda:0
+prompt: butterfly
+threshold: 0.3
+text_threshold: 0.25
+clip_boxes: true
+

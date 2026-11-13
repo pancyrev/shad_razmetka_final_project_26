@@ -2,6 +2,19 @@
 
 Репозиторий содержит материалы отбора фотографий iNaturalist и разметку взрослых бабочек рамками: два ноутбука, исходные списки фотографий, результаты проверок и HTML-галереи.
 
+## Инференс и сравнение четырёх моделей
+
+[Инструкция запуска](MODELS.md) описывает Hydra-конфигурации OWLv2, Grounding DINO,
+Qwen3-VL и Gemma 4, режимы `test`/`inference`, валидацию JSONL, метрики и Comet ML.
+Интерактивные примеры — в [03_model_demo.ipynb](03_model_demo.ipynb).
+
+```bash
+python -m butterfly_bench -m model=owlv2,grounding_dino,qwen,gemma
+```
+
+Команда последовательно оценивает четыре модели на полной HF-валидации;
+окружение и CUDA-сборку llama.cpp сначала подготовьте по инструкции.
+
 ## Шаг 01. Формирование выборки
 
 [01_build_photo_manifests.ipynb](01_build_photo_manifests.ipynb) получает кандидатов через публичный API iNaturalist по [плану отбора](sampling_plan.json). Конкурсные фотографии заданы в [dataset.jsonl](dataset.jsonl), их состав сопоставляется с [submission-template.jsonl](submission-template.jsonl).

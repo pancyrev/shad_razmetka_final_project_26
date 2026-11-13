@@ -1,0 +1,9 @@
+# auto: online if credentials exist; otherwise a real Comet offline experiment.
+mode: auto
+project_name: butterfly-bench
+workspace: null
+experiment_name: null
+tags: [butterfly-detection]
+log_images: 0
+log_raw_responses: true
+
