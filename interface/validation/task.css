@@ -1,0 +1,46 @@
+.task {
+  display: block !important;
+  width: 1200px !important;
+  max-width: calc(100% - 32px) !important;
+  margin: 0 auto 24px !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+.bbox-review-task { font: 16px/1.4 Arial, sans-serif; }
+.bbox-review-prompt { margin-bottom: 8px; }
+.bbox-review-worker-status { display: block; margin-top: 4px; color: #444; }
+.bbox-review-zoom { margin-bottom: 8px; cursor: pointer; }
+.bbox-review-stage { display: flex; justify-content: center; overflow: visible; }
+.bbox-review-image {
+  position: relative;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+}
+.bbox-review-image img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 70vh;
+}
+.bbox-review-image svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.bbox-review-image rect {
+  fill: none;
+  stroke: #e00000;
+  stroke-width: 3px;
+  vector-effect: non-scaling-stroke;
+}
+.bbox-review-image-large { max-width: none; }
+.bbox-review-image-large img {
+  width: min(1600px, 95vw);
+  max-width: none;
+  max-height: none;
+}
+.bbox-review-error { color: #a00000; margin-top: 8px; }
+.bbox-review-answers { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 12px; }
