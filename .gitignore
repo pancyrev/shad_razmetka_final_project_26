@@ -7,3 +7,7 @@ __pycache__/
 *.part
 .DS_Store
 .ipynb_checkpoints/
+annotation_ids.json
+validation_ids.json
+reannotation_ids.json
+revalidation_ids.json
