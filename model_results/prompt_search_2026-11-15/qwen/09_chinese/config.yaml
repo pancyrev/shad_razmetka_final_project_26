@@ -1,0 +1,75 @@
+model:
+  name: qwen
+  backend: transformers_vlm
+  repo_id: Qwen/Qwen3-VL-2B-Instruct
+  revision: 89644892e4d85e24eaac8bacfd4f463576704203
+  dtype: bfloat16
+  device: cuda:0
+  prompt: '请找出图像中所有成年蝴蝶（包括弄蝶），排除飞蛾、毛毛虫、蛹和其他昆虫。每只蝴蝶只画一个紧密的轴对齐矩形框，包含所有可见的翅膀、身体、触角和足。先在心里确定整只蝴蝶的最左、最上、最右、最下边界，再计算框的位置和大小。只输出一行合法JSON，且只有photo_id、boxes、error三个键。photo_id使用给定的整数ID，error必须为null。boxes是数组；每个框必须包含left、top、width、height四个命名数值字段。left是左边界除以整张图宽度，top是上边界除以整张图高度，width是框的总宽度除以图宽，height是框的总高度除以图高。width不是右边界，height不是下边界。所有坐标必须是0到1的小数，left>=0，top>=0，width>0，height>0，left+width<=1，top+height<=1。没有蝴蝶时boxes为[]。不要输出解释、Markdown或中间步骤。
+
+    Return exactly one line of valid JSON (one JSONL record), with no Markdown, code
+    fences, explanations, confidence scores or additional keys. The record must have
+    exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array
+    of boxes), and "error" (null). Each box must have exactly four numeric fields:
+    "left", "top", "width", "height". Coordinates are normalized to the original image:
+    left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width,
+    height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers
+    must be finite; left and top must be at least 0, width and height must be strictly
+    positive, and left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels
+    or a 0-1000 scale. If there are no adult butterflies, return "boxes": []. Example
+    structure (not the answer to this image): {"photo_id":123,"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}],"error":null}.
+    The first character of your response must be { and the last character must be
+    }. Do not wrap the JSON in triple backticks or code fences.'
+  output_prompt: 'Find every adult butterfly in the image. Include only adult butterflies;
+    exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one
+    tight axis-aligned bounding box per butterfly, enclosing all visible wings, body,
+    antennae and legs. For occluded or cropped butterflies enclose only visible parts;
+    do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record),
+    with no Markdown, code fences, explanations, confidence scores or additional keys.
+    The record must have exactly these keys: "photo_id" (the integer ID supplied below),
+    "boxes" (an array of boxes), and "error" (null). Each box must have exactly four
+    numeric fields: "left", "top", "width", "height". Coordinates are normalized to
+    the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width,
+    height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers
+    must be finite; left and top must be at least 0, width and height must be strictly
+    positive, and left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels
+    or a 0-1000 scale. If there are no adult butterflies, return "boxes": []. Example
+    structure (not the answer to this image): {"photo_id":123,"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}],"error":null}.'
+  max_new_tokens: 1024
+  max_pixels: 1003520
+  min_pixels: 65536
+  temperature: 0.0
+  retry_temperature: 0.2
+data:
+  source: hf
+  repo_id: xartik/inaturalist_butterflies
+  revision: 1316e3c7147d4399a03f90684e191aae4d798f09
+  split: validation
+  parquet_file: data/validation-00000-of-00001.parquet
+  limit: null
+  photo_ids: null
+  shuffle: false
+comet:
+  mode: auto
+  project_name: butterfly-bench
+  workspace: null
+  experiment_name: prompt-search-qwen-09-chinese
+  tags:
+  - butterfly-detection
+  - prompt-search
+  - validation-tuning
+  log_images: 0
+  log_raw_responses: true
+mode: test
+seed: 42
+deterministic: true
+output_dir: /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/prompt_search_2026-11-15/qwen/09_chinese
+retries:
+  max_attempts: 3
+postprocess:
+  nms_iou: null
+evaluation:
+  iou_thresholds:
+  - 0.5
+  - 0.75
+  primary_iou: 0.5

@@ -1,0 +1,26 @@
+{
+  "revision": 2,
+  "time_utc": "2026-11-16T10:53:58.734209+00:00",
+  "changed_indices": [
+    4,
+    5,
+    6,
+    7,
+    9,
+    10
+  ],
+  "unchanged_indices": [
+    1,
+    2,
+    3,
+    8
+  ],
+  "completed_indices_at_revision": [
+    1,
+    2
+  ],
+  "method": "adaptive prompt search; ten final candidates, ten full evaluations",
+  "rationale": "Compact SCHEMA candidate02 caused44 schema rejections and13 terminal processing errors versus baseline5/1. Preserve original baseline JSON example and format contract for future04-07,09-10, appending only their visual task guidance. Candidate03 remains unchanged negative-control variant,08 remains schema-first numeric-example variant. Numeric anchoring is a hypothesis, not proven causal.",
+  "initial_prompts": "prompts_v1_initial.json",
+  "current_prompts": "prompts.json"
+}

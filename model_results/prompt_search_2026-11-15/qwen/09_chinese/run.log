@@ -1,0 +1,327 @@
+COMET INFO: Experiment is live on comet.com https://www.comet.com/ubileyka19/butterfly-bench/8cd67b7a6a374448abad17ac4d1b501e
+
+COMET WARNING: String value length exceeds 1000 characters and will be truncated. Provided value: 'Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must be strictly positive, and left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels or a 0-1000 scale. If there are no adult butterflies, return "boxes": []. Example structure (not the answer to this image): {"photo_id":123,"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}],"error":null}.'
+COMET WARNING: String value length exceeds 1000 characters and will be truncated. Provided value: '请找出图像中所有成年蝴蝶（包括弄蝶），排除飞蛾、毛毛虫、蛹和其他昆虫。每只蝴蝶只画一个紧密的轴对齐矩形框，包含所有可见的翅膀、身体、触角和足。先在心里确定整只蝴蝶的最左、最上、最右、最下边界，再计算框的位置和大小。只输出一行合法JSON，且只有photo_id、boxes、error三个键。photo_id使用给定的整数ID，error必须为null。boxes是数组；每个框必须包含left、top、width、height四个命名数值字段。left是左边界除以整张图宽度，top是上边界除以整张图高度，width是框的总宽度除以图宽，height是框的总高度除以图高。width不是右边界，height不是下边界。所有坐标必须是0到1的小数，left>=0，top>=0，width>0，height>0，left+width<=1，top+height<=1。没有蝴蝶时boxes为[]。不要输出解释、Markdown或中间步骤。
+Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must be strictly positive, and left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels or a 0-1000 scale. If there are no adult butterflies, return "boxes": []. Example structure (not the answer to this image): {"photo_id":123,"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}],"error":null}. The first character of your response must be { and the last character must be }. Do not wrap the JSON in triple backticks or code fences.'
+Loading weights:   0%|          | 0/625 [00:00<?, ?it/s]Loading weights: 100%|██████████| 625/625 [00:00<00:00, 20579.04it/s]
+2026-11-16 14:36:06,910 INFO 1/100 photo_id=755630032 boxes=1 attempts=1 seconds=1.513
+2026-11-16 14:36:08,025 INFO 2/100 photo_id=760199895 boxes=1 attempts=1 seconds=1.115
+2026-11-16 14:36:09,114 WARNING photo_id=760117819 attempt=1 parsing: Extra data: line 1 column 88 (char 87)
+2026-11-16 14:36:10,114 WARNING photo_id=760117819 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:10,765 INFO 3/100 photo_id=760117819 boxes=0 attempts=3 seconds=2.737
+2026-11-16 14:36:11,663 WARNING photo_id=760581893 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:12,583 WARNING photo_id=760581893 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:13,508 WARNING photo_id=760581893 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:13,508 INFO 4/100 photo_id=760581893 boxes=ERROR attempts=3 seconds=2.743
+2026-11-16 14:36:14,436 WARNING photo_id=760617662 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:15,398 WARNING photo_id=760617662 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:16,363 WARNING photo_id=760617662 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:16,363 INFO 5/100 photo_id=760617662 boxes=ERROR attempts=3 seconds=2.855
+2026-11-16 14:36:33,521 WARNING photo_id=760585041 attempt=1 parsing: Expecting property name enclosed in double quotes: line 1 column 45 (char 44)
+2026-11-16 14:36:34,462 WARNING photo_id=760585041 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:35,080 INFO 6/100 photo_id=760585041 boxes=0 attempts=3 seconds=18.717
+2026-11-16 14:36:36,082 WARNING photo_id=751455934 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:36,756 INFO 7/100 photo_id=751455934 boxes=0 attempts=2 seconds=1.673
+2026-11-16 14:36:37,706 WARNING photo_id=755339961 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:38,674 WARNING photo_id=755339961 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:39,638 WARNING photo_id=755339961 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:39,641 INFO 8/100 photo_id=755339961 boxes=ERROR attempts=3 seconds=2.882
+2026-11-16 14:36:40,637 WARNING photo_id=751709803 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:41,619 WARNING photo_id=751709803 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:42,578 WARNING photo_id=751709803 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:42,581 INFO 9/100 photo_id=751709803 boxes=ERROR attempts=3 seconds=2.937
+2026-11-16 14:36:43,303 WARNING photo_id=755545567 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:43,773 INFO 10/100 photo_id=755545567 boxes=0 attempts=2 seconds=1.192
+2026-11-16 14:36:44,844 WARNING photo_id=760640706 attempt=1 parsing: Extra data: line 1 column 87 (char 86)
+2026-11-16 14:36:45,487 INFO 11/100 photo_id=760640706 boxes=0 attempts=2 seconds=1.714
+2026-11-16 14:36:46,515 WARNING photo_id=751709612 attempt=1 parsing: Extra data: line 1 column 85 (char 84)
+2026-11-16 14:36:47,647 INFO 12/100 photo_id=751709612 boxes=1 attempts=2 seconds=2.156
+2026-11-16 14:36:48,674 WARNING photo_id=751709821 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:49,611 WARNING photo_id=751709821 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:50,553 WARNING photo_id=751709821 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:50,556 INFO 13/100 photo_id=751709821 boxes=ERROR attempts=3 seconds=2.906
+2026-11-16 14:36:51,713 INFO 14/100 photo_id=751573899 boxes=1 attempts=1 seconds=1.154
+2026-11-16 14:36:52,855 INFO 15/100 photo_id=755595528 boxes=1 attempts=1 seconds=1.142
+2026-11-16 14:36:54,011 INFO 16/100 photo_id=760553542 boxes=1 attempts=1 seconds=1.153
+2026-11-16 14:36:54,945 WARNING photo_id=751709610 attempt=1 parsing: Expecting property name enclosed in double quotes: line 1 column 52 (char 51)
+2026-11-16 14:36:55,900 WARNING photo_id=751709610 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:56,854 WARNING photo_id=751709610 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:36:56,857 INFO 17/100 photo_id=751709610 boxes=ERROR attempts=3 seconds=2.843
+2026-11-16 14:36:57,972 INFO 18/100 photo_id=755466475 boxes=1 attempts=1 seconds=1.115
+2026-11-16 14:36:59,121 INFO 19/100 photo_id=751452886 boxes=1 attempts=1 seconds=1.149
+2026-11-16 14:37:00,030 WARNING photo_id=751744539 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:00,665 INFO 20/100 photo_id=751744539 boxes=0 attempts=2 seconds=1.541
+2026-11-16 14:37:01,682 WARNING photo_id=755824792 attempt=1 parsing: Expecting property name enclosed in double quotes: line 1 column 45 (char 44)
+2026-11-16 14:37:02,855 INFO 21/100 photo_id=755824792 boxes=1 attempts=2 seconds=2.187
+2026-11-16 14:37:03,801 WARNING photo_id=755914152 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:04,444 INFO 22/100 photo_id=755914152 boxes=0 attempts=2 seconds=1.586
+2026-11-16 14:37:06,165 INFO 23/100 photo_id=760120082 boxes=2 attempts=1 seconds=1.718
+2026-11-16 14:37:07,267 WARNING photo_id=755452426 attempt=1 parsing: Extra data: line 1 column 88 (char 87)
+2026-11-16 14:37:08,463 INFO 24/100 photo_id=755452426 boxes=1 attempts=2 seconds=2.294
+2026-11-16 14:37:09,347 WARNING photo_id=755531940 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:10,234 WARNING photo_id=755531940 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:11,138 WARNING photo_id=755531940 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:11,146 INFO 25/100 photo_id=755531940 boxes=ERROR attempts=3 seconds=2.684
+2026-11-16 14:37:12,078 WARNING photo_id=760126560 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:13,047 WARNING photo_id=760126560 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:14,016 WARNING photo_id=760126560 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:14,019 INFO 26/100 photo_id=760126560 boxes=ERROR attempts=3 seconds=2.870
+2026-11-16 14:37:15,101 INFO 27/100 photo_id=751709828 boxes=1 attempts=1 seconds=1.081
+2026-11-16 14:37:16,033 WARNING photo_id=751709835 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:16,676 INFO 28/100 photo_id=751709835 boxes=0 attempts=2 seconds=1.572
+2026-11-16 14:37:33,915 WARNING photo_id=751489222 attempt=1 parsing: Expecting property name enclosed in double quotes: line 1 column 45 (char 44)
+2026-11-16 14:37:35,072 INFO 29/100 photo_id=751489222 boxes=1 attempts=2 seconds=18.393
+2026-11-16 14:37:36,048 WARNING photo_id=755490215 attempt=1 parsing: Expecting property name enclosed in double quotes: line 1 column 53 (char 52)
+2026-11-16 14:37:37,014 WARNING photo_id=755490215 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:37,987 WARNING photo_id=755490215 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:37,990 INFO 30/100 photo_id=755490215 boxes=ERROR attempts=3 seconds=2.915
+2026-11-16 14:37:39,011 WARNING photo_id=760219697 attempt=1 parsing: Extra data: line 1 column 85 (char 84)
+2026-11-16 14:37:40,155 INFO 31/100 photo_id=760219697 boxes=1 attempts=2 seconds=2.165
+2026-11-16 14:37:41,292 INFO 32/100 photo_id=751895718 boxes=1 attempts=1 seconds=1.136
+2026-11-16 14:37:42,470 INFO 33/100 photo_id=760492236 boxes=1 attempts=1 seconds=1.167
+2026-11-16 14:37:43,565 WARNING photo_id=760823379 attempt=1 parsing: Extra data: line 1 column 88 (char 87)
+2026-11-16 14:37:44,683 INFO 34/100 photo_id=760823379 boxes=1 attempts=2 seconds=2.210
+2026-11-16 14:37:45,735 WARNING photo_id=751840376 attempt=1 parsing: Extra data: line 1 column 85 (char 84)
+2026-11-16 14:37:46,890 INFO 35/100 photo_id=751840376 boxes=1 attempts=2 seconds=2.205
+2026-11-16 14:37:47,934 WARNING photo_id=760792120 attempt=1 parsing: Extra data: line 1 column 85 (char 84)
+2026-11-16 14:37:48,898 WARNING photo_id=760792120 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:49,539 INFO 36/100 photo_id=760792120 boxes=0 attempts=3 seconds=2.645
+2026-11-16 14:37:50,652 WARNING photo_id=760545150 attempt=1 parsing: Extra data: line 1 column 88 (char 87)
+2026-11-16 14:37:51,300 INFO 37/100 photo_id=760545150 boxes=0 attempts=2 seconds=1.758
+2026-11-16 14:37:52,312 WARNING photo_id=755729066 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:53,258 WARNING photo_id=755729066 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:54,218 WARNING photo_id=755729066 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:37:54,222 INFO 38/100 photo_id=755729066 boxes=ERROR attempts=3 seconds=2.918
+2026-11-16 14:38:11,450 WARNING photo_id=751392269 attempt=1 parsing: Expecting property name enclosed in double quotes: line 1 column 45 (char 44)
+2026-11-16 14:38:12,406 WARNING photo_id=751392269 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:13,041 INFO 39/100 photo_id=751392269 boxes=0 attempts=3 seconds=18.817
+2026-11-16 14:38:13,956 WARNING photo_id=755667992 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:14,588 INFO 40/100 photo_id=755667992 boxes=0 attempts=2 seconds=1.544
+2026-11-16 14:38:15,710 INFO 41/100 photo_id=760483350 boxes=1 attempts=1 seconds=1.119
+2026-11-16 14:38:16,813 INFO 42/100 photo_id=751411373 boxes=1 attempts=1 seconds=1.103
+2026-11-16 14:38:17,754 WARNING photo_id=751709802 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:18,722 WARNING photo_id=751709802 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:19,678 WARNING photo_id=751709802 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:19,681 INFO 43/100 photo_id=751709802 boxes=ERROR attempts=3 seconds=2.865
+2026-11-16 14:38:20,629 WARNING photo_id=760275884 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:21,592 WARNING photo_id=760275884 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:22,559 WARNING photo_id=760275884 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:22,562 INFO 44/100 photo_id=760275884 boxes=ERROR attempts=3 seconds=2.877
+2026-11-16 14:38:23,616 WARNING photo_id=760112737 attempt=1 parsing: Extra data: line 1 column 85 (char 84)
+2026-11-16 14:38:24,657 WARNING photo_id=760112737 attempt=2 parsing: Expecting property name enclosed in double quotes: line 1 column 45 (char 44)
+2026-11-16 14:38:25,612 WARNING photo_id=760112737 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:25,615 INFO 45/100 photo_id=760112737 boxes=ERROR attempts=3 seconds=3.050
+2026-11-16 14:38:26,671 WARNING photo_id=755977758 attempt=1 parsing: Extra data: line 1 column 85 (char 84)
+2026-11-16 14:38:27,321 INFO 46/100 photo_id=755977758 boxes=0 attempts=2 seconds=1.703
+2026-11-16 14:38:27,972 INFO 47/100 photo_id=755819391 boxes=0 attempts=1 seconds=0.648
+2026-11-16 14:38:45,237 WARNING photo_id=751896458 attempt=1 parsing: Expecting property name enclosed in double quotes: line 1 column 45 (char 44)
+2026-11-16 14:38:46,184 WARNING photo_id=751896458 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:46,806 INFO 48/100 photo_id=751896458 boxes=0 attempts=3 seconds=18.834
+2026-11-16 14:38:47,956 INFO 49/100 photo_id=751752003 boxes=1 attempts=1 seconds=1.140
+2026-11-16 14:38:49,016 INFO 50/100 photo_id=760651030 boxes=1 attempts=1 seconds=1.059
+2026-11-16 14:38:49,637 INFO 51/100 photo_id=756059682 boxes=0 attempts=1 seconds=0.621
+2026-11-16 14:38:50,593 WARNING photo_id=760425692 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:51,559 WARNING photo_id=760425692 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:52,527 WARNING photo_id=760425692 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:52,530 INFO 52/100 photo_id=760425692 boxes=ERROR attempts=3 seconds=2.890
+2026-11-16 14:38:53,640 WARNING photo_id=751313721 attempt=1 parsing: Extra data: line 1 column 88 (char 87)
+2026-11-16 14:38:54,849 INFO 53/100 photo_id=751313721 boxes=1 attempts=2 seconds=2.316
+2026-11-16 14:38:56,001 INFO 54/100 photo_id=760620476 boxes=1 attempts=1 seconds=1.151
+2026-11-16 14:38:56,848 WARNING photo_id=755567021 attempt=1 parsing: Expecting property name enclosed in double quotes: line 1 column 45 (char 44)
+2026-11-16 14:38:57,655 WARNING photo_id=755567021 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:38:58,142 INFO 55/100 photo_id=755567021 boxes=0 attempts=3 seconds=2.141
+2026-11-16 14:38:59,088 WARNING photo_id=755488675 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:00,062 WARNING photo_id=755488675 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:01,055 WARNING photo_id=755488675 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:01,058 INFO 56/100 photo_id=755488675 boxes=ERROR attempts=3 seconds=2.913
+2026-11-16 14:39:01,996 WARNING photo_id=751795623 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:02,631 INFO 57/100 photo_id=751795623 boxes=0 attempts=2 seconds=1.571
+2026-11-16 14:39:19,865 WARNING photo_id=751752012 attempt=1 parsing: Expecting property name enclosed in double quotes: line 1 column 53 (char 52)
+2026-11-16 14:39:20,836 WARNING photo_id=751752012 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:21,806 WARNING photo_id=751752012 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:21,809 INFO 58/100 photo_id=751752012 boxes=ERROR attempts=3 seconds=19.175
+2026-11-16 14:39:22,736 WARNING photo_id=755710793 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:23,377 INFO 59/100 photo_id=755710793 boxes=0 attempts=2 seconds=1.568
+2026-11-16 14:39:24,414 WARNING photo_id=755736214 attempt=1 parsing: Extra data: line 1 column 85 (char 84)
+2026-11-16 14:39:25,056 INFO 60/100 photo_id=755736214 boxes=0 attempts=2 seconds=1.676
+2026-11-16 14:39:26,003 WARNING photo_id=760775330 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:26,968 WARNING photo_id=760775330 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:27,957 WARNING photo_id=760775330 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:27,960 INFO 61/100 photo_id=760775330 boxes=ERROR attempts=3 seconds=2.901
+2026-11-16 14:39:28,602 INFO 62/100 photo_id=760909680 boxes=0 attempts=1 seconds=0.639
+2026-11-16 14:39:29,540 WARNING photo_id=760883528 attempt=1 parsing: Expecting property name enclosed in double quotes: line 1 column 53 (char 52)
+2026-11-16 14:39:30,500 WARNING photo_id=760883528 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:31,141 INFO 63/100 photo_id=760883528 boxes=0 attempts=3 seconds=2.539
+2026-11-16 14:39:32,219 WARNING photo_id=760883522 attempt=1 parsing: Extra data: line 1 column 88 (char 87)
+2026-11-16 14:39:32,860 INFO 64/100 photo_id=760883522 boxes=0 attempts=2 seconds=1.711
+2026-11-16 14:39:33,952 WARNING photo_id=760812544 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:34,921 WARNING photo_id=760812544 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:35,896 WARNING photo_id=760812544 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:35,899 INFO 65/100 photo_id=760812544 boxes=ERROR attempts=3 seconds=3.036
+2026-11-16 14:39:36,553 INFO 66/100 photo_id=760853387 boxes=0 attempts=1 seconds=0.651
+2026-11-16 14:39:37,653 INFO 67/100 photo_id=760883820 boxes=1 attempts=1 seconds=1.099
+2026-11-16 14:39:38,607 WARNING photo_id=760851656 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:39,576 WARNING photo_id=760851656 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:40,549 WARNING photo_id=760851656 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:40,552 INFO 68/100 photo_id=760851656 boxes=ERROR attempts=3 seconds=2.895
+2026-11-16 14:39:41,188 INFO 69/100 photo_id=760787119 boxes=0 attempts=1 seconds=0.633
+2026-11-16 14:39:42,126 WARNING photo_id=760883941 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:43,082 WARNING photo_id=760883941 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:44,051 WARNING photo_id=760883941 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:44,052 INFO 70/100 photo_id=760883941 boxes=ERROR attempts=3 seconds=2.864
+2026-11-16 14:39:44,915 WARNING photo_id=760883841 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:45,549 INFO 71/100 photo_id=760883841 boxes=0 attempts=2 seconds=1.495
+2026-11-16 14:39:46,174 INFO 72/100 photo_id=760875039 boxes=0 attempts=1 seconds=0.625
+2026-11-16 14:39:47,111 WARNING photo_id=760883667 attempt=1 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:39:47,743 INFO 73/100 photo_id=760883667 boxes=0 attempts=2 seconds=1.567
+2026-11-16 14:39:48,891 INFO 74/100 photo_id=760883495 boxes=1 attempts=1 seconds=1.144
+2026-11-16 14:39:49,549 INFO 75/100 photo_id=760796649 boxes=0 attempts=1 seconds=0.656
+2026-11-16 14:39:50,194 INFO 76/100 photo_id=760959731 boxes=0 attempts=1 seconds=0.642
+2026-11-16 14:39:50,828 INFO 77/100 photo_id=760910719 boxes=0 attempts=1 seconds=0.631
+2026-11-16 14:39:51,455 INFO 78/100 photo_id=760874892 boxes=0 attempts=1 seconds=0.627
+2026-11-16 14:39:52,074 INFO 79/100 photo_id=760883359 boxes=0 attempts=1 seconds=0.617
+2026-11-16 14:39:52,703 INFO 80/100 photo_id=760872774 boxes=0 attempts=1 seconds=0.629
+2026-11-16 14:39:53,331 INFO 81/100 photo_id=760874634 boxes=0 attempts=1 seconds=0.626
+2026-11-16 14:39:53,968 INFO 82/100 photo_id=760954906 boxes=0 attempts=1 seconds=0.634
+2026-11-16 14:40:11,213 WARNING photo_id=760928380 attempt=1 parsing: Expecting ',' delimiter: line 1 column 1040 (char 1039)
+2026-11-16 14:40:12,183 WARNING photo_id=760928380 attempt=2 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:40:13,147 WARNING photo_id=760928380 attempt=3 validation: box 0: expected exactly ['height', 'left', 'top', 'width']
+2026-11-16 14:40:13,150 INFO 83/100 photo_id=760928380 boxes=ERROR attempts=3 seconds=19.179
+2026-11-16 14:40:13,788 INFO 84/100 photo_id=760959759 boxes=0 attempts=1 seconds=0.635
+2026-11-16 14:40:14,421 INFO 85/100 photo_id=760905298 boxes=0 attempts=1 seconds=0.630
+2026-11-16 14:40:15,064 INFO 86/100 photo_id=760796779 boxes=0 attempts=1 seconds=0.640
+2026-11-16 14:40:15,683 INFO 87/100 photo_id=760796628 boxes=0 attempts=1 seconds=0.618
+2026-11-16 14:40:16,314 INFO 88/100 photo_id=760822495 boxes=0 attempts=1 seconds=0.623
+2026-11-16 14:40:16,959 INFO 89/100 photo_id=760502210 boxes=0 attempts=1 seconds=0.641
+2026-11-16 14:40:17,607 INFO 90/100 photo_id=760794928 boxes=0 attempts=1 seconds=0.646
+2026-11-16 14:40:18,230 INFO 91/100 photo_id=760921497 boxes=0 attempts=1 seconds=0.620
+2026-11-16 14:40:18,865 INFO 92/100 photo_id=760728314 boxes=0 attempts=1 seconds=0.632
+2026-11-16 14:40:19,521 INFO 93/100 photo_id=760913412 boxes=0 attempts=1 seconds=0.653
+2026-11-16 14:40:20,158 INFO 94/100 photo_id=760835547 boxes=0 attempts=1 seconds=0.636
+2026-11-16 14:40:20,809 INFO 95/100 photo_id=760943083 boxes=0 attempts=1 seconds=0.648
+2026-11-16 14:40:21,447 INFO 96/100 photo_id=760856074 boxes=0 attempts=1 seconds=0.630
+2026-11-16 14:40:22,102 INFO 97/100 photo_id=760834056 boxes=0 attempts=1 seconds=0.651
+2026-11-16 14:40:22,757 INFO 98/100 photo_id=760755770 boxes=0 attempts=1 seconds=0.652
+2026-11-16 14:40:23,397 INFO 99/100 photo_id=760900415 boxes=0 attempts=1 seconds=0.638
+2026-11-16 14:40:24,047 INFO 100/100 photo_id=760812026 boxes=0 attempts=1 seconds=0.646
+2026-11-16 14:40:24,049 INFO Results: /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/prompt_search_2026-11-15/qwen/09_chinese
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : prompt-search-qwen-09-chinese
+COMET INFO:     url                   : https://www.comet.com/ubileyka19/butterfly-bench/8cd67b7a6a374448abad17ac4d1b501e
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     attempts [100]                   : (1, 3)
+COMET INFO:     data_load_seconds                : 0.3086935730098048
+COMET INFO:     device_peak_used_mib             : 5476.0
+COMET INFO:     errors                           : 80
+COMET INFO:     f1                               : 0.09090909090909091
+COMET INFO:     fn                               : 57
+COMET INFO:     fp                               : 23
+COMET INFO:     image_failed [100]               : (0, 1)
+COMET INFO:     image_seconds [100]              : (0.6165756080008578, 19.178672053007176)
+COMET INFO:     images                           : 100
+COMET INFO:     images_per_second                : 0.38699385641398926
+COMET INFO:     images_with_errors               : 61
+COMET INFO:     iou_0.5/errors                   : 80
+COMET INFO:     iou_0.5/f1                       : 0.09090909090909091
+COMET INFO:     iou_0.5/fn                       : 57
+COMET INFO:     iou_0.5/fp                       : 23
+COMET INFO:     iou_0.5/images_with_errors       : 61
+COMET INFO:     iou_0.5/negative_fp              : 2
+COMET INFO:     iou_0.5/negative_images_with_fp  : 2
+COMET INFO:     iou_0.5/precision                : 0.14814814814814814
+COMET INFO:     iou_0.5/recall                   : 0.06557377049180328
+COMET INFO:     iou_0.5/tp                       : 4
+COMET INFO:     iou_0.75/errors                  : 88
+COMET INFO:     iou_0.75/f1                      : 0.0
+COMET INFO:     iou_0.75/fn                      : 61
+COMET INFO:     iou_0.75/fp                      : 27
+COMET INFO:     iou_0.75/images_with_errors      : 65
+COMET INFO:     iou_0.75/negative_fp             : 2
+COMET INFO:     iou_0.75/negative_images_with_fp : 2
+COMET INFO:     iou_0.75/precision               : 0.0
+COMET INFO:     iou_0.75/recall                  : 0.0
+COMET INFO:     iou_0.75/tp                      : 0
+COMET INFO:     mean_image_seconds               : 2.5840203492280853
+COMET INFO:     model_load_seconds               : 2.5818002360028913
+COMET INFO:     negative_fp                      : 2
+COMET INFO:     negative_images                  : 42
+COMET INFO:     negative_images_with_fp          : 2
+COMET INFO:     parsing_errors                   : 26
+COMET INFO:     precision                        : 0.14814814814814814
+COMET INFO:     processing_errors                : 21
+COMET INFO:     processing_seconds               : 258.4020349228085
+COMET INFO:     recall                           : 0.06557377049180328
+COMET INFO:     runtime_errors                   : 0
+COMET INFO:     torch_peak_allocated_mib         : 4422.7314453125
+COMET INFO:     total_attempts                   : 179
+COMET INFO:     tp                               : 4
+COMET INFO:     validation_errors                : 74
+COMET INFO:     wall_seconds                     : 271.3033949709934
+COMET INFO:   Others:
+COMET INFO:     Name : prompt-search-qwen-09-chinese
+COMET INFO:   Parameters:
+COMET INFO:     comet.experiment_name     : prompt-search-qwen-09-chinese
+COMET INFO:     comet.log_images          : 0
+COMET INFO:     comet.log_raw_responses   : True
+COMET INFO:     comet.mode                : auto
+COMET INFO:     comet.project_name        : butterfly-bench
+COMET INFO:     comet.tags                : ["butterfly-detection", "prompt-search", "validation-tuning"]
+COMET INFO:     comet.workspace           : None
+COMET INFO:     data.limit                : None
+COMET INFO:     data.parquet_file         : data/validation-00000-of-00001.parquet
+COMET INFO:     data.photo_ids            : None
+COMET INFO:     data.repo_id              : xartik/inaturalist_butterflies
+COMET INFO:     data.revision             : 1316e3c7147d4399a03f90684e191aae4d798f09
+COMET INFO:     data.shuffle              : False
+COMET INFO:     data.source               : hf
+COMET INFO:     data.split                : validation
+COMET INFO:     deterministic             : True
+COMET INFO:     evaluation.iou_thresholds : [0.5, 0.75]
+COMET INFO:     evaluation.primary_iou    : 0.5
+COMET INFO:     mode                      : test
+COMET INFO:     model.backend             : transformers_vlm
+COMET INFO:     model.device              : cuda:0
+COMET INFO:     model.dtype               : bfloat16
+COMET INFO:     model.max_new_tokens      : 1024
+COMET INFO:     model.max_pixels          : 1003520
+COMET INFO:     model.min_pixels          : 65536
+COMET INFO:     model.name                : qwen
+COMET INFO:     model.output_prompt       : Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must  [truncated]
+COMET INFO:     model.prompt              : 请找出图像中所有成年蝴蝶（包括弄蝶），排除飞蛾、毛毛虫、蛹和其他昆虫。每只蝴蝶只画一个紧密的轴对齐矩形框，包含所有可见的翅膀、身体、触角和足。先在心里确定整只蝴蝶的最左、最上、最右、最下边界，再计算框的位置和大小。只输出一行合法JSON，且只有photo_id、boxes、error三个键。photo_id使用给定的整数ID，error必须为null。boxes是数组；每个框必须包含left、top、width、height四个命名数值字段。left是左边界除以整张图宽度，top是上边界除以整张图高度，width是框的总宽度除以图宽，height是框的总高度除以图高。width不是右边界，height不是下边界。所有坐标必须是0到1的小数，left>=0，top>=0，width>0，height>0，left+width<=1，top+height<=1。没有蝴蝶时boxes为[]。不要输出解释、Markdown或中间步骤。
+Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All number [truncated]
+COMET INFO:     model.repo_id             : Qwen/Qwen3-VL-2B-Instruct
+COMET INFO:     model.retry_temperature   : 0.2
+COMET INFO:     model.revision            : 89644892e4d85e24eaac8bacfd4f463576704203
+COMET INFO:     model.temperature         : 0.0
+COMET INFO:     output_dir                : /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/prompt_search_2026-11-15/qwen/09_chinese
+COMET INFO:     postprocess.nms_iou       : None
+COMET INFO:     retries.max_attempts      : 3
+COMET INFO:     seed                      : 42
+COMET INFO:   Uploads:
+COMET INFO:     asset : 9 (515.91 KB)
+COMET INFO: 
+COMET INFO: File upload ('data.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:41:25.251297 (60 seconds)
+COMET INFO: File upload ('predictions.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:41:25.257297 (60 seconds)
+COMET INFO: File upload ('metrics.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:41:25.263799 (60 seconds)
+COMET INFO: File upload ('model.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:41:25.264255 (60 seconds)
+COMET INFO: File upload ('config.yaml') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:41:25.281269 (60 seconds)
+COMET INFO: File upload ('timings.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:41:25.297805 (60 seconds)
+COMET INFO: File upload ('environment.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:41:25.298875 (60 seconds)
+COMET INFO: File upload ('gpu.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:41:25.385432 (60 seconds)
+COMET INFO: File upload ('attempts.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:41:25.412086 (60 seconds)
+COMET INFO: Please wait for metadata to finish uploading (timeout is 30 seconds)
+COMET INFO: Uploading 9 metrics, params and output messages
+COMET INFO: Uploading 9 metrics, params and output messages
+COMET INFO: Uploading 9 metrics, params and output messages
+COMET WARNING: Failed to send all messages, metrics and output will likely be incomplete.
+COMET INFO: Waiting for remaining data to be uploaded to Comet. 9 messages remaining.
+COMET INFO: Waiting for remaining data to be uploaded to Comet. 9 messages remaining.
+COMET INFO: Waiting for remaining data to be uploaded to Comet. 9 messages remaining.
+COMET ERROR: Comet failed to send all the data back (0 messages and 0 uploads), experiment ID: 8cd67b7a6a374448abad17ac4d1b501e
+COMET INFO: Still saving offline stats to messages file before program termination (may take up to 120 seconds)
+COMET WARNING: Could not send live data to Comet during experiment runtime. An offline experiment will be available for upload:
+    comet upload --force-reupload /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/prompt_search_2026-11-15/qwen/09_chinese/comet-offline/8cd67b7a6a374448abad17ac4d1b501e-cOJtpO.zip

@@ -1,0 +1,100 @@
+{"photo_id": 755630032, "boxes": [], "error": null}
+{"photo_id": 760199895, "boxes": [], "error": null}
+{"photo_id": 760117819, "boxes": [], "error": null}
+{"photo_id": 760581893, "boxes": [], "error": null}
+{"photo_id": 760617662, "boxes": [], "error": null}
+{"photo_id": 760585041, "boxes": [], "error": null}
+{"photo_id": 751455934, "boxes": [], "error": null}
+{"photo_id": 755339961, "boxes": [], "error": null}
+{"photo_id": 751709803, "boxes": [], "error": null}
+{"photo_id": 755545567, "boxes": [], "error": null}
+{"photo_id": 760640706, "boxes": [], "error": null}
+{"photo_id": 751709612, "boxes": [], "error": null}
+{"photo_id": 751709821, "boxes": [], "error": null}
+{"photo_id": 751573899, "boxes": [], "error": null}
+{"photo_id": 755595528, "boxes": [], "error": null}
+{"photo_id": 760553542, "boxes": [{"left": 0.22, "top": 0.25, "width": 0.31, "height": 0.34}], "error": null}
+{"photo_id": 751709610, "boxes": [{"left": 0.38, "top": 0.34, "width": 0.25, "height": 0.25}], "error": null}
+{"photo_id": 755466475, "boxes": [], "error": null}
+{"photo_id": 751452886, "boxes": [{"left": 0.24, "top": 0.22, "width": 0.5, "height": 0.53}], "error": null}
+{"photo_id": 751744539, "boxes": [], "error": null}
+{"photo_id": 755824792, "boxes": [], "error": null}
+{"photo_id": 755914152, "boxes": [], "error": null}
+{"photo_id": 760120082, "boxes": [], "error": null}
+{"photo_id": 755452426, "boxes": [], "error": null}
+{"photo_id": 755531940, "boxes": [], "error": null}
+{"photo_id": 760126560, "boxes": [], "error": null}
+{"photo_id": 751709828, "boxes": [{"left": 0.34, "top": 0.34, "width": 0.22, "height": 0.22}], "error": null}
+{"photo_id": 751709835, "boxes": [], "error": null}
+{"photo_id": 751489222, "boxes": [], "error": null}
+{"photo_id": 755490215, "boxes": [{"left": 0.34, "top": 0.23, "width": 0.31, "height": 0.44}], "error": null}
+{"photo_id": 760219697, "boxes": [], "error": null}
+{"photo_id": 751895718, "boxes": [{"left": 0.11, "top": 0.17, "width": 0.25, "height": 0.34}], "error": null}
+{"photo_id": 760492236, "boxes": [], "error": null}
+{"photo_id": 760823379, "boxes": [{"left": 0.15, "top": 0.44, "width": 0.17, "height": 0.17}], "error": null}
+{"photo_id": 751840376, "boxes": [{"left": 0.34, "top": 0.31, "width": 0.25, "height": 0.25}], "error": null}
+{"photo_id": 760792120, "boxes": [], "error": null}
+{"photo_id": 760545150, "boxes": [], "error": null}
+{"photo_id": 755729066, "boxes": null, "error": "ParseError: Expecting property name enclosed in double quotes: line 1 column 45 (char 44)"}
+{"photo_id": 751392269, "boxes": [], "error": null}
+{"photo_id": 755667992, "boxes": [], "error": null}
+{"photo_id": 760483350, "boxes": [], "error": null}
+{"photo_id": 751411373, "boxes": [], "error": null}
+{"photo_id": 751709802, "boxes": [], "error": null}
+{"photo_id": 760275884, "boxes": [{"left": 0.52, "top": 0.45, "width": 0.21, "height": 0.24}], "error": null}
+{"photo_id": 760112737, "boxes": [], "error": null}
+{"photo_id": 755977758, "boxes": [], "error": null}
+{"photo_id": 755819391, "boxes": [], "error": null}
+{"photo_id": 751896458, "boxes": [], "error": null}
+{"photo_id": 751752003, "boxes": [{"left": 0.25, "top": 0.25, "width": 0.45, "height": 0.55}], "error": null}
+{"photo_id": 760651030, "boxes": [], "error": null}
+{"photo_id": 756059682, "boxes": [], "error": null}
+{"photo_id": 760425692, "boxes": [{"left": 0.34, "top": 0.37, "width": 0.25, "height": 0.25}], "error": null}
+{"photo_id": 751313721, "boxes": [], "error": null}
+{"photo_id": 760620476, "boxes": [], "error": null}
+{"photo_id": 755567021, "boxes": [{"left": 0.15, "top": 0.25, "width": 0.25, "height": 0.25}], "error": null}
+{"photo_id": 755488675, "boxes": [{"left": 0.25, "top": 0.25, "width": 0.45, "height": 0.55}], "error": null}
+{"photo_id": 751795623, "boxes": [], "error": null}
+{"photo_id": 751752012, "boxes": [], "error": null}
+{"photo_id": 755710793, "boxes": [{"left": 0.24, "top": 0.17, "width": 0.31, "height": 0.44}], "error": null}
+{"photo_id": 755736214, "boxes": [], "error": null}
+{"photo_id": 760775330, "boxes": [], "error": null}
+{"photo_id": 760909680, "boxes": [], "error": null}
+{"photo_id": 760883528, "boxes": [], "error": null}
+{"photo_id": 760883522, "boxes": [], "error": null}
+{"photo_id": 760812544, "boxes": [], "error": null}
+{"photo_id": 760853387, "boxes": [], "error": null}
+{"photo_id": 760883820, "boxes": [], "error": null}
+{"photo_id": 760851656, "boxes": [{"left": 0.52, "top": 0.35, "width": 0.25, "height": 0.35}], "error": null}
+{"photo_id": 760787119, "boxes": [], "error": null}
+{"photo_id": 760883941, "boxes": [{"left": 0.34, "top": 0.24, "width": 0.31, "height": 0.33}], "error": null}
+{"photo_id": 760883841, "boxes": [], "error": null}
+{"photo_id": 760875039, "boxes": [], "error": null}
+{"photo_id": 760883667, "boxes": [], "error": null}
+{"photo_id": 760883495, "boxes": [], "error": null}
+{"photo_id": 760796649, "boxes": [], "error": null}
+{"photo_id": 760959731, "boxes": [], "error": null}
+{"photo_id": 760910719, "boxes": [], "error": null}
+{"photo_id": 760874892, "boxes": [], "error": null}
+{"photo_id": 760883359, "boxes": [], "error": null}
+{"photo_id": 760872774, "boxes": [], "error": null}
+{"photo_id": 760874634, "boxes": [], "error": null}
+{"photo_id": 760954906, "boxes": [], "error": null}
+{"photo_id": 760928380, "boxes": [], "error": null}
+{"photo_id": 760959759, "boxes": [], "error": null}
+{"photo_id": 760905298, "boxes": [], "error": null}
+{"photo_id": 760796779, "boxes": [], "error": null}
+{"photo_id": 760796628, "boxes": [], "error": null}
+{"photo_id": 760822495, "boxes": [], "error": null}
+{"photo_id": 760502210, "boxes": [], "error": null}
+{"photo_id": 760794928, "boxes": [], "error": null}
+{"photo_id": 760921497, "boxes": [], "error": null}
+{"photo_id": 760728314, "boxes": [], "error": null}
+{"photo_id": 760913412, "boxes": [], "error": null}
+{"photo_id": 760835547, "boxes": [], "error": null}
+{"photo_id": 760943083, "boxes": [], "error": null}
+{"photo_id": 760856074, "boxes": [], "error": null}
+{"photo_id": 760834056, "boxes": [], "error": null}
+{"photo_id": 760755770, "boxes": [], "error": null}
+{"photo_id": 760900415, "boxes": [], "error": null}
+{"photo_id": 760812026, "boxes": [], "error": null}

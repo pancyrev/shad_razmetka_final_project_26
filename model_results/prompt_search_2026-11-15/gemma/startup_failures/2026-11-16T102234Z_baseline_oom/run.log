@@ -1,0 +1,83 @@
+COMET INFO: Experiment is live on comet.com https://www.comet.com/ubileyka19/butterfly-bench/ea53f10830cd4483adeab52753eaea3d
+
+COMET WARNING: String value length exceeds 1000 characters and will be truncated. Provided value: 'Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must be strictly positive, and left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels or a 0-1000 scale. If there are no adult butterflies, return "boxes": []. Example structure (not the answer to this image): {"photo_id":123,"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}],"error":null}.'
+COMET WARNING: String value length exceeds 1000 characters and will be truncated. Provided value: 'Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must be strictly positive, and left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels or a 0-1000 scale. If there are no adult butterflies, return "boxes": []. Example structure (not the answer to this image): {"photo_id":123,"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}],"error":null}.'
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : prompt-search-gemma-01-01_baseline
+COMET INFO:     url                   : https://www.comet.com/ubileyka19/butterfly-bench/ea53f10830cd4483adeab52753eaea3d
+COMET INFO:   Others:
+COMET INFO:     Name : prompt-search-gemma-01-01_baseline
+COMET INFO:   Parameters:
+COMET INFO:     comet.experiment_name     : prompt-search-gemma-01-01_baseline
+COMET INFO:     comet.log_images          : 0
+COMET INFO:     comet.log_raw_responses   : True
+COMET INFO:     comet.mode                : auto
+COMET INFO:     comet.project_name        : butterfly-bench
+COMET INFO:     comet.tags                : ["butterfly-detection", "prompt-search", "validation-tuning"]
+COMET INFO:     comet.workspace           : None
+COMET INFO:     data.limit                : None
+COMET INFO:     data.parquet_file         : data/validation-00000-of-00001.parquet
+COMET INFO:     data.photo_ids            : None
+COMET INFO:     data.repo_id              : xartik/inaturalist_butterflies
+COMET INFO:     data.revision             : 1316e3c7147d4399a03f90684e191aae4d798f09
+COMET INFO:     data.shuffle              : False
+COMET INFO:     data.source               : hf
+COMET INFO:     data.split                : validation
+COMET INFO:     deterministic             : True
+COMET INFO:     evaluation.iou_thresholds : [0.5, 0.75]
+COMET INFO:     evaluation.primary_iou    : 0.5
+COMET INFO:     mode                      : test
+COMET INFO:     model.backend             : llama_cpp
+COMET INFO:     model.batch_size          : 1024
+COMET INFO:     model.context_size        : 8192
+COMET INFO:     model.device              : cuda:0
+COMET INFO:     model.dtype               : UD-Q4_K_XL
+COMET INFO:     model.extra_args          : []
+COMET INFO:     model.gguf_file           : gemma-4-12B-it-qat-UD-Q4_K_XL.gguf
+COMET INFO:     model.gpu_layers          : 999
+COMET INFO:     model.host                : 127.0.0.1
+COMET INFO:     model.image_max_side      : 1280
+COMET INFO:     model.image_max_tokens    : 560
+COMET INFO:     model.main_gpu            : 0
+COMET INFO:     model.max_new_tokens      : 1024
+COMET INFO:     model.max_pixels          : 1003520
+COMET INFO:     model.min_pixels          : 65536
+COMET INFO:     model.mmproj_file         : mmproj-F16.gguf
+COMET INFO:     model.name                : gemma
+COMET INFO:     model.output_prompt       : Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must  [truncated]
+COMET INFO:     model.port                : 0
+COMET INFO:     model.prompt              : Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must  [truncated]
+COMET INFO:     model.repo_id             : unsloth/gemma-4-12B-it-qat-GGUF
+COMET INFO:     model.request_timeout     : 300
+COMET INFO:     model.retry_temperature   : 0.2
+COMET INFO:     model.revision            : 980b060c40a8539ac159e0501a3e0f66a6365af3
+COMET INFO:     model.server_binary       : tools/llama.cpp/build/bin/llama-server
+COMET INFO:     model.server_url          : None
+COMET INFO:     model.startup_timeout     : 300
+COMET INFO:     model.temperature         : 0.0
+COMET INFO:     model.threads             : 8
+COMET INFO:     model.ubatch_size         : 1024
+COMET INFO:     output_dir                : /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/prompt_search_2026-11-15/gemma/01_01_baseline
+COMET INFO:     postprocess.nms_iou       : None
+COMET INFO:     retries.max_attempts      : 3
+COMET INFO:     seed                      : 42
+COMET INFO: 
+Traceback (most recent call last):
+  File "/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/scripts/prompt_search_common.py", line 209, in <module>
+    run_one(args.model, args.index, args.output)
+  File "/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/scripts/prompt_search_common.py", line 197, in run_one
+    result = pipeline.run(cfg)
+             ^^^^^^^^^^^^^^^^^
+  File "/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/butterfly_bench/pipeline.py", line 146, in run
+    backend = create_backend(cfg.model, revision, output_dir)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/butterfly_bench/models.py", line 256, in create_backend
+    return classes[cfg.backend](cfg, revision=revision, output_dir=output_dir)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/butterfly_bench/models.py", line 186, in __init__
+    raise RuntimeError("llama-server exited; see llama-server.log")
+RuntimeError: llama-server exited; see llama-server.log

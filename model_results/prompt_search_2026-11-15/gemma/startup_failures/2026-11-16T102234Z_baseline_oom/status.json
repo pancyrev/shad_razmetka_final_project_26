@@ -1,0 +1,4 @@
+{
+  "status": "failed",
+  "error": "RuntimeError: llama-server exited; see llama-server.log"
+}

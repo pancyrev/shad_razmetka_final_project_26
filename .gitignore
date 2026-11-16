@@ -16,3 +16,4 @@ tools/
 .pytest_cache/
 .ruff_cache/
 comet-offline/
+.cometml-runs/

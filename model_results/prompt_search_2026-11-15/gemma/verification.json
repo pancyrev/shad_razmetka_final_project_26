@@ -1,0 +1,180 @@
+{
+  "verified_utc": "2026-11-16T11:53:29.035028+00:00",
+  "model": "gemma",
+  "variants": [
+    {
+      "name": "01_baseline",
+      "images": 100,
+      "attempts": 104,
+      "prompt_matches_final_list": true,
+      "model_settings_equal_baseline_except_prompt": true,
+      "data_seed_retries_metrics_config_equal_baseline": true,
+      "effective_prompts_seeds_stages_reparsed": true,
+      "successful_attempts_equal_predictions": true,
+      "attempt_counts_match_metrics": true,
+      "sha256": {
+        "config.yaml": "3d816459c087aa8b7584d141e9f9c3db7c23c102fa22fb2824defd3450894d3a",
+        "attempts.jsonl": "f2a5d18167ce22017b64aac62817d0a5c799589176ab984365077a26134bdeef",
+        "predictions.jsonl": "c0d622a99573b936b10e20641d899573fa9edd68c9c3c454c68c459a61333cd3",
+        "metrics.json": "cfb41ee1b51827b056c858849a537f7fbb769c9f7f3fb16984766acc3502e743"
+      }
+    },
+    {
+      "name": "02_compact",
+      "images": 100,
+      "attempts": 131,
+      "prompt_matches_final_list": true,
+      "model_settings_equal_baseline_except_prompt": true,
+      "data_seed_retries_metrics_config_equal_baseline": true,
+      "effective_prompts_seeds_stages_reparsed": true,
+      "successful_attempts_equal_predictions": true,
+      "attempt_counts_match_metrics": true,
+      "sha256": {
+        "config.yaml": "d47a6f47f17bf7961e9821b0ead030c442b56882210fc7e21d8927826563c5e8",
+        "attempts.jsonl": "11bfc3443ab1ad15c722e35f6ae0f68edf001bdb9cf507223c69a835af06cb96",
+        "predictions.jsonl": "600693ca8fe58e6ccb537f09c11bd68e246a158933a81af6ee70a85b56241122",
+        "metrics.json": "46f4d12597f82c226b4e4b50987718c7e72717738a5a28f28c2538775a74e4e1"
+      }
+    },
+    {
+      "name": "03_edges_then_extents",
+      "images": 100,
+      "attempts": 114,
+      "prompt_matches_final_list": true,
+      "model_settings_equal_baseline_except_prompt": true,
+      "data_seed_retries_metrics_config_equal_baseline": true,
+      "effective_prompts_seeds_stages_reparsed": true,
+      "successful_attempts_equal_predictions": true,
+      "attempt_counts_match_metrics": true,
+      "sha256": {
+        "config.yaml": "c58933682166efed239df053bcf738aafc3aee018bf3e661adb7acabb547486f",
+        "attempts.jsonl": "4928d03a20799978223b543b1af65d3768c73c6056553ef9bf672542b6ad301c",
+        "predictions.jsonl": "05f34e14681dda5145a205b4e1a2413e004a9d4d38161787cb64515ae59d46f3",
+        "metrics.json": "d48c07c0af453b7fc8d1bea2f1cc5bec989ac9cadda42fa1d797383d7edb6d54"
+      }
+    },
+    {
+      "name": "04_visual_scan",
+      "images": 100,
+      "attempts": 116,
+      "prompt_matches_final_list": true,
+      "model_settings_equal_baseline_except_prompt": true,
+      "data_seed_retries_metrics_config_equal_baseline": true,
+      "effective_prompts_seeds_stages_reparsed": true,
+      "successful_attempts_equal_predictions": true,
+      "attempt_counts_match_metrics": true,
+      "sha256": {
+        "config.yaml": "4f0519d1b0dc4601205233c5924932cde2b26bd943f339b6e3013d01c5e35f49",
+        "attempts.jsonl": "dfd6d3e1110f36a50ded5f0e8ff4bbe29c36e942e0745985275a704c8b7bea33",
+        "predictions.jsonl": "6c7faabd756c833311e54c6a082d67bd3d68564ef058763b5a785e0dd7eb5b54",
+        "metrics.json": "3b84efdba4aae037f87655fe2e6923b22b39721855962f4fecf509e5668d1689"
+      }
+    },
+    {
+      "name": "05_classification_first",
+      "images": 100,
+      "attempts": 108,
+      "prompt_matches_final_list": true,
+      "model_settings_equal_baseline_except_prompt": true,
+      "data_seed_retries_metrics_config_equal_baseline": true,
+      "effective_prompts_seeds_stages_reparsed": true,
+      "successful_attempts_equal_predictions": true,
+      "attempt_counts_match_metrics": true,
+      "sha256": {
+        "config.yaml": "278408a0e16720a2d91c0e4a941e78d95c94d8516ad9903cc84418174c21ef16",
+        "attempts.jsonl": "2b83d2daf1082df32dc304d3b179e8a691ee6a9ce7df69ad50ffeb656362ab19",
+        "predictions.jsonl": "4d6f521878bf0efd4caff53a889b0a94a0242f078d9de734abfec1d6ebe79e90",
+        "metrics.json": "ccf0c3b16f54f97f4a3c7776b76ed42cbe3bbe71eea024e232a8f7594cda34a1"
+      }
+    },
+    {
+      "name": "06_box_verification",
+      "images": 100,
+      "attempts": 107,
+      "prompt_matches_final_list": true,
+      "model_settings_equal_baseline_except_prompt": true,
+      "data_seed_retries_metrics_config_equal_baseline": true,
+      "effective_prompts_seeds_stages_reparsed": true,
+      "successful_attempts_equal_predictions": true,
+      "attempt_counts_match_metrics": true,
+      "sha256": {
+        "config.yaml": "43450dcb73f2f781a771f53acd28b84e16aeaccd71163955dd44cc1ed819f3d3",
+        "attempts.jsonl": "ccf6193f151b427c34fa537ed8451cbfe34ea7beda589659f8eee3794683a908",
+        "predictions.jsonl": "7965eb7be23a9fa3451daf9ca2e6d88abdcd5f79bae0e698f88df5c02228ff81",
+        "metrics.json": "bff0950d8b566824e919fc70ff65b936dc96a8f71ee2502c77f0f0570519f617"
+      }
+    },
+    {
+      "name": "07_fractional_ruler",
+      "images": 100,
+      "attempts": 105,
+      "prompt_matches_final_list": true,
+      "model_settings_equal_baseline_except_prompt": true,
+      "data_seed_retries_metrics_config_equal_baseline": true,
+      "effective_prompts_seeds_stages_reparsed": true,
+      "successful_attempts_equal_predictions": true,
+      "attempt_counts_match_metrics": true,
+      "sha256": {
+        "config.yaml": "ac26ff806973f160f8af69214d2de18e7cadf8961319ab69fea0831540b674ce",
+        "attempts.jsonl": "6f984dfe864d7bcb365f91dfbae53cbc303f024dd0530559623a6bf5f56420b2",
+        "predictions.jsonl": "094bff40f8a221a65ed37cbb5a383225217e7249322da06b2afd25c5c2779eae",
+        "metrics.json": "4246a7754bcfd3bdf5f5e908e6ccf53800561a6d3fa6fce69fa2a322fe231b1c"
+      }
+    },
+    {
+      "name": "08_json_contract_first",
+      "images": 100,
+      "attempts": 100,
+      "prompt_matches_final_list": true,
+      "model_settings_equal_baseline_except_prompt": true,
+      "data_seed_retries_metrics_config_equal_baseline": true,
+      "effective_prompts_seeds_stages_reparsed": true,
+      "successful_attempts_equal_predictions": true,
+      "attempt_counts_match_metrics": true,
+      "sha256": {
+        "config.yaml": "2b70b508fbe0502debd5b9ed56e6e531d42382f29338921edb9715005504c6c9",
+        "attempts.jsonl": "676f374b6c9ce222f39ff4bb479593dd695ae10aed37a6c4df64493f095f83f2",
+        "predictions.jsonl": "ed856679df13831de7c2c04ad9afd1e683c9b80148bc299eefcd928f25241125",
+        "metrics.json": "bbddab8ebb78c16f544a68c1dea90b7e193ab2a17ba1ae396274908a36e95a0d"
+      }
+    },
+    {
+      "name": "09_precision_focus",
+      "images": 100,
+      "attempts": 107,
+      "prompt_matches_final_list": true,
+      "model_settings_equal_baseline_except_prompt": true,
+      "data_seed_retries_metrics_config_equal_baseline": true,
+      "effective_prompts_seeds_stages_reparsed": true,
+      "successful_attempts_equal_predictions": true,
+      "attempt_counts_match_metrics": true,
+      "sha256": {
+        "config.yaml": "6a8295fa243f35c37d58567080ec35681d352b8a54aeadc0a7ed58837ec39ec2",
+        "attempts.jsonl": "a1c266bfc83bbfc12a7262964004b836986153ce51e2b6fc690de964a5fc8ba0",
+        "predictions.jsonl": "a695cb0343f796472d96342634a0b0037308efafb0aef853fc7df6adb121970e",
+        "metrics.json": "b541ed690185e7eb2bbd888017f73f45b4d68f6c76e70a5657f61181393bc9ed"
+      }
+    },
+    {
+      "name": "10_recall_and_tightness",
+      "images": 100,
+      "attempts": 106,
+      "prompt_matches_final_list": true,
+      "model_settings_equal_baseline_except_prompt": true,
+      "data_seed_retries_metrics_config_equal_baseline": true,
+      "effective_prompts_seeds_stages_reparsed": true,
+      "successful_attempts_equal_predictions": true,
+      "attempt_counts_match_metrics": true,
+      "sha256": {
+        "config.yaml": "5b052a9032a62069eddd14ae41bb6796e29156d69751a5eccefd9d4969e9c446",
+        "attempts.jsonl": "3dee539075e8579cbe476e9391e697b1d37ee407877c820ddb0a4736e7926fb9",
+        "predictions.jsonl": "c74c37fce8ab22597ace4e14b3aa33f48051a9bf082ccffd39806b6c0243ea30",
+        "metrics.json": "2b8a7b9778a62547c5299a680a4cdaf6652d0f3d5639dafb6c29b59ff2592703"
+      }
+    }
+  ],
+  "all_ten_complete": true,
+  "baseline_all_100_parsed_predictions_equal_historical": true,
+  "summary_sha256": "f2189faf8e541dc633f70be3112b0c10cd86758944f6510dab1d914664e1373f",
+  "prompts_sha256": "6fe3721155256488392bb53e706bce8f8b32557aa999cd0e9d3132d011763325"
+}

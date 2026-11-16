@@ -1,0 +1,92 @@
+model:
+  name: gemma
+  backend: llama_cpp
+  repo_id: unsloth/gemma-4-12B-it-qat-GGUF
+  revision: 980b060c40a8539ac159e0501a3e0f66a6365af3
+  dtype: UD-Q4_K_XL
+  device: cuda:0
+  prompt: 'Output exactly one line of valid JSON, without Markdown or explanation.
+    Use exactly {"photo_id":THE_INTEGER_ID,"boxes":[{"left":X,"top":Y,"width":W,"height":H}],"error":null}.
+    Each box has exactly the four named numeric fields. Use normalized fractions of
+    image dimensions, never pixels or a 0-1000 scale. The top-left of the image is
+    (0,0), bottom-right is (1,1). left=x_min/image_width; top=y_min/image_height;
+    width=(x_max-x_min)/image_width; height=(y_max-y_min)/image_height. All numbers
+    must be finite. left>=0, top>=0, width>0, height>0, left+width<=1 and top+height<=1.
+    If no adult butterflies are present use "boxes": []. Copy the supplied photo_id
+    as an integer and set error to null. For example, an object occupying x=20% through
+    70% and y=10% through 60% would have {"left":0.2,"top":0.1,"width":0.5,"height":0.5}.
+    This is an example of arithmetic only, not a proposed box for this image. The
+    output boxes must come from this image. Locate every adult butterfly. Exclude
+    moths, caterpillars, pupae, other insects, flowers and shadows. Return one tight
+    axis-aligned rectangle for each butterfly, including all its visible wings, body,
+    antennae and legs. For occluded or cropped animals, box the visible part only. '
+  output_prompt: 'Find every adult butterfly in the image. Include only adult butterflies;
+    exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one
+    tight axis-aligned bounding box per butterfly, enclosing all visible wings, body,
+    antennae and legs. For occluded or cropped butterflies enclose only visible parts;
+    do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record),
+    with no Markdown, code fences, explanations, confidence scores or additional keys.
+    The record must have exactly these keys: "photo_id" (the integer ID supplied below),
+    "boxes" (an array of boxes), and "error" (null). Each box must have exactly four
+    numeric fields: "left", "top", "width", "height". Coordinates are normalized to
+    the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width,
+    height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers
+    must be finite; left and top must be at least 0, width and height must be strictly
+    positive, and left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels
+    or a 0-1000 scale. If there are no adult butterflies, return "boxes": []. Example
+    structure (not the answer to this image): {"photo_id":123,"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}],"error":null}.'
+  max_new_tokens: 1024
+  max_pixels: 1003520
+  min_pixels: 65536
+  temperature: 0.0
+  retry_temperature: 0.2
+  gguf_file: gemma-4-12B-it-qat-UD-Q4_K_XL.gguf
+  mmproj_file: mmproj-F16.gguf
+  server_binary: tools/llama.cpp/build/bin/llama-server
+  server_url: null
+  host: 127.0.0.1
+  port: 0
+  gpu_layers: 999
+  main_gpu: 0
+  context_size: 8192
+  batch_size: 1024
+  ubatch_size: 1024
+  threads: 8
+  image_max_side: 1280
+  image_max_tokens: 560
+  startup_timeout: 300
+  request_timeout: 300
+  extra_args: []
+data:
+  source: hf
+  repo_id: xartik/inaturalist_butterflies
+  revision: 1316e3c7147d4399a03f90684e191aae4d798f09
+  split: validation
+  parquet_file: data/validation-00000-of-00001.parquet
+  limit: null
+  photo_ids: null
+  shuffle: false
+comet:
+  mode: auto
+  project_name: butterfly-bench
+  workspace: null
+  experiment_name: prompt-search-gemma-08-08_json_contract_first
+  tags:
+  - butterfly-detection
+  - prompt-search
+  - validation-tuning
+  log_images: 0
+  log_raw_responses: true
+mode: test
+seed: 42
+deterministic: true
+output_dir: /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/prompt_search_2026-11-15/gemma/08_08_json_contract_first
+retries:
+  max_attempts: 3
+postprocess:
+  nms_iou: null
+evaluation:
+  iou_thresholds:
+  - 0.5
+  - 0.75
+  primary_iou: 0.5

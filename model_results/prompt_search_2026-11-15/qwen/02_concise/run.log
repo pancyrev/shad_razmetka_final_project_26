@@ -1,0 +1,514 @@
+COMET INFO: Experiment is live on comet.com https://www.comet.com/ubileyka19/butterfly-bench/4749c7cc9344497f856c1ce032086b22
+
+COMET WARNING: String value length exceeds 1000 characters and will be truncated. Provided value: 'Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must be strictly positive, and left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels or a 0-1000 scale. If there are no adult butterflies, return "boxes": []. Example structure (not the answer to this image): {"photo_id":123,"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}],"error":null}.'
+Loading weights:   0%|          | 0/625 [00:00<?, ?it/s]Loading weights: 100%|██████████| 625/625 [00:00<00:00, 22071.01it/s]
+2026-11-16 13:37:05,008 WARNING photo_id=755630032 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:06,291 WARNING photo_id=755630032 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:07,534 WARNING photo_id=755630032 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:07,534 INFO 1/100 photo_id=755630032 boxes=ERROR attempts=3 seconds=4.442
+2026-11-16 13:37:09,168 WARNING photo_id=760199895 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:10,335 WARNING photo_id=760199895 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:11,593 WARNING photo_id=760199895 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:11,594 INFO 2/100 photo_id=760199895 boxes=ERROR attempts=3 seconds=4.059
+2026-11-16 13:37:13,228 WARNING photo_id=760117819 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:14,397 WARNING photo_id=760117819 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:15,569 WARNING photo_id=760117819 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:15,569 INFO 3/100 photo_id=760117819 boxes=ERROR attempts=3 seconds=3.975
+2026-11-16 13:37:17,026 WARNING photo_id=760581893 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:18,156 WARNING photo_id=760581893 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:19,316 WARNING photo_id=760581893 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:19,317 INFO 4/100 photo_id=760581893 boxes=ERROR attempts=3 seconds=3.747
+2026-11-16 13:37:20,957 WARNING photo_id=760617662 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:22,147 WARNING photo_id=760617662 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:23,348 WARNING photo_id=760617662 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:23,348 INFO 5/100 photo_id=760617662 boxes=ERROR attempts=3 seconds=4.031
+2026-11-16 13:37:24,885 WARNING photo_id=760585041 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:26,024 WARNING photo_id=760585041 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:27,111 WARNING photo_id=760585041 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:27,111 INFO 6/100 photo_id=760585041 boxes=ERROR attempts=3 seconds=3.763
+2026-11-16 13:37:28,642 WARNING photo_id=751455934 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:29,752 WARNING photo_id=751455934 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:30,930 WARNING photo_id=751455934 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:30,931 INFO 7/100 photo_id=751455934 boxes=ERROR attempts=3 seconds=3.819
+2026-11-16 13:37:32,466 WARNING photo_id=755339961 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:33,578 WARNING photo_id=755339961 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:34,710 WARNING photo_id=755339961 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:34,710 INFO 8/100 photo_id=755339961 boxes=ERROR attempts=3 seconds=3.779
+2026-11-16 13:37:36,248 WARNING photo_id=751709803 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:37,332 WARNING photo_id=751709803 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:38,417 WARNING photo_id=751709803 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:38,420 INFO 9/100 photo_id=751709803 boxes=ERROR attempts=3 seconds=3.707
+2026-11-16 13:37:39,762 WARNING photo_id=755545567 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:40,746 WARNING photo_id=755545567 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:41,719 WARNING photo_id=755545567 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:41,719 INFO 10/100 photo_id=755545567 boxes=ERROR attempts=3 seconds=3.298
+2026-11-16 13:37:43,245 WARNING photo_id=760640706 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:44,399 WARNING photo_id=760640706 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:45,565 WARNING photo_id=760640706 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:45,565 INFO 11/100 photo_id=760640706 boxes=ERROR attempts=3 seconds=3.846
+2026-11-16 13:37:47,086 WARNING photo_id=751709612 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:48,167 WARNING photo_id=751709612 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:49,251 WARNING photo_id=751709612 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:49,254 INFO 12/100 photo_id=751709612 boxes=ERROR attempts=3 seconds=3.686
+2026-11-16 13:37:50,784 WARNING photo_id=751709821 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:51,940 WARNING photo_id=751709821 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:53,028 WARNING photo_id=751709821 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:53,029 INFO 13/100 photo_id=751709821 boxes=ERROR attempts=3 seconds=3.774
+2026-11-16 13:37:54,552 WARNING photo_id=751573899 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:55,635 WARNING photo_id=751573899 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:56,725 WARNING photo_id=751573899 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:56,726 INFO 14/100 photo_id=751573899 boxes=ERROR attempts=3 seconds=3.697
+2026-11-16 13:37:58,221 WARNING photo_id=755595528 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:37:59,300 WARNING photo_id=755595528 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:00,374 WARNING photo_id=755595528 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:00,374 INFO 15/100 photo_id=755595528 boxes=ERROR attempts=3 seconds=3.648
+2026-11-16 13:38:01,911 WARNING photo_id=760553542 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:02,971 WARNING photo_id=760553542 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:04,149 WARNING photo_id=760553542 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:04,152 INFO 16/100 photo_id=760553542 boxes=ERROR attempts=3 seconds=3.775
+2026-11-16 13:38:05,691 WARNING photo_id=751709610 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:06,848 WARNING photo_id=751709610 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:08,001 WARNING photo_id=751709610 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:08,004 INFO 17/100 photo_id=751709610 boxes=ERROR attempts=3 seconds=3.849
+2026-11-16 13:38:09,534 WARNING photo_id=755466475 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:10,649 WARNING photo_id=755466475 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:11,812 WARNING photo_id=755466475 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:11,812 INFO 18/100 photo_id=755466475 boxes=ERROR attempts=3 seconds=3.808
+2026-11-16 13:38:13,365 WARNING photo_id=751452886 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:14,464 WARNING photo_id=751452886 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:16,098 WARNING photo_id=751452886 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:16,098 INFO 19/100 photo_id=751452886 boxes=ERROR attempts=3 seconds=4.285
+2026-11-16 13:38:17,632 WARNING photo_id=751744539 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:19,271 WARNING photo_id=751744539 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:20,911 WARNING photo_id=751744539 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:20,912 INFO 20/100 photo_id=751744539 boxes=ERROR attempts=3 seconds=4.813
+2026-11-16 13:38:22,444 WARNING photo_id=755824792 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:23,620 WARNING photo_id=755824792 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:24,796 WARNING photo_id=755824792 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:24,796 INFO 21/100 photo_id=755824792 boxes=ERROR attempts=3 seconds=3.885
+2026-11-16 13:38:26,315 WARNING photo_id=755914152 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:27,481 WARNING photo_id=755914152 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:28,639 WARNING photo_id=755914152 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:28,639 INFO 22/100 photo_id=755914152 boxes=ERROR attempts=3 seconds=3.843
+2026-11-16 13:38:30,888 WARNING photo_id=760120082 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:32,462 WARNING photo_id=760120082 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:34,039 WARNING photo_id=760120082 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:34,039 INFO 23/100 photo_id=760120082 boxes=ERROR attempts=3 seconds=5.400
+2026-11-16 13:38:35,582 WARNING photo_id=755452426 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:36,670 WARNING photo_id=755452426 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:37,771 WARNING photo_id=755452426 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:37,771 INFO 24/100 photo_id=755452426 boxes=ERROR attempts=3 seconds=3.731
+2026-11-16 13:38:39,220 WARNING photo_id=755531940 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:40,307 WARNING photo_id=755531940 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:41,381 WARNING photo_id=755531940 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:41,381 INFO 25/100 photo_id=755531940 boxes=ERROR attempts=3 seconds=3.610
+2026-11-16 13:38:42,914 WARNING photo_id=760126560 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:38:44,010 WARNING photo_id=760126560 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:01,366 WARNING photo_id=760126560 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:01,366 INFO 26/100 photo_id=760126560 boxes=ERROR attempts=3 seconds=19.985
+2026-11-16 13:39:02,855 WARNING photo_id=751709828 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:03,990 WARNING photo_id=751709828 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:05,060 WARNING photo_id=751709828 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:05,060 INFO 27/100 photo_id=751709828 boxes=ERROR attempts=3 seconds=3.694
+2026-11-16 13:39:06,578 WARNING photo_id=751709835 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:07,661 WARNING photo_id=751709835 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:08,752 WARNING photo_id=751709835 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:08,756 INFO 28/100 photo_id=751709835 boxes=ERROR attempts=3 seconds=3.692
+2026-11-16 13:39:10,291 WARNING photo_id=751489222 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:11,384 WARNING photo_id=751489222 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:12,496 WARNING photo_id=751489222 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:12,496 INFO 29/100 photo_id=751489222 boxes=ERROR attempts=3 seconds=3.740
+2026-11-16 13:39:14,028 WARNING photo_id=755490215 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:15,114 WARNING photo_id=755490215 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:16,197 WARNING photo_id=755490215 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:16,201 INFO 30/100 photo_id=755490215 boxes=ERROR attempts=3 seconds=3.701
+2026-11-16 13:39:17,695 WARNING photo_id=760219697 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:18,735 WARNING photo_id=760219697 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:19,772 WARNING photo_id=760219697 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:19,772 INFO 31/100 photo_id=760219697 boxes=ERROR attempts=3 seconds=3.571
+2026-11-16 13:39:21,283 WARNING photo_id=751895718 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:22,354 WARNING photo_id=751895718 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:23,421 WARNING photo_id=751895718 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:23,422 INFO 32/100 photo_id=751895718 boxes=ERROR attempts=3 seconds=3.649
+2026-11-16 13:39:24,959 WARNING photo_id=760492236 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:26,063 WARNING photo_id=760492236 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:27,251 WARNING photo_id=760492236 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:27,252 INFO 33/100 photo_id=760492236 boxes=ERROR attempts=3 seconds=3.830
+2026-11-16 13:39:28,782 WARNING photo_id=760823379 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:29,980 WARNING photo_id=760823379 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:31,148 WARNING photo_id=760823379 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:31,148 INFO 34/100 photo_id=760823379 boxes=ERROR attempts=3 seconds=3.897
+2026-11-16 13:39:32,766 WARNING photo_id=751840376 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:33,861 WARNING photo_id=751840376 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:35,038 WARNING photo_id=751840376 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:35,038 INFO 35/100 photo_id=751840376 boxes=ERROR attempts=3 seconds=3.890
+2026-11-16 13:39:36,560 WARNING photo_id=760792120 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:37,649 WARNING photo_id=760792120 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:38,815 WARNING photo_id=760792120 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:38,815 INFO 36/100 photo_id=760792120 boxes=ERROR attempts=3 seconds=3.777
+2026-11-16 13:39:40,354 WARNING photo_id=760545150 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:41,516 WARNING photo_id=760545150 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:42,700 WARNING photo_id=760545150 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:42,701 INFO 37/100 photo_id=760545150 boxes=ERROR attempts=3 seconds=3.885
+2026-11-16 13:39:44,206 WARNING photo_id=755729066 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:45,301 WARNING photo_id=755729066 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:46,466 WARNING photo_id=755729066 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:46,466 INFO 38/100 photo_id=755729066 boxes=ERROR attempts=3 seconds=3.765
+2026-11-16 13:39:47,992 WARNING photo_id=751392269 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:49,079 WARNING photo_id=751392269 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:50,170 WARNING photo_id=751392269 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:50,173 INFO 39/100 photo_id=751392269 boxes=ERROR attempts=3 seconds=3.704
+2026-11-16 13:39:51,701 WARNING photo_id=755667992 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:52,854 WARNING photo_id=755667992 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:53,933 WARNING photo_id=755667992 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:53,933 INFO 40/100 photo_id=755667992 boxes=ERROR attempts=3 seconds=3.760
+2026-11-16 13:39:55,472 WARNING photo_id=760483350 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:56,644 WARNING photo_id=760483350 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:57,794 WARNING photo_id=760483350 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:39:57,795 INFO 41/100 photo_id=760483350 boxes=ERROR attempts=3 seconds=3.861
+2026-11-16 13:39:59,336 WARNING photo_id=751411373 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:00,518 WARNING photo_id=751411373 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:01,665 WARNING photo_id=751411373 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:01,666 INFO 42/100 photo_id=751411373 boxes=ERROR attempts=3 seconds=3.871
+2026-11-16 13:40:03,189 WARNING photo_id=751709802 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:04,362 WARNING photo_id=751709802 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:05,524 WARNING photo_id=751709802 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:05,528 INFO 43/100 photo_id=751709802 boxes=ERROR attempts=3 seconds=3.858
+2026-11-16 13:40:07,057 WARNING photo_id=760275884 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:08,155 WARNING photo_id=760275884 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:09,261 WARNING photo_id=760275884 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:09,265 INFO 44/100 photo_id=760275884 boxes=ERROR attempts=3 seconds=3.734
+2026-11-16 13:40:10,807 WARNING photo_id=760112737 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:11,982 WARNING photo_id=760112737 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:13,174 WARNING photo_id=760112737 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:13,174 INFO 45/100 photo_id=760112737 boxes=ERROR attempts=3 seconds=3.909
+2026-11-16 13:40:14,705 WARNING photo_id=755977758 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:15,873 WARNING photo_id=755977758 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:17,051 WARNING photo_id=755977758 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:17,054 INFO 46/100 photo_id=755977758 boxes=ERROR attempts=3 seconds=3.876
+2026-11-16 13:40:18,569 WARNING photo_id=755819391 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:19,253 WARNING photo_id=755819391 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:19,939 WARNING photo_id=755819391 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:19,942 INFO 47/100 photo_id=755819391 boxes=ERROR attempts=3 seconds=2.885
+2026-11-16 13:40:21,466 WARNING photo_id=751896458 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:22,538 WARNING photo_id=751896458 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:23,610 WARNING photo_id=751896458 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:23,610 INFO 48/100 photo_id=751896458 boxes=ERROR attempts=3 seconds=3.668
+2026-11-16 13:40:25,108 WARNING photo_id=751752003 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:26,255 WARNING photo_id=751752003 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:27,360 WARNING photo_id=751752003 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:27,361 INFO 49/100 photo_id=751752003 boxes=ERROR attempts=3 seconds=3.750
+2026-11-16 13:40:28,814 WARNING photo_id=760651030 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:29,904 WARNING photo_id=760651030 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:30,986 WARNING photo_id=760651030 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:30,986 INFO 50/100 photo_id=760651030 boxes=ERROR attempts=3 seconds=3.625
+2026-11-16 13:40:31,636 WARNING photo_id=756059682 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:32,301 WARNING photo_id=756059682 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:32,981 WARNING photo_id=756059682 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:32,981 INFO 51/100 photo_id=756059682 boxes=ERROR attempts=3 seconds=1.995
+2026-11-16 13:40:34,509 WARNING photo_id=760425692 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:35,598 WARNING photo_id=760425692 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:36,686 WARNING photo_id=760425692 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:36,686 INFO 52/100 photo_id=760425692 boxes=ERROR attempts=3 seconds=3.705
+2026-11-16 13:40:38,222 WARNING photo_id=751313721 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:39,386 WARNING photo_id=751313721 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:40,574 WARNING photo_id=751313721 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:40,575 INFO 53/100 photo_id=751313721 boxes=ERROR attempts=3 seconds=3.888
+2026-11-16 13:40:42,073 WARNING photo_id=760620476 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:43,160 WARNING photo_id=760620476 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:44,228 WARNING photo_id=760620476 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:44,229 INFO 54/100 photo_id=760620476 boxes=ERROR attempts=3 seconds=3.654
+2026-11-16 13:40:45,601 WARNING photo_id=755567021 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:46,595 WARNING photo_id=755567021 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:47,591 WARNING photo_id=755567021 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:47,591 INFO 55/100 photo_id=755567021 boxes=ERROR attempts=3 seconds=3.362
+2026-11-16 13:40:49,119 WARNING photo_id=755488675 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:50,224 WARNING photo_id=755488675 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:51,329 WARNING photo_id=755488675 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:51,330 INFO 56/100 photo_id=755488675 boxes=ERROR attempts=3 seconds=3.738
+2026-11-16 13:40:52,852 WARNING photo_id=751795623 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:54,007 WARNING photo_id=751795623 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:55,153 WARNING photo_id=751795623 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:55,153 INFO 57/100 photo_id=751795623 boxes=ERROR attempts=3 seconds=3.823
+2026-11-16 13:40:57,413 WARNING photo_id=751752012 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:40:58,973 WARNING photo_id=751752012 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:16,446 WARNING photo_id=751752012 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:16,446 INFO 58/100 photo_id=751752012 boxes=ERROR attempts=3 seconds=21.293
+2026-11-16 13:41:17,968 WARNING photo_id=755710793 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:19,044 WARNING photo_id=755710793 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:20,125 WARNING photo_id=755710793 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:20,125 INFO 59/100 photo_id=755710793 boxes=ERROR attempts=3 seconds=3.679
+2026-11-16 13:41:21,637 WARNING photo_id=755736214 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:22,731 WARNING photo_id=755736214 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:23,836 WARNING photo_id=755736214 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:23,836 INFO 60/100 photo_id=755736214 boxes=ERROR attempts=3 seconds=3.710
+2026-11-16 13:41:25,402 WARNING photo_id=760775330 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:26,507 WARNING photo_id=760775330 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:27,633 WARNING photo_id=760775330 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:27,634 INFO 61/100 photo_id=760775330 boxes=ERROR attempts=3 seconds=3.798
+2026-11-16 13:41:28,299 WARNING photo_id=760909680 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:28,991 WARNING photo_id=760909680 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:29,676 WARNING photo_id=760909680 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:29,679 INFO 62/100 photo_id=760909680 boxes=ERROR attempts=3 seconds=2.042
+2026-11-16 13:41:31,289 WARNING photo_id=760883528 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:32,927 WARNING photo_id=760883528 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:34,571 WARNING photo_id=760883528 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:34,571 INFO 63/100 photo_id=760883528 boxes=ERROR attempts=3 seconds=4.892
+2026-11-16 13:41:35,594 WARNING photo_id=760883522 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:36,717 WARNING photo_id=760883522 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:37,824 WARNING photo_id=760883522 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:37,824 INFO 64/100 photo_id=760883522 boxes=ERROR attempts=3 seconds=3.253
+2026-11-16 13:41:39,380 WARNING photo_id=760812544 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:40,567 WARNING photo_id=760812544 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:41,742 WARNING photo_id=760812544 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:41,742 INFO 65/100 photo_id=760812544 boxes=ERROR attempts=3 seconds=3.917
+2026-11-16 13:41:42,406 WARNING photo_id=760853387 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:43,089 WARNING photo_id=760853387 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:43,777 WARNING photo_id=760853387 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:43,777 INFO 66/100 photo_id=760853387 boxes=ERROR attempts=3 seconds=2.035
+2026-11-16 13:41:44,834 WARNING photo_id=760883820 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:45,998 WARNING photo_id=760883820 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:47,164 WARNING photo_id=760883820 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:47,165 INFO 67/100 photo_id=760883820 boxes=ERROR attempts=3 seconds=3.387
+2026-11-16 13:41:48,260 WARNING photo_id=760851656 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:49,441 WARNING photo_id=760851656 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:50,636 WARNING photo_id=760851656 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:50,636 INFO 68/100 photo_id=760851656 boxes=ERROR attempts=3 seconds=3.471
+2026-11-16 13:41:51,304 WARNING photo_id=760787119 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:51,994 WARNING photo_id=760787119 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:52,691 WARNING photo_id=760787119 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:52,691 INFO 69/100 photo_id=760787119 boxes=ERROR attempts=3 seconds=2.055
+2026-11-16 13:41:54,047 WARNING photo_id=760883941 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:55,210 WARNING photo_id=760883941 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:56,379 WARNING photo_id=760883941 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:56,380 INFO 70/100 photo_id=760883941 boxes=ERROR attempts=3 seconds=3.689
+2026-11-16 13:41:57,907 WARNING photo_id=760883841 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:41:59,069 WARNING photo_id=760883841 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:00,241 WARNING photo_id=760883841 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:00,241 INFO 71/100 photo_id=760883841 boxes=ERROR attempts=3 seconds=3.861
+2026-11-16 13:42:00,920 WARNING photo_id=760875039 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:01,596 WARNING photo_id=760875039 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:02,276 WARNING photo_id=760875039 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:02,276 INFO 72/100 photo_id=760875039 boxes=ERROR attempts=3 seconds=2.035
+2026-11-16 13:42:03,272 WARNING photo_id=760883667 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:04,375 WARNING photo_id=760883667 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:05,471 WARNING photo_id=760883667 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:05,471 INFO 73/100 photo_id=760883667 boxes=ERROR attempts=3 seconds=3.195
+2026-11-16 13:42:06,600 WARNING photo_id=760883495 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:07,694 WARNING photo_id=760883495 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:08,794 WARNING photo_id=760883495 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:08,794 INFO 74/100 photo_id=760883495 boxes=ERROR attempts=3 seconds=3.323
+2026-11-16 13:42:09,464 WARNING photo_id=760796649 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:10,152 WARNING photo_id=760796649 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:10,867 WARNING photo_id=760796649 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:10,867 INFO 75/100 photo_id=760796649 boxes=ERROR attempts=3 seconds=2.073
+2026-11-16 13:42:11,861 WARNING photo_id=760959731 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:12,974 WARNING photo_id=760959731 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:14,082 WARNING photo_id=760959731 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:14,082 INFO 76/100 photo_id=760959731 boxes=ERROR attempts=3 seconds=3.215
+2026-11-16 13:42:15,234 WARNING photo_id=760910719 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:16,408 WARNING photo_id=760910719 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:17,527 WARNING photo_id=760910719 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:17,528 INFO 77/100 photo_id=760910719 boxes=ERROR attempts=3 seconds=3.445
+2026-11-16 13:42:18,188 WARNING photo_id=760874892 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:18,863 WARNING photo_id=760874892 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:19,538 WARNING photo_id=760874892 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:19,538 INFO 78/100 photo_id=760874892 boxes=ERROR attempts=3 seconds=2.010
+2026-11-16 13:42:20,657 WARNING photo_id=760883359 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:21,821 WARNING photo_id=760883359 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:22,914 WARNING photo_id=760883359 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:22,914 INFO 79/100 photo_id=760883359 boxes=ERROR attempts=3 seconds=3.376
+2026-11-16 13:42:24,066 WARNING photo_id=760872774 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:25,228 WARNING photo_id=760872774 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:26,410 WARNING photo_id=760872774 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:26,410 INFO 80/100 photo_id=760872774 boxes=ERROR attempts=3 seconds=3.496
+2026-11-16 13:42:27,074 WARNING photo_id=760874634 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:27,757 WARNING photo_id=760874634 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:28,443 WARNING photo_id=760874634 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:28,444 INFO 81/100 photo_id=760874634 boxes=ERROR attempts=3 seconds=2.033
+2026-11-16 13:42:29,122 WARNING photo_id=760954906 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:29,799 WARNING photo_id=760954906 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:30,501 WARNING photo_id=760954906 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:30,501 INFO 82/100 photo_id=760954906 boxes=ERROR attempts=3 seconds=2.058
+2026-11-16 13:42:32,047 WARNING photo_id=760928380 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:33,236 WARNING photo_id=760928380 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:34,358 WARNING photo_id=760928380 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:34,359 INFO 83/100 photo_id=760928380 boxes=ERROR attempts=3 seconds=3.857
+2026-11-16 13:42:35,343 WARNING photo_id=760959759 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:36,513 WARNING photo_id=760959759 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:37,623 WARNING photo_id=760959759 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:37,624 INFO 84/100 photo_id=760959759 boxes=ERROR attempts=3 seconds=3.265
+2026-11-16 13:42:38,284 WARNING photo_id=760905298 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:38,957 WARNING photo_id=760905298 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:39,632 WARNING photo_id=760905298 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:39,632 INFO 85/100 photo_id=760905298 boxes=ERROR attempts=3 seconds=2.008
+2026-11-16 13:42:40,653 WARNING photo_id=760796779 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:41,781 WARNING photo_id=760796779 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:42,932 WARNING photo_id=760796779 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:42,933 INFO 86/100 photo_id=760796779 boxes=ERROR attempts=3 seconds=3.301
+2026-11-16 13:42:43,924 WARNING photo_id=760796628 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:45,082 WARNING photo_id=760796628 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:46,187 WARNING photo_id=760796628 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:46,188 INFO 87/100 photo_id=760796628 boxes=ERROR attempts=3 seconds=3.255
+2026-11-16 13:42:47,332 WARNING photo_id=760822495 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:48,015 WARNING photo_id=760822495 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:49,201 WARNING photo_id=760822495 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:49,201 INFO 88/100 photo_id=760822495 boxes=ERROR attempts=3 seconds=3.013
+2026-11-16 13:42:49,875 WARNING photo_id=760502210 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:50,569 WARNING photo_id=760502210 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:51,271 WARNING photo_id=760502210 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:51,271 INFO 89/100 photo_id=760502210 boxes=ERROR attempts=3 seconds=2.070
+2026-11-16 13:42:51,943 WARNING photo_id=760794928 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:52,633 WARNING photo_id=760794928 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:53,339 WARNING photo_id=760794928 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:53,339 INFO 90/100 photo_id=760794928 boxes=ERROR attempts=3 seconds=2.068
+2026-11-16 13:42:53,998 WARNING photo_id=760921497 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:54,674 WARNING photo_id=760921497 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:55,344 WARNING photo_id=760921497 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:55,344 INFO 91/100 photo_id=760921497 boxes=ERROR attempts=3 seconds=2.005
+2026-11-16 13:42:56,005 WARNING photo_id=760728314 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:56,681 WARNING photo_id=760728314 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:57,368 WARNING photo_id=760728314 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:57,369 INFO 92/100 photo_id=760728314 boxes=ERROR attempts=3 seconds=2.024
+2026-11-16 13:42:58,041 WARNING photo_id=760913412 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:58,730 WARNING photo_id=760913412 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:59,416 WARNING photo_id=760913412 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:42:59,419 INFO 93/100 photo_id=760913412 boxes=ERROR attempts=3 seconds=2.047
+2026-11-16 13:43:00,095 WARNING photo_id=760835547 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:00,769 WARNING photo_id=760835547 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:01,445 WARNING photo_id=760835547 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:01,446 INFO 94/100 photo_id=760835547 boxes=ERROR attempts=3 seconds=2.027
+2026-11-16 13:43:02,132 WARNING photo_id=760943083 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:02,836 WARNING photo_id=760943083 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:03,547 WARNING photo_id=760943083 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:03,547 INFO 95/100 photo_id=760943083 boxes=ERROR attempts=3 seconds=2.101
+2026-11-16 13:43:04,211 WARNING photo_id=760856074 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:04,894 WARNING photo_id=760856074 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:05,585 WARNING photo_id=760856074 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:05,586 INFO 96/100 photo_id=760856074 boxes=ERROR attempts=3 seconds=2.038
+2026-11-16 13:43:06,277 WARNING photo_id=760834056 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:06,982 WARNING photo_id=760834056 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:07,692 WARNING photo_id=760834056 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:07,692 INFO 97/100 photo_id=760834056 boxes=ERROR attempts=3 seconds=2.106
+2026-11-16 13:43:08,378 WARNING photo_id=760755770 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:09,087 WARNING photo_id=760755770 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:09,804 WARNING photo_id=760755770 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:09,804 INFO 98/100 photo_id=760755770 boxes=ERROR attempts=3 seconds=2.112
+2026-11-16 13:43:10,476 WARNING photo_id=760900415 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:11,167 WARNING photo_id=760900415 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:11,856 WARNING photo_id=760900415 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:11,860 INFO 99/100 photo_id=760900415 boxes=ERROR attempts=3 seconds=2.052
+2026-11-16 13:43:12,545 WARNING photo_id=760812026 attempt=1 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:13,242 WARNING photo_id=760812026 attempt=2 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:13,948 WARNING photo_id=760812026 attempt=3 parsing: expected exactly one nonempty JSONL line
+2026-11-16 13:43:13,949 INFO 100/100 photo_id=760812026 boxes=ERROR attempts=3 seconds=2.089
+2026-11-16 13:43:13,952 INFO Results: /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/prompt_search_2026-11-15/qwen/02_concise
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : prompt-search-qwen-02-concise
+COMET INFO:     url                   : https://www.comet.com/ubileyka19/butterfly-bench/4749c7cc9344497f856c1ce032086b22
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     attempts                         : 3
+COMET INFO:     data_load_seconds                : 0.30663779299356975
+COMET INFO:     device_peak_used_mib             : 5430.0
+COMET INFO:     errors                           : 61
+COMET INFO:     f1                               : 0.0
+COMET INFO:     fn                               : 61
+COMET INFO:     fp                               : 0
+COMET INFO:     image_failed                     : 1
+COMET INFO:     image_seconds [100]              : (1.9948026240017498, 21.292750853011967)
+COMET INFO:     images                           : 100
+COMET INFO:     images_per_second                : 0.26969199628000823
+COMET INFO:     images_with_errors               : 100
+COMET INFO:     iou_0.5/errors                   : 61
+COMET INFO:     iou_0.5/f1                       : 0.0
+COMET INFO:     iou_0.5/fn                       : 61
+COMET INFO:     iou_0.5/fp                       : 0
+COMET INFO:     iou_0.5/images_with_errors       : 100
+COMET INFO:     iou_0.5/negative_fp              : 0
+COMET INFO:     iou_0.5/negative_images_with_fp  : 0
+COMET INFO:     iou_0.5/precision                : 0.0
+COMET INFO:     iou_0.5/recall                   : 0.0
+COMET INFO:     iou_0.5/tp                       : 0
+COMET INFO:     iou_0.75/errors                  : 61
+COMET INFO:     iou_0.75/f1                      : 0.0
+COMET INFO:     iou_0.75/fn                      : 61
+COMET INFO:     iou_0.75/fp                      : 0
+COMET INFO:     iou_0.75/images_with_errors      : 100
+COMET INFO:     iou_0.75/negative_fp             : 0
+COMET INFO:     iou_0.75/negative_images_with_fp : 0
+COMET INFO:     iou_0.75/precision               : 0.0
+COMET INFO:     iou_0.75/recall                  : 0.0
+COMET INFO:     iou_0.75/tp                      : 0
+COMET INFO:     mean_image_seconds               : 3.7079335456501576
+COMET INFO:     model_load_seconds               : 2.597343818997615
+COMET INFO:     negative_fp                      : 0
+COMET INFO:     negative_images                  : 42
+COMET INFO:     negative_images_with_fp          : 0
+COMET INFO:     parsing_errors                   : 300
+COMET INFO:     precision                        : 0.0
+COMET INFO:     processing_errors                : 100
+COMET INFO:     processing_seconds               : 370.79335456501576
+COMET INFO:     recall                           : 0.0
+COMET INFO:     runtime_errors                   : 0
+COMET INFO:     torch_peak_allocated_mib         : 4391.82763671875
+COMET INFO:     total_attempts                   : 300
+COMET INFO:     tp                               : 0
+COMET INFO:     validation_errors                : 0
+COMET INFO:     wall_seconds                     : 375.9833298769954
+COMET INFO:   Others:
+COMET INFO:     Name : prompt-search-qwen-02-concise
+COMET INFO:   Parameters:
+COMET INFO:     comet.experiment_name     : prompt-search-qwen-02-concise
+COMET INFO:     comet.log_images          : 0
+COMET INFO:     comet.log_raw_responses   : True
+COMET INFO:     comet.mode                : auto
+COMET INFO:     comet.project_name        : butterfly-bench
+COMET INFO:     comet.tags                : ["butterfly-detection", "prompt-search", "validation-tuning"]
+COMET INFO:     comet.workspace           : None
+COMET INFO:     data.limit                : None
+COMET INFO:     data.parquet_file         : data/validation-00000-of-00001.parquet
+COMET INFO:     data.photo_ids            : None
+COMET INFO:     data.repo_id              : xartik/inaturalist_butterflies
+COMET INFO:     data.revision             : 1316e3c7147d4399a03f90684e191aae4d798f09
+COMET INFO:     data.shuffle              : False
+COMET INFO:     data.source               : hf
+COMET INFO:     data.split                : validation
+COMET INFO:     deterministic             : True
+COMET INFO:     evaluation.iou_thresholds : [0.5, 0.75]
+COMET INFO:     evaluation.primary_iou    : 0.5
+COMET INFO:     mode                      : test
+COMET INFO:     model.backend             : transformers_vlm
+COMET INFO:     model.device              : cuda:0
+COMET INFO:     model.dtype               : bfloat16
+COMET INFO:     model.max_new_tokens      : 1024
+COMET INFO:     model.max_pixels          : 1003520
+COMET INFO:     model.min_pixels          : 65536
+COMET INFO:     model.name                : qwen
+COMET INFO:     model.output_prompt       : Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must  [truncated]
+COMET INFO:     model.prompt              : Detect all adult butterflies (including skippers, excluding moths). Give one tight box around the entire visible insect, including wings. Output one JSON line: {"photo_id":INTEGER,"boxes":[{"left":NUMBER,"top":NUMBER,"width":NUMBER,"height":NUMBER}],"error":null}. Replace INTEGER with the supplied photo_id and NUMBER with decimal fractions of image width/height in [0,1]. left/top locate the top-left corner; width/height are sizes, not bottom-right coordinates. Boxes must stay inside the image. If absent use an empty boxes array. Output JSON only.
+COMET INFO:     model.repo_id             : Qwen/Qwen3-VL-2B-Instruct
+COMET INFO:     model.retry_temperature   : 0.2
+COMET INFO:     model.revision            : 89644892e4d85e24eaac8bacfd4f463576704203
+COMET INFO:     model.temperature         : 0.0
+COMET INFO:     output_dir                : /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/prompt_search_2026-11-15/qwen/02_concise
+COMET INFO:     postprocess.nms_iou       : None
+COMET INFO:     retries.max_attempts      : 3
+COMET INFO:     seed                      : 42
+COMET INFO:   Uploads:
+COMET INFO:     asset : 9 (418.36 KB)
+COMET INFO: 
+COMET INFO: File upload ('data.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T13:44:14.991115 (60 seconds)
+COMET INFO: Please wait for metadata to finish uploading (timeout is 30 seconds)
+COMET INFO: Uploading 1 metrics, params and output messages
+COMET INFO: Uploading 1 metrics, params and output messages
+COMET INFO: Uploading 1 metrics, params and output messages
+COMET WARNING: Failed to send all messages, metrics and output will likely be incomplete.
+COMET INFO: Waiting for remaining data to be uploaded to Comet. 1 messages remaining.
+COMET INFO: Waiting for remaining data to be uploaded to Comet. 1 messages remaining.
+COMET INFO: Waiting for remaining data to be uploaded to Comet. 1 messages remaining.
+COMET INFO: Please wait for assets to finish uploading (timeout is 60 seconds)
+COMET INFO: Still uploading 1 file(s), remaining 1.94 KB/1.94 KB

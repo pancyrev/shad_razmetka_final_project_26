@@ -1,0 +1,266 @@
+COMET INFO: Experiment is live on comet.com https://www.comet.com/ubileyka19/butterfly-bench/b11cac5c98ea47bf92927ac80bafe685
+
+COMET WARNING: String value length exceeds 1000 characters and will be truncated. Provided value: 'Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must be strictly positive, and left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels or a 0-1000 scale. If there are no adult butterflies, return "boxes": []. Example structure (not the answer to this image): {"photo_id":123,"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}],"error":null}.'
+COMET WARNING: String value length exceeds 1000 characters and will be truncated. Provided value: 'Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must be strictly positive, and left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels or a 0-1000 scale. If there are no adult butterflies, return "boxes": []. Example structure (not the answer to this image): {"photo_id":123,"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}],"error":null}.
+Additional annotation guidance: Annotate all adult butterflies in this image, including butterflies whose wings are folded, butterflies seen from the side, small butterflies, and partially hidden or cropped butterflies. Do not require bright colors or open wings. After finding each animal, refine the rectangle to its exact visible extent: use the outer wing tips and any visible antennae or legs. Avoid a generic square centered on the body; adapt width and height to the actual silhouette. Moths and non-adult life stages must still be excluded.'
+2026-11-16 14:47:52,384 INFO 1/100 photo_id=755630032 boxes=1 attempts=1 seconds=2.007
+2026-11-16 14:47:54,452 INFO 2/100 photo_id=760199895 boxes=1 attempts=1 seconds=2.068
+2026-11-16 14:47:56,433 INFO 3/100 photo_id=760117819 boxes=1 attempts=1 seconds=1.979
+2026-11-16 14:47:58,019 WARNING photo_id=760581893 attempt=1 validation: box 0: extends beyond normalized image boundaries
+2026-11-16 14:47:59,458 WARNING photo_id=760581893 attempt=2 validation: box 0: extends beyond normalized image boundaries
+2026-11-16 14:48:00,893 WARNING photo_id=760581893 attempt=3 validation: box 0: extends beyond normalized image boundaries
+2026-11-16 14:48:00,893 INFO 4/100 photo_id=760581893 boxes=ERROR attempts=3 seconds=4.460
+2026-11-16 14:48:02,945 INFO 5/100 photo_id=760617662 boxes=1 attempts=1 seconds=2.050
+2026-11-16 14:48:04,656 INFO 6/100 photo_id=760585041 boxes=1 attempts=1 seconds=1.711
+2026-11-16 14:48:06,788 INFO 7/100 photo_id=751455934 boxes=1 attempts=1 seconds=2.130
+2026-11-16 14:48:08,824 INFO 8/100 photo_id=755339961 boxes=1 attempts=1 seconds=2.034
+2026-11-16 14:48:10,836 INFO 9/100 photo_id=751709803 boxes=1 attempts=1 seconds=2.011
+2026-11-16 14:48:12,273 INFO 10/100 photo_id=755545567 boxes=1 attempts=1 seconds=1.436
+2026-11-16 14:48:14,272 INFO 11/100 photo_id=760640706 boxes=1 attempts=1 seconds=1.998
+2026-11-16 14:48:16,165 INFO 12/100 photo_id=751709612 boxes=1 attempts=1 seconds=1.893
+2026-11-16 14:48:18,195 INFO 13/100 photo_id=751709821 boxes=1 attempts=1 seconds=2.028
+2026-11-16 14:48:20,148 INFO 14/100 photo_id=751573899 boxes=1 attempts=1 seconds=1.953
+2026-11-16 14:48:22,276 INFO 15/100 photo_id=755595528 boxes=1 attempts=1 seconds=2.126
+2026-11-16 14:48:24,293 INFO 16/100 photo_id=760553542 boxes=1 attempts=1 seconds=2.017
+2026-11-16 14:48:26,344 INFO 17/100 photo_id=751709610 boxes=1 attempts=1 seconds=2.049
+2026-11-16 14:48:28,279 INFO 18/100 photo_id=755466475 boxes=1 attempts=1 seconds=1.935
+2026-11-16 14:48:30,067 INFO 19/100 photo_id=751452886 boxes=1 attempts=1 seconds=1.788
+2026-11-16 14:48:32,194 INFO 20/100 photo_id=751744539 boxes=1 attempts=1 seconds=2.127
+2026-11-16 14:48:34,304 INFO 21/100 photo_id=755824792 boxes=1 attempts=1 seconds=2.109
+2026-11-16 14:48:36,267 INFO 22/100 photo_id=755914152 boxes=1 attempts=1 seconds=1.964
+2026-11-16 14:48:38,763 WARNING photo_id=760120082 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 14:48:40,924 INFO 23/100 photo_id=760120082 boxes=2 attempts=2 seconds=4.655
+2026-11-16 14:48:42,941 INFO 24/100 photo_id=755452426 boxes=1 attempts=1 seconds=2.017
+2026-11-16 14:48:44,686 INFO 25/100 photo_id=755531940 boxes=1 attempts=1 seconds=1.746
+2026-11-16 14:48:46,545 INFO 26/100 photo_id=760126560 boxes=1 attempts=1 seconds=1.858
+2026-11-16 14:48:48,332 INFO 27/100 photo_id=751709828 boxes=1 attempts=1 seconds=1.787
+2026-11-16 14:48:50,271 INFO 28/100 photo_id=751709835 boxes=1 attempts=1 seconds=1.939
+2026-11-16 14:48:51,798 INFO 29/100 photo_id=751489222 boxes=0 attempts=1 seconds=1.527
+2026-11-16 14:48:53,929 INFO 30/100 photo_id=755490215 boxes=1 attempts=1 seconds=2.130
+2026-11-16 14:48:55,577 INFO 31/100 photo_id=760219697 boxes=1 attempts=1 seconds=1.647
+2026-11-16 14:48:57,556 INFO 32/100 photo_id=751895718 boxes=1 attempts=1 seconds=1.979
+2026-11-16 14:48:59,548 INFO 33/100 photo_id=760492236 boxes=1 attempts=1 seconds=1.992
+2026-11-16 14:49:01,545 INFO 34/100 photo_id=760823379 boxes=1 attempts=1 seconds=1.997
+2026-11-16 14:49:03,560 INFO 35/100 photo_id=751840376 boxes=1 attempts=1 seconds=2.015
+2026-11-16 14:49:05,615 INFO 36/100 photo_id=760792120 boxes=1 attempts=1 seconds=2.054
+2026-11-16 14:49:07,733 INFO 37/100 photo_id=760545150 boxes=1 attempts=1 seconds=2.118
+2026-11-16 14:49:09,833 INFO 38/100 photo_id=755729066 boxes=1 attempts=1 seconds=2.099
+2026-11-16 14:49:11,986 INFO 39/100 photo_id=751392269 boxes=1 attempts=1 seconds=2.153
+2026-11-16 14:49:14,077 INFO 40/100 photo_id=755667992 boxes=1 attempts=1 seconds=2.091
+2026-11-16 14:49:16,117 INFO 41/100 photo_id=760483350 boxes=1 attempts=1 seconds=2.039
+2026-11-16 14:49:18,255 INFO 42/100 photo_id=751411373 boxes=1 attempts=1 seconds=2.138
+2026-11-16 14:49:20,406 WARNING photo_id=751709802 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 14:49:22,277 INFO 43/100 photo_id=751709802 boxes=1 attempts=2 seconds=4.020
+2026-11-16 14:49:24,279 INFO 44/100 photo_id=760275884 boxes=1 attempts=1 seconds=2.001
+2026-11-16 14:49:26,171 INFO 45/100 photo_id=760112737 boxes=1 attempts=1 seconds=1.892
+2026-11-16 14:49:28,037 INFO 46/100 photo_id=755977758 boxes=1 attempts=1 seconds=1.866
+2026-11-16 14:49:29,581 INFO 47/100 photo_id=755819391 boxes=0 attempts=1 seconds=1.544
+2026-11-16 14:49:31,399 INFO 48/100 photo_id=751896458 boxes=1 attempts=1 seconds=1.817
+2026-11-16 14:49:33,387 INFO 49/100 photo_id=751752003 boxes=1 attempts=1 seconds=1.989
+2026-11-16 14:49:35,081 INFO 50/100 photo_id=760651030 boxes=1 attempts=1 seconds=1.693
+2026-11-16 14:49:36,693 INFO 51/100 photo_id=756059682 boxes=0 attempts=1 seconds=1.612
+2026-11-16 14:49:38,715 INFO 52/100 photo_id=760425692 boxes=1 attempts=1 seconds=2.022
+2026-11-16 14:49:40,758 INFO 53/100 photo_id=751313721 boxes=1 attempts=1 seconds=2.042
+2026-11-16 14:49:42,256 INFO 54/100 photo_id=760620476 boxes=0 attempts=1 seconds=1.497
+2026-11-16 14:49:43,777 INFO 55/100 photo_id=755567021 boxes=1 attempts=1 seconds=1.521
+2026-11-16 14:49:45,543 INFO 56/100 photo_id=755488675 boxes=1 attempts=1 seconds=1.765
+2026-11-16 14:49:47,364 INFO 57/100 photo_id=751795623 boxes=1 attempts=1 seconds=1.821
+2026-11-16 14:49:49,833 WARNING photo_id=751752012 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 14:49:52,153 WARNING photo_id=751752012 attempt=2 validation: box 0: invalid origin or nonpositive size
+2026-11-16 14:49:54,292 INFO 58/100 photo_id=751752012 boxes=2 attempts=3 seconds=6.928
+2026-11-16 14:49:56,217 INFO 59/100 photo_id=755710793 boxes=1 attempts=1 seconds=1.924
+2026-11-16 14:49:58,129 INFO 60/100 photo_id=755736214 boxes=1 attempts=1 seconds=1.912
+2026-11-16 14:49:59,545 INFO 61/100 photo_id=760775330 boxes=0 attempts=1 seconds=1.416
+2026-11-16 14:50:01,630 INFO 62/100 photo_id=760909680 boxes=1 attempts=1 seconds=2.085
+2026-11-16 14:50:03,130 INFO 63/100 photo_id=760883528 boxes=0 attempts=1 seconds=1.500
+2026-11-16 14:50:04,639 INFO 64/100 photo_id=760883522 boxes=0 attempts=1 seconds=1.509
+2026-11-16 14:50:06,152 INFO 65/100 photo_id=760812544 boxes=0 attempts=1 seconds=1.512
+2026-11-16 14:50:07,705 INFO 66/100 photo_id=760853387 boxes=0 attempts=1 seconds=1.552
+2026-11-16 14:50:09,266 INFO 67/100 photo_id=760883820 boxes=0 attempts=1 seconds=1.561
+2026-11-16 14:50:10,833 INFO 68/100 photo_id=760851656 boxes=0 attempts=1 seconds=1.566
+2026-11-16 14:50:12,307 INFO 69/100 photo_id=760787119 boxes=0 attempts=1 seconds=1.474
+2026-11-16 14:50:13,793 INFO 70/100 photo_id=760883941 boxes=0 attempts=1 seconds=1.486
+2026-11-16 14:50:15,297 INFO 71/100 photo_id=760883841 boxes=0 attempts=1 seconds=1.504
+2026-11-16 14:50:16,502 INFO 72/100 photo_id=760875039 boxes=0 attempts=1 seconds=1.205
+2026-11-16 14:50:17,974 INFO 73/100 photo_id=760883667 boxes=0 attempts=1 seconds=1.471
+2026-11-16 14:50:19,514 INFO 74/100 photo_id=760883495 boxes=0 attempts=1 seconds=1.540
+2026-11-16 14:50:21,129 INFO 75/100 photo_id=760796649 boxes=0 attempts=1 seconds=1.615
+2026-11-16 14:50:22,528 INFO 76/100 photo_id=760959731 boxes=0 attempts=1 seconds=1.399
+2026-11-16 14:50:24,100 INFO 77/100 photo_id=760910719 boxes=0 attempts=1 seconds=1.572
+2026-11-16 14:50:25,409 INFO 78/100 photo_id=760874892 boxes=0 attempts=1 seconds=1.309
+2026-11-16 14:50:26,894 INFO 79/100 photo_id=760883359 boxes=0 attempts=1 seconds=1.485
+2026-11-16 14:50:28,158 INFO 80/100 photo_id=760872774 boxes=0 attempts=1 seconds=1.264
+2026-11-16 14:50:29,712 INFO 81/100 photo_id=760874634 boxes=0 attempts=1 seconds=1.553
+2026-11-16 14:50:31,187 INFO 82/100 photo_id=760954906 boxes=0 attempts=1 seconds=1.475
+2026-11-16 14:50:32,681 INFO 83/100 photo_id=760928380 boxes=0 attempts=1 seconds=1.493
+2026-11-16 14:50:34,138 INFO 84/100 photo_id=760959759 boxes=0 attempts=1 seconds=1.457
+2026-11-16 14:50:35,605 INFO 85/100 photo_id=760905298 boxes=0 attempts=1 seconds=1.466
+2026-11-16 14:50:37,067 INFO 86/100 photo_id=760796779 boxes=0 attempts=1 seconds=1.463
+2026-11-16 14:50:38,465 INFO 87/100 photo_id=760796628 boxes=0 attempts=1 seconds=1.398
+2026-11-16 14:50:39,993 INFO 88/100 photo_id=760822495 boxes=0 attempts=1 seconds=1.528
+2026-11-16 14:50:41,494 INFO 89/100 photo_id=760502210 boxes=0 attempts=1 seconds=1.501
+2026-11-16 14:50:43,018 INFO 90/100 photo_id=760794928 boxes=0 attempts=1 seconds=1.524
+2026-11-16 14:50:44,302 INFO 91/100 photo_id=760921497 boxes=0 attempts=1 seconds=1.284
+2026-11-16 14:50:45,748 INFO 92/100 photo_id=760728314 boxes=0 attempts=1 seconds=1.445
+2026-11-16 14:50:47,299 INFO 93/100 photo_id=760913412 boxes=0 attempts=1 seconds=1.551
+2026-11-16 14:50:48,676 INFO 94/100 photo_id=760835547 boxes=0 attempts=1 seconds=1.377
+2026-11-16 14:50:50,227 INFO 95/100 photo_id=760943083 boxes=0 attempts=1 seconds=1.550
+2026-11-16 14:50:51,616 INFO 96/100 photo_id=760856074 boxes=0 attempts=1 seconds=1.389
+2026-11-16 14:50:53,238 INFO 97/100 photo_id=760834056 boxes=0 attempts=1 seconds=1.621
+2026-11-16 14:50:54,882 INFO 98/100 photo_id=760755770 boxes=0 attempts=1 seconds=1.644
+2026-11-16 14:50:56,450 INFO 99/100 photo_id=760900415 boxes=0 attempts=1 seconds=1.567
+2026-11-16 14:50:57,947 INFO 100/100 photo_id=760812026 boxes=0 attempts=1 seconds=1.497
+2026-11-16 14:50:57,950 INFO Results: /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/prompt_search_2026-11-15/gemma/10_10_recall_and_tightness
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : prompt-search-gemma-10-10_recall_and_tightness
+COMET INFO:     url                   : https://www.comet.com/ubileyka19/butterfly-bench/b11cac5c98ea47bf92927ac80bafe685
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     attempts [100]                   : (1, 3)
+COMET INFO:     data_load_seconds                : 0.3099509219900938
+COMET INFO:     device_peak_used_mib             : 8656.0
+COMET INFO:     errors                           : 7
+COMET INFO:     f1                               : 0.9411764705882353
+COMET INFO:     fn                               : 5
+COMET INFO:     fp                               : 2
+COMET INFO:     image_failed [100]               : (0, 1)
+COMET INFO:     image_seconds [100]              : (1.2051656979892869, 6.92820518600638)
+COMET INFO:     images                           : 100
+COMET INFO:     images_per_second                : 0.5332548198858208
+COMET INFO:     images_with_errors               : 6
+COMET INFO:     iou_0.5/errors                   : 7
+COMET INFO:     iou_0.5/f1                       : 0.9411764705882353
+COMET INFO:     iou_0.5/fn                       : 5
+COMET INFO:     iou_0.5/fp                       : 2
+COMET INFO:     iou_0.5/images_with_errors       : 6
+COMET INFO:     iou_0.5/negative_fp              : 1
+COMET INFO:     iou_0.5/negative_images_with_fp  : 1
+COMET INFO:     iou_0.5/precision                : 0.9655172413793104
+COMET INFO:     iou_0.5/recall                   : 0.9180327868852459
+COMET INFO:     iou_0.5/tp                       : 56
+COMET INFO:     iou_0.75/errors                  : 49
+COMET INFO:     iou_0.75/f1                      : 0.5882352941176471
+COMET INFO:     iou_0.75/fn                      : 26
+COMET INFO:     iou_0.75/fp                      : 23
+COMET INFO:     iou_0.75/images_with_errors      : 27
+COMET INFO:     iou_0.75/negative_fp             : 1
+COMET INFO:     iou_0.75/negative_images_with_fp : 1
+COMET INFO:     iou_0.75/precision               : 0.603448275862069
+COMET INFO:     iou_0.75/recall                  : 0.5737704918032787
+COMET INFO:     iou_0.75/tp                      : 35
+COMET INFO:     mean_image_seconds               : 1.8752760644791124
+COMET INFO:     model_load_seconds               : 3.0614821260096505
+COMET INFO:     negative_fp                      : 1
+COMET INFO:     negative_images                  : 42
+COMET INFO:     negative_images_with_fp          : 1
+COMET INFO:     parsing_errors                   : 0
+COMET INFO:     precision                        : 0.9655172413793104
+COMET INFO:     processing_errors                : 1
+COMET INFO:     processing_seconds               : 187.52760644791124
+COMET INFO:     recall                           : 0.9180327868852459
+COMET INFO:     runtime_errors                   : 0
+COMET INFO:     torch_peak_allocated_mib         : 0.0
+COMET INFO:     total_attempts                   : 106
+COMET INFO:     tp                               : 56
+COMET INFO:     validation_errors                : 7
+COMET INFO:     wall_seconds                     : 194.18070215400076
+COMET INFO:   Others:
+COMET INFO:     Name : prompt-search-gemma-10-10_recall_and_tightness
+COMET INFO:   Parameters:
+COMET INFO:     comet.experiment_name     : prompt-search-gemma-10-10_recall_and_tightness
+COMET INFO:     comet.log_images          : 0
+COMET INFO:     comet.log_raw_responses   : True
+COMET INFO:     comet.mode                : auto
+COMET INFO:     comet.project_name        : butterfly-bench
+COMET INFO:     comet.tags                : ["butterfly-detection", "prompt-search", "validation-tuning"]
+COMET INFO:     comet.workspace           : None
+COMET INFO:     data.limit                : None
+COMET INFO:     data.parquet_file         : data/validation-00000-of-00001.parquet
+COMET INFO:     data.photo_ids            : None
+COMET INFO:     data.repo_id              : xartik/inaturalist_butterflies
+COMET INFO:     data.revision             : 1316e3c7147d4399a03f90684e191aae4d798f09
+COMET INFO:     data.shuffle              : False
+COMET INFO:     data.source               : hf
+COMET INFO:     data.split                : validation
+COMET INFO:     deterministic             : True
+COMET INFO:     evaluation.iou_thresholds : [0.5, 0.75]
+COMET INFO:     evaluation.primary_iou    : 0.5
+COMET INFO:     mode                      : test
+COMET INFO:     model.backend             : llama_cpp
+COMET INFO:     model.batch_size          : 1024
+COMET INFO:     model.context_size        : 8192
+COMET INFO:     model.device              : cuda:0
+COMET INFO:     model.dtype               : UD-Q4_K_XL
+COMET INFO:     model.extra_args          : []
+COMET INFO:     model.gguf_file           : gemma-4-12B-it-qat-UD-Q4_K_XL.gguf
+COMET INFO:     model.gpu_layers          : 999
+COMET INFO:     model.host                : 127.0.0.1
+COMET INFO:     model.image_max_side      : 1280
+COMET INFO:     model.image_max_tokens    : 560
+COMET INFO:     model.main_gpu            : 0
+COMET INFO:     model.max_new_tokens      : 1024
+COMET INFO:     model.max_pixels          : 1003520
+COMET INFO:     model.min_pixels          : 65536
+COMET INFO:     model.mmproj_file         : mmproj-F16.gguf
+COMET INFO:     model.name                : gemma
+COMET INFO:     model.output_prompt       : Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must  [truncated]
+COMET INFO:     model.port                : 0
+COMET INFO:     model.prompt              : Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must  [truncated]
+COMET INFO:     model.repo_id             : unsloth/gemma-4-12B-it-qat-GGUF
+COMET INFO:     model.request_timeout     : 300
+COMET INFO:     model.retry_temperature   : 0.2
+COMET INFO:     model.revision            : 980b060c40a8539ac159e0501a3e0f66a6365af3
+COMET INFO:     model.server_binary       : tools/llama.cpp/build/bin/llama-server
+COMET INFO:     model.server_url          : None
+COMET INFO:     model.startup_timeout     : 300
+COMET INFO:     model.temperature         : 0.0
+COMET INFO:     model.threads             : 8
+COMET INFO:     model.ubatch_size         : 1024
+COMET INFO:     output_dir                : /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/prompt_search_2026-11-15/gemma/10_10_recall_and_tightness
+COMET INFO:     postprocess.nms_iou       : None
+COMET INFO:     retries.max_attempts      : 3
+COMET INFO:     seed                      : 42
+COMET INFO:   Uploads:
+COMET INFO:     asset : 9 (338.34 KB)
+COMET INFO: 
+COMET INFO: File upload ('metrics.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:51:59.001660 (60 seconds)
+COMET INFO: File upload ('predictions.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:51:59.002240 (60 seconds)
+COMET INFO: File upload ('config.yaml') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:51:59.003123 (60 seconds)
+COMET INFO: File upload ('environment.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:51:59.004652 (60 seconds)
+COMET INFO: File upload ('model.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:51:59.008974 (60 seconds)
+COMET INFO: File upload ('timings.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:51:59.060502 (60 seconds)
+COMET INFO: File upload ('gpu.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:51:59.086642 (60 seconds)
+COMET INFO: File upload ('attempts.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:51:59.123306 (60 seconds)
+COMET INFO: Please wait for metadata to finish uploading (timeout is 30 seconds)
+COMET INFO: Uploading 8 metrics, params and output messages
+COMET INFO: Uploading 8 metrics, params and output messages
+COMET INFO: Uploading 8 metrics, params and output messages
+COMET WARNING: Failed to send all messages, metrics and output will likely be incomplete.
+COMET INFO: Waiting for remaining data to be uploaded to Comet. 8 messages remaining.
+COMET INFO: Waiting for remaining data to be uploaded to Comet. 8 messages remaining.
+COMET INFO: Waiting for remaining data to be uploaded to Comet. 8 messages remaining.
+COMET INFO: Please wait for assets to finish uploading (timeout is 60 seconds)
+COMET INFO: Still uploading 8 file(s), remaining 337.63 KB/337.63 KB
+COMET INFO: File upload ('metrics.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.606067 (60 seconds)
+COMET INFO: File upload ('metrics.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.606243 (60 seconds)
+COMET INFO: File upload ('environment.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.607285 (60 seconds)
+COMET INFO: File upload ('environment.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.607441 (60 seconds)
+COMET INFO: File upload ('config.yaml') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.608352 (60 seconds)
+COMET INFO: File upload ('config.yaml') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.608470 (60 seconds)
+COMET INFO: File upload ('model.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.610598 (60 seconds)
+COMET INFO: File upload ('model.json') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.610712 (60 seconds)
+COMET INFO: File upload ('predictions.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.612421 (60 seconds)
+COMET INFO: File upload ('predictions.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.612531 (60 seconds)
+COMET INFO: File upload ('timings.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.637693 (60 seconds)
+COMET INFO: File upload ('timings.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.637803 (60 seconds)
+COMET INFO: File upload ('gpu.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.690541 (60 seconds)
+COMET INFO: File upload ('gpu.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.690642 (60 seconds)
+COMET INFO: File upload ('attempts.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.700357 (60 seconds)
+COMET INFO: File upload ('attempts.jsonl') throttled by backend for type 'file_upload', retry after: 2026-11-16T14:53:00.700458 (60 seconds)
+COMET ERROR: Comet failed to send all the data back (0 messages and 0 uploads), experiment ID: b11cac5c98ea47bf92927ac80bafe685
+COMET INFO: Still saving offline stats to messages file before program termination (may take up to 120 seconds)
+COMET WARNING: Could not send live data to Comet during experiment runtime. An offline experiment will be available for upload:
+    comet upload --force-reupload /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/prompt_search_2026-11-15/gemma/10_10_recall_and_tightness/comet-offline/b11cac5c98ea47bf92927ac80bafe685-OhbVrp.zip

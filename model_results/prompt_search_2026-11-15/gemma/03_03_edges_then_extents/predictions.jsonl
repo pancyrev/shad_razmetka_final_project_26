@@ -1,0 +1,100 @@
+{"photo_id": 755630032, "boxes": [{"left": 0.234, "top": 0.461, "width": 0.466, "height": 0.163}], "error": null}
+{"photo_id": 760199895, "boxes": [{"left": 0.065, "top": 0.098, "width": 0.435, "height": 0.402}], "error": null}
+{"photo_id": 760117819, "boxes": [{"left": 0.481, "top": 0.348, "width": 0.268, "height": 0.225}], "error": null}
+{"photo_id": 760581893, "boxes": [{"left": 0.184, "top": 0.074, "width": 0.606, "height": 0.706}], "error": null}
+{"photo_id": 760617662, "boxes": null, "error": "ValidationError: box 0: invalid origin or nonpositive size"}
+{"photo_id": 760585041, "boxes": [{"left": 0.148, "top": 0.103, "width": 0.712, "height": 0.747}], "error": null}
+{"photo_id": 751455934, "boxes": [], "error": null}
+{"photo_id": 755339961, "boxes": [{"left": 0.798, "top": 0.394, "width": 0.051, "height": 0.088}], "error": null}
+{"photo_id": 751709803, "boxes": [{"left": 0.302, "top": 0.334, "width": 0.253, "height": 0.288}], "error": null}
+{"photo_id": 755545567, "boxes": [{"left": 0.078, "top": 0.104, "width": 0.754, "height": 0.896}], "error": null}
+{"photo_id": 760640706, "boxes": [{"left": 0.258, "top": 0.221, "width": 0.243, "height": 0.188}], "error": null}
+{"photo_id": 751709612, "boxes": [{"left": 0.348, "top": 0.275, "width": 0.234, "height": 0.348}], "error": null}
+{"photo_id": 751709821, "boxes": [{"left": 0.355, "top": 0.344, "width": 0.238, "height": 0.341}], "error": null}
+{"photo_id": 751573899, "boxes": [{"left": 0.088, "top": 0.305, "width": 0.673, "height": 0.433}], "error": null}
+{"photo_id": 755595528, "boxes": [{"left": 0.166, "top": 0.238, "width": 0.588, "height": 0.458}], "error": null}
+{"photo_id": 760553542, "boxes": [{"left": 0.166, "top": 0.208, "width": 0.568, "height": 0.622}], "error": null}
+{"photo_id": 751709610, "boxes": null, "error": "ValidationError: box 0: invalid origin or nonpositive size"}
+{"photo_id": 755466475, "boxes": [{"left": 0.305, "top": 0.421, "width": 0.245, "height": 0.384}], "error": null}
+{"photo_id": 751452886, "boxes": [{"left": 0.211, "top": 0.393, "width": 0.588, "height": 0.312}], "error": null}
+{"photo_id": 751744539, "boxes": null, "error": "ValidationError: box 0: invalid origin or nonpositive size"}
+{"photo_id": 755824792, "boxes": [{"left": 0.404, "top": 0.528, "width": 0.158, "height": 0.112}], "error": null}
+{"photo_id": 755914152, "boxes": [{"left": 0.325, "top": 0.311, "width": 0.378, "height": 0.288}], "error": null}
+{"photo_id": 760120082, "boxes": null, "error": "ValidationError: box 0: invalid origin or nonpositive size"}
+{"photo_id": 755452426, "boxes": [{"left": 0.308, "top": 0.101, "width": 0.264, "height": 0.548}], "error": null}
+{"photo_id": 755531940, "boxes": [{"left": 0.204, "top": 0.161, "width": 0.514, "height": 0.381}], "error": null}
+{"photo_id": 760126560, "boxes": [{"left": 0.431, "top": 0.331, "width": 0.448, "height": 0.278}], "error": null}
+{"photo_id": 751709828, "boxes": [{"left": 0.341, "top": 0.248, "width": 0.288, "height": 0.522}], "error": null}
+{"photo_id": 751709835, "boxes": [{"left": 0.293, "top": 0.232, "width": 0.341, "height": 0.368}], "error": null}
+{"photo_id": 751489222, "boxes": [], "error": null}
+{"photo_id": 755490215, "boxes": [{"left": 0.288, "top": 0.127, "width": 0.388, "height": 0.588}], "error": null}
+{"photo_id": 760219697, "boxes": [{"left": 0.144, "top": 0.304, "width": 0.682, "height": 0.486}], "error": null}
+{"photo_id": 751895718, "boxes": [{"left": 0.098, "top": 0.146, "width": 0.782, "height": 0.544}], "error": null}
+{"photo_id": 760492236, "boxes": [{"left": 0.331, "top": 0.333, "width": 0.344, "height": 0.354}], "error": null}
+{"photo_id": 760823379, "boxes": [{"left": 0.151, "top": 0.441, "width": 0.158, "height": 0.088}], "error": null}
+{"photo_id": 751840376, "boxes": [], "error": null}
+{"photo_id": 760792120, "boxes": [{"left": 0.251, "top": 0.121, "width": 0.481, "height": 0.631}], "error": null}
+{"photo_id": 760545150, "boxes": [{"left": 0.411, "top": 0.358, "width": 0.294, "height": 0.232}], "error": null}
+{"photo_id": 755729066, "boxes": [], "error": null}
+{"photo_id": 751392269, "boxes": [{"left": 0.166, "top": 0.254, "width": 0.554, "height": 0.546}], "error": null}
+{"photo_id": 755667992, "boxes": [{"left": 0.264, "top": 0.078, "width": 0.686, "height": 0.722}], "error": null}
+{"photo_id": 760483350, "boxes": [{"left": 0.268, "top": 0.348, "width": 0.604, "height": 0.342}], "error": null}
+{"photo_id": 751411373, "boxes": [{"left": 0.355, "top": 0.271, "width": 0.428, "height": 0.518}], "error": null}
+{"photo_id": 751709802, "boxes": [{"left": 0.304, "top": 0.248, "width": 0.441, "height": 0.502}], "error": null}
+{"photo_id": 760275884, "boxes": [{"left": 0.491, "top": 0.426, "width": 0.165, "height": 0.191}], "error": null}
+{"photo_id": 760112737, "boxes": [{"left": 0.381, "top": 0.458, "width": 0.274, "height": 0.178}], "error": null}
+{"photo_id": 755977758, "boxes": [{"left": 0.411, "top": 0.431, "width": 0.188, "height": 0.171}], "error": null}
+{"photo_id": 755819391, "boxes": [], "error": null}
+{"photo_id": 751896458, "boxes": null, "error": "ValidationError: box 0: invalid origin or nonpositive size"}
+{"photo_id": 751752003, "boxes": [{"left": 0.191, "top": 0.161, "width": 0.598, "height": 0.638}], "error": null}
+{"photo_id": 760651030, "boxes": [{"left": 0.134, "top": 0.104, "width": 0.668, "height": 0.834}], "error": null}
+{"photo_id": 756059682, "boxes": [], "error": null}
+{"photo_id": 760425692, "boxes": [{"left": 0.301, "top": 0.324, "width": 0.398, "height": 0.362}], "error": null}
+{"photo_id": 751313721, "boxes": null, "error": "ValidationError: box 0: invalid origin or nonpositive size"}
+{"photo_id": 760620476, "boxes": [], "error": null}
+{"photo_id": 755567021, "boxes": [{"left": 0.151, "top": 0.148, "width": 0.531, "height": 0.441}], "error": null}
+{"photo_id": 755488675, "boxes": [{"left": 0.218, "top": 0.258, "width": 0.582, "height": 0.402}], "error": null}
+{"photo_id": 751795623, "boxes": [{"left": 0.395, "top": 0.416, "width": 0.208, "height": 0.264}], "error": null}
+{"photo_id": 751752012, "boxes": [{"left": 0.231, "top": 0.381, "width": 0.304, "height": 0.412}, {"left": 0.467, "top": 0.073, "width": 0.291, "height": 0.532}], "error": null}
+{"photo_id": 755710793, "boxes": [{"left": 0.168, "top": 0.108, "width": 0.658, "height": 0.592}], "error": null}
+{"photo_id": 755736214, "boxes": [{"left": 0.13, "top": 0.255, "width": 0.595, "height": 0.602}], "error": null}
+{"photo_id": 760775330, "boxes": [], "error": null}
+{"photo_id": 760909680, "boxes": [{"left": 0.251, "top": 0.081, "width": 0.589, "height": 0.779}], "error": null}
+{"photo_id": 760883528, "boxes": [], "error": null}
+{"photo_id": 760883522, "boxes": [], "error": null}
+{"photo_id": 760812544, "boxes": [], "error": null}
+{"photo_id": 760853387, "boxes": [], "error": null}
+{"photo_id": 760883820, "boxes": [], "error": null}
+{"photo_id": 760851656, "boxes": [], "error": null}
+{"photo_id": 760787119, "boxes": [], "error": null}
+{"photo_id": 760883941, "boxes": [], "error": null}
+{"photo_id": 760883841, "boxes": [], "error": null}
+{"photo_id": 760875039, "boxes": [], "error": null}
+{"photo_id": 760883667, "boxes": [], "error": null}
+{"photo_id": 760883495, "boxes": [], "error": null}
+{"photo_id": 760796649, "boxes": [], "error": null}
+{"photo_id": 760959731, "boxes": [], "error": null}
+{"photo_id": 760910719, "boxes": [], "error": null}
+{"photo_id": 760874892, "boxes": [], "error": null}
+{"photo_id": 760883359, "boxes": [], "error": null}
+{"photo_id": 760872774, "boxes": [], "error": null}
+{"photo_id": 760874634, "boxes": [], "error": null}
+{"photo_id": 760954906, "boxes": [], "error": null}
+{"photo_id": 760928380, "boxes": [], "error": null}
+{"photo_id": 760959759, "boxes": [], "error": null}
+{"photo_id": 760905298, "boxes": [], "error": null}
+{"photo_id": 760796779, "boxes": [], "error": null}
+{"photo_id": 760796628, "boxes": [], "error": null}
+{"photo_id": 760822495, "boxes": [], "error": null}
+{"photo_id": 760502210, "boxes": [], "error": null}
+{"photo_id": 760794928, "boxes": [], "error": null}
+{"photo_id": 760921497, "boxes": [], "error": null}
+{"photo_id": 760728314, "boxes": [], "error": null}
+{"photo_id": 760913412, "boxes": [], "error": null}
+{"photo_id": 760835547, "boxes": [], "error": null}
+{"photo_id": 760943083, "boxes": [], "error": null}
+{"photo_id": 760856074, "boxes": [], "error": null}
+{"photo_id": 760834056, "boxes": [], "error": null}
+{"photo_id": 760755770, "boxes": [], "error": null}
+{"photo_id": 760900415, "boxes": [], "error": null}
+{"photo_id": 760812026, "boxes": [], "error": null}

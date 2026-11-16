@@ -1,0 +1,8 @@
+{
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "dtype": "torch.bfloat16",
+  "device": "cuda:0",
+  "quantized": false,
+  "max_pixels": 1003520,
+  "min_pixels": 65536
+}

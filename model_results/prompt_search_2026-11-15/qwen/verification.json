@@ -1,0 +1,129 @@
+{
+  "time_utc": "2026-11-16T11:48:19.352909+00:00",
+  "status": "all_checks_passed",
+  "variants": 10,
+  "total_images": 1000,
+  "all_configs_match_final_prompts": true,
+  "all_attempt_effective_prompts_match": true,
+  "all_attempt_seeds_match": true,
+  "only_model_prompt_changed": true,
+  "all_other_evaluation_settings_unchanged": true,
+  "same_ordered_100_images_and_parquet": true,
+  "baseline_predictions_identical_to_historical": true,
+  "first_three_prompts_unchanged": true,
+  "revision_hashes_match": true,
+  "best_prompt_matches_winning_config": true,
+  "best_name": "four_edges",
+  "checks": [
+    {
+      "index": 1,
+      "name": "baseline",
+      "images": 100,
+      "attempts_verified": 159,
+      "prompt_sha256": "ff4bd5854d79e877e3bd2cf9ab740a846710869b17592746811878a4c45b2382",
+      "f1_05": 0.07874015748031496,
+      "f1_075": 0.0,
+      "processing_errors": 8,
+      "parquet_sha256": "1bd37f7bd7747801e7896f6605ff977b3328d6571560367b176e802ac2dfd650"
+    },
+    {
+      "index": 2,
+      "name": "concise",
+      "images": 100,
+      "attempts_verified": 300,
+      "prompt_sha256": "ef7bfbcb248411440218f0164d8f944ce36d4079160172f2626200f7177648ce",
+      "f1_05": 0.0,
+      "f1_075": 0.0,
+      "processing_errors": 100,
+      "parquet_sha256": "1bd37f7bd7747801e7896f6605ff977b3328d6571560367b176e802ac2dfd650"
+    },
+    {
+      "index": 3,
+      "name": "json_exemplars",
+      "images": 100,
+      "attempts_verified": 300,
+      "prompt_sha256": "614cc214ac46ed4c45e32b7e2e14ef450cc9074c42f1ae19956d4067cdc3b038",
+      "f1_05": 0.0,
+      "f1_075": 0.0,
+      "processing_errors": 98,
+      "parquet_sha256": "1bd37f7bd7747801e7896f6605ff977b3328d6571560367b176e802ac2dfd650"
+    },
+    {
+      "index": 4,
+      "name": "corners_then_sizes",
+      "images": 100,
+      "attempts_verified": 103,
+      "prompt_sha256": "9fd7f3e6825475fac7b3f3176e412129495644b958a807e72745716513bdcf57",
+      "f1_05": 0.4032258064516129,
+      "f1_075": 0.06451612903225806,
+      "processing_errors": 0,
+      "parquet_sha256": "1bd37f7bd7747801e7896f6605ff977b3328d6571560367b176e802ac2dfd650"
+    },
+    {
+      "index": 5,
+      "name": "four_edges",
+      "images": 100,
+      "attempts_verified": 107,
+      "prompt_sha256": "9ad9c317ac95a3e054c9543d06c22f351e944fc6a74b0be21bb23de0762cd08f",
+      "f1_05": 0.47368421052631576,
+      "f1_075": 0.07017543859649122,
+      "processing_errors": 0,
+      "parquet_sha256": "1bd37f7bd7747801e7896f6605ff977b3328d6571560367b176e802ac2dfd650"
+    },
+    {
+      "index": 6,
+      "name": "internal_1000",
+      "images": 100,
+      "attempts_verified": 133,
+      "prompt_sha256": "72f53549d0189e10eed252460e455ad0f1e14a5d226c6f00fc2dc0caae5bfa54",
+      "f1_05": 0.12987012987012986,
+      "f1_075": 0.0,
+      "processing_errors": 1,
+      "parquet_sha256": "1bd37f7bd7747801e7896f6605ff977b3328d6571560367b176e802ac2dfd650"
+    },
+    {
+      "index": 7,
+      "name": "percentage_geometry",
+      "images": 100,
+      "attempts_verified": 101,
+      "prompt_sha256": "0b0c889fde4ad8f9e70f2ae77df2e7762b226c93cfb83b407b16bb82eccb5e0f",
+      "f1_05": 0.22641509433962265,
+      "f1_075": 0.0,
+      "processing_errors": 0,
+      "parquet_sha256": "1bd37f7bd7747801e7896f6605ff977b3328d6571560367b176e802ac2dfd650"
+    },
+    {
+      "index": 8,
+      "name": "russian",
+      "images": 100,
+      "attempts_verified": 101,
+      "prompt_sha256": "c823a4493d88923e5b2abac1e65249648b1b778abc0c188715a1ef3993077d4e",
+      "f1_05": 0.0,
+      "f1_075": 0.0,
+      "processing_errors": 0,
+      "parquet_sha256": "1bd37f7bd7747801e7896f6605ff977b3328d6571560367b176e802ac2dfd650"
+    },
+    {
+      "index": 9,
+      "name": "chinese",
+      "images": 100,
+      "attempts_verified": 179,
+      "prompt_sha256": "2475387b8affe1aa9e5fb89061d10512c4a3a25e25a2cb6ea94f5c56c5020766",
+      "f1_05": 0.09090909090909091,
+      "f1_075": 0.0,
+      "processing_errors": 21,
+      "parquet_sha256": "1bd37f7bd7747801e7896f6605ff977b3328d6571560367b176e802ac2dfd650"
+    },
+    {
+      "index": 10,
+      "name": "silent_checklist",
+      "images": 100,
+      "attempts_verified": 102,
+      "prompt_sha256": "9b432cbeff82ebe3f957a99372b063f72c2aa04f981c986b48801e07a7ecacd4",
+      "f1_05": 0.20618556701030927,
+      "f1_075": 0.0,
+      "processing_errors": 0,
+      "parquet_sha256": "1bd37f7bd7747801e7896f6605ff977b3328d6571560367b176e802ac2dfd650"
+    }
+  ]
+}

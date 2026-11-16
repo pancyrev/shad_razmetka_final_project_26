@@ -1,0 +1,23 @@
+{
+  "time_utc": "2026-11-16T10:58:41.512026+00:00",
+  "after_completed_variants": [
+    1,
+    2,
+    3
+  ],
+  "changed_variants": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "initial_sha256": "6d22d6cea675a7cd56ed25cbb3d2612c30d7b7eeaa364411e19c2618198fbfb5",
+  "final_sha256": "eb9a0a33a57fc9c6dd857e3ce10bc8d60bc65900a03a57bd4034d2a14f1aa1a5",
+  "reason": "Variants 2 and 3 produced Markdown code fences (100 and 98 terminal failures). Preserve those completed runs; strengthen only untested variants 4–10 with the exact baseline output contract and explicit starts/ends braces and no-code-fences instructions. Geometry/language strategies retained.",
+  "unchanged_first_three": true,
+  "evaluations_before_revision": 3,
+  "orchestrator_restart": "Stopped only idle PID403900 after verifying no child process and Gemma held shared GPU lock."
+}
