@@ -1,0 +1,530 @@
+COMET INFO: Experiment is live on comet.com https://www.comet.com/ubileyka19/butterfly-bench/e3d1aac1e627495293b3ce47f8fd17ce
+
+COMET WARNING: String value length exceeds 1000 characters and will be truncated. Provided value: 'Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must be strictly positive, and left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels or a 0-1000 scale. If there are no adult butterflies, return "boxes": []. Example structure (not the answer to this image): {"photo_id":123,"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}],"error":null}.'
+COMET WARNING: String value length exceeds 1000 characters and will be truncated. Provided value: 'Output exactly one line of valid JSON, without Markdown or explanation. Use exactly {"photo_id":THE_INTEGER_ID,"boxes":[{"left":X,"top":Y,"width":W,"height":H}],"error":null}. Each box has exactly the four named numeric fields. Use normalized fractions of image dimensions, never pixels or a 0-1000 scale. The top-left of the image is (0,0), bottom-right is (1,1). left=x_min/image_width; top=y_min/image_height; width=(x_max-x_min)/image_width; height=(y_max-y_min)/image_height. All numbers must be finite. left>=0, top>=0, width>0, height>0, left+width<=1 and top+height<=1. If no adult butterflies are present use "boxes": []. Copy the supplied photo_id as an integer and set error to null. For example, an object occupying x=20% through 70% and y=10% through 60% would have {"left":0.2,"top":0.1,"width":0.5,"height":0.5}. This is an example of arithmetic only, not a proposed box for this image. The output boxes must come from this image. Locate every adult butterfly. Exclude moths, caterpillars, pupae, other insects, flowers and shadows. Return one tight axis-aligned rectangle for each butterfly, including all its visible wings, body, antennae and legs. For occluded or cropped animals, box the visible part only. '
+2026-11-16 17:15:24,481 INFO 1/400 photo_id=751297785 boxes=0 attempts=1 seconds=1.381
+2026-11-16 17:15:26,377 INFO 2/400 photo_id=751308237 boxes=1 attempts=1 seconds=1.895
+2026-11-16 17:15:27,856 INFO 3/400 photo_id=751322667 boxes=0 attempts=1 seconds=1.479
+2026-11-16 17:15:29,672 INFO 4/400 photo_id=751322797 boxes=1 attempts=1 seconds=1.815
+2026-11-16 17:15:31,483 INFO 5/400 photo_id=751348395 boxes=1 attempts=1 seconds=1.811
+2026-11-16 17:15:33,355 INFO 6/400 photo_id=751376398 boxes=1 attempts=1 seconds=1.872
+2026-11-16 17:15:35,252 INFO 7/400 photo_id=751389282 boxes=1 attempts=1 seconds=1.897
+2026-11-16 17:15:37,168 WARNING photo_id=751391377 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 17:15:38,989 INFO 8/400 photo_id=751391377 boxes=1 attempts=2 seconds=3.737
+2026-11-16 17:15:40,811 INFO 9/400 photo_id=751391761 boxes=1 attempts=1 seconds=1.821
+2026-11-16 17:15:42,660 INFO 10/400 photo_id=751394097 boxes=1 attempts=1 seconds=1.848
+2026-11-16 17:15:44,576 INFO 11/400 photo_id=751407111 boxes=1 attempts=1 seconds=1.915
+2026-11-16 17:15:46,526 INFO 12/400 photo_id=751407258 boxes=1 attempts=1 seconds=1.950
+2026-11-16 17:15:48,425 WARNING photo_id=751407869 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 17:15:50,227 INFO 13/400 photo_id=751407869 boxes=1 attempts=2 seconds=3.700
+2026-11-16 17:15:52,027 INFO 14/400 photo_id=751407962 boxes=1 attempts=1 seconds=1.800
+2026-11-16 17:15:53,985 INFO 15/400 photo_id=751408609 boxes=1 attempts=1 seconds=1.957
+2026-11-16 17:15:55,755 INFO 16/400 photo_id=751409248 boxes=1 attempts=1 seconds=1.770
+2026-11-16 17:15:57,823 INFO 17/400 photo_id=751420867 boxes=1 attempts=1 seconds=2.067
+2026-11-16 17:15:59,250 INFO 18/400 photo_id=751429218 boxes=0 attempts=1 seconds=1.427
+2026-11-16 17:16:01,515 INFO 19/400 photo_id=751435756 boxes=2 attempts=1 seconds=2.266
+2026-11-16 17:16:02,961 INFO 20/400 photo_id=751441129 boxes=0 attempts=1 seconds=1.446
+2026-11-16 17:16:04,467 INFO 21/400 photo_id=751450706 boxes=0 attempts=1 seconds=1.505
+2026-11-16 17:16:06,410 INFO 22/400 photo_id=751454049 boxes=1 attempts=1 seconds=1.943
+2026-11-16 17:16:08,372 INFO 23/400 photo_id=751458228 boxes=1 attempts=1 seconds=1.961
+2026-11-16 17:16:10,290 INFO 24/400 photo_id=751472112 boxes=1 attempts=1 seconds=1.918
+2026-11-16 17:16:12,047 INFO 25/400 photo_id=751484213 boxes=1 attempts=1 seconds=1.757
+2026-11-16 17:16:13,901 INFO 26/400 photo_id=751489223 boxes=1 attempts=1 seconds=1.854
+2026-11-16 17:16:15,762 INFO 27/400 photo_id=751517948 boxes=1 attempts=1 seconds=1.861
+2026-11-16 17:16:17,533 WARNING photo_id=751531008 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 17:16:19,195 INFO 28/400 photo_id=751531008 boxes=1 attempts=2 seconds=3.432
+2026-11-16 17:16:21,052 INFO 29/400 photo_id=751540516 boxes=1 attempts=1 seconds=1.857
+2026-11-16 17:16:22,961 INFO 30/400 photo_id=751555204 boxes=1 attempts=1 seconds=1.909
+2026-11-16 17:16:24,939 INFO 31/400 photo_id=751561958 boxes=1 attempts=1 seconds=1.978
+2026-11-16 17:16:26,991 INFO 32/400 photo_id=751562127 boxes=1 attempts=1 seconds=2.050
+2026-11-16 17:16:28,266 INFO 33/400 photo_id=751570905 boxes=0 attempts=1 seconds=1.274
+2026-11-16 17:16:36,043 INFO 34/400 photo_id=751656321 boxes=15 attempts=1 seconds=7.777
+2026-11-16 17:16:37,881 INFO 35/400 photo_id=751668980 boxes=1 attempts=1 seconds=1.837
+2026-11-16 17:16:39,827 INFO 36/400 photo_id=751693169 boxes=1 attempts=1 seconds=1.945
+2026-11-16 17:16:41,711 INFO 37/400 photo_id=751709613 boxes=1 attempts=1 seconds=1.884
+2026-11-16 17:16:43,530 INFO 38/400 photo_id=751709680 boxes=1 attempts=1 seconds=1.819
+2026-11-16 17:16:45,482 INFO 39/400 photo_id=751709726 boxes=1 attempts=1 seconds=1.951
+2026-11-16 17:16:47,409 INFO 40/400 photo_id=751709727 boxes=1 attempts=1 seconds=1.927
+2026-11-16 17:16:49,172 INFO 41/400 photo_id=751709756 boxes=1 attempts=1 seconds=1.763
+2026-11-16 17:16:51,077 INFO 42/400 photo_id=751709772 boxes=1 attempts=1 seconds=1.904
+2026-11-16 17:16:52,991 INFO 43/400 photo_id=751709781 boxes=1 attempts=1 seconds=1.914
+2026-11-16 17:16:54,920 INFO 44/400 photo_id=751709791 boxes=1 attempts=1 seconds=1.929
+2026-11-16 17:16:56,810 INFO 45/400 photo_id=751709823 boxes=1 attempts=1 seconds=1.889
+2026-11-16 17:16:58,658 INFO 46/400 photo_id=751709834 boxes=1 attempts=1 seconds=1.848
+2026-11-16 17:17:00,895 INFO 47/400 photo_id=751709885 boxes=2 attempts=1 seconds=2.237
+2026-11-16 17:17:02,853 INFO 48/400 photo_id=751709909 boxes=1 attempts=1 seconds=1.958
+2026-11-16 17:17:04,676 INFO 49/400 photo_id=751709912 boxes=1 attempts=1 seconds=1.823
+2026-11-16 17:17:06,638 INFO 50/400 photo_id=751709915 boxes=1 attempts=1 seconds=1.961
+2026-11-16 17:17:08,559 INFO 51/400 photo_id=751709927 boxes=1 attempts=1 seconds=1.921
+2026-11-16 17:17:10,374 INFO 52/400 photo_id=751709947 boxes=1 attempts=1 seconds=1.815
+2026-11-16 17:17:12,301 INFO 53/400 photo_id=751709967 boxes=1 attempts=1 seconds=1.927
+2026-11-16 17:17:14,118 INFO 54/400 photo_id=751709978 boxes=1 attempts=1 seconds=1.817
+2026-11-16 17:17:15,960 INFO 55/400 photo_id=751709995 boxes=1 attempts=1 seconds=1.841
+2026-11-16 17:17:17,876 INFO 56/400 photo_id=751710014 boxes=1 attempts=1 seconds=1.916
+2026-11-16 17:17:19,723 WARNING photo_id=751710021 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 17:17:21,423 WARNING photo_id=751710021 attempt=2 validation: box 0: invalid origin or nonpositive size
+2026-11-16 17:17:23,114 WARNING photo_id=751710021 attempt=3 validation: box 0: invalid origin or nonpositive size
+2026-11-16 17:17:23,114 INFO 57/400 photo_id=751710021 boxes=ERROR attempts=3 seconds=5.238
+2026-11-16 17:17:25,425 INFO 58/400 photo_id=751710036 boxes=2 attempts=1 seconds=2.311
+2026-11-16 17:17:27,292 INFO 59/400 photo_id=751710037 boxes=1 attempts=1 seconds=1.867
+2026-11-16 17:17:28,845 INFO 60/400 photo_id=751731569 boxes=1 attempts=1 seconds=1.553
+2026-11-16 17:17:30,569 INFO 61/400 photo_id=751735514 boxes=1 attempts=1 seconds=1.723
+2026-11-16 17:17:32,473 INFO 62/400 photo_id=751743335 boxes=1 attempts=1 seconds=1.904
+2026-11-16 17:17:34,236 WARNING photo_id=751746256 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 17:17:35,852 INFO 63/400 photo_id=751746256 boxes=1 attempts=2 seconds=3.379
+2026-11-16 17:17:37,704 INFO 64/400 photo_id=751746340 boxes=1 attempts=1 seconds=1.851
+2026-11-16 17:17:39,567 INFO 65/400 photo_id=751747072 boxes=1 attempts=1 seconds=1.863
+2026-11-16 17:17:41,493 INFO 66/400 photo_id=751747732 boxes=1 attempts=1 seconds=1.926
+2026-11-16 17:17:43,121 INFO 67/400 photo_id=751751993 boxes=1 attempts=1 seconds=1.628
+2026-11-16 17:17:44,402 INFO 68/400 photo_id=751763612 boxes=0 attempts=1 seconds=1.280
+2026-11-16 17:17:46,090 INFO 69/400 photo_id=751763871 boxes=1 attempts=1 seconds=1.688
+2026-11-16 17:17:47,423 INFO 70/400 photo_id=751769446 boxes=0 attempts=1 seconds=1.333
+2026-11-16 17:17:49,145 INFO 71/400 photo_id=751785387 boxes=1 attempts=1 seconds=1.721
+2026-11-16 17:17:50,835 INFO 72/400 photo_id=751799291 boxes=1 attempts=1 seconds=1.690
+2026-11-16 17:17:52,430 INFO 73/400 photo_id=751810783 boxes=1 attempts=1 seconds=1.595
+2026-11-16 17:17:53,618 INFO 74/400 photo_id=751825018 boxes=1 attempts=1 seconds=1.188
+2026-11-16 17:17:55,348 INFO 75/400 photo_id=751840133 boxes=1 attempts=1 seconds=1.729
+2026-11-16 17:17:56,992 INFO 76/400 photo_id=751848256 boxes=1 attempts=1 seconds=1.644
+2026-11-16 17:17:58,469 INFO 77/400 photo_id=751860866 boxes=1 attempts=1 seconds=1.477
+2026-11-16 17:18:00,150 INFO 78/400 photo_id=751865780 boxes=1 attempts=1 seconds=1.681
+2026-11-16 17:18:01,872 INFO 79/400 photo_id=751888864 boxes=1 attempts=1 seconds=1.722
+2026-11-16 17:18:03,696 INFO 80/400 photo_id=751906753 boxes=1 attempts=1 seconds=1.824
+2026-11-16 17:18:05,595 INFO 81/400 photo_id=755284146 boxes=1 attempts=1 seconds=1.900
+2026-11-16 17:18:07,434 INFO 82/400 photo_id=755306284 boxes=1 attempts=1 seconds=1.838
+2026-11-16 17:18:09,373 INFO 83/400 photo_id=755306803 boxes=1 attempts=1 seconds=1.939
+2026-11-16 17:18:10,839 INFO 84/400 photo_id=755308033 boxes=0 attempts=1 seconds=1.465
+2026-11-16 17:18:12,609 INFO 85/400 photo_id=755317913 boxes=1 attempts=1 seconds=1.771
+2026-11-16 17:18:14,404 INFO 86/400 photo_id=755332290 boxes=1 attempts=1 seconds=1.794
+2026-11-16 17:18:16,338 INFO 87/400 photo_id=755332762 boxes=1 attempts=1 seconds=1.933
+2026-11-16 17:18:18,050 INFO 88/400 photo_id=755359294 boxes=1 attempts=1 seconds=1.712
+2026-11-16 17:18:19,452 INFO 89/400 photo_id=755365051 boxes=0 attempts=1 seconds=1.401
+2026-11-16 17:18:21,217 INFO 90/400 photo_id=755388528 boxes=1 attempts=1 seconds=1.764
+2026-11-16 17:18:23,047 INFO 91/400 photo_id=755401135 boxes=1 attempts=1 seconds=1.831
+2026-11-16 17:18:24,943 INFO 92/400 photo_id=755447661 boxes=1 attempts=1 seconds=1.895
+2026-11-16 17:18:26,756 INFO 93/400 photo_id=755453337 boxes=1 attempts=1 seconds=1.813
+2026-11-16 17:18:28,594 INFO 94/400 photo_id=755467709 boxes=1 attempts=1 seconds=1.838
+2026-11-16 17:18:30,468 INFO 95/400 photo_id=755470624 boxes=1 attempts=1 seconds=1.874
+2026-11-16 17:18:32,389 INFO 96/400 photo_id=755475936 boxes=1 attempts=1 seconds=1.920
+2026-11-16 17:18:33,758 INFO 97/400 photo_id=755484318 boxes=0 attempts=1 seconds=1.369
+2026-11-16 17:18:35,544 INFO 98/400 photo_id=755490703 boxes=1 attempts=1 seconds=1.786
+2026-11-16 17:18:36,897 INFO 99/400 photo_id=755491226 boxes=0 attempts=1 seconds=1.353
+2026-11-16 17:18:38,687 INFO 100/400 photo_id=755491444 boxes=1 attempts=1 seconds=1.789
+2026-11-16 17:18:40,388 INFO 101/400 photo_id=755491615 boxes=1 attempts=1 seconds=1.701
+2026-11-16 17:18:42,040 INFO 102/400 photo_id=755495001 boxes=1 attempts=1 seconds=1.652
+2026-11-16 17:18:43,382 INFO 103/400 photo_id=755495665 boxes=1 attempts=1 seconds=1.342
+2026-11-16 17:18:45,037 INFO 104/400 photo_id=755501774 boxes=1 attempts=1 seconds=1.655
+2026-11-16 17:18:47,013 INFO 105/400 photo_id=755521387 boxes=1 attempts=1 seconds=1.974
+2026-11-16 17:18:48,889 INFO 106/400 photo_id=755524907 boxes=1 attempts=1 seconds=1.876
+2026-11-16 17:18:50,727 INFO 107/400 photo_id=755528756 boxes=1 attempts=1 seconds=1.838
+2026-11-16 17:18:52,883 INFO 108/400 photo_id=755532778 boxes=2 attempts=1 seconds=2.156
+2026-11-16 17:18:54,498 INFO 109/400 photo_id=755544456 boxes=1 attempts=1 seconds=1.614
+2026-11-16 17:18:55,911 INFO 110/400 photo_id=755548798 boxes=0 attempts=1 seconds=1.412
+2026-11-16 17:18:57,488 INFO 111/400 photo_id=755573620 boxes=1 attempts=1 seconds=1.577
+2026-11-16 17:18:59,373 INFO 112/400 photo_id=755577772 boxes=1 attempts=1 seconds=1.884
+2026-11-16 17:19:00,762 INFO 113/400 photo_id=755586059 boxes=0 attempts=1 seconds=1.389
+2026-11-16 17:19:02,479 INFO 114/400 photo_id=755588973 boxes=1 attempts=1 seconds=1.717
+2026-11-16 17:19:03,965 INFO 115/400 photo_id=755598948 boxes=1 attempts=1 seconds=1.485
+2026-11-16 17:19:05,929 INFO 116/400 photo_id=755605790 boxes=1 attempts=1 seconds=1.964
+2026-11-16 17:19:07,776 INFO 117/400 photo_id=755627786 boxes=1 attempts=1 seconds=1.848
+2026-11-16 17:19:09,637 INFO 118/400 photo_id=755630368 boxes=1 attempts=1 seconds=1.861
+2026-11-16 17:19:11,493 INFO 119/400 photo_id=755630850 boxes=1 attempts=1 seconds=1.855
+2026-11-16 17:19:13,330 INFO 120/400 photo_id=755649790 boxes=1 attempts=1 seconds=1.837
+2026-11-16 17:19:15,234 INFO 121/400 photo_id=755662194 boxes=1 attempts=1 seconds=1.902
+2026-11-16 17:19:16,927 INFO 122/400 photo_id=755665573 boxes=1 attempts=1 seconds=1.692
+2026-11-16 17:19:18,738 INFO 123/400 photo_id=755671153 boxes=1 attempts=1 seconds=1.811
+2026-11-16 17:19:20,343 INFO 124/400 photo_id=755695598 boxes=1 attempts=1 seconds=1.605
+2026-11-16 17:19:21,483 INFO 125/400 photo_id=755695771 boxes=0 attempts=1 seconds=1.139
+2026-11-16 17:19:23,348 INFO 126/400 photo_id=755696484 boxes=1 attempts=1 seconds=1.866
+2026-11-16 17:19:25,135 INFO 127/400 photo_id=755700651 boxes=1 attempts=1 seconds=1.787
+2026-11-16 17:19:26,955 INFO 128/400 photo_id=755708393 boxes=1 attempts=1 seconds=1.819
+2026-11-16 17:19:28,753 INFO 129/400 photo_id=755713667 boxes=1 attempts=1 seconds=1.798
+2026-11-16 17:19:30,623 INFO 130/400 photo_id=755734356 boxes=1 attempts=1 seconds=1.870
+2026-11-16 17:19:32,328 INFO 131/400 photo_id=755740340 boxes=1 attempts=1 seconds=1.705
+2026-11-16 17:19:34,244 INFO 132/400 photo_id=755752541 boxes=1 attempts=1 seconds=1.915
+2026-11-16 17:19:36,141 INFO 133/400 photo_id=755821236 boxes=1 attempts=1 seconds=1.897
+2026-11-16 17:19:37,664 INFO 134/400 photo_id=755833627 boxes=0 attempts=1 seconds=1.523
+2026-11-16 17:19:39,061 INFO 135/400 photo_id=755833723 boxes=0 attempts=1 seconds=1.397
+2026-11-16 17:19:40,884 INFO 136/400 photo_id=755848776 boxes=1 attempts=1 seconds=1.822
+2026-11-16 17:19:42,153 INFO 137/400 photo_id=755897675 boxes=0 attempts=1 seconds=1.269
+2026-11-16 17:19:43,896 INFO 138/400 photo_id=755913192 boxes=1 attempts=1 seconds=1.743
+2026-11-16 17:19:45,292 INFO 139/400 photo_id=755928579 boxes=0 attempts=1 seconds=1.396
+2026-11-16 17:19:47,256 INFO 140/400 photo_id=755932941 boxes=1 attempts=1 seconds=1.964
+2026-11-16 17:19:49,320 INFO 141/400 photo_id=755932957 boxes=1 attempts=1 seconds=2.062
+2026-11-16 17:19:51,174 INFO 142/400 photo_id=755952018 boxes=1 attempts=1 seconds=1.854
+2026-11-16 17:19:53,069 INFO 143/400 photo_id=755955118 boxes=1 attempts=1 seconds=1.895
+2026-11-16 17:19:54,951 INFO 144/400 photo_id=755955737 boxes=1 attempts=1 seconds=1.882
+2026-11-16 17:19:56,384 INFO 145/400 photo_id=755965496 boxes=1 attempts=1 seconds=1.433
+2026-11-16 17:19:58,189 INFO 146/400 photo_id=755979522 boxes=1 attempts=1 seconds=1.805
+2026-11-16 17:19:59,366 INFO 147/400 photo_id=756048397 boxes=0 attempts=1 seconds=1.177
+2026-11-16 17:20:01,169 INFO 148/400 photo_id=756050060 boxes=1 attempts=1 seconds=1.803
+2026-11-16 17:20:03,066 INFO 149/400 photo_id=756079607 boxes=1 attempts=1 seconds=1.897
+2026-11-16 17:20:04,804 INFO 150/400 photo_id=756115484 boxes=1 attempts=1 seconds=1.738
+2026-11-16 17:20:06,601 INFO 151/400 photo_id=756128768 boxes=1 attempts=1 seconds=1.797
+2026-11-16 17:20:07,938 INFO 152/400 photo_id=756141724 boxes=0 attempts=1 seconds=1.336
+2026-11-16 17:20:09,683 INFO 153/400 photo_id=756141761 boxes=1 attempts=1 seconds=1.745
+2026-11-16 17:20:11,362 INFO 154/400 photo_id=756142252 boxes=1 attempts=1 seconds=1.679
+2026-11-16 17:20:12,996 INFO 155/400 photo_id=756170380 boxes=1 attempts=1 seconds=1.633
+2026-11-16 17:20:14,653 INFO 156/400 photo_id=756170654 boxes=1 attempts=1 seconds=1.657
+2026-11-16 17:20:16,217 INFO 157/400 photo_id=756190187 boxes=1 attempts=1 seconds=1.564
+2026-11-16 17:20:17,745 INFO 158/400 photo_id=756212992 boxes=1 attempts=1 seconds=1.527
+2026-11-16 17:20:19,469 INFO 159/400 photo_id=759962472 boxes=1 attempts=1 seconds=1.724
+2026-11-16 17:20:21,362 INFO 160/400 photo_id=760036517 boxes=1 attempts=1 seconds=1.893
+2026-11-16 17:20:23,123 INFO 161/400 photo_id=760040958 boxes=1 attempts=1 seconds=1.761
+2026-11-16 17:20:25,048 INFO 162/400 photo_id=760070455 boxes=1 attempts=1 seconds=1.924
+2026-11-16 17:20:26,978 INFO 163/400 photo_id=760077284 boxes=1 attempts=1 seconds=1.930
+2026-11-16 17:20:28,534 INFO 164/400 photo_id=760082940 boxes=0 attempts=1 seconds=1.555
+2026-11-16 17:20:30,455 INFO 165/400 photo_id=760082985 boxes=1 attempts=1 seconds=1.921
+2026-11-16 17:20:32,548 INFO 166/400 photo_id=760086981 boxes=1 attempts=1 seconds=2.091
+2026-11-16 17:20:34,242 INFO 167/400 photo_id=760091961 boxes=1 attempts=1 seconds=1.694
+2026-11-16 17:20:35,550 INFO 168/400 photo_id=760119158 boxes=0 attempts=1 seconds=1.307
+2026-11-16 17:20:37,331 INFO 169/400 photo_id=760124083 boxes=1 attempts=1 seconds=1.781
+2026-11-16 17:20:39,161 INFO 170/400 photo_id=760124749 boxes=1 attempts=1 seconds=1.830
+2026-11-16 17:20:41,111 INFO 171/400 photo_id=760152198 boxes=1 attempts=1 seconds=1.950
+2026-11-16 17:20:43,026 INFO 172/400 photo_id=760153523 boxes=1 attempts=1 seconds=1.915
+2026-11-16 17:20:44,899 INFO 173/400 photo_id=760154955 boxes=1 attempts=1 seconds=1.873
+2026-11-16 17:20:46,763 INFO 174/400 photo_id=760155394 boxes=1 attempts=1 seconds=1.864
+2026-11-16 17:20:48,587 INFO 175/400 photo_id=760157361 boxes=1 attempts=1 seconds=1.824
+2026-11-16 17:20:50,367 INFO 176/400 photo_id=760199198 boxes=1 attempts=1 seconds=1.780
+2026-11-16 17:20:52,199 INFO 177/400 photo_id=760202799 boxes=1 attempts=1 seconds=1.832
+2026-11-16 17:20:54,181 INFO 178/400 photo_id=760203903 boxes=1 attempts=1 seconds=1.981
+2026-11-16 17:20:55,969 INFO 179/400 photo_id=760203912 boxes=1 attempts=1 seconds=1.787
+2026-11-16 17:20:57,702 INFO 180/400 photo_id=760212571 boxes=1 attempts=1 seconds=1.733
+2026-11-16 17:20:59,177 INFO 181/400 photo_id=760213379 boxes=1 attempts=1 seconds=1.474
+2026-11-16 17:21:00,991 INFO 182/400 photo_id=760217177 boxes=1 attempts=1 seconds=1.814
+2026-11-16 17:21:02,583 INFO 183/400 photo_id=760217691 boxes=1 attempts=1 seconds=1.592
+2026-11-16 17:21:04,423 INFO 184/400 photo_id=760217697 boxes=1 attempts=1 seconds=1.840
+2026-11-16 17:21:06,112 INFO 185/400 photo_id=760218804 boxes=1 attempts=1 seconds=1.688
+2026-11-16 17:21:07,742 INFO 186/400 photo_id=760220039 boxes=1 attempts=1 seconds=1.630
+2026-11-16 17:21:09,616 INFO 187/400 photo_id=760223061 boxes=1 attempts=1 seconds=1.874
+2026-11-16 17:21:11,384 INFO 188/400 photo_id=760223631 boxes=1 attempts=1 seconds=1.768
+2026-11-16 17:21:13,261 INFO 189/400 photo_id=760226383 boxes=1 attempts=1 seconds=1.876
+2026-11-16 17:21:15,111 INFO 190/400 photo_id=760226877 boxes=1 attempts=1 seconds=1.849
+2026-11-16 17:21:17,031 INFO 191/400 photo_id=760243854 boxes=1 attempts=1 seconds=1.920
+2026-11-16 17:21:18,628 INFO 192/400 photo_id=760323308 boxes=1 attempts=1 seconds=1.597
+2026-11-16 17:21:20,128 INFO 193/400 photo_id=760331613 boxes=0 attempts=1 seconds=1.499
+2026-11-16 17:21:22,214 INFO 194/400 photo_id=760408154 boxes=1 attempts=1 seconds=2.085
+2026-11-16 17:21:23,942 INFO 195/400 photo_id=760445834 boxes=1 attempts=1 seconds=1.727
+2026-11-16 17:21:25,724 INFO 196/400 photo_id=760446257 boxes=1 attempts=1 seconds=1.781
+2026-11-16 17:21:27,709 INFO 197/400 photo_id=760467503 boxes=1 attempts=1 seconds=1.984
+2026-11-16 17:21:29,624 INFO 198/400 photo_id=760472159 boxes=1 attempts=1 seconds=1.914
+2026-11-16 17:21:31,121 INFO 199/400 photo_id=760480125 boxes=0 attempts=1 seconds=1.497
+2026-11-16 17:21:32,572 INFO 200/400 photo_id=760480362 boxes=0 attempts=1 seconds=1.451
+2026-11-16 17:21:34,392 INFO 201/400 photo_id=760481748 boxes=1 attempts=1 seconds=1.820
+2026-11-16 17:21:36,216 INFO 202/400 photo_id=760483092 boxes=1 attempts=1 seconds=1.824
+2026-11-16 17:21:38,045 INFO 203/400 photo_id=760483993 boxes=1 attempts=1 seconds=1.829
+2026-11-16 17:21:39,879 INFO 204/400 photo_id=760487198 boxes=1 attempts=1 seconds=1.833
+2026-11-16 17:21:41,295 INFO 205/400 photo_id=760488243 boxes=0 attempts=1 seconds=1.416
+2026-11-16 17:21:43,148 INFO 206/400 photo_id=760488383 boxes=1 attempts=1 seconds=1.853
+2026-11-16 17:21:44,813 INFO 207/400 photo_id=760490244 boxes=1 attempts=1 seconds=1.664
+2026-11-16 17:21:46,630 INFO 208/400 photo_id=760491785 boxes=1 attempts=1 seconds=1.817
+2026-11-16 17:21:48,131 INFO 209/400 photo_id=760491919 boxes=0 attempts=1 seconds=1.499
+2026-11-16 17:21:50,198 INFO 210/400 photo_id=760494847 boxes=1 attempts=1 seconds=2.066
+2026-11-16 17:21:52,214 INFO 211/400 photo_id=760496627 boxes=1 attempts=1 seconds=2.015
+2026-11-16 17:21:53,527 INFO 212/400 photo_id=760498003 boxes=0 attempts=1 seconds=1.313
+2026-11-16 17:21:54,936 INFO 213/400 photo_id=760502342 boxes=0 attempts=1 seconds=1.409
+2026-11-16 17:21:56,391 INFO 214/400 photo_id=760506048 boxes=0 attempts=1 seconds=1.455
+2026-11-16 17:21:57,852 INFO 215/400 photo_id=760507922 boxes=0 attempts=1 seconds=1.460
+2026-11-16 17:21:59,401 INFO 216/400 photo_id=760524137 boxes=1 attempts=1 seconds=1.549
+2026-11-16 17:22:00,721 INFO 217/400 photo_id=760528752 boxes=0 attempts=1 seconds=1.320
+2026-11-16 17:22:01,972 INFO 218/400 photo_id=760530804 boxes=1 attempts=1 seconds=1.250
+2026-11-16 17:22:03,722 INFO 219/400 photo_id=760542242 boxes=1 attempts=1 seconds=1.750
+2026-11-16 17:22:05,571 INFO 220/400 photo_id=760542869 boxes=1 attempts=1 seconds=1.849
+2026-11-16 17:22:07,115 INFO 221/400 photo_id=760552700 boxes=0 attempts=1 seconds=1.543
+2026-11-16 17:22:08,355 INFO 222/400 photo_id=760556198 boxes=0 attempts=1 seconds=1.239
+2026-11-16 17:22:09,656 INFO 223/400 photo_id=760560747 boxes=0 attempts=1 seconds=1.301
+2026-11-16 17:22:11,023 INFO 224/400 photo_id=760581764 boxes=0 attempts=1 seconds=1.367
+2026-11-16 17:22:12,969 INFO 225/400 photo_id=760582391 boxes=1 attempts=1 seconds=1.945
+2026-11-16 17:22:14,782 INFO 226/400 photo_id=760591950 boxes=1 attempts=1 seconds=1.813
+2026-11-16 17:22:16,605 INFO 227/400 photo_id=760595076 boxes=1 attempts=1 seconds=1.822
+2026-11-16 17:22:18,549 INFO 228/400 photo_id=760598669 boxes=1 attempts=1 seconds=1.944
+2026-11-16 17:22:20,519 INFO 229/400 photo_id=760598830 boxes=1 attempts=1 seconds=1.970
+2026-11-16 17:22:21,636 INFO 230/400 photo_id=760598857 boxes=0 attempts=1 seconds=1.117
+2026-11-16 17:22:22,933 INFO 231/400 photo_id=760603991 boxes=0 attempts=1 seconds=1.296
+2026-11-16 17:22:24,287 INFO 232/400 photo_id=760618776 boxes=0 attempts=1 seconds=1.354
+2026-11-16 17:22:25,575 INFO 233/400 photo_id=760666458 boxes=0 attempts=1 seconds=1.288
+2026-11-16 17:22:26,943 INFO 234/400 photo_id=760670331 boxes=0 attempts=1 seconds=1.367
+2026-11-16 17:22:28,868 INFO 235/400 photo_id=760675347 boxes=1 attempts=1 seconds=1.925
+2026-11-16 17:22:30,272 INFO 236/400 photo_id=760686681 boxes=0 attempts=1 seconds=1.403
+2026-11-16 17:22:31,774 INFO 237/400 photo_id=760692486 boxes=1 attempts=1 seconds=1.501
+2026-11-16 17:22:33,186 INFO 238/400 photo_id=760696952 boxes=0 attempts=1 seconds=1.412
+2026-11-16 17:22:34,641 INFO 239/400 photo_id=760702431 boxes=0 attempts=1 seconds=1.455
+2026-11-16 17:22:36,521 INFO 240/400 photo_id=760704164 boxes=1 attempts=1 seconds=1.879
+2026-11-16 17:22:38,350 INFO 241/400 photo_id=760734357 boxes=1 attempts=1 seconds=1.829
+2026-11-16 17:22:40,359 INFO 242/400 photo_id=760736048 boxes=1 attempts=1 seconds=2.009
+2026-11-16 17:22:41,687 INFO 243/400 photo_id=760740190 boxes=0 attempts=1 seconds=1.328
+2026-11-16 17:22:43,083 INFO 244/400 photo_id=760740354 boxes=0 attempts=1 seconds=1.395
+2026-11-16 17:22:44,572 INFO 245/400 photo_id=760740956 boxes=0 attempts=1 seconds=1.489
+2026-11-16 17:22:45,644 INFO 246/400 photo_id=760743677 boxes=0 attempts=1 seconds=1.072
+2026-11-16 17:22:47,051 INFO 247/400 photo_id=760747716 boxes=0 attempts=1 seconds=1.407
+2026-11-16 17:22:48,365 INFO 248/400 photo_id=760750840 boxes=1 attempts=1 seconds=1.314
+2026-11-16 17:22:50,219 INFO 249/400 photo_id=760750962 boxes=1 attempts=1 seconds=1.853
+2026-11-16 17:22:51,711 INFO 250/400 photo_id=760759247 boxes=0 attempts=1 seconds=1.492
+2026-11-16 17:22:53,177 INFO 251/400 photo_id=760759296 boxes=0 attempts=1 seconds=1.466
+2026-11-16 17:22:55,047 INFO 252/400 photo_id=760759513 boxes=1 attempts=1 seconds=1.870
+2026-11-16 17:22:57,269 INFO 253/400 photo_id=760762264 boxes=2 attempts=1 seconds=2.222
+2026-11-16 17:22:58,873 INFO 254/400 photo_id=760766766 boxes=0 attempts=1 seconds=1.602
+2026-11-16 17:23:00,328 INFO 255/400 photo_id=760768785 boxes=0 attempts=1 seconds=1.454
+2026-11-16 17:23:01,835 INFO 256/400 photo_id=760770593 boxes=0 attempts=1 seconds=1.507
+2026-11-16 17:23:03,310 INFO 257/400 photo_id=760770831 boxes=0 attempts=1 seconds=1.475
+2026-11-16 17:23:05,156 INFO 258/400 photo_id=760775965 boxes=1 attempts=1 seconds=1.846
+2026-11-16 17:23:07,048 INFO 259/400 photo_id=760783451 boxes=1 attempts=1 seconds=1.892
+2026-11-16 17:23:09,385 INFO 260/400 photo_id=760791732 boxes=2 attempts=1 seconds=2.336
+2026-11-16 17:23:10,649 INFO 261/400 photo_id=760792099 boxes=0 attempts=1 seconds=1.264
+2026-11-16 17:23:11,620 INFO 262/400 photo_id=760794332 boxes=0 attempts=1 seconds=0.972
+2026-11-16 17:23:13,118 INFO 263/400 photo_id=760794697 boxes=0 attempts=1 seconds=1.498
+2026-11-16 17:23:14,538 INFO 264/400 photo_id=760794712 boxes=0 attempts=1 seconds=1.420
+2026-11-16 17:23:15,752 INFO 265/400 photo_id=760794740 boxes=0 attempts=1 seconds=1.213
+2026-11-16 17:23:17,002 INFO 266/400 photo_id=760794760 boxes=0 attempts=1 seconds=1.251
+2026-11-16 17:23:18,156 INFO 267/400 photo_id=760794762 boxes=0 attempts=1 seconds=1.153
+2026-11-16 17:23:19,577 INFO 268/400 photo_id=760794796 boxes=0 attempts=1 seconds=1.421
+2026-11-16 17:23:20,988 INFO 269/400 photo_id=760794814 boxes=0 attempts=1 seconds=1.411
+2026-11-16 17:23:22,463 INFO 270/400 photo_id=760795735 boxes=0 attempts=1 seconds=1.474
+2026-11-16 17:23:23,950 INFO 271/400 photo_id=760795805 boxes=0 attempts=1 seconds=1.487
+2026-11-16 17:23:24,993 INFO 272/400 photo_id=760795831 boxes=0 attempts=1 seconds=1.043
+2026-11-16 17:23:26,407 INFO 273/400 photo_id=760795841 boxes=0 attempts=1 seconds=1.413
+2026-11-16 17:23:27,878 INFO 274/400 photo_id=760795919 boxes=0 attempts=1 seconds=1.471
+2026-11-16 17:23:29,253 INFO 275/400 photo_id=760796206 boxes=0 attempts=1 seconds=1.374
+2026-11-16 17:23:30,744 INFO 276/400 photo_id=760796217 boxes=0 attempts=1 seconds=1.491
+2026-11-16 17:23:32,189 INFO 277/400 photo_id=760796260 boxes=0 attempts=1 seconds=1.445
+2026-11-16 17:23:33,714 INFO 278/400 photo_id=760796364 boxes=0 attempts=1 seconds=1.524
+2026-11-16 17:23:35,622 INFO 279/400 photo_id=760796949 boxes=1 attempts=1 seconds=1.908
+2026-11-16 17:23:37,156 INFO 280/400 photo_id=760798815 boxes=1 attempts=1 seconds=1.534
+2026-11-16 17:23:38,624 INFO 281/400 photo_id=760799376 boxes=0 attempts=1 seconds=1.467
+2026-11-16 17:23:40,001 INFO 282/400 photo_id=760808393 boxes=0 attempts=1 seconds=1.377
+2026-11-16 17:23:41,411 INFO 283/400 photo_id=760808485 boxes=0 attempts=1 seconds=1.410
+2026-11-16 17:23:42,851 INFO 284/400 photo_id=760809365 boxes=0 attempts=1 seconds=1.440
+2026-11-16 17:23:44,238 INFO 285/400 photo_id=760811947 boxes=0 attempts=1 seconds=1.387
+2026-11-16 17:23:45,703 INFO 286/400 photo_id=760812513 boxes=0 attempts=1 seconds=1.464
+2026-11-16 17:23:47,223 INFO 287/400 photo_id=760814222 boxes=0 attempts=1 seconds=1.520
+2026-11-16 17:23:48,639 INFO 288/400 photo_id=760824917 boxes=0 attempts=1 seconds=1.416
+2026-11-16 17:23:50,097 INFO 289/400 photo_id=760825329 boxes=0 attempts=1 seconds=1.458
+2026-11-16 17:23:51,439 INFO 290/400 photo_id=760825354 boxes=0 attempts=1 seconds=1.342
+2026-11-16 17:23:52,846 INFO 291/400 photo_id=760826859 boxes=0 attempts=1 seconds=1.406
+2026-11-16 17:23:54,343 INFO 292/400 photo_id=760828011 boxes=0 attempts=1 seconds=1.497
+2026-11-16 17:23:58,766 INFO 293/400 photo_id=760828121 boxes=7 attempts=1 seconds=4.423
+2026-11-16 17:24:00,618 INFO 294/400 photo_id=760828164 boxes=1 attempts=1 seconds=1.852
+2026-11-16 17:24:01,929 INFO 295/400 photo_id=760830074 boxes=0 attempts=1 seconds=1.311
+2026-11-16 17:24:03,191 INFO 296/400 photo_id=760830528 boxes=0 attempts=1 seconds=1.261
+2026-11-16 17:24:05,012 INFO 297/400 photo_id=760831616 boxes=1 attempts=1 seconds=1.821
+2026-11-16 17:24:06,900 INFO 298/400 photo_id=760831619 boxes=1 attempts=1 seconds=1.887
+2026-11-16 17:24:08,405 INFO 299/400 photo_id=760832201 boxes=0 attempts=1 seconds=1.505
+2026-11-16 17:24:10,295 INFO 300/400 photo_id=760833697 boxes=1 attempts=1 seconds=1.889
+2026-11-16 17:24:11,796 INFO 301/400 photo_id=760836412 boxes=0 attempts=1 seconds=1.501
+2026-11-16 17:24:13,280 INFO 302/400 photo_id=760836523 boxes=0 attempts=1 seconds=1.484
+2026-11-16 17:24:14,677 INFO 303/400 photo_id=760839786 boxes=0 attempts=1 seconds=1.397
+2026-11-16 17:24:16,119 INFO 304/400 photo_id=760840108 boxes=0 attempts=1 seconds=1.441
+2026-11-16 17:24:17,618 INFO 305/400 photo_id=760840152 boxes=0 attempts=1 seconds=1.499
+2026-11-16 17:24:19,119 INFO 306/400 photo_id=760840210 boxes=0 attempts=1 seconds=1.500
+2026-11-16 17:24:20,601 INFO 307/400 photo_id=760840341 boxes=0 attempts=1 seconds=1.482
+2026-11-16 17:24:22,085 INFO 308/400 photo_id=760844242 boxes=0 attempts=1 seconds=1.484
+2026-11-16 17:24:23,472 INFO 309/400 photo_id=760846867 boxes=0 attempts=1 seconds=1.386
+2026-11-16 17:24:25,410 INFO 310/400 photo_id=760849218 boxes=1 attempts=1 seconds=1.938
+2026-11-16 17:24:26,917 INFO 311/400 photo_id=760851803 boxes=0 attempts=1 seconds=1.507
+2026-11-16 17:24:28,816 INFO 312/400 photo_id=760853346 boxes=1 attempts=1 seconds=1.899
+2026-11-16 17:24:30,366 INFO 313/400 photo_id=760860770 boxes=0 attempts=1 seconds=1.550
+2026-11-16 17:24:31,376 INFO 314/400 photo_id=760861993 boxes=0 attempts=1 seconds=1.009
+2026-11-16 17:24:32,680 INFO 315/400 photo_id=760863261 boxes=0 attempts=1 seconds=1.304
+2026-11-16 17:24:34,097 INFO 316/400 photo_id=760863414 boxes=0 attempts=1 seconds=1.417
+2026-11-16 17:24:35,339 INFO 317/400 photo_id=760863846 boxes=0 attempts=1 seconds=1.242
+2026-11-16 17:24:36,915 INFO 318/400 photo_id=760866864 boxes=0 attempts=1 seconds=1.576
+2026-11-16 17:24:38,344 INFO 319/400 photo_id=760872225 boxes=0 attempts=1 seconds=1.428
+2026-11-16 17:24:39,528 INFO 320/400 photo_id=760873951 boxes=0 attempts=1 seconds=1.184
+2026-11-16 17:24:41,038 INFO 321/400 photo_id=760874055 boxes=0 attempts=1 seconds=1.510
+2026-11-16 17:24:42,225 INFO 322/400 photo_id=760874189 boxes=0 attempts=1 seconds=1.187
+2026-11-16 17:24:43,541 INFO 323/400 photo_id=760874211 boxes=0 attempts=1 seconds=1.316
+2026-11-16 17:24:44,876 INFO 324/400 photo_id=760878072 boxes=0 attempts=1 seconds=1.335
+2026-11-16 17:24:46,070 INFO 325/400 photo_id=760882929 boxes=0 attempts=1 seconds=1.194
+2026-11-16 17:24:47,176 INFO 326/400 photo_id=760882955 boxes=0 attempts=1 seconds=1.105
+2026-11-16 17:24:48,330 INFO 327/400 photo_id=760882980 boxes=0 attempts=1 seconds=1.154
+2026-11-16 17:24:49,700 INFO 328/400 photo_id=760883304 boxes=0 attempts=1 seconds=1.370
+2026-11-16 17:24:51,121 INFO 329/400 photo_id=760883367 boxes=0 attempts=1 seconds=1.420
+2026-11-16 17:24:52,490 INFO 330/400 photo_id=760883429 boxes=0 attempts=1 seconds=1.369
+2026-11-16 17:24:53,870 INFO 331/400 photo_id=760883436 boxes=0 attempts=1 seconds=1.379
+2026-11-16 17:24:55,163 INFO 332/400 photo_id=760883490 boxes=0 attempts=1 seconds=1.293
+2026-11-16 17:24:56,550 INFO 333/400 photo_id=760883501 boxes=0 attempts=1 seconds=1.387
+2026-11-16 17:24:57,914 INFO 334/400 photo_id=760883554 boxes=0 attempts=1 seconds=1.364
+2026-11-16 17:24:59,340 INFO 335/400 photo_id=760883556 boxes=0 attempts=1 seconds=1.425
+2026-11-16 17:25:00,772 INFO 336/400 photo_id=760883605 boxes=0 attempts=1 seconds=1.432
+2026-11-16 17:25:02,226 INFO 337/400 photo_id=760883609 boxes=0 attempts=1 seconds=1.454
+2026-11-16 17:25:03,593 INFO 338/400 photo_id=760883669 boxes=0 attempts=1 seconds=1.367
+2026-11-16 17:25:05,026 INFO 339/400 photo_id=760883688 boxes=0 attempts=1 seconds=1.433
+2026-11-16 17:25:06,412 INFO 340/400 photo_id=760883696 boxes=0 attempts=1 seconds=1.385
+2026-11-16 17:25:07,827 INFO 341/400 photo_id=760883761 boxes=0 attempts=1 seconds=1.415
+2026-11-16 17:25:09,235 INFO 342/400 photo_id=760883873 boxes=0 attempts=1 seconds=1.408
+2026-11-16 17:25:10,576 INFO 343/400 photo_id=760883883 boxes=0 attempts=1 seconds=1.340
+2026-11-16 17:25:11,990 INFO 344/400 photo_id=760883935 boxes=0 attempts=1 seconds=1.414
+2026-11-16 17:25:13,344 INFO 345/400 photo_id=760883955 boxes=0 attempts=1 seconds=1.354
+2026-11-16 17:25:14,695 INFO 346/400 photo_id=760884008 boxes=0 attempts=1 seconds=1.351
+2026-11-16 17:25:16,053 INFO 347/400 photo_id=760884028 boxes=0 attempts=1 seconds=1.357
+2026-11-16 17:25:17,393 INFO 348/400 photo_id=760884046 boxes=0 attempts=1 seconds=1.339
+2026-11-16 17:25:18,745 INFO 349/400 photo_id=760884047 boxes=0 attempts=1 seconds=1.352
+2026-11-16 17:25:20,226 INFO 350/400 photo_id=760884062 boxes=0 attempts=1 seconds=1.480
+2026-11-16 17:25:21,686 INFO 351/400 photo_id=760884113 boxes=0 attempts=1 seconds=1.460
+2026-11-16 17:25:23,074 INFO 352/400 photo_id=760884130 boxes=0 attempts=1 seconds=1.388
+2026-11-16 17:25:24,513 INFO 353/400 photo_id=760884141 boxes=0 attempts=1 seconds=1.439
+2026-11-16 17:25:25,954 INFO 354/400 photo_id=760884143 boxes=0 attempts=1 seconds=1.440
+2026-11-16 17:25:27,486 INFO 355/400 photo_id=760886126 boxes=0 attempts=1 seconds=1.532
+2026-11-16 17:25:28,985 INFO 356/400 photo_id=760889024 boxes=0 attempts=1 seconds=1.498
+2026-11-16 17:25:30,404 INFO 357/400 photo_id=760889376 boxes=0 attempts=1 seconds=1.418
+2026-11-16 17:25:31,510 INFO 358/400 photo_id=760889708 boxes=0 attempts=1 seconds=1.106
+2026-11-16 17:25:32,946 INFO 359/400 photo_id=760889982 boxes=0 attempts=1 seconds=1.436
+2026-11-16 17:25:34,321 INFO 360/400 photo_id=760891296 boxes=0 attempts=1 seconds=1.374
+2026-11-16 17:25:35,718 INFO 361/400 photo_id=760896208 boxes=0 attempts=1 seconds=1.396
+2026-11-16 17:25:37,565 INFO 362/400 photo_id=760896209 boxes=1 attempts=1 seconds=1.847
+2026-11-16 17:25:39,336 INFO 363/400 photo_id=760896866 boxes=1 attempts=1 seconds=1.771
+2026-11-16 17:25:40,705 INFO 364/400 photo_id=760896899 boxes=0 attempts=1 seconds=1.369
+2026-11-16 17:25:41,955 INFO 365/400 photo_id=760901104 boxes=1 attempts=1 seconds=1.250
+2026-11-16 17:25:43,367 INFO 366/400 photo_id=760901922 boxes=0 attempts=1 seconds=1.411
+2026-11-16 17:25:44,841 INFO 367/400 photo_id=760902097 boxes=0 attempts=1 seconds=1.474
+2026-11-16 17:25:46,310 INFO 368/400 photo_id=760902483 boxes=0 attempts=1 seconds=1.468
+2026-11-16 17:25:48,148 INFO 369/400 photo_id=760903289 boxes=1 attempts=1 seconds=1.837
+2026-11-16 17:25:49,652 INFO 370/400 photo_id=760906690 boxes=0 attempts=1 seconds=1.504
+2026-11-16 17:25:51,123 INFO 371/400 photo_id=760909418 boxes=0 attempts=1 seconds=1.471
+2026-11-16 17:25:52,563 INFO 372/400 photo_id=760909826 boxes=0 attempts=1 seconds=1.440
+2026-11-16 17:25:54,024 INFO 373/400 photo_id=760911348 boxes=0 attempts=1 seconds=1.461
+2026-11-16 17:25:55,287 INFO 374/400 photo_id=760912068 boxes=0 attempts=1 seconds=1.263
+2026-11-16 17:25:56,842 INFO 375/400 photo_id=760916281 boxes=0 attempts=1 seconds=1.555
+2026-11-16 17:25:58,189 INFO 376/400 photo_id=760917469 boxes=0 attempts=1 seconds=1.346
+2026-11-16 17:25:59,532 INFO 377/400 photo_id=760918750 boxes=0 attempts=1 seconds=1.343
+2026-11-16 17:26:01,047 INFO 378/400 photo_id=760921994 boxes=0 attempts=1 seconds=1.515
+2026-11-16 17:26:02,292 INFO 379/400 photo_id=760922831 boxes=0 attempts=1 seconds=1.244
+2026-11-16 17:26:03,710 INFO 380/400 photo_id=760924461 boxes=0 attempts=1 seconds=1.419
+2026-11-16 17:26:05,107 INFO 381/400 photo_id=760928679 boxes=0 attempts=1 seconds=1.396
+2026-11-16 17:26:06,456 INFO 382/400 photo_id=760928840 boxes=0 attempts=1 seconds=1.349
+2026-11-16 17:26:07,869 INFO 383/400 photo_id=760936519 boxes=0 attempts=1 seconds=1.412
+2026-11-16 17:26:09,577 INFO 384/400 photo_id=760938189 boxes=1 attempts=1 seconds=1.708
+2026-11-16 17:26:11,488 INFO 385/400 photo_id=760940688 boxes=1 attempts=1 seconds=1.912
+2026-11-16 17:26:12,947 INFO 386/400 photo_id=760942194 boxes=0 attempts=1 seconds=1.458
+2026-11-16 17:26:14,125 INFO 387/400 photo_id=760942668 boxes=0 attempts=1 seconds=1.178
+2026-11-16 17:26:15,202 INFO 388/400 photo_id=760946389 boxes=0 attempts=1 seconds=1.077
+2026-11-16 17:26:16,677 INFO 389/400 photo_id=760947122 boxes=0 attempts=1 seconds=1.475
+2026-11-16 17:26:18,012 INFO 390/400 photo_id=760948392 boxes=0 attempts=1 seconds=1.334
+2026-11-16 17:26:19,267 INFO 391/400 photo_id=760950800 boxes=0 attempts=1 seconds=1.255
+2026-11-16 17:26:20,545 INFO 392/400 photo_id=760951385 boxes=0 attempts=1 seconds=1.278
+2026-11-16 17:26:22,007 INFO 393/400 photo_id=760955874 boxes=0 attempts=1 seconds=1.461
+2026-11-16 17:26:23,513 INFO 394/400 photo_id=760957242 boxes=0 attempts=1 seconds=1.506
+2026-11-16 17:26:24,978 INFO 395/400 photo_id=760958094 boxes=0 attempts=1 seconds=1.465
+2026-11-16 17:26:26,271 INFO 396/400 photo_id=760959829 boxes=0 attempts=1 seconds=1.293
+2026-11-16 17:26:27,571 INFO 397/400 photo_id=760959889 boxes=0 attempts=1 seconds=1.299
+2026-11-16 17:26:28,956 INFO 398/400 photo_id=760961317 boxes=0 attempts=1 seconds=1.385
+2026-11-16 17:26:30,302 INFO 399/400 photo_id=760961867 boxes=0 attempts=1 seconds=1.345
+2026-11-16 17:26:31,787 INFO 400/400 photo_id=760963866 boxes=0 attempts=1 seconds=1.485
+2026-11-16 17:26:31,817 INFO Results: /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/test_2026-11-16/gemma
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : test-400-final-gemma
+COMET INFO:     url                   : https://www.comet.com/ubileyka19/butterfly-bench/e3d1aac1e627495293b3ce47f8fd17ce
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     attempts [400]                   : (1, 3)
+COMET INFO:     data_load_seconds                : 1.0757601660006912
+COMET INFO:     device_peak_used_mib             : 8646.0
+COMET INFO:     errors                           : 71
+COMET INFO:     f1                               : 0.8536082474226804
+COMET INFO:     fn                               : 34
+COMET INFO:     fp                               : 37
+COMET INFO:     image_failed [400]               : (0, 1)
+COMET INFO:     image_seconds [400]              : (0.9715069480007514, 7.777426329004811)
+COMET INFO:     images                           : 400
+COMET INFO:     images_per_second                : 0.5983025416358382
+COMET INFO:     images_with_errors               : 43
+COMET INFO:     iou_0.5/errors                   : 71
+COMET INFO:     iou_0.5/f1                       : 0.8536082474226804
+COMET INFO:     iou_0.5/fn                       : 34
+COMET INFO:     iou_0.5/fp                       : 37
+COMET INFO:     iou_0.5/images_with_errors       : 43
+COMET INFO:     iou_0.5/negative_fp              : 10
+COMET INFO:     iou_0.5/negative_images_with_fp  : 10
+COMET INFO:     iou_0.5/precision                : 0.8483606557377049
+COMET INFO:     iou_0.5/recall                   : 0.8589211618257261
+COMET INFO:     iou_0.5/tp                       : 207
+COMET INFO:     iou_0.75/errors                  : 247
+COMET INFO:     iou_0.75/f1                      : 0.49072164948453606
+COMET INFO:     iou_0.75/fn                      : 122
+COMET INFO:     iou_0.75/fp                      : 125
+COMET INFO:     iou_0.75/images_with_errors      : 120
+COMET INFO:     iou_0.75/negative_fp             : 10
+COMET INFO:     iou_0.75/negative_images_with_fp : 10
+COMET INFO:     iou_0.75/precision               : 0.48770491803278687
+COMET INFO:     iou_0.75/recall                  : 0.49377593360995853
+COMET INFO:     iou_0.75/tp                      : 119
+COMET INFO:     mean_image_seconds               : 1.671395206287889
+COMET INFO:     model_load_seconds               : 3.0495914019993506
+COMET INFO:     negative_fp                      : 10
+COMET INFO:     negative_images                  : 180
+COMET INFO:     negative_images_with_fp          : 10
+COMET INFO:     parsing_errors                   : 0
+COMET INFO:     precision                        : 0.8483606557377049
+COMET INFO:     processing_errors                : 1
+COMET INFO:     processing_seconds               : 668.5580825151555
+COMET INFO:     recall                           : 0.8589211618257261
+COMET INFO:     runtime_errors                   : 0
+COMET INFO:     torch_peak_allocated_mib         : 0.0
+COMET INFO:     total_attempts                   : 406
+COMET INFO:     tp                               : 207
+COMET INFO:     validation_errors                : 7
+COMET INFO:     wall_seconds                     : 675.0877003740025
+COMET INFO:   Others:
+COMET INFO:     Name : test-400-final-gemma
+COMET INFO:   Parameters:
+COMET INFO:     comet.experiment_name     : test-400-final-gemma
+COMET INFO:     comet.log_images          : 0
+COMET INFO:     comet.log_raw_responses   : True
+COMET INFO:     comet.mode                : auto
+COMET INFO:     comet.project_name        : butterfly-bench
+COMET INFO:     comet.tags                : ["butterfly-detection", "test-400", "final-config", "held-out-test"]
+COMET INFO:     comet.workspace           : None
+COMET INFO:     data.limit                : None
+COMET INFO:     data.parquet_file         : data/test-00000-of-00001.parquet
+COMET INFO:     data.photo_ids            : None
+COMET INFO:     data.repo_id              : xartik/inaturalist_butterflies
+COMET INFO:     data.revision             : 1316e3c7147d4399a03f90684e191aae4d798f09
+COMET INFO:     data.shuffle              : False
+COMET INFO:     data.source               : hf
+COMET INFO:     data.split                : test
+COMET INFO:     deterministic             : True
+COMET INFO:     evaluation.iou_thresholds : [0.5, 0.75]
+COMET INFO:     evaluation.primary_iou    : 0.5
+COMET INFO:     mode                      : test
+COMET INFO:     model.backend             : llama_cpp
+COMET INFO:     model.batch_size          : 1024
+COMET INFO:     model.context_size        : 8192
+COMET INFO:     model.device              : cuda:0
+COMET INFO:     model.dtype               : UD-Q4_K_XL
+COMET INFO:     model.extra_args          : []
+COMET INFO:     model.gguf_file           : gemma-4-12B-it-qat-UD-Q4_K_XL.gguf
+COMET INFO:     model.gpu_layers          : 999
+COMET INFO:     model.host                : 127.0.0.1
+COMET INFO:     model.image_max_side      : 1280
+COMET INFO:     model.image_max_tokens    : 560
+COMET INFO:     model.main_gpu            : 0
+COMET INFO:     model.max_new_tokens      : 1024
+COMET INFO:     model.max_pixels          : 1003520
+COMET INFO:     model.min_pixels          : 65536
+COMET INFO:     model.mmproj_file         : mmproj-F16.gguf
+COMET INFO:     model.name                : gemma
+COMET INFO:     model.output_prompt       : Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly these keys: "photo_id" (the integer ID supplied below), "boxes" (an array of boxes), and "error" (null). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must  [truncated]
+COMET INFO:     model.port                : 0
+COMET INFO:     model.prompt              : Output exactly one line of valid JSON, without Markdown or explanation. Use exactly {"photo_id":THE_INTEGER_ID,"boxes":[{"left":X,"top":Y,"width":W,"height":H}],"error":null}. Each box has exactly the four named numeric fields. Use normalized fractions of image dimensions, never pixels or a 0-1000 scale. The top-left of the image is (0,0), bottom-right is (1,1). left=x_min/image_width; top=y_min/image_height; width=(x_max-x_min)/image_width; height=(y_max-y_min)/image_height. All numbers must be finite. left>=0, top>=0, width>0, height>0, left+width<=1 and top+height<=1. If no adult butterflies are present use "boxes": []. Copy the supplied photo_id as an integer and set error to null. For example, an object occupying x=20% through 70% and y=10% through 60% would have {"left":0.2,"top":0.1,"width":0.5,"height":0.5}. This is an example of arithmetic only, not a proposed box for this image. The output boxes must come from this image. Locate every adult butterfly. Exclude moth [truncated]
+COMET INFO:     model.repo_id             : unsloth/gemma-4-12B-it-qat-GGUF
+COMET INFO:     model.request_timeout     : 300
+COMET INFO:     model.retry_temperature   : 0.2
+COMET INFO:     model.revision            : 980b060c40a8539ac159e0501a3e0f66a6365af3
+COMET INFO:     model.server_binary       : tools/llama.cpp/build/bin/llama-server
+COMET INFO:     model.server_url          : None
+COMET INFO:     model.startup_timeout     : 300
+COMET INFO:     model.temperature         : 0.0
+COMET INFO:     model.threads             : 8
+COMET INFO:     model.ubatch_size         : 1024
+COMET INFO:     output_dir                : /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/test_2026-11-16/gemma
+COMET INFO:     postprocess.nms_iou       : None
+COMET INFO:     retries.max_attempts      : 3
+COMET INFO:     seed                      : 42
+COMET INFO:   Uploads:
+COMET INFO:     asset : 9 (1013.22 KB)
+COMET INFO: 
+COMET INFO: Please wait for assets to finish uploading (timeout is 60 seconds)
+COMET INFO: All assets have been sent, waiting for delivery confirmation
+{"output_dir": "/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/test_2026-11-16/gemma", "metrics": {"images": 400, "processing_seconds": 668.5580825151555, "mean_image_seconds": 1.671395206287889, "images_per_second": 0.5983025416358382, "data_load_seconds": 1.0757601660006912, "model_load_seconds": 3.0495914019993506, "wall_seconds": 675.0877003740025, "torch_peak_allocated_mib": 0.0, "device_peak_used_mib": 8646.0, "processing_errors": 1, "parsing_errors": 0, "validation_errors": 7, "runtime_errors": 0, "total_attempts": 406, "iou_0.5/tp": 207, "iou_0.5/fp": 37, "iou_0.5/fn": 34, "iou_0.5/errors": 71, "iou_0.5/images_with_errors": 43, "iou_0.5/precision": 0.8483606557377049, "iou_0.5/recall": 0.8589211618257261, "iou_0.5/f1": 0.8536082474226804, "iou_0.5/negative_fp": 10, "iou_0.5/negative_images_with_fp": 10, "tp": 207, "fp": 37, "fn": 34, "errors": 71, "images_with_errors": 43, "precision": 0.8483606557377049, "recall": 0.8589211618257261, "f1": 0.8536082474226804, "negative_fp": 10, "negative_images_with_fp": 10, "iou_0.75/tp": 119, "iou_0.75/fp": 125, "iou_0.75/fn": 122, "iou_0.75/errors": 247, "iou_0.75/images_with_errors": 120, "iou_0.75/precision": 0.48770491803278687, "iou_0.75/recall": 0.49377593360995853, "iou_0.75/f1": 0.49072164948453606, "iou_0.75/negative_fp": 10, "iou_0.75/negative_images_with_fp": 10, "negative_images": 180}, "status": "completed_with_errors"}

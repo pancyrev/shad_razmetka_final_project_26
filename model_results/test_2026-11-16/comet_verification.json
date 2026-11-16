@@ -1,0 +1,197 @@
+{
+  "verified_at_utc": "2026-11-16T14:27:22.832885+00:00",
+  "experiments": [
+    {
+      "model": "owlv2",
+      "url": "https://www.comet.com/ubileyka19/butterfly-bench/b0f84d5191584ad28957d9379cfd0629",
+      "mode": "online",
+      "metric_mismatches": [],
+      "missing_assets": [],
+      "assets": {
+        "config.yaml": {
+          "sha256": "1a515088367556dbdb250329d175a4a9e783c83716c334dce8111324a1c28029",
+          "matches_local": true
+        },
+        "environment.json": {
+          "sha256": "6723adf9683a98dd5289dca50cfebb4f5ce2fe2d6cba72456291ab77d3a1f0c0",
+          "matches_local": true
+        },
+        "data.json": {
+          "sha256": "eb42b4a02f1bf3c9d57adb93f9f60238b437d80ba9986eaa949163c99ff25dea",
+          "matches_local": true
+        },
+        "model.json": {
+          "sha256": "3aa8df3917eedcfb80b3e337e39328966557530999a8cbdeb82faef3a0df6347",
+          "matches_local": true
+        },
+        "metrics.json": {
+          "sha256": "ab7c75a485c60191edfb378cc57abe966e43b78a668c3f4012887ea7212fad31",
+          "matches_local": true
+        },
+        "predictions.jsonl": {
+          "sha256": "f2ffb99606f7fe101d6474d0d00253352888adbf33166c68e669dc5445a3e32f",
+          "matches_local": true
+        },
+        "timings.jsonl": {
+          "sha256": "67e4fbdec44e635968061150804c1dd8bc423e52390e99b183d5b0bcd15fc506",
+          "matches_local": true
+        },
+        "gpu.jsonl": {
+          "sha256": "7d0039a0fbaaa83edab13f224cad60f06616a6031bdab22dcae6cd3c41dd55e8",
+          "matches_local": true
+        },
+        "attempts.jsonl": {
+          "sha256": "e37b51fbcbc396d0571e54bed3f84eb0d1c9eb7fe0cc300f95fda7e4e30dfc73",
+          "matches_local": true
+        }
+      },
+      "full_prompt_parameter_matches": true,
+      "all_metrics_verified": true,
+      "all_nine_assets_verified_byte_for_byte": true
+    },
+    {
+      "model": "grounding_dino",
+      "url": "https://www.comet.com/ubileyka19/butterfly-bench/61642f78d6ca4ea388b5287a1b825564",
+      "mode": "online",
+      "metric_mismatches": [],
+      "missing_assets": [],
+      "assets": {
+        "config.yaml": {
+          "sha256": "c4c4d2a67db4655806d623eb2e9eed28477063dfeab976c1edab72b6e1463d23",
+          "matches_local": true
+        },
+        "environment.json": {
+          "sha256": "6723adf9683a98dd5289dca50cfebb4f5ce2fe2d6cba72456291ab77d3a1f0c0",
+          "matches_local": true
+        },
+        "data.json": {
+          "sha256": "eb42b4a02f1bf3c9d57adb93f9f60238b437d80ba9986eaa949163c99ff25dea",
+          "matches_local": true
+        },
+        "model.json": {
+          "sha256": "814a17dac26c9b950029722cb80967714115530989cb7806e312cd42689c783e",
+          "matches_local": true
+        },
+        "metrics.json": {
+          "sha256": "aee28fbee816527866a6b05527d126e3516a0986763a3bc1203202bb3bbb7cbb",
+          "matches_local": true
+        },
+        "predictions.jsonl": {
+          "sha256": "fef3e0c42f3f00516326b1fff8d7f62fb23b4b7b771984941cfd721e1ab6681f",
+          "matches_local": true
+        },
+        "timings.jsonl": {
+          "sha256": "cd1824a315b7934003b320e55b02b911edf9178971f706394c06b0a8cc8f2b54",
+          "matches_local": true
+        },
+        "gpu.jsonl": {
+          "sha256": "ec7a0d42ec1cec1ba8c327b0142d032099e7f8eca3d58e71bcc2fa31a54de04d",
+          "matches_local": true
+        },
+        "attempts.jsonl": {
+          "sha256": "8e876facf2cfa7b7796b0c9bf086f6b4ce328bd86706117ee1a3e85610479491",
+          "matches_local": true
+        }
+      },
+      "full_prompt_parameter_matches": true,
+      "all_metrics_verified": true,
+      "all_nine_assets_verified_byte_for_byte": true
+    },
+    {
+      "model": "qwen",
+      "url": "https://www.comet.com/ubileyka19/butterfly-bench/6d5526226e8440d4b9544b3d4dfe7356",
+      "mode": "online",
+      "metric_mismatches": [],
+      "missing_assets": [],
+      "assets": {
+        "config.yaml": {
+          "sha256": "aa13b950637f108fb894a7c951d40c6ae387c080eab754b156125d5a8cba1f36",
+          "matches_local": true
+        },
+        "environment.json": {
+          "sha256": "6723adf9683a98dd5289dca50cfebb4f5ce2fe2d6cba72456291ab77d3a1f0c0",
+          "matches_local": true
+        },
+        "data.json": {
+          "sha256": "eb42b4a02f1bf3c9d57adb93f9f60238b437d80ba9986eaa949163c99ff25dea",
+          "matches_local": true
+        },
+        "model.json": {
+          "sha256": "79064940616ffe5995192101c74d83921336215957553f9d10bd32650556b92f",
+          "matches_local": true
+        },
+        "metrics.json": {
+          "sha256": "bed27118a87f0664a8f200133c86df962330800c8e23b29ef9cb74c56c292d6c",
+          "matches_local": true
+        },
+        "predictions.jsonl": {
+          "sha256": "9dd310479bf64893852307e3aadf51fffdd2a45b8e5aa010920885e0e22f1982",
+          "matches_local": true
+        },
+        "timings.jsonl": {
+          "sha256": "7b4a27f2067bba73a5a776d682a33d61e845e18890d3c4da0c739052e22e3682",
+          "matches_local": true
+        },
+        "gpu.jsonl": {
+          "sha256": "df7037c900856ee266d92cde1cdb9ea3c9fd2eeeb6b60ac0540f474d68bf7546",
+          "matches_local": true
+        },
+        "attempts.jsonl": {
+          "sha256": "c73ee1d3c8503fb3440874559c423adace292611d0fbc5d5c86534505caf8ffa",
+          "matches_local": true
+        }
+      },
+      "full_prompt_parameter_matches": false,
+      "all_metrics_verified": true,
+      "all_nine_assets_verified_byte_for_byte": true
+    },
+    {
+      "model": "gemma",
+      "url": "https://www.comet.com/ubileyka19/butterfly-bench/e3d1aac1e627495293b3ce47f8fd17ce",
+      "mode": "online",
+      "metric_mismatches": [],
+      "missing_assets": [],
+      "assets": {
+        "config.yaml": {
+          "sha256": "023417fe72d6923956a94d6b549b50b95d6cb2a30bb2fd47fc41538e2e086875",
+          "matches_local": true
+        },
+        "environment.json": {
+          "sha256": "6723adf9683a98dd5289dca50cfebb4f5ce2fe2d6cba72456291ab77d3a1f0c0",
+          "matches_local": true
+        },
+        "data.json": {
+          "sha256": "eb42b4a02f1bf3c9d57adb93f9f60238b437d80ba9986eaa949163c99ff25dea",
+          "matches_local": true
+        },
+        "model.json": {
+          "sha256": "7373e0d393738970010f06ac4fc3e455430ebcab423fe0008282259771c8f14d",
+          "matches_local": true
+        },
+        "metrics.json": {
+          "sha256": "8e5abcb6126a3ba1bb333de46895a959040f765b167ca7bee37003ae4dd1b627",
+          "matches_local": true
+        },
+        "predictions.jsonl": {
+          "sha256": "5cb14ebfe24293d2d114525e9df7989825fc6a238b4b22ad66547a830573398e",
+          "matches_local": true
+        },
+        "timings.jsonl": {
+          "sha256": "c7155bb53b8e383099bf50b987bf0c1ddff254ec111c46adf6c75ec05ac8aeb0",
+          "matches_local": true
+        },
+        "gpu.jsonl": {
+          "sha256": "ec674114989e7bf3795b6593ff93659cf6ca72a74a1e703e201cbdd2dbde556e",
+          "matches_local": true
+        },
+        "attempts.jsonl": {
+          "sha256": "a4b8810ab1a06d946968d1590f6ae66110b5f814d665281c0ffcd42953abb35a",
+          "matches_local": true
+        }
+      },
+      "full_prompt_parameter_matches": false,
+      "all_metrics_verified": true,
+      "all_nine_assets_verified_byte_for_byte": true
+    }
+  ]
+}

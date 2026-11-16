@@ -1,0 +1,30 @@
+{
+  "frozen_at_utc": "2026-11-16T14:03:33.160801+00:00",
+  "expected_images": 400,
+  "seed": 42,
+  "source_runs": {
+    "owlv2": "model_results/validation_2026-11-13/owlv2_nms_0.5",
+    "grounding_dino": "model_results/validation_2026-11-13/grounding_dino",
+    "qwen": "model_results/prompt_search_2026-11-15/qwen/05_four_edges",
+    "gemma": "model_results/prompt_search_2026-11-15/gemma/08_08_json_contract_first"
+  },
+  "selection": "Settings selected on validation; no tuning on test.",
+  "gpu_execution": "Sequential processes under /tmp/butterfly-prompt-search-gpu.lock",
+  "sha256": {
+    "model_results/test_2026-11-16/frozen/gemma.yaml": "023417fe72d6923956a94d6b549b50b95d6cb2a30bb2fd47fc41538e2e086875",
+    "model_results/test_2026-11-16/frozen/grounding_dino.yaml": "c4c4d2a67db4655806d623eb2e9eed28477063dfeab976c1edab72b6e1463d23",
+    "model_results/test_2026-11-16/frozen/owlv2.yaml": "1a515088367556dbdb250329d175a4a9e783c83716c334dce8111324a1c28029",
+    "model_results/test_2026-11-16/frozen/qwen.yaml": "aa13b950637f108fb894a7c951d40c6ae387c080eab754b156125d5a8cba1f36",
+    "butterfly_bench/cli.py": "862f8114a29f4a53f920ad424f793490e168a7362080becb402f463d810a665d",
+    "butterfly_bench/__init__.py": "a08429a272f147a869ebe20b59cdd00a8649b244b1d91498c14b3ef83148f68f",
+    "butterfly_bench/__main__.py": "11cf323249f4ba4e79c9fb7660c0979fc91a3822bc5362286376b69808b41195",
+    "butterfly_bench/tracking.py": "fdc6c24444be7c6f5a3b9d451a46551ca84aa006bacd95047df85241d128fd33",
+    "butterfly_bench/models.py": "86dcacb234e33694dd37ebe1067d98cf55928a39a014452b9cd3d2bc8dac2c0a",
+    "butterfly_bench/pipeline.py": "6509e96e476918208a6fc5e8b3bf31eb05be23d0c33bb756206c0679f65cd49e",
+    "butterfly_bench/data.py": "0b77b02d056bbdd84e27a70ce1b9839fb4f1f389409e3a4dfcbc92ef64e3b0cf",
+    "butterfly_bench/api.py": "6ff6a17bb7ec09541faa5787c383ff1c094b1e41a182029415588de6957d6442",
+    "butterfly_bench/metrics.py": "73ea10e58c846c90a1dfcbaa2cc2e607c890f9a49bee3717c99fcef2cb08547c",
+    "butterfly_bench/schema.py": "a031e532a90af9c941b4dfe221cb9f24e5a1b3c8ed4f5c0d0da6f1cf0bd21ce7",
+    "butterfly_bench/visualize.py": "e1ec713b6700e8e00b23d47297b38860d223f5b567772b667b5492a286b562a7"
+  }
+}

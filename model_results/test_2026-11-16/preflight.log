@@ -1,0 +1,4 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-11-16 17:03:50,245 WARNING Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 144 examples [00:00, 1318.01 examples/s]Generating test split: 288 examples [00:00, 1329.46 examples/s]Generating test split: 400 examples [00:00, 1310.40 examples/s]
+{"source": "hf", "repo_id": "xartik/inaturalist_butterflies", "revision": "1316e3c7147d4399a03f90684e191aae4d798f09", "split": "test", "parquet_file": "data/test-00000-of-00001.parquet", "count": 400, "parquet_sha256": "e824a877b2da31ee92458191184209dcde2425bbd72aec15dffa97177d130c2d", "parquet_bytes": 516615965, "ground_truth_boxes": 241, "negative_images": 180, "no_overlap_with_validation": true}

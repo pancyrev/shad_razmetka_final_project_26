@@ -1,0 +1,502 @@
+COMET INFO: Experiment is live on comet.com https://www.comet.com/ubileyka19/butterfly-bench/b0f84d5191584ad28957d9379cfd0629
+
+Loading weights:   0%|          | 0/418 [00:00<?, ?it/s]Loading weights: 100%|██████████| 418/418 [00:00<00:00, 9236.32it/s]
+2026-11-16 17:04:50,680 INFO 1/400 photo_id=751297785 boxes=1 attempts=1 seconds=0.494
+2026-11-16 17:04:50,893 INFO 2/400 photo_id=751308237 boxes=0 attempts=1 seconds=0.212
+2026-11-16 17:04:51,110 INFO 3/400 photo_id=751322667 boxes=1 attempts=1 seconds=0.217
+2026-11-16 17:04:51,332 INFO 4/400 photo_id=751322797 boxes=1 attempts=1 seconds=0.220
+2026-11-16 17:04:51,535 INFO 5/400 photo_id=751348395 boxes=3 attempts=1 seconds=0.201
+2026-11-16 17:04:51,749 INFO 6/400 photo_id=751376398 boxes=3 attempts=1 seconds=0.213
+2026-11-16 17:04:51,961 INFO 7/400 photo_id=751389282 boxes=4 attempts=1 seconds=0.211
+2026-11-16 17:04:52,174 INFO 8/400 photo_id=751391377 boxes=2 attempts=1 seconds=0.213
+2026-11-16 17:04:52,385 INFO 9/400 photo_id=751391761 boxes=3 attempts=1 seconds=0.210
+2026-11-16 17:04:52,568 INFO 10/400 photo_id=751394097 boxes=1 attempts=1 seconds=0.182
+2026-11-16 17:04:52,775 INFO 11/400 photo_id=751407111 boxes=2 attempts=1 seconds=0.205
+2026-11-16 17:04:52,990 INFO 12/400 photo_id=751407258 boxes=11 attempts=1 seconds=0.213
+2026-11-16 17:04:53,205 INFO 13/400 photo_id=751407869 boxes=3 attempts=1 seconds=0.213
+2026-11-16 17:04:53,423 INFO 14/400 photo_id=751407962 boxes=2 attempts=1 seconds=0.215
+2026-11-16 17:04:53,639 INFO 15/400 photo_id=751408609 boxes=1 attempts=1 seconds=0.214
+2026-11-16 17:04:53,843 INFO 16/400 photo_id=751409248 boxes=1 attempts=1 seconds=0.204
+2026-11-16 17:04:54,012 INFO 17/400 photo_id=751420867 boxes=3 attempts=1 seconds=0.169
+2026-11-16 17:04:54,211 INFO 18/400 photo_id=751429218 boxes=1 attempts=1 seconds=0.199
+2026-11-16 17:04:54,412 INFO 19/400 photo_id=751435756 boxes=6 attempts=1 seconds=0.200
+2026-11-16 17:04:54,607 INFO 20/400 photo_id=751441129 boxes=3 attempts=1 seconds=0.195
+2026-11-16 17:04:54,818 INFO 21/400 photo_id=751450706 boxes=0 attempts=1 seconds=0.211
+2026-11-16 17:04:55,020 INFO 22/400 photo_id=751454049 boxes=1 attempts=1 seconds=0.202
+2026-11-16 17:04:55,187 INFO 23/400 photo_id=751458228 boxes=1 attempts=1 seconds=0.166
+2026-11-16 17:04:55,346 INFO 24/400 photo_id=751472112 boxes=3 attempts=1 seconds=0.159
+2026-11-16 17:04:55,537 INFO 25/400 photo_id=751484213 boxes=1 attempts=1 seconds=0.191
+2026-11-16 17:04:55,727 INFO 26/400 photo_id=751489223 boxes=2 attempts=1 seconds=0.190
+2026-11-16 17:04:55,918 INFO 27/400 photo_id=751517948 boxes=1 attempts=1 seconds=0.191
+2026-11-16 17:04:56,111 INFO 28/400 photo_id=751531008 boxes=2 attempts=1 seconds=0.193
+2026-11-16 17:04:56,319 INFO 29/400 photo_id=751540516 boxes=3 attempts=1 seconds=0.207
+2026-11-16 17:04:56,515 INFO 30/400 photo_id=751555204 boxes=2 attempts=1 seconds=0.196
+2026-11-16 17:04:56,714 INFO 31/400 photo_id=751561958 boxes=2 attempts=1 seconds=0.199
+2026-11-16 17:04:56,915 INFO 32/400 photo_id=751562127 boxes=2 attempts=1 seconds=0.201
+2026-11-16 17:04:57,114 INFO 33/400 photo_id=751570905 boxes=0 attempts=1 seconds=0.199
+2026-11-16 17:04:57,321 INFO 34/400 photo_id=751656321 boxes=30 attempts=1 seconds=0.207
+2026-11-16 17:04:57,510 INFO 35/400 photo_id=751668980 boxes=3 attempts=1 seconds=0.189
+2026-11-16 17:04:57,709 INFO 36/400 photo_id=751693169 boxes=1 attempts=1 seconds=0.198
+2026-11-16 17:04:57,893 INFO 37/400 photo_id=751709613 boxes=1 attempts=1 seconds=0.184
+2026-11-16 17:04:58,079 INFO 38/400 photo_id=751709680 boxes=2 attempts=1 seconds=0.185
+2026-11-16 17:04:58,267 INFO 39/400 photo_id=751709726 boxes=1 attempts=1 seconds=0.188
+2026-11-16 17:04:58,459 INFO 40/400 photo_id=751709727 boxes=1 attempts=1 seconds=0.192
+2026-11-16 17:04:58,650 INFO 41/400 photo_id=751709756 boxes=1 attempts=1 seconds=0.190
+2026-11-16 17:04:58,822 INFO 42/400 photo_id=751709772 boxes=1 attempts=1 seconds=0.172
+2026-11-16 17:04:59,010 INFO 43/400 photo_id=751709781 boxes=1 attempts=1 seconds=0.187
+2026-11-16 17:04:59,206 INFO 44/400 photo_id=751709791 boxes=3 attempts=1 seconds=0.196
+2026-11-16 17:04:59,416 INFO 45/400 photo_id=751709823 boxes=1 attempts=1 seconds=0.209
+2026-11-16 17:04:59,621 INFO 46/400 photo_id=751709834 boxes=2 attempts=1 seconds=0.205
+2026-11-16 17:04:59,823 INFO 47/400 photo_id=751709885 boxes=3 attempts=1 seconds=0.202
+2026-11-16 17:05:00,014 INFO 48/400 photo_id=751709909 boxes=1 attempts=1 seconds=0.191
+2026-11-16 17:05:00,214 INFO 49/400 photo_id=751709912 boxes=1 attempts=1 seconds=0.199
+2026-11-16 17:05:00,406 INFO 50/400 photo_id=751709915 boxes=1 attempts=1 seconds=0.192
+2026-11-16 17:05:00,593 INFO 51/400 photo_id=751709927 boxes=2 attempts=1 seconds=0.187
+2026-11-16 17:05:00,776 INFO 52/400 photo_id=751709947 boxes=2 attempts=1 seconds=0.182
+2026-11-16 17:05:00,967 INFO 53/400 photo_id=751709967 boxes=1 attempts=1 seconds=0.191
+2026-11-16 17:05:01,154 INFO 54/400 photo_id=751709978 boxes=1 attempts=1 seconds=0.187
+2026-11-16 17:05:01,339 INFO 55/400 photo_id=751709995 boxes=2 attempts=1 seconds=0.185
+2026-11-16 17:05:01,528 INFO 56/400 photo_id=751710014 boxes=2 attempts=1 seconds=0.188
+2026-11-16 17:05:01,715 INFO 57/400 photo_id=751710021 boxes=1 attempts=1 seconds=0.187
+2026-11-16 17:05:01,901 INFO 58/400 photo_id=751710036 boxes=3 attempts=1 seconds=0.186
+2026-11-16 17:05:02,095 INFO 59/400 photo_id=751710037 boxes=2 attempts=1 seconds=0.194
+2026-11-16 17:05:02,252 INFO 60/400 photo_id=751731569 boxes=1 attempts=1 seconds=0.157
+2026-11-16 17:05:02,450 INFO 61/400 photo_id=751735514 boxes=0 attempts=1 seconds=0.197
+2026-11-16 17:05:02,616 INFO 62/400 photo_id=751743335 boxes=1 attempts=1 seconds=0.166
+2026-11-16 17:05:02,780 INFO 63/400 photo_id=751746256 boxes=2 attempts=1 seconds=0.165
+2026-11-16 17:05:02,944 INFO 64/400 photo_id=751746340 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:03,135 INFO 65/400 photo_id=751747072 boxes=1 attempts=1 seconds=0.190
+2026-11-16 17:05:03,325 INFO 66/400 photo_id=751747732 boxes=1 attempts=1 seconds=0.190
+2026-11-16 17:05:03,534 INFO 67/400 photo_id=751751993 boxes=1 attempts=1 seconds=0.209
+2026-11-16 17:05:03,676 INFO 68/400 photo_id=751763612 boxes=1 attempts=1 seconds=0.141
+2026-11-16 17:05:03,826 INFO 69/400 photo_id=751763871 boxes=1 attempts=1 seconds=0.150
+2026-11-16 17:05:04,019 INFO 70/400 photo_id=751769446 boxes=0 attempts=1 seconds=0.193
+2026-11-16 17:05:04,204 INFO 71/400 photo_id=751785387 boxes=1 attempts=1 seconds=0.184
+2026-11-16 17:05:04,380 INFO 72/400 photo_id=751799291 boxes=5 attempts=1 seconds=0.176
+2026-11-16 17:05:04,566 INFO 73/400 photo_id=751810783 boxes=1 attempts=1 seconds=0.185
+2026-11-16 17:05:04,696 INFO 74/400 photo_id=751825018 boxes=1 attempts=1 seconds=0.130
+2026-11-16 17:05:04,893 INFO 75/400 photo_id=751840133 boxes=3 attempts=1 seconds=0.197
+2026-11-16 17:05:05,075 INFO 76/400 photo_id=751848256 boxes=1 attempts=1 seconds=0.182
+2026-11-16 17:05:05,210 INFO 77/400 photo_id=751860866 boxes=0 attempts=1 seconds=0.135
+2026-11-16 17:05:05,394 INFO 78/400 photo_id=751865780 boxes=1 attempts=1 seconds=0.183
+2026-11-16 17:05:05,596 INFO 79/400 photo_id=751888864 boxes=3 attempts=1 seconds=0.202
+2026-11-16 17:05:05,751 INFO 80/400 photo_id=751906753 boxes=1 attempts=1 seconds=0.155
+2026-11-16 17:05:05,927 INFO 81/400 photo_id=755284146 boxes=1 attempts=1 seconds=0.175
+2026-11-16 17:05:06,123 INFO 82/400 photo_id=755306284 boxes=1 attempts=1 seconds=0.196
+2026-11-16 17:05:06,322 INFO 83/400 photo_id=755306803 boxes=1 attempts=1 seconds=0.198
+2026-11-16 17:05:06,518 INFO 84/400 photo_id=755308033 boxes=1 attempts=1 seconds=0.197
+2026-11-16 17:05:06,717 INFO 85/400 photo_id=755317913 boxes=2 attempts=1 seconds=0.199
+2026-11-16 17:05:06,920 INFO 86/400 photo_id=755332290 boxes=1 attempts=1 seconds=0.202
+2026-11-16 17:05:07,120 INFO 87/400 photo_id=755332762 boxes=1 attempts=1 seconds=0.200
+2026-11-16 17:05:07,315 INFO 88/400 photo_id=755359294 boxes=1 attempts=1 seconds=0.195
+2026-11-16 17:05:07,468 INFO 89/400 photo_id=755365051 boxes=0 attempts=1 seconds=0.153
+2026-11-16 17:05:07,656 INFO 90/400 photo_id=755388528 boxes=1 attempts=1 seconds=0.188
+2026-11-16 17:05:07,857 INFO 91/400 photo_id=755401135 boxes=2 attempts=1 seconds=0.201
+2026-11-16 17:05:08,047 INFO 92/400 photo_id=755447661 boxes=2 attempts=1 seconds=0.190
+2026-11-16 17:05:08,234 INFO 93/400 photo_id=755453337 boxes=1 attempts=1 seconds=0.187
+2026-11-16 17:05:08,428 INFO 94/400 photo_id=755467709 boxes=4 attempts=1 seconds=0.193
+2026-11-16 17:05:08,619 INFO 95/400 photo_id=755470624 boxes=1 attempts=1 seconds=0.191
+2026-11-16 17:05:08,769 INFO 96/400 photo_id=755475936 boxes=1 attempts=1 seconds=0.150
+2026-11-16 17:05:08,975 INFO 97/400 photo_id=755484318 boxes=1 attempts=1 seconds=0.206
+2026-11-16 17:05:09,162 INFO 98/400 photo_id=755490703 boxes=1 attempts=1 seconds=0.186
+2026-11-16 17:05:09,347 INFO 99/400 photo_id=755491226 boxes=0 attempts=1 seconds=0.185
+2026-11-16 17:05:09,532 INFO 100/400 photo_id=755491444 boxes=2 attempts=1 seconds=0.184
+2026-11-16 17:05:09,717 INFO 101/400 photo_id=755491615 boxes=0 attempts=1 seconds=0.185
+2026-11-16 17:05:09,913 INFO 102/400 photo_id=755495001 boxes=4 attempts=1 seconds=0.196
+2026-11-16 17:05:10,045 INFO 103/400 photo_id=755495665 boxes=1 attempts=1 seconds=0.132
+2026-11-16 17:05:10,188 INFO 104/400 photo_id=755501774 boxes=1 attempts=1 seconds=0.142
+2026-11-16 17:05:10,391 INFO 105/400 photo_id=755521387 boxes=2 attempts=1 seconds=0.202
+2026-11-16 17:05:10,593 INFO 106/400 photo_id=755524907 boxes=1 attempts=1 seconds=0.202
+2026-11-16 17:05:10,783 INFO 107/400 photo_id=755528756 boxes=2 attempts=1 seconds=0.190
+2026-11-16 17:05:10,993 INFO 108/400 photo_id=755532778 boxes=7 attempts=1 seconds=0.210
+2026-11-16 17:05:11,130 INFO 109/400 photo_id=755544456 boxes=1 attempts=1 seconds=0.137
+2026-11-16 17:05:11,317 INFO 110/400 photo_id=755548798 boxes=0 attempts=1 seconds=0.187
+2026-11-16 17:05:11,465 INFO 111/400 photo_id=755573620 boxes=1 attempts=1 seconds=0.147
+2026-11-16 17:05:11,618 INFO 112/400 photo_id=755577772 boxes=1 attempts=1 seconds=0.153
+2026-11-16 17:05:11,811 INFO 113/400 photo_id=755586059 boxes=1 attempts=1 seconds=0.193
+2026-11-16 17:05:12,005 INFO 114/400 photo_id=755588973 boxes=1 attempts=1 seconds=0.194
+2026-11-16 17:05:12,138 INFO 115/400 photo_id=755598948 boxes=1 attempts=1 seconds=0.132
+2026-11-16 17:05:12,327 INFO 116/400 photo_id=755605790 boxes=1 attempts=1 seconds=0.189
+2026-11-16 17:05:12,516 INFO 117/400 photo_id=755627786 boxes=1 attempts=1 seconds=0.188
+2026-11-16 17:05:12,711 INFO 118/400 photo_id=755630368 boxes=6 attempts=1 seconds=0.195
+2026-11-16 17:05:12,909 INFO 119/400 photo_id=755630850 boxes=6 attempts=1 seconds=0.197
+2026-11-16 17:05:13,106 INFO 120/400 photo_id=755649790 boxes=10 attempts=1 seconds=0.197
+2026-11-16 17:05:13,302 INFO 121/400 photo_id=755662194 boxes=2 attempts=1 seconds=0.195
+2026-11-16 17:05:13,471 INFO 122/400 photo_id=755665573 boxes=1 attempts=1 seconds=0.168
+2026-11-16 17:05:13,627 INFO 123/400 photo_id=755671153 boxes=1 attempts=1 seconds=0.156
+2026-11-16 17:05:13,815 INFO 124/400 photo_id=755695598 boxes=6 attempts=1 seconds=0.188
+2026-11-16 17:05:14,004 INFO 125/400 photo_id=755695771 boxes=1 attempts=1 seconds=0.189
+2026-11-16 17:05:14,166 INFO 126/400 photo_id=755696484 boxes=4 attempts=1 seconds=0.162
+2026-11-16 17:05:14,338 INFO 127/400 photo_id=755700651 boxes=2 attempts=1 seconds=0.171
+2026-11-16 17:05:14,489 INFO 128/400 photo_id=755708393 boxes=5 attempts=1 seconds=0.151
+2026-11-16 17:05:14,631 INFO 129/400 photo_id=755713667 boxes=1 attempts=1 seconds=0.142
+2026-11-16 17:05:14,818 INFO 130/400 photo_id=755734356 boxes=1 attempts=1 seconds=0.187
+2026-11-16 17:05:15,010 INFO 131/400 photo_id=755740340 boxes=4 attempts=1 seconds=0.192
+2026-11-16 17:05:15,208 INFO 132/400 photo_id=755752541 boxes=1 attempts=1 seconds=0.197
+2026-11-16 17:05:15,397 INFO 133/400 photo_id=755821236 boxes=5 attempts=1 seconds=0.189
+2026-11-16 17:05:15,605 INFO 134/400 photo_id=755833627 boxes=1 attempts=1 seconds=0.208
+2026-11-16 17:05:15,759 INFO 135/400 photo_id=755833723 boxes=0 attempts=1 seconds=0.154
+2026-11-16 17:05:15,956 INFO 136/400 photo_id=755848776 boxes=4 attempts=1 seconds=0.196
+2026-11-16 17:05:16,149 INFO 137/400 photo_id=755897675 boxes=0 attempts=1 seconds=0.193
+2026-11-16 17:05:16,347 INFO 138/400 photo_id=755913192 boxes=1 attempts=1 seconds=0.190
+2026-11-16 17:05:16,527 INFO 139/400 photo_id=755928579 boxes=2 attempts=1 seconds=0.180
+2026-11-16 17:05:16,675 INFO 140/400 photo_id=755932941 boxes=3 attempts=1 seconds=0.148
+2026-11-16 17:05:16,856 INFO 141/400 photo_id=755932957 boxes=1 attempts=1 seconds=0.181
+2026-11-16 17:05:17,041 INFO 142/400 photo_id=755952018 boxes=2 attempts=1 seconds=0.185
+2026-11-16 17:05:17,231 INFO 143/400 photo_id=755955118 boxes=1 attempts=1 seconds=0.189
+2026-11-16 17:05:17,399 INFO 144/400 photo_id=755955737 boxes=1 attempts=1 seconds=0.168
+2026-11-16 17:05:17,584 INFO 145/400 photo_id=755965496 boxes=1 attempts=1 seconds=0.185
+2026-11-16 17:05:17,790 INFO 146/400 photo_id=755979522 boxes=2 attempts=1 seconds=0.206
+2026-11-16 17:05:17,983 INFO 147/400 photo_id=756048397 boxes=0 attempts=1 seconds=0.193
+2026-11-16 17:05:18,174 INFO 148/400 photo_id=756050060 boxes=1 attempts=1 seconds=0.190
+2026-11-16 17:05:18,381 INFO 149/400 photo_id=756079607 boxes=2 attempts=1 seconds=0.207
+2026-11-16 17:05:18,551 INFO 150/400 photo_id=756115484 boxes=1 attempts=1 seconds=0.170
+2026-11-16 17:05:18,741 INFO 151/400 photo_id=756128768 boxes=1 attempts=1 seconds=0.190
+2026-11-16 17:05:18,927 INFO 152/400 photo_id=756141724 boxes=1 attempts=1 seconds=0.186
+2026-11-16 17:05:19,113 INFO 153/400 photo_id=756141761 boxes=1 attempts=1 seconds=0.186
+2026-11-16 17:05:19,257 INFO 154/400 photo_id=756142252 boxes=1 attempts=1 seconds=0.144
+2026-11-16 17:05:19,446 INFO 155/400 photo_id=756170380 boxes=6 attempts=1 seconds=0.189
+2026-11-16 17:05:19,635 INFO 156/400 photo_id=756170654 boxes=3 attempts=1 seconds=0.189
+2026-11-16 17:05:19,808 INFO 157/400 photo_id=756190187 boxes=2 attempts=1 seconds=0.173
+2026-11-16 17:05:19,944 INFO 158/400 photo_id=756212992 boxes=1 attempts=1 seconds=0.136
+2026-11-16 17:05:20,143 INFO 159/400 photo_id=759962472 boxes=1 attempts=1 seconds=0.199
+2026-11-16 17:05:20,341 INFO 160/400 photo_id=760036517 boxes=1 attempts=1 seconds=0.198
+2026-11-16 17:05:20,544 INFO 161/400 photo_id=760040958 boxes=1 attempts=1 seconds=0.202
+2026-11-16 17:05:20,753 INFO 162/400 photo_id=760070455 boxes=2 attempts=1 seconds=0.209
+2026-11-16 17:05:20,970 INFO 163/400 photo_id=760077284 boxes=3 attempts=1 seconds=0.217
+2026-11-16 17:05:21,180 INFO 164/400 photo_id=760082940 boxes=2 attempts=1 seconds=0.209
+2026-11-16 17:05:21,400 INFO 165/400 photo_id=760082985 boxes=4 attempts=1 seconds=0.212
+2026-11-16 17:05:21,606 INFO 166/400 photo_id=760086981 boxes=1 attempts=1 seconds=0.206
+2026-11-16 17:05:21,801 INFO 167/400 photo_id=760091961 boxes=1 attempts=1 seconds=0.195
+2026-11-16 17:05:21,943 INFO 168/400 photo_id=760119158 boxes=2 attempts=1 seconds=0.141
+2026-11-16 17:05:22,133 INFO 169/400 photo_id=760124083 boxes=1 attempts=1 seconds=0.190
+2026-11-16 17:05:22,324 INFO 170/400 photo_id=760124749 boxes=1 attempts=1 seconds=0.191
+2026-11-16 17:05:22,521 INFO 171/400 photo_id=760152198 boxes=1 attempts=1 seconds=0.197
+2026-11-16 17:05:22,716 INFO 172/400 photo_id=760153523 boxes=1 attempts=1 seconds=0.195
+2026-11-16 17:05:22,914 INFO 173/400 photo_id=760154955 boxes=2 attempts=1 seconds=0.197
+2026-11-16 17:05:23,112 INFO 174/400 photo_id=760155394 boxes=5 attempts=1 seconds=0.198
+2026-11-16 17:05:23,306 INFO 175/400 photo_id=760157361 boxes=1 attempts=1 seconds=0.194
+2026-11-16 17:05:23,507 INFO 176/400 photo_id=760199198 boxes=8 attempts=1 seconds=0.201
+2026-11-16 17:05:23,668 INFO 177/400 photo_id=760202799 boxes=1 attempts=1 seconds=0.160
+2026-11-16 17:05:23,825 INFO 178/400 photo_id=760203903 boxes=2 attempts=1 seconds=0.157
+2026-11-16 17:05:24,003 INFO 179/400 photo_id=760203912 boxes=1 attempts=1 seconds=0.178
+2026-11-16 17:05:24,146 INFO 180/400 photo_id=760212571 boxes=1 attempts=1 seconds=0.143
+2026-11-16 17:05:24,280 INFO 181/400 photo_id=760213379 boxes=1 attempts=1 seconds=0.133
+2026-11-16 17:05:24,480 INFO 182/400 photo_id=760217177 boxes=1 attempts=1 seconds=0.200
+2026-11-16 17:05:24,618 INFO 183/400 photo_id=760217691 boxes=1 attempts=1 seconds=0.137
+2026-11-16 17:05:24,819 INFO 184/400 photo_id=760217697 boxes=4 attempts=1 seconds=0.201
+2026-11-16 17:05:24,989 INFO 185/400 photo_id=760218804 boxes=1 attempts=1 seconds=0.170
+2026-11-16 17:05:25,163 INFO 186/400 photo_id=760220039 boxes=1 attempts=1 seconds=0.173
+2026-11-16 17:05:25,353 INFO 187/400 photo_id=760223061 boxes=1 attempts=1 seconds=0.190
+2026-11-16 17:05:25,538 INFO 188/400 photo_id=760223631 boxes=1 attempts=1 seconds=0.185
+2026-11-16 17:05:25,728 INFO 189/400 photo_id=760226383 boxes=2 attempts=1 seconds=0.189
+2026-11-16 17:05:25,915 INFO 190/400 photo_id=760226877 boxes=1 attempts=1 seconds=0.187
+2026-11-16 17:05:26,114 INFO 191/400 photo_id=760243854 boxes=1 attempts=1 seconds=0.198
+2026-11-16 17:05:26,308 INFO 192/400 photo_id=760323308 boxes=4 attempts=1 seconds=0.194
+2026-11-16 17:05:26,512 INFO 193/400 photo_id=760331613 boxes=1 attempts=1 seconds=0.196
+2026-11-16 17:05:26,714 INFO 194/400 photo_id=760408154 boxes=1 attempts=1 seconds=0.201
+2026-11-16 17:05:26,857 INFO 195/400 photo_id=760445834 boxes=1 attempts=1 seconds=0.143
+2026-11-16 17:05:27,050 INFO 196/400 photo_id=760446257 boxes=1 attempts=1 seconds=0.193
+2026-11-16 17:05:27,245 INFO 197/400 photo_id=760467503 boxes=1 attempts=1 seconds=0.195
+2026-11-16 17:05:27,434 INFO 198/400 photo_id=760472159 boxes=1 attempts=1 seconds=0.189
+2026-11-16 17:05:27,641 INFO 199/400 photo_id=760480125 boxes=0 attempts=1 seconds=0.207
+2026-11-16 17:05:27,837 INFO 200/400 photo_id=760480362 boxes=0 attempts=1 seconds=0.195
+2026-11-16 17:05:28,035 INFO 201/400 photo_id=760481748 boxes=1 attempts=1 seconds=0.198
+2026-11-16 17:05:28,233 INFO 202/400 photo_id=760483092 boxes=1 attempts=1 seconds=0.198
+2026-11-16 17:05:28,399 INFO 203/400 photo_id=760483993 boxes=0 attempts=1 seconds=0.165
+2026-11-16 17:05:28,593 INFO 204/400 photo_id=760487198 boxes=1 attempts=1 seconds=0.194
+2026-11-16 17:05:28,788 INFO 205/400 photo_id=760488243 boxes=0 attempts=1 seconds=0.194
+2026-11-16 17:05:28,985 INFO 206/400 photo_id=760488383 boxes=1 attempts=1 seconds=0.197
+2026-11-16 17:05:29,150 INFO 207/400 photo_id=760490244 boxes=1 attempts=1 seconds=0.165
+2026-11-16 17:05:29,359 INFO 208/400 photo_id=760491785 boxes=1 attempts=1 seconds=0.209
+2026-11-16 17:05:29,551 INFO 209/400 photo_id=760491919 boxes=0 attempts=1 seconds=0.191
+2026-11-16 17:05:29,765 INFO 210/400 photo_id=760494847 boxes=1 attempts=1 seconds=0.214
+2026-11-16 17:05:29,922 INFO 211/400 photo_id=760496627 boxes=3 attempts=1 seconds=0.156
+2026-11-16 17:05:30,122 INFO 212/400 photo_id=760498003 boxes=0 attempts=1 seconds=0.200
+2026-11-16 17:05:30,321 INFO 213/400 photo_id=760502342 boxes=0 attempts=1 seconds=0.199
+2026-11-16 17:05:30,516 INFO 214/400 photo_id=760506048 boxes=0 attempts=1 seconds=0.195
+2026-11-16 17:05:30,728 INFO 215/400 photo_id=760507922 boxes=0 attempts=1 seconds=0.211
+2026-11-16 17:05:30,870 INFO 216/400 photo_id=760524137 boxes=1 attempts=1 seconds=0.142
+2026-11-16 17:05:31,072 INFO 217/400 photo_id=760528752 boxes=0 attempts=1 seconds=0.202
+2026-11-16 17:05:31,205 INFO 218/400 photo_id=760530804 boxes=5 attempts=1 seconds=0.132
+2026-11-16 17:05:31,407 INFO 219/400 photo_id=760542242 boxes=1 attempts=1 seconds=0.202
+2026-11-16 17:05:31,606 INFO 220/400 photo_id=760542869 boxes=1 attempts=1 seconds=0.199
+2026-11-16 17:05:31,799 INFO 221/400 photo_id=760552700 boxes=0 attempts=1 seconds=0.193
+2026-11-16 17:05:31,992 INFO 222/400 photo_id=760556198 boxes=0 attempts=1 seconds=0.193
+2026-11-16 17:05:32,188 INFO 223/400 photo_id=760560747 boxes=0 attempts=1 seconds=0.196
+2026-11-16 17:05:32,401 INFO 224/400 photo_id=760581764 boxes=0 attempts=1 seconds=0.213
+2026-11-16 17:05:32,590 INFO 225/400 photo_id=760582391 boxes=3 attempts=1 seconds=0.189
+2026-11-16 17:05:32,779 INFO 226/400 photo_id=760591950 boxes=1 attempts=1 seconds=0.189
+2026-11-16 17:05:32,927 INFO 227/400 photo_id=760595076 boxes=1 attempts=1 seconds=0.148
+2026-11-16 17:05:33,129 INFO 228/400 photo_id=760598669 boxes=1 attempts=1 seconds=0.201
+2026-11-16 17:05:33,327 INFO 229/400 photo_id=760598830 boxes=1 attempts=1 seconds=0.198
+2026-11-16 17:05:33,517 INFO 230/400 photo_id=760598857 boxes=0 attempts=1 seconds=0.189
+2026-11-16 17:05:33,735 INFO 231/400 photo_id=760603991 boxes=0 attempts=1 seconds=0.218
+2026-11-16 17:05:33,952 INFO 232/400 photo_id=760618776 boxes=0 attempts=1 seconds=0.216
+2026-11-16 17:05:34,147 INFO 233/400 photo_id=760666458 boxes=0 attempts=1 seconds=0.195
+2026-11-16 17:05:34,363 INFO 234/400 photo_id=760670331 boxes=0 attempts=1 seconds=0.216
+2026-11-16 17:05:34,550 INFO 235/400 photo_id=760675347 boxes=1 attempts=1 seconds=0.186
+2026-11-16 17:05:34,739 INFO 236/400 photo_id=760686681 boxes=0 attempts=1 seconds=0.189
+2026-11-16 17:05:34,875 INFO 237/400 photo_id=760692486 boxes=1 attempts=1 seconds=0.135
+2026-11-16 17:05:35,073 INFO 238/400 photo_id=760696952 boxes=1 attempts=1 seconds=0.198
+2026-11-16 17:05:35,226 INFO 239/400 photo_id=760702431 boxes=0 attempts=1 seconds=0.153
+2026-11-16 17:05:35,414 INFO 240/400 photo_id=760704164 boxes=2 attempts=1 seconds=0.188
+2026-11-16 17:05:35,608 INFO 241/400 photo_id=760734357 boxes=1 attempts=1 seconds=0.194
+2026-11-16 17:05:35,803 INFO 242/400 photo_id=760736048 boxes=1 attempts=1 seconds=0.194
+2026-11-16 17:05:36,006 INFO 243/400 photo_id=760740190 boxes=0 attempts=1 seconds=0.203
+2026-11-16 17:05:36,195 INFO 244/400 photo_id=760740354 boxes=0 attempts=1 seconds=0.189
+2026-11-16 17:05:36,390 INFO 245/400 photo_id=760740956 boxes=1 attempts=1 seconds=0.194
+2026-11-16 17:05:36,580 INFO 246/400 photo_id=760743677 boxes=0 attempts=1 seconds=0.191
+2026-11-16 17:05:36,781 INFO 247/400 photo_id=760747716 boxes=1 attempts=1 seconds=0.200
+2026-11-16 17:05:36,912 INFO 248/400 photo_id=760750840 boxes=1 attempts=1 seconds=0.132
+2026-11-16 17:05:37,109 INFO 249/400 photo_id=760750962 boxes=2 attempts=1 seconds=0.196
+2026-11-16 17:05:37,305 INFO 250/400 photo_id=760759247 boxes=1 attempts=1 seconds=0.196
+2026-11-16 17:05:37,504 INFO 251/400 photo_id=760759296 boxes=0 attempts=1 seconds=0.199
+2026-11-16 17:05:37,693 INFO 252/400 photo_id=760759513 boxes=2 attempts=1 seconds=0.189
+2026-11-16 17:05:37,845 INFO 253/400 photo_id=760762264 boxes=8 attempts=1 seconds=0.151
+2026-11-16 17:05:38,054 INFO 254/400 photo_id=760766766 boxes=1 attempts=1 seconds=0.208
+2026-11-16 17:05:38,219 INFO 255/400 photo_id=760768785 boxes=1 attempts=1 seconds=0.165
+2026-11-16 17:05:38,410 INFO 256/400 photo_id=760770593 boxes=0 attempts=1 seconds=0.191
+2026-11-16 17:05:38,601 INFO 257/400 photo_id=760770831 boxes=0 attempts=1 seconds=0.191
+2026-11-16 17:05:38,799 INFO 258/400 photo_id=760775965 boxes=4 attempts=1 seconds=0.197
+2026-11-16 17:05:38,988 INFO 259/400 photo_id=760783451 boxes=1 attempts=1 seconds=0.189
+2026-11-16 17:05:39,180 INFO 260/400 photo_id=760791732 boxes=4 attempts=1 seconds=0.191
+2026-11-16 17:05:39,372 INFO 261/400 photo_id=760792099 boxes=1 attempts=1 seconds=0.192
+2026-11-16 17:05:39,505 INFO 262/400 photo_id=760794332 boxes=0 attempts=1 seconds=0.133
+2026-11-16 17:05:39,703 INFO 263/400 photo_id=760794697 boxes=0 attempts=1 seconds=0.197
+2026-11-16 17:05:39,891 INFO 264/400 photo_id=760794712 boxes=0 attempts=1 seconds=0.187
+2026-11-16 17:05:40,039 INFO 265/400 photo_id=760794740 boxes=1 attempts=1 seconds=0.148
+2026-11-16 17:05:40,182 INFO 266/400 photo_id=760794760 boxes=0 attempts=1 seconds=0.143
+2026-11-16 17:05:40,332 INFO 267/400 photo_id=760794762 boxes=1 attempts=1 seconds=0.149
+2026-11-16 17:05:40,525 INFO 268/400 photo_id=760794796 boxes=1 attempts=1 seconds=0.193
+2026-11-16 17:05:40,696 INFO 269/400 photo_id=760794814 boxes=0 attempts=1 seconds=0.171
+2026-11-16 17:05:40,898 INFO 270/400 photo_id=760795735 boxes=0 attempts=1 seconds=0.202
+2026-11-16 17:05:41,048 INFO 271/400 photo_id=760795805 boxes=0 attempts=1 seconds=0.150
+2026-11-16 17:05:41,182 INFO 272/400 photo_id=760795831 boxes=0 attempts=1 seconds=0.134
+2026-11-16 17:05:41,384 INFO 273/400 photo_id=760795841 boxes=1 attempts=1 seconds=0.201
+2026-11-16 17:05:41,575 INFO 274/400 photo_id=760795919 boxes=1 attempts=1 seconds=0.192
+2026-11-16 17:05:41,726 INFO 275/400 photo_id=760796206 boxes=0 attempts=1 seconds=0.151
+2026-11-16 17:05:41,891 INFO 276/400 photo_id=760796217 boxes=3 attempts=1 seconds=0.165
+2026-11-16 17:05:42,062 INFO 277/400 photo_id=760796260 boxes=1 attempts=1 seconds=0.170
+2026-11-16 17:05:42,264 INFO 278/400 photo_id=760796364 boxes=0 attempts=1 seconds=0.202
+2026-11-16 17:05:42,465 INFO 279/400 photo_id=760796949 boxes=3 attempts=1 seconds=0.201
+2026-11-16 17:05:42,609 INFO 280/400 photo_id=760798815 boxes=1 attempts=1 seconds=0.145
+2026-11-16 17:05:42,810 INFO 281/400 photo_id=760799376 boxes=0 attempts=1 seconds=0.201
+2026-11-16 17:05:42,987 INFO 282/400 photo_id=760808393 boxes=1 attempts=1 seconds=0.176
+2026-11-16 17:05:43,178 INFO 283/400 photo_id=760808485 boxes=2 attempts=1 seconds=0.191
+2026-11-16 17:05:43,380 INFO 284/400 photo_id=760809365 boxes=0 attempts=1 seconds=0.202
+2026-11-16 17:05:43,585 INFO 285/400 photo_id=760811947 boxes=2 attempts=1 seconds=0.204
+2026-11-16 17:05:43,777 INFO 286/400 photo_id=760812513 boxes=1 attempts=1 seconds=0.191
+2026-11-16 17:05:43,976 INFO 287/400 photo_id=760814222 boxes=0 attempts=1 seconds=0.199
+2026-11-16 17:05:44,171 INFO 288/400 photo_id=760824917 boxes=3 attempts=1 seconds=0.194
+2026-11-16 17:05:44,381 INFO 289/400 photo_id=760825329 boxes=0 attempts=1 seconds=0.210
+2026-11-16 17:05:44,599 INFO 290/400 photo_id=760825354 boxes=0 attempts=1 seconds=0.218
+2026-11-16 17:05:44,791 INFO 291/400 photo_id=760826859 boxes=0 attempts=1 seconds=0.191
+2026-11-16 17:05:44,982 INFO 292/400 photo_id=760828011 boxes=0 attempts=1 seconds=0.191
+2026-11-16 17:05:45,175 INFO 293/400 photo_id=760828121 boxes=9 attempts=1 seconds=0.193
+2026-11-16 17:05:45,367 INFO 294/400 photo_id=760828164 boxes=1 attempts=1 seconds=0.191
+2026-11-16 17:05:45,542 INFO 295/400 photo_id=760830074 boxes=0 attempts=1 seconds=0.175
+2026-11-16 17:05:45,739 INFO 296/400 photo_id=760830528 boxes=1 attempts=1 seconds=0.197
+2026-11-16 17:05:45,933 INFO 297/400 photo_id=760831616 boxes=1 attempts=1 seconds=0.194
+2026-11-16 17:05:46,125 INFO 298/400 photo_id=760831619 boxes=2 attempts=1 seconds=0.191
+2026-11-16 17:05:46,327 INFO 299/400 photo_id=760832201 boxes=0 attempts=1 seconds=0.202
+2026-11-16 17:05:46,526 INFO 300/400 photo_id=760833697 boxes=1 attempts=1 seconds=0.199
+2026-11-16 17:05:46,725 INFO 301/400 photo_id=760836412 boxes=1 attempts=1 seconds=0.199
+2026-11-16 17:05:46,925 INFO 302/400 photo_id=760836523 boxes=1 attempts=1 seconds=0.200
+2026-11-16 17:05:47,136 INFO 303/400 photo_id=760839786 boxes=0 attempts=1 seconds=0.203
+2026-11-16 17:05:47,338 INFO 304/400 photo_id=760840108 boxes=0 attempts=1 seconds=0.201
+2026-11-16 17:05:47,540 INFO 305/400 photo_id=760840152 boxes=0 attempts=1 seconds=0.202
+2026-11-16 17:05:47,740 INFO 306/400 photo_id=760840210 boxes=0 attempts=1 seconds=0.200
+2026-11-16 17:05:47,943 INFO 307/400 photo_id=760840341 boxes=1 attempts=1 seconds=0.203
+2026-11-16 17:05:48,142 INFO 308/400 photo_id=760844242 boxes=0 attempts=1 seconds=0.199
+2026-11-16 17:05:48,347 INFO 309/400 photo_id=760846867 boxes=0 attempts=1 seconds=0.205
+2026-11-16 17:05:48,545 INFO 310/400 photo_id=760849218 boxes=1 attempts=1 seconds=0.197
+2026-11-16 17:05:48,741 INFO 311/400 photo_id=760851803 boxes=0 attempts=1 seconds=0.196
+2026-11-16 17:05:48,943 INFO 312/400 photo_id=760853346 boxes=2 attempts=1 seconds=0.202
+2026-11-16 17:05:49,137 INFO 313/400 photo_id=760860770 boxes=1 attempts=1 seconds=0.193
+2026-11-16 17:05:49,272 INFO 314/400 photo_id=760861993 boxes=0 attempts=1 seconds=0.135
+2026-11-16 17:05:49,478 INFO 315/400 photo_id=760863261 boxes=0 attempts=1 seconds=0.206
+2026-11-16 17:05:49,670 INFO 316/400 photo_id=760863414 boxes=3 attempts=1 seconds=0.191
+2026-11-16 17:05:49,854 INFO 317/400 photo_id=760863846 boxes=1 attempts=1 seconds=0.184
+2026-11-16 17:05:50,019 INFO 318/400 photo_id=760866864 boxes=4 attempts=1 seconds=0.165
+2026-11-16 17:05:50,214 INFO 319/400 photo_id=760872225 boxes=3 attempts=1 seconds=0.195
+2026-11-16 17:05:50,414 INFO 320/400 photo_id=760873951 boxes=0 attempts=1 seconds=0.200
+2026-11-16 17:05:50,605 INFO 321/400 photo_id=760874055 boxes=0 attempts=1 seconds=0.191
+2026-11-16 17:05:50,803 INFO 322/400 photo_id=760874189 boxes=0 attempts=1 seconds=0.198
+2026-11-16 17:05:51,002 INFO 323/400 photo_id=760874211 boxes=3 attempts=1 seconds=0.199
+2026-11-16 17:05:51,207 INFO 324/400 photo_id=760878072 boxes=0 attempts=1 seconds=0.204
+2026-11-16 17:05:51,405 INFO 325/400 photo_id=760882929 boxes=0 attempts=1 seconds=0.198
+2026-11-16 17:05:51,543 INFO 326/400 photo_id=760882955 boxes=1 attempts=1 seconds=0.138
+2026-11-16 17:05:51,741 INFO 327/400 photo_id=760882980 boxes=0 attempts=1 seconds=0.197
+2026-11-16 17:05:51,904 INFO 328/400 photo_id=760883304 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:52,062 INFO 329/400 photo_id=760883367 boxes=0 attempts=1 seconds=0.158
+2026-11-16 17:05:52,233 INFO 330/400 photo_id=760883429 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:52,396 INFO 331/400 photo_id=760883436 boxes=0 attempts=1 seconds=0.163
+2026-11-16 17:05:52,588 INFO 332/400 photo_id=760883490 boxes=1 attempts=1 seconds=0.191
+2026-11-16 17:05:52,751 INFO 333/400 photo_id=760883501 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:52,914 INFO 334/400 photo_id=760883554 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:53,077 INFO 335/400 photo_id=760883556 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:53,240 INFO 336/400 photo_id=760883605 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:53,400 INFO 337/400 photo_id=760883609 boxes=1 attempts=1 seconds=0.160
+2026-11-16 17:05:53,566 INFO 338/400 photo_id=760883669 boxes=1 attempts=1 seconds=0.166
+2026-11-16 17:05:53,730 INFO 339/400 photo_id=760883688 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:53,893 INFO 340/400 photo_id=760883696 boxes=2 attempts=1 seconds=0.163
+2026-11-16 17:05:54,057 INFO 341/400 photo_id=760883761 boxes=1 attempts=1 seconds=0.164
+2026-11-16 17:05:54,220 INFO 342/400 photo_id=760883873 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:54,383 INFO 343/400 photo_id=760883883 boxes=1 attempts=1 seconds=0.162
+2026-11-16 17:05:54,546 INFO 344/400 photo_id=760883935 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:54,709 INFO 345/400 photo_id=760883955 boxes=1 attempts=1 seconds=0.162
+2026-11-16 17:05:54,872 INFO 346/400 photo_id=760884008 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:55,035 INFO 347/400 photo_id=760884028 boxes=0 attempts=1 seconds=0.163
+2026-11-16 17:05:55,198 INFO 348/400 photo_id=760884046 boxes=4 attempts=1 seconds=0.163
+2026-11-16 17:05:55,361 INFO 349/400 photo_id=760884047 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:55,525 INFO 350/400 photo_id=760884062 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:55,688 INFO 351/400 photo_id=760884113 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:55,852 INFO 352/400 photo_id=760884130 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:56,016 INFO 353/400 photo_id=760884141 boxes=1 attempts=1 seconds=0.164
+2026-11-16 17:05:56,180 INFO 354/400 photo_id=760884143 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:56,379 INFO 355/400 photo_id=760886126 boxes=0 attempts=1 seconds=0.199
+2026-11-16 17:05:56,570 INFO 356/400 photo_id=760889024 boxes=0 attempts=1 seconds=0.190
+2026-11-16 17:05:56,753 INFO 357/400 photo_id=760889376 boxes=0 attempts=1 seconds=0.183
+2026-11-16 17:05:56,888 INFO 358/400 photo_id=760889708 boxes=1 attempts=1 seconds=0.135
+2026-11-16 17:05:57,078 INFO 359/400 photo_id=760889982 boxes=0 attempts=1 seconds=0.190
+2026-11-16 17:05:57,293 INFO 360/400 photo_id=760891296 boxes=1 attempts=1 seconds=0.214
+2026-11-16 17:05:57,456 INFO 361/400 photo_id=760896208 boxes=1 attempts=1 seconds=0.163
+2026-11-16 17:05:57,620 INFO 362/400 photo_id=760896209 boxes=0 attempts=1 seconds=0.163
+2026-11-16 17:05:57,815 INFO 363/400 photo_id=760896866 boxes=1 attempts=1 seconds=0.195
+2026-11-16 17:05:58,008 INFO 364/400 photo_id=760896899 boxes=1 attempts=1 seconds=0.192
+2026-11-16 17:05:58,140 INFO 365/400 photo_id=760901104 boxes=0 attempts=1 seconds=0.132
+2026-11-16 17:05:58,330 INFO 366/400 photo_id=760901922 boxes=1 attempts=1 seconds=0.189
+2026-11-16 17:05:58,520 INFO 367/400 photo_id=760902097 boxes=0 attempts=1 seconds=0.190
+2026-11-16 17:05:58,720 INFO 368/400 photo_id=760902483 boxes=2 attempts=1 seconds=0.200
+2026-11-16 17:05:58,878 INFO 369/400 photo_id=760903289 boxes=0 attempts=1 seconds=0.158
+2026-11-16 17:05:59,068 INFO 370/400 photo_id=760906690 boxes=1 attempts=1 seconds=0.190
+2026-11-16 17:05:59,260 INFO 371/400 photo_id=760909418 boxes=0 attempts=1 seconds=0.191
+2026-11-16 17:05:59,460 INFO 372/400 photo_id=760909826 boxes=1 attempts=1 seconds=0.200
+2026-11-16 17:05:59,661 INFO 373/400 photo_id=760911348 boxes=0 attempts=1 seconds=0.201
+2026-11-16 17:05:59,813 INFO 374/400 photo_id=760912068 boxes=0 attempts=1 seconds=0.152
+2026-11-16 17:06:00,022 INFO 375/400 photo_id=760916281 boxes=1 attempts=1 seconds=0.208
+2026-11-16 17:06:00,238 INFO 376/400 photo_id=760917469 boxes=0 attempts=1 seconds=0.216
+2026-11-16 17:06:00,437 INFO 377/400 photo_id=760918750 boxes=1 attempts=1 seconds=0.198
+2026-11-16 17:06:00,648 INFO 378/400 photo_id=760921994 boxes=0 attempts=1 seconds=0.211
+2026-11-16 17:06:00,842 INFO 379/400 photo_id=760922831 boxes=0 attempts=1 seconds=0.194
+2026-11-16 17:06:01,032 INFO 380/400 photo_id=760924461 boxes=0 attempts=1 seconds=0.189
+2026-11-16 17:06:01,221 INFO 381/400 photo_id=760928679 boxes=0 attempts=1 seconds=0.189
+2026-11-16 17:06:01,412 INFO 382/400 photo_id=760928840 boxes=1 attempts=1 seconds=0.190
+2026-11-16 17:06:01,603 INFO 383/400 photo_id=760936519 boxes=1 attempts=1 seconds=0.191
+2026-11-16 17:06:01,754 INFO 384/400 photo_id=760938189 boxes=3 attempts=1 seconds=0.151
+2026-11-16 17:06:01,964 INFO 385/400 photo_id=760940688 boxes=1 attempts=1 seconds=0.210
+2026-11-16 17:06:02,178 INFO 386/400 photo_id=760942194 boxes=0 attempts=1 seconds=0.213
+2026-11-16 17:06:02,321 INFO 387/400 photo_id=760942668 boxes=0 attempts=1 seconds=0.143
+2026-11-16 17:06:02,459 INFO 388/400 photo_id=760946389 boxes=1 attempts=1 seconds=0.137
+2026-11-16 17:06:02,657 INFO 389/400 photo_id=760947122 boxes=0 attempts=1 seconds=0.198
+2026-11-16 17:06:02,874 INFO 390/400 photo_id=760948392 boxes=0 attempts=1 seconds=0.216
+2026-11-16 17:06:03,063 INFO 391/400 photo_id=760950800 boxes=1 attempts=1 seconds=0.189
+2026-11-16 17:06:03,258 INFO 392/400 photo_id=760951385 boxes=1 attempts=1 seconds=0.196
+2026-11-16 17:06:03,471 INFO 393/400 photo_id=760955874 boxes=0 attempts=1 seconds=0.212
+2026-11-16 17:06:03,680 INFO 394/400 photo_id=760957242 boxes=0 attempts=1 seconds=0.209
+2026-11-16 17:06:03,877 INFO 395/400 photo_id=760958094 boxes=0 attempts=1 seconds=0.197
+2026-11-16 17:06:04,066 INFO 396/400 photo_id=760959829 boxes=1 attempts=1 seconds=0.188
+2026-11-16 17:06:04,254 INFO 397/400 photo_id=760959889 boxes=2 attempts=1 seconds=0.188
+2026-11-16 17:06:04,404 INFO 398/400 photo_id=760961317 boxes=0 attempts=1 seconds=0.149
+2026-11-16 17:06:04,617 INFO 399/400 photo_id=760961867 boxes=0 attempts=1 seconds=0.214
+2026-11-16 17:06:04,817 INFO 400/400 photo_id=760963866 boxes=0 attempts=1 seconds=0.199
+2026-11-16 17:06:04,822 INFO Results: /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/test_2026-11-16/owlv2
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : test-400-final-owlv2
+COMET INFO:     url                   : https://www.comet.com/ubileyka19/butterfly-bench/b0f84d5191584ad28957d9379cfd0629
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     attempts                         : 1
+COMET INFO:     data_load_seconds                : 1.0730827299994417
+COMET INFO:     device_peak_used_mib             : 1788.0
+COMET INFO:     errors                           : 341
+COMET INFO:     f1                               : 0.5710691823899371
+COMET INFO:     fn                               : 14
+COMET INFO:     fp                               : 327
+COMET INFO:     image_failed                     : 0
+COMET INFO:     image_seconds [400]              : (0.12996318700606935, 0.4940370959957363)
+COMET INFO:     images                           : 400
+COMET INFO:     images_per_second                : 5.371251393848715
+COMET INFO:     images_with_errors               : 175
+COMET INFO:     iou_0.5/errors                   : 341
+COMET INFO:     iou_0.5/f1                       : 0.5710691823899371
+COMET INFO:     iou_0.5/fn                       : 14
+COMET INFO:     iou_0.5/fp                       : 327
+COMET INFO:     iou_0.5/images_with_errors       : 175
+COMET INFO:     iou_0.5/negative_fp              : 112
+COMET INFO:     iou_0.5/negative_images_with_fp  : 82
+COMET INFO:     iou_0.5/precision                : 0.40974729241877256
+COMET INFO:     iou_0.5/recall                   : 0.941908713692946
+COMET INFO:     iou_0.5/tp                       : 227
+COMET INFO:     iou_0.75/errors                  : 481
+COMET INFO:     iou_0.75/f1                      : 0.3949685534591195
+COMET INFO:     iou_0.75/fn                      : 84
+COMET INFO:     iou_0.75/fp                      : 397
+COMET INFO:     iou_0.75/images_with_errors      : 210
+COMET INFO:     iou_0.75/negative_fp             : 112
+COMET INFO:     iou_0.75/negative_images_with_fp : 82
+COMET INFO:     iou_0.75/precision               : 0.2833935018050541
+COMET INFO:     iou_0.75/recall                  : 0.6514522821576764
+COMET INFO:     iou_0.75/tp                      : 157
+COMET INFO:     mean_image_seconds               : 0.18617635382794107
+COMET INFO:     model_load_seconds               : 1.7863737269944977
+COMET INFO:     negative_fp                      : 112
+COMET INFO:     negative_images                  : 180
+COMET INFO:     negative_images_with_fp          : 82
+COMET INFO:     parsing_errors                   : 0
+COMET INFO:     precision                        : 0.40974729241877256
+COMET INFO:     processing_errors                : 0
+COMET INFO:     processing_seconds               : 74.47054153117642
+COMET INFO:     recall                           : 0.941908713692946
+COMET INFO:     runtime_errors                   : 0
+COMET INFO:     torch_peak_allocated_mib         : 804.28515625
+COMET INFO:     total_attempts                   : 400
+COMET INFO:     tp                               : 227
+COMET INFO:     validation_errors                : 0
+COMET INFO:     wall_seconds                     : 80.68691448100435
+COMET INFO:   Others:
+COMET INFO:     Name : test-400-final-owlv2
+COMET INFO:   Parameters:
+COMET INFO:     comet.experiment_name     : test-400-final-owlv2
+COMET INFO:     comet.log_images          : 0
+COMET INFO:     comet.log_raw_responses   : True
+COMET INFO:     comet.mode                : auto
+COMET INFO:     comet.project_name        : butterfly-bench
+COMET INFO:     comet.tags                : ["butterfly-detection", "test-400", "final-config", "held-out-test"]
+COMET INFO:     comet.workspace           : None
+COMET INFO:     data.limit                : None
+COMET INFO:     data.parquet_file         : data/test-00000-of-00001.parquet
+COMET INFO:     data.photo_ids            : None
+COMET INFO:     data.repo_id              : xartik/inaturalist_butterflies
+COMET INFO:     data.revision             : 1316e3c7147d4399a03f90684e191aae4d798f09
+COMET INFO:     data.shuffle              : False
+COMET INFO:     data.source               : hf
+COMET INFO:     data.split                : test
+COMET INFO:     deterministic             : True
+COMET INFO:     evaluation.iou_thresholds : [0.5, 0.75]
+COMET INFO:     evaluation.primary_iou    : 0.5
+COMET INFO:     mode                      : test
+COMET INFO:     model.backend             : transformers_detector
+COMET INFO:     model.clip_boxes          : True
+COMET INFO:     model.device              : cuda:0
+COMET INFO:     model.dtype               : float32
+COMET INFO:     model.name                : owlv2
+COMET INFO:     model.prompt              : butterfly
+COMET INFO:     model.repo_id             : google/owlv2-base-patch16-ensemble
+COMET INFO:     model.revision            : cfd3195ba4ea9592eec887ded089f4c08eff231d
+COMET INFO:     model.text_threshold      : 0.25
+COMET INFO:     model.threshold           : 0.1
+COMET INFO:     output_dir                : /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/test_2026-11-16/owlv2
+COMET INFO:     postprocess.nms_iou       : 0.5
+COMET INFO:     retries.max_attempts      : 3
+COMET INFO:     seed                      : 42
+COMET INFO:   Uploads:
+COMET INFO:     asset : 9 (439.11 KB)
+COMET INFO: 
+COMET INFO: Please wait for assets to finish uploading (timeout is 60 seconds)
+COMET INFO: All assets have been sent, waiting for delivery confirmation
+{"output_dir": "/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/test_2026-11-16/owlv2", "metrics": {"images": 400, "processing_seconds": 74.47054153117642, "mean_image_seconds": 0.18617635382794107, "images_per_second": 5.371251393848715, "data_load_seconds": 1.0730827299994417, "model_load_seconds": 1.7863737269944977, "wall_seconds": 80.68691448100435, "torch_peak_allocated_mib": 804.28515625, "device_peak_used_mib": 1788.0, "processing_errors": 0, "parsing_errors": 0, "validation_errors": 0, "runtime_errors": 0, "total_attempts": 400, "iou_0.5/tp": 227, "iou_0.5/fp": 327, "iou_0.5/fn": 14, "iou_0.5/errors": 341, "iou_0.5/images_with_errors": 175, "iou_0.5/precision": 0.40974729241877256, "iou_0.5/recall": 0.941908713692946, "iou_0.5/f1": 0.5710691823899371, "iou_0.5/negative_fp": 112, "iou_0.5/negative_images_with_fp": 82, "tp": 227, "fp": 327, "fn": 14, "errors": 341, "images_with_errors": 175, "precision": 0.40974729241877256, "recall": 0.941908713692946, "f1": 0.5710691823899371, "negative_fp": 112, "negative_images_with_fp": 82, "iou_0.75/tp": 157, "iou_0.75/fp": 397, "iou_0.75/fn": 84, "iou_0.75/errors": 481, "iou_0.75/images_with_errors": 210, "iou_0.75/precision": 0.2833935018050541, "iou_0.75/recall": 0.6514522821576764, "iou_0.75/f1": 0.3949685534591195, "iou_0.75/negative_fp": 112, "iou_0.75/negative_images_with_fp": 82, "negative_images": 180}, "status": "complete"}
