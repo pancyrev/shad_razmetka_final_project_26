@@ -69,24 +69,14 @@ def _invalid_constant(value):
     raise ParseError(f"non-JSON numeric constant: {value}")
 
 
-def parse_jsonl_response(text, photo_id, *, response_format="boxes_only"):
-    """Parse model-owned fields and attach trusted metadata from the input.
-
-    task_record is retained only to reproduce archived prompt experiments.
-    """
+def parse_jsonl_response(text, photo_id):
     if not isinstance(text, str) or len(text.strip().splitlines()) != 1:
         raise ParseError("expected exactly one nonempty JSONL line")
     try:
         obj = json.loads(text.strip(), object_pairs_hook=_unique_object, parse_constant=_invalid_constant)
     except (json.JSONDecodeError, RecursionError) as exc:
         raise ParseError(str(exc)) from exc
-    if response_format == "task_record":
-        return validate_record(obj, photo_id)
-    if response_format != "boxes_only":
-        raise ValueError(f"unknown VLM response format: {response_format}")
-    if not isinstance(obj, dict) or set(obj) != {"boxes"}:
-        raise ValidationError("model response must have exactly one field: boxes")
-    return validate_record({"photo_id": photo_id, "boxes": obj["boxes"], "error": None}, photo_id)
+    return validate_record(obj, photo_id)
 
 
 def detector_record(photo_id, boxes_xyxy, scores, image_size, *, clip=True):

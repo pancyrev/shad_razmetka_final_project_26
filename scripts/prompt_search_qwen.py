@@ -7,8 +7,8 @@ from omegaconf import OmegaConf
 from prompt_search_common import run_search
 
 BASELINE = OmegaConf.load(
-    Path(__file__).resolve().parents[1] / "model_results/validation_2026-11-13/qwen/config.yaml"
-).model.prompt
+    Path(__file__).resolve().parents[1] / "butterfly_bench/conf/model/qwen.yaml"
+).output_prompt
 
 SCHEMA = (
     'Return exactly one JSON line with exactly the keys "photo_id", "boxes", "error". '

@@ -49,8 +49,7 @@ def run_sample(backend, sample, cfg, attempts_handle):
             output = backend.predict(image, sample.photo_id, attempt=attempt,
                                      seed=attempt_seed, feedback=feedback)
             entry.update(raw_text=output.text, raw_record=output.record, details=output.details)
-            record = (parse_jsonl_response(output.text, sample.photo_id,
-                                          response_format=cfg.model.get("response_format", "boxes_only"))
+            record = (parse_jsonl_response(output.text, sample.photo_id)
                       if output.record is None else validate_record(output.record, sample.photo_id))
             scores = output.scores if output.record is not None else [1.0] * len(record["boxes"])
             record["boxes"], scores = nms(record["boxes"], scores, cfg.postprocess.nms_iou)
@@ -100,8 +99,6 @@ def run(cfg):
         raise ValueError("mode must be test or inference")
     if cfg.retries.max_attempts < 1:
         raise ValueError("retries.max_attempts must be at least 1")
-    if cfg.model.get("response_format", "boxes_only") not in {"boxes_only", "task_record"}:
-        raise ValueError("model.response_format must be boxes_only or task_record")
     thresholds = list(cfg.evaluation.iou_thresholds)
     if cfg.evaluation.primary_iou not in thresholds or any(not 0 < v <= 1 for v in thresholds):
         raise ValueError("IoU thresholds must be in (0,1] and include primary_iou")

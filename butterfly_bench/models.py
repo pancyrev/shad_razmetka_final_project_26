@@ -36,10 +36,7 @@ def torch_dtype(name):
 
 
 def prompt_for(cfg, photo_id, feedback=None):
-    prompt = cfg.prompt
-    # Only the historical sweep explicitly opts into the old full-record contract.
-    if cfg.get("response_format", "boxes_only") == "task_record":
-        prompt += f"\nThe photo_id for this image is {photo_id}."
+    prompt = f"{cfg.prompt}\nThe photo_id for this image is {photo_id}."
     if feedback:
         prompt += ("\nYour previous response was rejected: " + feedback[:1200]
                    + ". Inspect this image again and return a corrected single JSONL record.")
