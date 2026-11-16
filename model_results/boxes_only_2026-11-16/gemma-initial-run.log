@@ -1,0 +1,247 @@
+COMET INFO: Experiment is live on comet.com https://www.comet.com/ubileyka19/butterfly-bench/b9ac77f877924317806de1de1139e5e2
+
+COMET WARNING: String value length exceeds 1000 characters and will be truncated. Provided value: 'Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly one key: "boxes" (an array of boxes). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must be strictly positive, and left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels or a 0-1000 scale. If there are no adult butterflies, return "boxes": []. Example structure (not the answer to this image): {"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}]}.'
+COMET WARNING: String value length exceeds 1000 characters and will be truncated. Provided value: 'Output exactly one line of valid JSON, without Markdown or explanation. Use exactly {"boxes":[{"left":X,"top":Y,"width":W,"height":H}]}. The record must have exactly one key: "boxes". Each box has exactly the four named numeric fields. Use normalized fractions of image dimensions, never pixels or a 0-1000 scale. The top-left of the image is (0,0), bottom-right is (1,1). left=x_min/image_width; top=y_min/image_height; width=(x_max-x_min)/image_width; height=(y_max-y_min)/image_height. All numbers must be finite. left>=0, top>=0, width>0, height>0, left+width<=1 and top+height<=1. If no adult butterflies are present use "boxes": []. For example, an object occupying x=20% through 70% and y=10% through 60% would have {"left":0.2,"top":0.1,"width":0.5,"height":0.5}. This is an example of arithmetic only, not a proposed box for this image. The output boxes must come from this image. Locate every adult butterfly. Exclude moths, caterpillars, pupae, other insects, flowers and shadows. Return one tight axis-aligned rectangle for each butterfly, including all its visible wings, body, antennae and legs. For occluded or cropped animals, box the visible part only.'
+2026-11-16 16:13:48,874 INFO 1/100 photo_id=755630032 boxes=1 attempts=1 seconds=1.629
+2026-11-16 16:13:50,580 INFO 2/100 photo_id=760199895 boxes=1 attempts=1 seconds=1.704
+2026-11-16 16:13:52,197 INFO 3/100 photo_id=760117819 boxes=1 attempts=1 seconds=1.617
+2026-11-16 16:13:53,552 INFO 4/100 photo_id=760581893 boxes=1 attempts=1 seconds=1.354
+2026-11-16 16:13:55,189 WARNING photo_id=760617662 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:13:56,724 WARNING photo_id=760617662 attempt=2 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:13:58,257 WARNING photo_id=760617662 attempt=3 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:13:58,259 INFO 5/100 photo_id=760617662 boxes=ERROR attempts=3 seconds=4.706
+2026-11-16 16:13:59,747 INFO 6/100 photo_id=760585041 boxes=1 attempts=1 seconds=1.489
+2026-11-16 16:14:01,500 INFO 7/100 photo_id=751455934 boxes=1 attempts=1 seconds=1.752
+2026-11-16 16:14:03,162 INFO 8/100 photo_id=755339961 boxes=1 attempts=1 seconds=1.661
+2026-11-16 16:14:04,946 INFO 9/100 photo_id=751709803 boxes=1 attempts=1 seconds=1.783
+2026-11-16 16:14:06,019 INFO 10/100 photo_id=755545567 boxes=1 attempts=1 seconds=1.073
+2026-11-16 16:14:07,634 INFO 11/100 photo_id=760640706 boxes=1 attempts=1 seconds=1.613
+2026-11-16 16:14:09,287 INFO 12/100 photo_id=751709612 boxes=1 attempts=1 seconds=1.653
+2026-11-16 16:14:10,923 INFO 13/100 photo_id=751709821 boxes=1 attempts=1 seconds=1.635
+2026-11-16 16:14:12,489 INFO 14/100 photo_id=751573899 boxes=1 attempts=1 seconds=1.565
+2026-11-16 16:14:14,197 INFO 15/100 photo_id=755595528 boxes=1 attempts=1 seconds=1.708
+2026-11-16 16:14:15,837 INFO 16/100 photo_id=760553542 boxes=1 attempts=1 seconds=1.638
+2026-11-16 16:14:17,519 WARNING photo_id=751709610 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:14:19,057 WARNING photo_id=751709610 attempt=2 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:14:20,595 WARNING photo_id=751709610 attempt=3 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:14:20,597 INFO 17/100 photo_id=751709610 boxes=ERROR attempts=3 seconds=4.758
+2026-11-16 16:14:22,146 INFO 18/100 photo_id=755466475 boxes=1 attempts=1 seconds=1.549
+2026-11-16 16:14:23,508 INFO 19/100 photo_id=751452886 boxes=1 attempts=1 seconds=1.362
+2026-11-16 16:14:25,245 INFO 20/100 photo_id=751744539 boxes=1 attempts=1 seconds=1.735
+2026-11-16 16:14:26,981 INFO 21/100 photo_id=755824792 boxes=1 attempts=1 seconds=1.734
+2026-11-16 16:14:28,597 INFO 22/100 photo_id=755914152 boxes=1 attempts=1 seconds=1.617
+2026-11-16 16:14:30,677 WARNING photo_id=760120082 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:14:32,650 WARNING photo_id=760120082 attempt=2 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:14:34,626 WARNING photo_id=760120082 attempt=3 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:14:34,628 INFO 23/100 photo_id=760120082 boxes=ERROR attempts=3 seconds=6.028
+2026-11-16 16:14:36,288 INFO 24/100 photo_id=755452426 boxes=1 attempts=1 seconds=1.658
+2026-11-16 16:14:37,635 INFO 25/100 photo_id=755531940 boxes=1 attempts=1 seconds=1.347
+2026-11-16 16:14:39,268 INFO 26/100 photo_id=760126560 boxes=1 attempts=1 seconds=1.633
+2026-11-16 16:14:40,647 WARNING photo_id=751709828 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:14:41,901 WARNING photo_id=751709828 attempt=2 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:14:43,153 WARNING photo_id=751709828 attempt=3 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:14:43,153 INFO 27/100 photo_id=751709828 boxes=ERROR attempts=3 seconds=3.886
+2026-11-16 16:14:44,869 INFO 28/100 photo_id=751709835 boxes=1 attempts=1 seconds=1.714
+2026-11-16 16:14:46,058 INFO 29/100 photo_id=751489222 boxes=0 attempts=1 seconds=1.187
+2026-11-16 16:14:47,818 INFO 30/100 photo_id=755490215 boxes=1 attempts=1 seconds=1.759
+2026-11-16 16:14:49,201 WARNING photo_id=760219697 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:14:50,473 INFO 31/100 photo_id=760219697 boxes=1 attempts=2 seconds=2.655
+2026-11-16 16:14:52,238 INFO 32/100 photo_id=751895718 boxes=1 attempts=1 seconds=1.765
+2026-11-16 16:14:53,843 INFO 33/100 photo_id=760492236 boxes=1 attempts=1 seconds=1.603
+2026-11-16 16:14:55,458 INFO 34/100 photo_id=760823379 boxes=1 attempts=1 seconds=1.614
+2026-11-16 16:14:57,101 INFO 35/100 photo_id=751840376 boxes=1 attempts=1 seconds=1.642
+2026-11-16 16:14:58,797 INFO 36/100 photo_id=760792120 boxes=1 attempts=1 seconds=1.693
+2026-11-16 16:15:00,578 INFO 37/100 photo_id=760545150 boxes=1 attempts=1 seconds=1.779
+2026-11-16 16:15:01,795 INFO 38/100 photo_id=755729066 boxes=0 attempts=1 seconds=1.215
+2026-11-16 16:15:03,554 INFO 39/100 photo_id=751392269 boxes=1 attempts=1 seconds=1.757
+2026-11-16 16:15:05,255 INFO 40/100 photo_id=755667992 boxes=1 attempts=1 seconds=1.701
+2026-11-16 16:15:06,934 INFO 41/100 photo_id=760483350 boxes=1 attempts=1 seconds=1.677
+2026-11-16 16:15:08,701 INFO 42/100 photo_id=751411373 boxes=1 attempts=1 seconds=1.767
+2026-11-16 16:15:10,465 WARNING photo_id=751709802 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:15:12,091 WARNING photo_id=751709802 attempt=2 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:15:13,719 WARNING photo_id=751709802 attempt=3 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:15:13,721 INFO 43/100 photo_id=751709802 boxes=ERROR attempts=3 seconds=5.018
+2026-11-16 16:15:15,351 INFO 44/100 photo_id=760275884 boxes=1 attempts=1 seconds=1.628
+2026-11-16 16:15:17,024 INFO 45/100 photo_id=760112737 boxes=1 attempts=1 seconds=1.671
+2026-11-16 16:15:18,667 INFO 46/100 photo_id=755977758 boxes=1 attempts=1 seconds=1.641
+2026-11-16 16:15:19,897 INFO 47/100 photo_id=755819391 boxes=0 attempts=1 seconds=1.228
+2026-11-16 16:15:21,454 WARNING photo_id=751896458 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:15:22,866 WARNING photo_id=751896458 attempt=2 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:15:24,277 WARNING photo_id=751896458 attempt=3 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:15:24,277 INFO 48/100 photo_id=751896458 boxes=ERROR attempts=3 seconds=4.380
+2026-11-16 16:15:25,856 WARNING photo_id=751752003 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:15:27,331 INFO 49/100 photo_id=751752003 boxes=1 attempts=2 seconds=3.052
+2026-11-16 16:15:28,649 INFO 50/100 photo_id=760651030 boxes=1 attempts=1 seconds=1.317
+2026-11-16 16:15:29,908 INFO 51/100 photo_id=756059682 boxes=0 attempts=1 seconds=1.259
+2026-11-16 16:15:31,603 INFO 52/100 photo_id=760425692 boxes=1 attempts=1 seconds=1.693
+2026-11-16 16:15:33,269 INFO 53/100 photo_id=751313721 boxes=1 attempts=1 seconds=1.665
+2026-11-16 16:15:34,451 INFO 54/100 photo_id=760620476 boxes=0 attempts=1 seconds=1.181
+2026-11-16 16:15:35,583 INFO 55/100 photo_id=755567021 boxes=1 attempts=1 seconds=1.132
+2026-11-16 16:15:37,131 INFO 56/100 photo_id=755488675 boxes=1 attempts=1 seconds=1.546
+2026-11-16 16:15:38,715 INFO 57/100 photo_id=751795623 boxes=1 attempts=1 seconds=1.582
+2026-11-16 16:15:40,798 WARNING photo_id=751752012 attempt=1 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:15:42,761 WARNING photo_id=751752012 attempt=2 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:15:44,729 WARNING photo_id=751752012 attempt=3 validation: box 0: invalid origin or nonpositive size
+2026-11-16 16:15:44,731 INFO 58/100 photo_id=751752012 boxes=ERROR attempts=3 seconds=6.014
+2026-11-16 16:15:46,253 INFO 59/100 photo_id=755710793 boxes=1 attempts=1 seconds=1.522
+2026-11-16 16:15:47,863 INFO 60/100 photo_id=755736214 boxes=1 attempts=1 seconds=1.608
+2026-11-16 16:15:48,932 INFO 61/100 photo_id=760775330 boxes=0 attempts=1 seconds=1.067
+2026-11-16 16:15:50,146 INFO 62/100 photo_id=760909680 boxes=0 attempts=1 seconds=1.212
+2026-11-16 16:15:51,342 INFO 63/100 photo_id=760883528 boxes=0 attempts=1 seconds=1.196
+2026-11-16 16:15:52,490 INFO 64/100 photo_id=760883522 boxes=0 attempts=1 seconds=1.147
+2026-11-16 16:15:53,617 INFO 65/100 photo_id=760812544 boxes=0 attempts=1 seconds=1.125
+2026-11-16 16:15:54,805 INFO 66/100 photo_id=760853387 boxes=0 attempts=1 seconds=1.186
+2026-11-16 16:15:56,002 INFO 67/100 photo_id=760883820 boxes=0 attempts=1 seconds=1.196
+2026-11-16 16:15:57,252 INFO 68/100 photo_id=760851656 boxes=0 attempts=1 seconds=1.248
+2026-11-16 16:15:58,363 INFO 69/100 photo_id=760787119 boxes=0 attempts=1 seconds=1.109
+2026-11-16 16:15:59,484 INFO 70/100 photo_id=760883941 boxes=0 attempts=1 seconds=1.121
+2026-11-16 16:16:00,634 INFO 71/100 photo_id=760883841 boxes=0 attempts=1 seconds=1.150
+2026-11-16 16:16:01,493 INFO 72/100 photo_id=760875039 boxes=0 attempts=1 seconds=0.859
+2026-11-16 16:16:02,619 INFO 73/100 photo_id=760883667 boxes=0 attempts=1 seconds=1.125
+2026-11-16 16:16:03,770 INFO 74/100 photo_id=760883495 boxes=0 attempts=1 seconds=1.151
+2026-11-16 16:16:05,028 INFO 75/100 photo_id=760796649 boxes=0 attempts=1 seconds=1.256
+2026-11-16 16:16:06,069 INFO 76/100 photo_id=760959731 boxes=0 attempts=1 seconds=1.040
+2026-11-16 16:16:07,277 INFO 77/100 photo_id=760910719 boxes=0 attempts=1 seconds=1.207
+2026-11-16 16:16:08,252 INFO 78/100 photo_id=760874892 boxes=0 attempts=1 seconds=0.975
+2026-11-16 16:16:09,359 INFO 79/100 photo_id=760883359 boxes=0 attempts=1 seconds=1.107
+2026-11-16 16:16:10,264 INFO 80/100 photo_id=760872774 boxes=0 attempts=1 seconds=0.904
+2026-11-16 16:16:11,448 INFO 81/100 photo_id=760874634 boxes=0 attempts=1 seconds=1.183
+2026-11-16 16:16:12,577 INFO 82/100 photo_id=760954906 boxes=0 attempts=1 seconds=1.127
+2026-11-16 16:16:13,746 INFO 83/100 photo_id=760928380 boxes=0 attempts=1 seconds=1.167
+2026-11-16 16:16:14,786 INFO 84/100 photo_id=760959759 boxes=0 attempts=1 seconds=1.038
+2026-11-16 16:16:15,919 INFO 85/100 photo_id=760905298 boxes=0 attempts=1 seconds=1.132
+2026-11-16 16:16:17,029 INFO 86/100 photo_id=760796779 boxes=0 attempts=1 seconds=1.108
+2026-11-16 16:16:18,115 INFO 87/100 photo_id=760796628 boxes=0 attempts=1 seconds=1.086
+2026-11-16 16:16:19,268 INFO 88/100 photo_id=760822495 boxes=0 attempts=1 seconds=1.151
+2026-11-16 16:16:20,370 INFO 89/100 photo_id=760502210 boxes=0 attempts=1 seconds=1.100
+2026-11-16 16:16:21,539 INFO 90/100 photo_id=760794928 boxes=0 attempts=1 seconds=1.168
+2026-11-16 16:16:22,473 INFO 91/100 photo_id=760921497 boxes=0 attempts=1 seconds=0.934
+2026-11-16 16:16:23,546 INFO 92/100 photo_id=760728314 boxes=0 attempts=1 seconds=1.071
+2026-11-16 16:16:24,757 INFO 93/100 photo_id=760913412 boxes=0 attempts=1 seconds=1.209
+2026-11-16 16:16:25,791 INFO 94/100 photo_id=760835547 boxes=0 attempts=1 seconds=1.034
+2026-11-16 16:16:26,944 INFO 95/100 photo_id=760943083 boxes=0 attempts=1 seconds=1.151
+2026-11-16 16:16:28,008 INFO 96/100 photo_id=760856074 boxes=0 attempts=1 seconds=1.062
+2026-11-16 16:16:29,287 INFO 97/100 photo_id=760834056 boxes=0 attempts=1 seconds=1.276
+2026-11-16 16:16:30,632 INFO 98/100 photo_id=760755770 boxes=0 attempts=1 seconds=1.343
+2026-11-16 16:16:31,835 INFO 99/100 photo_id=760900415 boxes=0 attempts=1 seconds=1.202
+2026-11-16 16:16:32,962 INFO 100/100 photo_id=760812026 boxes=0 attempts=1 seconds=1.125
+2026-11-16 16:16:32,965 INFO Results: /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/boxes_only_2026-11-16/gemma
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : boxes-only-gemma-validation-100
+COMET INFO:     url                   : https://www.comet.com/ubileyka19/butterfly-bench/b9ac77f877924317806de1de1139e5e2
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     attempts [100]                   : (1, 3)
+COMET INFO:     data_load_seconds                : 0.3807538240071153
+COMET INFO:     device_peak_used_mib             : 8646.0
+COMET INFO:     errors                           : 15
+COMET INFO:     f1                               : 0.8623853211009175
+COMET INFO:     fn                               : 14
+COMET INFO:     fp                               : 1
+COMET INFO:     image_failed [100]               : (0, 1)
+COMET INFO:     image_seconds [100]              : (0.8585738569963723, 6.028355774993543)
+COMET INFO:     images                           : 100
+COMET INFO:     images_per_second                : 0.6038803070816684
+COMET INFO:     images_with_errors               : 11
+COMET INFO:     iou_0.5/errors                   : 15
+COMET INFO:     iou_0.5/f1                       : 0.8623853211009175
+COMET INFO:     iou_0.5/fn                       : 14
+COMET INFO:     iou_0.5/fp                       : 1
+COMET INFO:     iou_0.5/images_with_errors       : 11
+COMET INFO:     iou_0.5/negative_fp              : 0
+COMET INFO:     iou_0.5/negative_images_with_fp  : 0
+COMET INFO:     iou_0.5/precision                : 0.9791666666666666
+COMET INFO:     iou_0.5/recall                   : 0.7704918032786885
+COMET INFO:     iou_0.5/tp                       : 47
+COMET INFO:     iou_0.75/errors                  : 51
+COMET INFO:     iou_0.75/f1                      : 0.5321100917431193
+COMET INFO:     iou_0.75/fn                      : 32
+COMET INFO:     iou_0.75/fp                      : 19
+COMET INFO:     iou_0.75/images_with_errors      : 29
+COMET INFO:     iou_0.75/negative_fp             : 0
+COMET INFO:     iou_0.75/negative_images_with_fp : 0
+COMET INFO:     iou_0.75/precision               : 0.6041666666666666
+COMET INFO:     iou_0.75/recall                  : 0.47540983606557374
+COMET INFO:     iou_0.75/tp                      : 29
+COMET INFO:     mean_image_seconds               : 1.655957295300177
+COMET INFO:     model_load_seconds               : 3.0531594479980413
+COMET INFO:     negative_fp                      : 0
+COMET INFO:     negative_images                  : 42
+COMET INFO:     negative_images_with_fp          : 0
+COMET INFO:     parsing_errors                   : 0
+COMET INFO:     precision                        : 0.9791666666666666
+COMET INFO:     processing_errors                : 7
+COMET INFO:     processing_seconds               : 165.5957295300177
+COMET INFO:     recall                           : 0.7704918032786885
+COMET INFO:     runtime_errors                   : 0
+COMET INFO:     torch_peak_allocated_mib         : 0.0
+COMET INFO:     total_attempts                   : 116
+COMET INFO:     tp                               : 47
+COMET INFO:     validation_errors                : 23
+COMET INFO:     wall_seconds                     : 171.1998137490009
+COMET INFO:   Others:
+COMET INFO:     Name : boxes-only-gemma-validation-100
+COMET INFO:   Parameters:
+COMET INFO:     comet.experiment_name     : boxes-only-gemma-validation-100
+COMET INFO:     comet.log_images          : 0
+COMET INFO:     comet.log_raw_responses   : True
+COMET INFO:     comet.mode                : auto
+COMET INFO:     comet.project_name        : butterfly-bench
+COMET INFO:     comet.tags                : ["butterfly-detection", "boxes-only", "validation", "protocol-change"]
+COMET INFO:     comet.workspace           : None
+COMET INFO:     data.limit                : None
+COMET INFO:     data.parquet_file         : data/validation-00000-of-00001.parquet
+COMET INFO:     data.photo_ids            : None
+COMET INFO:     data.repo_id              : xartik/inaturalist_butterflies
+COMET INFO:     data.revision             : 1316e3c7147d4399a03f90684e191aae4d798f09
+COMET INFO:     data.shuffle              : False
+COMET INFO:     data.source               : hf
+COMET INFO:     data.split                : validation
+COMET INFO:     deterministic             : True
+COMET INFO:     evaluation.iou_thresholds : [0.5, 0.75]
+COMET INFO:     evaluation.primary_iou    : 0.5
+COMET INFO:     mode                      : test
+COMET INFO:     model.backend             : llama_cpp
+COMET INFO:     model.batch_size          : 1024
+COMET INFO:     model.context_size        : 8192
+COMET INFO:     model.device              : cuda:0
+COMET INFO:     model.dtype               : UD-Q4_K_XL
+COMET INFO:     model.extra_args          : []
+COMET INFO:     model.gguf_file           : gemma-4-12B-it-qat-UD-Q4_K_XL.gguf
+COMET INFO:     model.gpu_layers          : 999
+COMET INFO:     model.host                : 127.0.0.1
+COMET INFO:     model.image_max_side      : 1280
+COMET INFO:     model.image_max_tokens    : 560
+COMET INFO:     model.main_gpu            : 0
+COMET INFO:     model.max_new_tokens      : 1024
+COMET INFO:     model.max_pixels          : 1003520
+COMET INFO:     model.min_pixels          : 65536
+COMET INFO:     model.mmproj_file         : mmproj-F16.gguf
+COMET INFO:     model.name                : gemma
+COMET INFO:     model.output_prompt       : Find every adult butterfly in the image. Include only adult butterflies; exclude moths, caterpillars, pupae, other insects, shadows and flowers. Draw one tight axis-aligned bounding box per butterfly, enclosing all visible wings, body, antennae and legs. For occluded or cropped butterflies enclose only visible parts; do not invent hidden parts. Return exactly one line of valid JSON (one JSONL record), with no Markdown, code fences, explanations, confidence scores or additional keys. The record must have exactly one key: "boxes" (an array of boxes). Each box must have exactly four numeric fields: "left", "top", "width", "height". Coordinates are normalized to the original image: left=x_min/image_width, top=y_min/image_height, width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height. The origin is the top-left corner. All numbers must be finite; left and top must be at least 0, width and height must be strictly positive, and left+width<=1 and top+height<=1. Use deci [truncated]
+COMET INFO:     model.port                : 0
+COMET INFO:     model.prompt              : Output exactly one line of valid JSON, without Markdown or explanation. Use exactly {"boxes":[{"left":X,"top":Y,"width":W,"height":H}]}. The record must have exactly one key: "boxes". Each box has exactly the four named numeric fields. Use normalized fractions of image dimensions, never pixels or a 0-1000 scale. The top-left of the image is (0,0), bottom-right is (1,1). left=x_min/image_width; top=y_min/image_height; width=(x_max-x_min)/image_width; height=(y_max-y_min)/image_height. All numbers must be finite. left>=0, top>=0, width>0, height>0, left+width<=1 and top+height<=1. If no adult butterflies are present use "boxes": []. For example, an object occupying x=20% through 70% and y=10% through 60% would have {"left":0.2,"top":0.1,"width":0.5,"height":0.5}. This is an example of arithmetic only, not a proposed box for this image. The output boxes must come from this image. Locate every adult butterfly. Exclude moths, caterpillars, pupae, other insects, flowers and shado [truncated]
+COMET INFO:     model.repo_id             : unsloth/gemma-4-12B-it-qat-GGUF
+COMET INFO:     model.request_timeout     : 300
+COMET INFO:     model.response_format     : boxes_only
+COMET INFO:     model.retry_temperature   : 0.2
+COMET INFO:     model.revision            : 980b060c40a8539ac159e0501a3e0f66a6365af3
+COMET INFO:     model.server_binary       : tools/llama.cpp/build/bin/llama-server
+COMET INFO:     model.server_url          : None
+COMET INFO:     model.startup_timeout     : 300
+COMET INFO:     model.temperature         : 0.0
+COMET INFO:     model.threads             : 8
+COMET INFO:     model.ubatch_size         : 1024
+COMET INFO:     output_dir                : /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/boxes_only_2026-11-16/gemma
+COMET INFO:     postprocess.nms_iou       : None
+COMET INFO:     retries.max_attempts      : 3
+COMET INFO:     seed                      : 42
+COMET INFO:   Uploads:
+COMET INFO:     asset : 9 (276.38 KB)
+COMET INFO: 
+COMET INFO: Please wait for assets to finish uploading (timeout is 60 seconds)
+COMET INFO: All assets have been sent, waiting for delivery confirmation
+{'output_dir': '/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/boxes_only_2026-11-16/gemma', 'metrics': {'images': 100, 'processing_seconds': 165.5957295300177, 'mean_image_seconds': 1.655957295300177, 'images_per_second': 0.6038803070816684, 'data_load_seconds': 0.3807538240071153, 'model_load_seconds': 3.0531594479980413, 'wall_seconds': 171.1998137490009, 'torch_peak_allocated_mib': 0.0, 'device_peak_used_mib': 8646.0, 'processing_errors': 7, 'parsing_errors': 0, 'validation_errors': 23, 'runtime_errors': 0, 'total_attempts': 116, 'iou_0.5/tp': 47, 'iou_0.5/fp': 1, 'iou_0.5/fn': 14, 'iou_0.5/errors': 15, 'iou_0.5/images_with_errors': 11, 'iou_0.5/precision': 0.9791666666666666, 'iou_0.5/recall': 0.7704918032786885, 'iou_0.5/f1': 0.8623853211009175, 'iou_0.5/negative_fp': 0, 'iou_0.5/negative_images_with_fp': 0, 'tp': 47, 'fp': 1, 'fn': 14, 'errors': 15, 'images_with_errors': 11, 'precision': 0.9791666666666666, 'recall': 0.7704918032786885, 'f1': 0.8623853211009175, 'negative_fp': 0, 'negative_images_with_fp': 0, 'iou_0.75/tp': 29, 'iou_0.75/fp': 19, 'iou_0.75/fn': 32, 'iou_0.75/errors': 51, 'iou_0.75/images_with_errors': 29, 'iou_0.75/precision': 0.6041666666666666, 'iou_0.75/recall': 0.47540983606557374, 'iou_0.75/f1': 0.5321100917431193, 'iou_0.75/negative_fp': 0, 'iou_0.75/negative_images_with_fp': 0, 'negative_images': 42}, 'status': 'completed_with_errors'}

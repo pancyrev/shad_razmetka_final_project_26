@@ -1,7 +1,23 @@
-# Selected on 100 validation images; see model_results/prompt_search_2026-11-15.
+# Adapted to boxes_only from the selected validation prompt.
+# Historical full-record results: model_results/prompt_search_2026-11-15.
 defaults:
   - gemma
   - _self_
 
 revision: 980b060c40a8539ac159e0501a3e0f66a6365af3
-prompt: "Output exactly one line of valid JSON, without Markdown or explanation. Use exactly {\"photo_id\":THE_INTEGER_ID,\"boxes\":[{\"left\":X,\"top\":Y,\"width\":W,\"height\":H}],\"error\":null}. Each box has exactly the four named numeric fields. Use normalized fractions of image dimensions, never pixels or a 0-1000 scale. The top-left of the image is (0,0), bottom-right is (1,1). left=x_min/image_width; top=y_min/image_height; width=(x_max-x_min)/image_width; height=(y_max-y_min)/image_height. All numbers must be finite. left>=0, top>=0, width>0, height>0, left+width<=1 and top+height<=1. If no adult butterflies are present use \"boxes\": []. Copy the supplied photo_id as an integer and set error to null. For example, an object occupying x=20% through 70% and y=10% through 60% would have {\"left\":0.2,\"top\":0.1,\"width\":0.5,\"height\":0.5}. This is an example of arithmetic only, not a proposed box for this image. The output boxes must come from this image. Locate every adult butterfly. Exclude moths, caterpillars, pupae, other insects, flowers and shadows. Return one tight axis-aligned rectangle for each butterfly, including all its visible wings, body, antennae and legs. For occluded or cropped animals, box the visible part only. "
+prompt: >-
+  Output exactly one line of valid JSON, without Markdown or explanation. Example of the output
+  structure (not the answer for this image):
+  {"boxes":[{"left":0.2,"top":0.1,"width":0.5,"height":0.5}]}. The record must have exactly one key:
+  "boxes". Each box has exactly the four named numeric fields. Use normalized fractions of image
+  dimensions, never pixels or a 0-1000 scale. Every coordinate, including top, must be between 0.0
+  and 1.0. For example, top=0.25 means 25 percent down the image; top=25 is invalid. The top-left of
+  the image is (0,0), bottom-right is (1,1). left=x_min/image_width; top=y_min/image_height;
+  width=(x_max-x_min)/image_width; height=(y_max-y_min)/image_height. All numbers must be finite.
+  left>=0, top>=0, width>0, height>0, left+width<=1 and top+height<=1. If no adult butterflies are
+  present use "boxes": []. For example, an object occupying x=20% through 70% and y=10% through 60%
+  would have {"left":0.2,"top":0.1,"width":0.5,"height":0.5}. This is an example of arithmetic only,
+  not a proposed box for this image. The output boxes must come from this image. Locate every adult
+  butterfly. Exclude moths, caterpillars, pupae, other insects, flowers and shadows. Return one
+  tight axis-aligned rectangle for each butterfly, including all its visible wings, body, antennae
+  and legs. For occluded or cropped animals, box the visible part only.

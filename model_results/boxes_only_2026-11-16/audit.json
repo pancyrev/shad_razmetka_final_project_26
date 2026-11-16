@@ -1,0 +1,66 @@
+{
+  "audited_at_utc": "2026-11-16T13:22:29.400452+00:00",
+  "runs": [
+    {
+      "model": "qwen",
+      "directory": "qwen",
+      "images": 100,
+      "attempts": 100,
+      "no_ids_or_error_field_in_requests": true,
+      "all_successful_raw_responses_boxes_only": true,
+      "metadata_added_from_input": true,
+      "metric_recomputation_matches": true,
+      "model_settings_except_protocol_unchanged": true,
+      "hashes": {
+        "config.yaml": "9584da7479d2b174e6161c48e16cf2ddc80d072398af489eda704b9e1cd80981",
+        "predictions.jsonl": "90c745b23a31a0f8c89f2380c86fce9adf8f0819af5c7079f8aef23a14a3df06",
+        "attempts.jsonl": "3ce2506dce2b7847d89b0304c8efc0c1c0135631a8d24719e9b29d1ea1e53d9d",
+        "metrics.json": "458764449a15315ead8869b83c38d304012ebfeafb1a00300adf5547060c7df6"
+      }
+    },
+    {
+      "model": "gemma",
+      "directory": "gemma_initial",
+      "images": 100,
+      "attempts": 116,
+      "no_ids_or_error_field_in_requests": true,
+      "all_successful_raw_responses_boxes_only": true,
+      "metadata_added_from_input": true,
+      "metric_recomputation_matches": true,
+      "model_settings_except_protocol_unchanged": true,
+      "hashes": {
+        "config.yaml": "c88293249cbd2d6d8387174355627305cea1ac94115edd27bb7b5668fe374196",
+        "predictions.jsonl": "f5e5fd25b3aca8d0cfdbb1d451e8058e7d53a8435d5c27a8434e2b1d5b3db470",
+        "attempts.jsonl": "306a30f324cd3fb154cec85c97f0991d0ae06f6c37e1d21f61a6d6f5151136c6",
+        "metrics.json": "8311eb9a7f10e058ffc41527bb8c296663dfcc9b7e5b4f69307ea738e1ada95b"
+      }
+    },
+    {
+      "model": "gemma",
+      "directory": "gemma",
+      "images": 100,
+      "attempts": 103,
+      "no_ids_or_error_field_in_requests": true,
+      "all_successful_raw_responses_boxes_only": true,
+      "metadata_added_from_input": true,
+      "metric_recomputation_matches": true,
+      "model_settings_except_protocol_unchanged": true,
+      "hashes": {
+        "config.yaml": "8a433297743b7c3f8ef832015c379614c03f1cfe2e64644682c79fe568c3d1f1",
+        "predictions.jsonl": "397b95a3fe112664347be6ba2863a26e6a5013e0bd264f572bcb2baf387c4470",
+        "attempts.jsonl": "65846d485f364b987c6e6a70fb8aae4646ddfc44b41e0f9580e51c095e253916",
+        "metrics.json": "55ea9232764dbd6bce3f18cfd583f4485dd9f22bc948b510d1bb4f3945d22f3c"
+      }
+    }
+  ],
+  "source_sha256": {
+    "butterfly_bench/models.py": "693cea2ae84f99ea53abe276c4a62731f00c6cb9174f2b78460e676c3e825a61",
+    "butterfly_bench/schema.py": "063bdba47c7075275dfd65969b50a7bd5563c36266919428f4a2fe8c51530766",
+    "butterfly_bench/pipeline.py": "142f8adcb7c05c724765ad38d0fdbe3b80314d41619a4d89028a1a983cbfcc85",
+    "butterfly_bench/conf/model/qwen.yaml": "02d7935b2357a3f6d20164aa9a258b50d06af0d9f366d1b7b77cc4311420dd8f",
+    "butterfly_bench/conf/model/qwen_tuned.yaml": "c5c68ed550acc0526a74fdee01d8083867ad13678785178de67517cb178c9ed2",
+    "butterfly_bench/conf/model/gemma_tuned.yaml": "c4327ff6c1e29c8df6fd789fc12fa3dc1e185ac9fabe796843e7cce649984db0",
+    "scripts/prompt_search_common.py": "aaf0a6dd6c054819a5e52c96498cb03b5663cdaae7d3b55b95004b79aec614ee",
+    "scripts/prompt_search_qwen.py": "14d9fab7dcb9134405c25043eb5f8e7eeb8ed07d30249caf09753e04762018c1"
+  }
+}

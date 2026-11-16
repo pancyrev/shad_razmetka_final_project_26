@@ -191,6 +191,8 @@ def run_one(model, index, output):
     prompt = prompts[index]
     # Reuse every original setting and exact model/dataset revisions, changing only prompt/name/output.
     cfg = OmegaConf.load(BASELINE / model / "config.yaml")
+    # Archived candidates requested full task records, including the supplied ID.
+    cfg.model.response_format = "task_record"
     cfg.output_dir = str(Path(output).resolve())
     cfg.model.prompt = prompt["prompt"]
     cfg.comet.experiment_name = f"prompt-search-{model}-{index + 1:02d}-{prompt['name']}"

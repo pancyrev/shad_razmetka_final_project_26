@@ -4,6 +4,7 @@ repo_id: Qwen/Qwen3-VL-2B-Instruct
 revision: main
 dtype: bfloat16
 device: cuda:0
+response_format: boxes_only
 prompt: ${model.output_prompt}
 output_prompt: &output_prompt >-
   Find every adult butterfly in the image. Include only adult butterflies;
@@ -12,9 +13,8 @@ output_prompt: &output_prompt >-
   wings, body, antennae and legs. For occluded or cropped butterflies enclose
   only visible parts; do not invent hidden parts. Return exactly one line of
   valid JSON (one JSONL record), with no Markdown, code fences, explanations,
-  confidence scores or additional keys. The record must have exactly these keys:
-  "photo_id" (the integer ID supplied below), "boxes" (an array of boxes),
-  and "error" (null). Each box must have exactly four numeric fields: "left",
+  confidence scores or additional keys. The record must have exactly one key:
+  "boxes" (an array of boxes). Each box must have exactly four numeric fields: "left",
   "top", "width", "height". Coordinates are normalized to the original image:
   left=x_min/image_width, top=y_min/image_height,
   width=(x_max-x_min)/image_width, height=(y_max-y_min)/image_height.
@@ -23,10 +23,9 @@ output_prompt: &output_prompt >-
   left+width<=1 and top+height<=1. Use decimals in [0,1], never pixels or a
   0-1000 scale. If there are no adult butterflies, return "boxes": [].
   Example structure (not the answer to this image):
-  {"photo_id":123,"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}],"error":null}.
+  {"boxes":[{"left":0.1,"top":0.2,"width":0.3,"height":0.4}]}.
 max_new_tokens: 1024
 max_pixels: 1003520
 min_pixels: 65536
 temperature: 0.0
 retry_temperature: 0.2
-
