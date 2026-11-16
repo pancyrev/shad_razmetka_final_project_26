@@ -1,0 +1,10 @@
+{"photo_id": 760219697, "status": "FOUND", "boxes": [{"left": 0.14, "top": 0.233, "width": 0.688, "height": 0.462}], "case": "Бабочка с раскрытыми крыльями"}
+{"photo_id": 760812544, "status": "NONE", "boxes": [], "case": "Моль на светлом фоне"}
+{"photo_id": 755630032, "status": "FOUND", "boxes": [{"left": 0.232, "top": 0.458, "width": 0.478, "height": 0.168}], "case": "Небольшая бабочка на цветке"}
+{"photo_id": 760910719, "status": "NONE", "boxes": [], "case": "Другое насекомое на природном фоне"}
+{"photo_id": 755531940, "status": "FOUND", "boxes": [{"left": 0.205, "top": 0.268, "width": 0.615, "height": 0.328}], "case": "Бабочка сбоку"}
+{"photo_id": 751752012, "status": "FOUND", "boxes": [{"left": 0.2275, "top": 0.3472, "width": 0.316, "height": 0.5283}, {"left": 0.4656, "top": 0.0804, "width": 0.3018, "height": 0.5062}], "case": "Две бабочки, рамки пересекаются"}
+{"photo_id": 760794928, "status": "NONE", "boxes": [], "case": "Соцветия без бабочек"}
+{"photo_id": 751455934, "status": "FOUND", "boxes": [{"left": 0.115, "top": 0.145, "width": 0.86, "height": 0.44}], "case": "Тёмная бабочка на листе"}
+{"photo_id": 760883522, "status": "NONE", "boxes": [], "case": "Моль крупным планом"}
+{"photo_id": 751795623, "status": "FOUND", "boxes": [{"left": 0.3899, "top": 0.3377, "width": 0.2276, "height": 0.3508}], "case": "Бабочка среди листьев"}
