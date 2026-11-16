@@ -1,0 +1,14 @@
+{
+  "source": "hf",
+  "repo_id": "xartik/inaturalist_butterflies",
+  "revision": "863f76cfbcbcaf1563693b8a08e5128efa47a4c4",
+  "split": "validation",
+  "parquet_file": "data/validation-00000-of-00001.parquet",
+  "photo_ids": [
+    751297785,
+    751308237,
+    751322667,
+    751391377
+  ],
+  "count": 4
+}

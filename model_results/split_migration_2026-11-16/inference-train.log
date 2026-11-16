@@ -1,0 +1,75 @@
+COMET INFO: Experiment is live on comet.com https://www.comet.com/ubileyka19/butterfly-bench/ee19184a98f249c1b62af78efbbdf238
+
+Loading weights:   0%|          | 0/418 [00:00<?, ?it/s]Loading weights: 100%|██████████| 418/418 [00:00<00:00, 23215.91it/s]
+2026-11-16 17:48:29,161 INFO 1/4 photo_id=755630032 boxes=1 attempts=1 seconds=0.467
+2026-11-16 17:48:29,371 INFO 2/4 photo_id=760199895 boxes=0 attempts=1 seconds=0.209
+2026-11-16 17:48:29,582 INFO 3/4 photo_id=760120082 boxes=2 attempts=1 seconds=0.211
+2026-11-16 17:48:29,791 INFO 4/4 photo_id=755819391 boxes=1 attempts=1 seconds=0.209
+2026-11-16 17:48:29,793 INFO Results: /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/split_migration_2026-11-16/inference_train/owlv2
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : split-migration-inference_train-owlv2-4
+COMET INFO:     url                   : https://www.comet.com/ubileyka19/butterfly-bench/ee19184a98f249c1b62af78efbbdf238
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     attempts                 : 1
+COMET INFO:     data_load_seconds        : 0.9351162590028252
+COMET INFO:     device_peak_used_mib     : 1786.0
+COMET INFO:     image_failed             : 0
+COMET INFO:     image_seconds [4]        : (0.20881241399911232, 0.4672354929934954)
+COMET INFO:     images                   : 4
+COMET INFO:     images_per_second        : 3.650854315250501
+COMET INFO:     mean_image_seconds       : 0.2739084919994639
+COMET INFO:     model_load_seconds       : 1.6460281379986554
+COMET INFO:     parsing_errors           : 0
+COMET INFO:     processing_errors        : 0
+COMET INFO:     processing_seconds       : 1.0956339679978555
+COMET INFO:     runtime_errors           : 0
+COMET INFO:     torch_peak_allocated_mib : 804.28515625
+COMET INFO:     total_attempts           : 4
+COMET INFO:     validation_errors        : 0
+COMET INFO:     wall_seconds             : 5.902093501994386
+COMET INFO:   Others:
+COMET INFO:     Name : split-migration-inference_train-owlv2-4
+COMET INFO:   Parameters:
+COMET INFO:     comet.experiment_name     : split-migration-inference_train-owlv2-4
+COMET INFO:     comet.log_images          : 0
+COMET INFO:     comet.log_raw_responses   : True
+COMET INFO:     comet.mode                : auto
+COMET INFO:     comet.project_name        : butterfly-bench
+COMET INFO:     comet.tags                : ["butterfly-detection", "split-migration", "inference_train", "smoke"]
+COMET INFO:     comet.workspace           : None
+COMET INFO:     data.limit                : None
+COMET INFO:     data.parquet_file         : data/train-00000-of-00001.parquet
+COMET INFO:     data.photo_ids            : [755630032, 760199895, 760120082, 755819391]
+COMET INFO:     data.repo_id              : xartik/inaturalist_butterflies
+COMET INFO:     data.revision             : 863f76cfbcbcaf1563693b8a08e5128efa47a4c4
+COMET INFO:     data.shuffle              : False
+COMET INFO:     data.source               : hf
+COMET INFO:     data.split                : train
+COMET INFO:     deterministic             : True
+COMET INFO:     evaluation.iou_thresholds : [0.5, 0.75]
+COMET INFO:     evaluation.primary_iou    : 0.5
+COMET INFO:     mode                      : inference
+COMET INFO:     model.backend             : transformers_detector
+COMET INFO:     model.clip_boxes          : True
+COMET INFO:     model.device              : cuda:0
+COMET INFO:     model.dtype               : float32
+COMET INFO:     model.name                : owlv2
+COMET INFO:     model.prompt              : butterfly
+COMET INFO:     model.repo_id             : google/owlv2-base-patch16-ensemble
+COMET INFO:     model.revision            : cfd3195ba4ea9592eec887ded089f4c08eff231d
+COMET INFO:     model.text_threshold      : 0.25
+COMET INFO:     model.threshold           : 0.1
+COMET INFO:     output_dir                : /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/split_migration_2026-11-16/inference_train/owlv2
+COMET INFO:     postprocess.nms_iou       : 0.5
+COMET INFO:     retries.max_attempts      : 3
+COMET INFO:     seed                      : 42
+COMET INFO:   Uploads:
+COMET INFO:     asset : 9 (6.94 KB)
+COMET INFO: 
+COMET INFO: Please wait for assets to finish uploading (timeout is 60 seconds)
+COMET INFO: All assets have been sent, waiting for delivery confirmation
+{"output_dir": "/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/split_migration_2026-11-16/inference_train/owlv2", "metrics": {"images": 4, "processing_seconds": 1.0956339679978555, "mean_image_seconds": 0.2739084919994639, "images_per_second": 3.650854315250501, "data_load_seconds": 0.9351162590028252, "model_load_seconds": 1.6460281379986554, "wall_seconds": 5.902093501994386, "torch_peak_allocated_mib": 804.28515625, "device_peak_used_mib": 1786.0, "processing_errors": 0, "parsing_errors": 0, "validation_errors": 0, "runtime_errors": 0, "total_attempts": 4}, "status": "complete"}

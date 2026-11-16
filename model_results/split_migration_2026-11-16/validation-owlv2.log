@@ -1,0 +1,106 @@
+COMET INFO: Experiment is live on comet.com https://www.comet.com/ubileyka19/butterfly-bench/250c8ecd26c247f382076ce99b01aaa0
+
+Loading weights:   0%|          | 0/418 [00:00<?, ?it/s]Loading weights: 100%|██████████| 418/418 [00:00<00:00, 22843.54it/s]
+2026-11-16 17:46:45,975 INFO 1/4 photo_id=751297785 boxes=1 attempts=1 seconds=0.467
+2026-11-16 17:46:46,190 INFO 2/4 photo_id=751308237 boxes=0 attempts=1 seconds=0.213
+2026-11-16 17:46:46,405 INFO 3/4 photo_id=751322667 boxes=1 attempts=1 seconds=0.215
+2026-11-16 17:46:46,614 INFO 4/4 photo_id=751391377 boxes=2 attempts=1 seconds=0.208
+2026-11-16 17:46:46,617 INFO Results: /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/split_migration_2026-11-16/validation/owlv2
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : split-migration-validation-owlv2-4
+COMET INFO:     url                   : https://www.comet.com/ubileyka19/butterfly-bench/250c8ecd26c247f382076ce99b01aaa0
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     attempts                         : 1
+COMET INFO:     data_load_seconds                : 1.0819941549998475
+COMET INFO:     device_peak_used_mib             : 1786.0
+COMET INFO:     errors                           : 2
+COMET INFO:     f1                               : 0.75
+COMET INFO:     fn                               : 1
+COMET INFO:     fp                               : 1
+COMET INFO:     image_failed                     : 0
+COMET INFO:     image_seconds [4]                : (0.20838269700470846, 0.46674277099373285)
+COMET INFO:     images                           : 4
+COMET INFO:     images_per_second                : 3.6268328340606315
+COMET INFO:     images_with_errors               : 2
+COMET INFO:     iou_0.5/errors                   : 2
+COMET INFO:     iou_0.5/f1                       : 0.75
+COMET INFO:     iou_0.5/fn                       : 1
+COMET INFO:     iou_0.5/fp                       : 1
+COMET INFO:     iou_0.5/images_with_errors       : 2
+COMET INFO:     iou_0.5/negative_fp              : 1
+COMET INFO:     iou_0.5/negative_images_with_fp  : 1
+COMET INFO:     iou_0.5/precision                : 0.75
+COMET INFO:     iou_0.5/recall                   : 0.75
+COMET INFO:     iou_0.5/tp                       : 3
+COMET INFO:     iou_0.75/errors                  : 6
+COMET INFO:     iou_0.75/f1                      : 0.25
+COMET INFO:     iou_0.75/fn                      : 3
+COMET INFO:     iou_0.75/fp                      : 3
+COMET INFO:     iou_0.75/images_with_errors      : 4
+COMET INFO:     iou_0.75/negative_fp             : 1
+COMET INFO:     iou_0.75/negative_images_with_fp : 1
+COMET INFO:     iou_0.75/precision               : 0.25
+COMET INFO:     iou_0.75/recall                  : 0.25
+COMET INFO:     iou_0.75/tp                      : 1
+COMET INFO:     mean_image_seconds               : 0.2757226609974168
+COMET INFO:     model_load_seconds               : 1.6591026030073408
+COMET INFO:     negative_fp                      : 1
+COMET INFO:     negative_images                  : 1
+COMET INFO:     negative_images_with_fp          : 1
+COMET INFO:     parsing_errors                   : 0
+COMET INFO:     precision                        : 0.75
+COMET INFO:     processing_errors                : 0
+COMET INFO:     processing_seconds               : 1.1028906439896673
+COMET INFO:     recall                           : 0.75
+COMET INFO:     runtime_errors                   : 0
+COMET INFO:     torch_peak_allocated_mib         : 804.28515625
+COMET INFO:     total_attempts                   : 4
+COMET INFO:     tp                               : 3
+COMET INFO:     validation_errors                : 0
+COMET INFO:     wall_seconds                     : 5.930156009009806
+COMET INFO:   Others:
+COMET INFO:     Name : split-migration-validation-owlv2-4
+COMET INFO:   Parameters:
+COMET INFO:     comet.experiment_name     : split-migration-validation-owlv2-4
+COMET INFO:     comet.log_images          : 0
+COMET INFO:     comet.log_raw_responses   : True
+COMET INFO:     comet.mode                : auto
+COMET INFO:     comet.project_name        : butterfly-bench
+COMET INFO:     comet.tags                : ["butterfly-detection", "split-migration", "validation", "smoke"]
+COMET INFO:     comet.workspace           : None
+COMET INFO:     data.limit                : None
+COMET INFO:     data.parquet_file         : data/validation-00000-of-00001.parquet
+COMET INFO:     data.photo_ids            : [751297785, 751308237, 751322667, 751391377]
+COMET INFO:     data.repo_id              : xartik/inaturalist_butterflies
+COMET INFO:     data.revision             : 863f76cfbcbcaf1563693b8a08e5128efa47a4c4
+COMET INFO:     data.shuffle              : False
+COMET INFO:     data.source               : hf
+COMET INFO:     data.split                : validation
+COMET INFO:     deterministic             : True
+COMET INFO:     evaluation.iou_thresholds : [0.5, 0.75]
+COMET INFO:     evaluation.primary_iou    : 0.5
+COMET INFO:     mode                      : test
+COMET INFO:     model.backend             : transformers_detector
+COMET INFO:     model.clip_boxes          : True
+COMET INFO:     model.device              : cuda:0
+COMET INFO:     model.dtype               : float32
+COMET INFO:     model.name                : owlv2
+COMET INFO:     model.prompt              : butterfly
+COMET INFO:     model.repo_id             : google/owlv2-base-patch16-ensemble
+COMET INFO:     model.revision            : cfd3195ba4ea9592eec887ded089f4c08eff231d
+COMET INFO:     model.text_threshold      : 0.25
+COMET INFO:     model.threshold           : 0.1
+COMET INFO:     output_dir                : /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/split_migration_2026-11-16/validation/owlv2
+COMET INFO:     postprocess.nms_iou       : 0.5
+COMET INFO:     retries.max_attempts      : 3
+COMET INFO:     seed                      : 42
+COMET INFO:   Uploads:
+COMET INFO:     asset : 9 (7.65 KB)
+COMET INFO: 
+COMET INFO: Please wait for assets to finish uploading (timeout is 60 seconds)
+COMET INFO: All assets have been sent, waiting for delivery confirmation
+{"output_dir": "/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/split_migration_2026-11-16/validation/owlv2", "metrics": {"images": 4, "processing_seconds": 1.1028906439896673, "mean_image_seconds": 0.2757226609974168, "images_per_second": 3.6268328340606315, "data_load_seconds": 1.0819941549998475, "model_load_seconds": 1.6591026030073408, "wall_seconds": 5.930156009009806, "torch_peak_allocated_mib": 804.28515625, "device_peak_used_mib": 1786.0, "processing_errors": 0, "parsing_errors": 0, "validation_errors": 0, "runtime_errors": 0, "total_attempts": 4, "iou_0.5/tp": 3, "iou_0.5/fp": 1, "iou_0.5/fn": 1, "iou_0.5/errors": 2, "iou_0.5/images_with_errors": 2, "iou_0.5/precision": 0.75, "iou_0.5/recall": 0.75, "iou_0.5/f1": 0.75, "iou_0.5/negative_fp": 1, "iou_0.5/negative_images_with_fp": 1, "tp": 3, "fp": 1, "fn": 1, "errors": 2, "images_with_errors": 2, "precision": 0.75, "recall": 0.75, "f1": 0.75, "negative_fp": 1, "negative_images_with_fp": 1, "iou_0.75/tp": 1, "iou_0.75/fp": 3, "iou_0.75/fn": 3, "iou_0.75/errors": 6, "iou_0.75/images_with_errors": 4, "iou_0.75/precision": 0.25, "iou_0.75/recall": 0.25, "iou_0.75/f1": 0.25, "iou_0.75/negative_fp": 1, "iou_0.75/negative_images_with_fp": 1, "negative_images": 1}, "status": "complete"}

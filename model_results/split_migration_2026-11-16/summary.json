@@ -1,0 +1,183 @@
+{
+  "dataset_revision": "863f76cfbcbcaf1563693b8a08e5128efa47a4c4",
+  "current_test_used": false,
+  "evaluation_runs": 8,
+  "predictions_matching_history": 32,
+  "inference_images": 4,
+  "notebook": {
+    "notebook": "03_model_demo.ipynb",
+    "split": "train",
+    "revision": "863f76cfbcbcaf1563693b8a08e5128efa47a4c4",
+    "images": 4,
+    "executed_code_cells": 5,
+    "processing_errors": 0,
+    "output_dir": "/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/outputs/demo/2026-11-16_17-47-38-274835/grounding_dino",
+    "comet": {
+      "requested_mode": "auto",
+      "mode": "online",
+      "experiment_key": "1312aa25af2940dfa8213de38788d127",
+      "url": "https://www.comet.com/ubileyka19/butterfly-bench/1312aa25af2940dfa8213de38788d127"
+    }
+  },
+  "runs": [
+    {
+      "split": "train",
+      "mode": "test",
+      "model": "owlv2",
+      "images": 4,
+      "processing_errors": 0,
+      "output_dir": "train/owlv2",
+      "regression": {
+        "compared_to": "model_results/validation_2026-11-13/owlv2_nms_0.5",
+        "all_four_predictions_identical": true
+      },
+      "comet": {
+        "requested_mode": "auto",
+        "mode": "online",
+        "experiment_key": "3da205354a3348cb9f189668df10448c",
+        "url": "https://www.comet.com/ubileyka19/butterfly-bench/3da205354a3348cb9f189668df10448c"
+      }
+    },
+    {
+      "split": "train",
+      "mode": "test",
+      "model": "grounding_dino",
+      "images": 4,
+      "processing_errors": 0,
+      "output_dir": "train/grounding_dino",
+      "regression": {
+        "compared_to": "model_results/validation_2026-11-13/grounding_dino",
+        "all_four_predictions_identical": true
+      },
+      "comet": {
+        "requested_mode": "auto",
+        "mode": "online",
+        "experiment_key": "01f1fcbf18dc4695bb23e30261014437",
+        "url": "https://www.comet.com/ubileyka19/butterfly-bench/01f1fcbf18dc4695bb23e30261014437"
+      }
+    },
+    {
+      "split": "train",
+      "mode": "test",
+      "model": "qwen",
+      "images": 4,
+      "processing_errors": 0,
+      "output_dir": "train/qwen",
+      "regression": {
+        "compared_to": "model_results/restored_task_record_2026-11-16/qwen",
+        "all_four_predictions_identical": true
+      },
+      "comet": {
+        "requested_mode": "auto",
+        "mode": "online",
+        "experiment_key": "ff94859751f64e3295d3f0f35e1ba542",
+        "url": "https://www.comet.com/ubileyka19/butterfly-bench/ff94859751f64e3295d3f0f35e1ba542"
+      }
+    },
+    {
+      "split": "train",
+      "mode": "test",
+      "model": "gemma",
+      "images": 4,
+      "processing_errors": 0,
+      "output_dir": "train/gemma",
+      "regression": {
+        "compared_to": "model_results/restored_task_record_2026-11-16/gemma",
+        "all_four_predictions_identical": true
+      },
+      "comet": {
+        "requested_mode": "auto",
+        "mode": "online",
+        "experiment_key": "44497cb94b474d12b96f8e7ad8e9419d",
+        "url": "https://www.comet.com/ubileyka19/butterfly-bench/44497cb94b474d12b96f8e7ad8e9419d"
+      }
+    },
+    {
+      "split": "validation",
+      "mode": "test",
+      "model": "owlv2",
+      "images": 4,
+      "processing_errors": 0,
+      "output_dir": "validation/owlv2",
+      "regression": {
+        "compared_to": "model_results/test_2026-11-16/owlv2",
+        "all_four_predictions_identical": true
+      },
+      "comet": {
+        "requested_mode": "auto",
+        "mode": "online",
+        "experiment_key": "250c8ecd26c247f382076ce99b01aaa0",
+        "url": "https://www.comet.com/ubileyka19/butterfly-bench/250c8ecd26c247f382076ce99b01aaa0"
+      }
+    },
+    {
+      "split": "validation",
+      "mode": "test",
+      "model": "grounding_dino",
+      "images": 4,
+      "processing_errors": 0,
+      "output_dir": "validation/grounding_dino",
+      "regression": {
+        "compared_to": "model_results/test_2026-11-16/grounding_dino",
+        "all_four_predictions_identical": true
+      },
+      "comet": {
+        "requested_mode": "auto",
+        "mode": "online",
+        "experiment_key": "b6a91140cd5d41168ef71593a8adb784",
+        "url": "https://www.comet.com/ubileyka19/butterfly-bench/b6a91140cd5d41168ef71593a8adb784"
+      }
+    },
+    {
+      "split": "validation",
+      "mode": "test",
+      "model": "qwen",
+      "images": 4,
+      "processing_errors": 0,
+      "output_dir": "validation/qwen",
+      "regression": {
+        "compared_to": "model_results/test_2026-11-16/qwen",
+        "all_four_predictions_identical": true
+      },
+      "comet": {
+        "requested_mode": "auto",
+        "mode": "online",
+        "experiment_key": "552f1a1466214722be2eb31717da276d",
+        "url": "https://www.comet.com/ubileyka19/butterfly-bench/552f1a1466214722be2eb31717da276d"
+      }
+    },
+    {
+      "split": "validation",
+      "mode": "test",
+      "model": "gemma",
+      "images": 4,
+      "processing_errors": 0,
+      "output_dir": "validation/gemma",
+      "regression": {
+        "compared_to": "model_results/test_2026-11-16/gemma",
+        "all_four_predictions_identical": true
+      },
+      "comet": {
+        "requested_mode": "auto",
+        "mode": "online",
+        "experiment_key": "a4139ef9157c4d70b11ec15be486bc68",
+        "url": "https://www.comet.com/ubileyka19/butterfly-bench/a4139ef9157c4d70b11ec15be486bc68"
+      }
+    },
+    {
+      "split": "train",
+      "mode": "inference",
+      "model": "owlv2",
+      "images": 4,
+      "processing_errors": 0,
+      "output_dir": "inference_train/owlv2",
+      "regression": null,
+      "comet": {
+        "requested_mode": "auto",
+        "mode": "online",
+        "experiment_key": "ee19184a98f249c1b62af78efbbdf238",
+        "url": "https://www.comet.com/ubileyka19/butterfly-bench/ee19184a98f249c1b62af78efbbdf238"
+      }
+    }
+  ]
+}

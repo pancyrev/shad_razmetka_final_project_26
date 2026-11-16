@@ -1,0 +1,15 @@
+{
+  "notebook": "03_model_demo.ipynb",
+  "split": "train",
+  "revision": "863f76cfbcbcaf1563693b8a08e5128efa47a4c4",
+  "images": 4,
+  "executed_code_cells": 5,
+  "processing_errors": 0,
+  "output_dir": "/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/outputs/demo/2026-11-16_17-47-38-274835/grounding_dino",
+  "comet": {
+    "requested_mode": "auto",
+    "mode": "online",
+    "experiment_key": "1312aa25af2940dfa8213de38788d127",
+    "url": "https://www.comet.com/ubileyka19/butterfly-bench/1312aa25af2940dfa8213de38788d127"
+  }
+}

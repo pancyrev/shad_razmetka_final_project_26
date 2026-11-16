@@ -58,30 +58,41 @@ python -m butterfly_bench model=qwen comet.mode=offline data.limit=4
 
 ## Тестирование по эталонам
 
-По умолчанию используется только `validation` из
-`xartik/inaturalist_butterflies`: 100 изображений, 61 рамка, 42 отрицательных примера.
-`test` — отдельные 400 изображений golden set. Выбор split не меняет режим:
-`mode=test` означает оценивание по известным рамкам.
+В `xartik/inaturalist_butterflies` используются новые имена split:
+
+| Split | Состав | Назначение |
+| --- | --- | --- |
+| `train` | 100 изображений, 61 рамка, 42 отрицательных примера | Подбор промптов; прежний `validation` |
+| `validation` | 400 изображений, 241 рамка, 180 отрицательных примеров | Оценка моделей; прежний `test` |
+| `test` | 400 конкурсных изображений без разметки | Пока не используется |
+
+По умолчанию выбран `validation` (400 размеченных изображений).
+Имя split не меняет режим: `mode=test` означает оценивание по известным рамкам,
+а не выбор HF split `test`. Данные без эталонов требуют `mode=inference`;
+при попытке оценивания загрузчик сообщает об отсутствии разметки.
+
+Проверка переименования, загрузки всех 500 размеченных изображений, четырёх
+CUDA-моделей и демо — [в отчёте](model_results/split_migration_2026-11-16/README.md).
 
 ```bash
-# Проверка на нескольких фотографиях
-python -m butterfly_bench model=owlv2 data.limit=8
-python -m butterfly_bench model=grounding_dino data.limit=8
-python -m butterfly_bench model=qwen data.limit=8
-python -m butterfly_bench model=gemma data.limit=8
+# Быстрая проверка на train
+python -m butterfly_bench model=owlv2 data.split=train data.limit=8
+python -m butterfly_bench model=grounding_dino data.split=train data.limit=8
+python -m butterfly_bench model=qwen_tuned data.split=train data.limit=8
+python -m butterfly_bench model=gemma_tuned data.split=train data.limit=8
 
 # Все четыре модели на одинаковой полной валидации, последовательно
-python -m butterfly_bench -m model=owlv2,grounding_dino,qwen,gemma
+python -m butterfly_bench -m model=owlv2,grounding_dino,qwen_tuned,gemma_tuned
 
-# Golden set — только после выбора настроек на validation
-python -m butterfly_bench model=grounding_dino data.split=test
+# Оценка на всех 400 размеченных validation после выбора настроек на train
+python -m butterfly_bench model=grounding_dino data.split=validation
 
 # Собственная эталонная JSONL-разметка с image_path или photo_url
 python -m butterfly_bench model=owlv2 data=manifest \
   data.path='annotations/worker_reference_first_pass.jsonl'
 ```
 
-При выборе поднабора `data.photo_ids=[755630032,760199895]` проверьте, что ID
+При выборе поднабора `data.split=train data.photo_ids=[755630032,760199895]` проверьте, что ID
 есть в выбранном split. Можно использовать `data.shuffle=true data.limit=12`;
 перемешивание зависит только от `seed`, а не от модели. `data.limit=null`
 обрабатывает весь выбранный набор. Одни и те же настройки данных дают одинаковые ID.
@@ -202,7 +213,7 @@ micro precision, recall и F1. Пороги по умолчанию 0.5 и 0.75.
 
 ## Проверки реализации
 
-Фактические результаты четырёх моделей на всех 100 изображениях validation
+Фактические результаты четырёх моделей на всех 100 изображениях нынешнего train
 и эксперимент с NMS сохранены в
 [отчёте](model_results/validation_2026-11-13/README.md).
 
@@ -216,21 +227,31 @@ ruff check butterfly_bench tests
 отрицательные изображения, повторные рамки и пример, где жадное сопоставление
 даёт неправильную F1.
 
-## Промпты после подбора на validation
+## Промпты после подбора на train
+
+В архивных отчётах сохранены имена split и ревизии на момент запуска:
+старый validation соответствует нынешнему train, старый test — нынешнему validation.
+Сырые ответы, конфиги и метрики прошлых экспериментов не переименовываются.
 
 Формат с `photo_id` в запросе и полном ответе модели восстановлен после
 эксперимента без служебных полей. Повторная проверка выбранных промптов —
 [в отдельном отчёте](model_results/restored_task_record_2026-11-16/README.md).
 
-По десять промптов Qwen и Gemma проверены на одинаковых 100 изображениях validation. Точные варианты, метрики и ограничения сравнения — [в отчёте](model_results/prompt_search_2026-11-15/README.md). Исходные конфигурации сохранены; лучшие испытанные запросы доступны как `model=qwen_tuned` и `model=gemma_tuned`. У пресетов зафиксирована ревизия весов, остальные настройки наследуются от соответствующей исходной модели.
+По десять промптов Qwen и Gemma проверены на одинаковых 100 изображениях нынешнего train. Точные варианты, метрики и ограничения сравнения — [в отчёте](model_results/prompt_search_2026-11-15/README.md). Исходные конфигурации сохранены; лучшие испытанные запросы доступны как `model=qwen_tuned` и `model=gemma_tuned`. У пресетов зафиксирована ревизия весов, остальные настройки наследуются от соответствующей исходной модели.
 
 ```bash
-python -m butterfly_bench model=qwen_tuned
-python -m butterfly_bench model=gemma_tuned
+python -m butterfly_bench model=qwen_tuned data.split=train
+python -m butterfly_bench model=gemma_tuned data.split=train
 ```
 
-Запускайте эти команды последовательно. В демо-ноутбуке также можно выбрать один из этих пресетов. Это результаты адаптивного подбора на validation; независимый test при подборе не использовался.
+Запускайте эти команды последовательно. В демо-ноутбуке также можно выбрать один из этих пресетов. Это результаты адаптивного подбора на train; отдельная размеченная validation при подборе не использовалась.
 
-Итоговые четыре конфигурации проверены на всех 400 изображениях HF split `test`:
+Скрипты `scripts/prompt_search_qwen.py` и `scripts/prompt_search_gemma.py` теперь
+используют только train (100 изображений), с закреплённой новой ревизией данных.
+Новые результаты пишутся в `model_results/prompt_search_train`; путь можно задать
+через `BUTTERFLY_PROMPT_SEARCH_RESULTS`. Архивный подбор не перезаписывается.
+
+Итоговые четыре конфигурации проверены на всех 400 изображениях нынешнего HF split `validation`
+(в исходной ревизии он назывался `test`):
 [метрики, полные конфиги и Comet-эксперименты](model_results/test_2026-11-16/README.md).
-OWLv2 оценивался с выбранным на validation NMS=0.5; остальные — без NMS.
+OWLv2 оценивался с выбранным на нынешнем train NMS=0.5; остальные — без NMS.

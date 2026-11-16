@@ -7,15 +7,18 @@
 [Инструкция запуска](MODELS.md) описывает Hydra-конфигурации OWLv2, Grounding DINO,
 Qwen3-VL и Gemma 4, режимы `test`/`inference`, валидацию JSONL, метрики и Comet ML.
 Интерактивные примеры — в [03_model_demo.ipynb](03_model_demo.ipynb).
-Полная проверка на 100 изображениях validation, метрики, исходные ответы и
+Полная проверка на 100 изображениях нынешнего train (ранее validation), метрики, исходные ответы и
 эксперимент с NMS — в [отчёте](model_results/validation_2026-11-13/README.md).
 
 ```bash
-python -m butterfly_bench -m model=owlv2,grounding_dino,qwen,gemma
+python -m butterfly_bench -m model=owlv2,grounding_dino,qwen_tuned,gemma_tuned
 ```
 
-Команда последовательно оценивает четыре модели на полной HF-валидации;
+Команда последовательно оценивает четыре модели на полной HF validation (400 размеченных изображений);
 окружение и CUDA-сборку llama.cpp сначала подготовьте по инструкции.
+HF train содержит 100 размеченных изображений для подбора; новый HF test —
+400 конкурсных изображений без разметки и пока не используется.
+Проверки после переименования выборок — [в отчёте](model_results/split_migration_2026-11-16/README.md).
 
 ## Шаг 01. Формирование выборки
 

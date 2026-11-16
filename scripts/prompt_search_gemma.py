@@ -5,6 +5,7 @@ from collections import Counter
 from pathlib import Path
 
 from omegaconf import OmegaConf
+from prompt_search_common import RESULTS
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = OmegaConf.load(ROOT / "model_results/validation_2026-11-13/gemma/config.yaml").model.prompt
@@ -98,7 +99,7 @@ PROMPTS = [
 
 def build_report():
     """Populate the final report only after all ten full runs have completed."""
-    base = ROOT / "model_results/prompt_search_2026-11-15/gemma"
+    base = RESULTS / "gemma"
     rows = []
     for index, prompt in enumerate(PROMPTS, 1):
         run_dir = base / f"{index:02d}_{prompt['name']}"
@@ -113,7 +114,10 @@ def build_report():
     initial = rows[0]["metrics"]
     winner = best["metrics"]
     report_path = base / "report.md"
-    methodology = report_path.read_text().split("## Текущий статус")[0].split("## Результаты")[0]
+    methodology = ("# Gemma: перебор десяти промптов на train\n\n"
+                   "Используются прежние 100 размеченных изображений (ранее validation). "
+                   "Промпты сохранены в prompts.json, ревизии данных и весов — в config.yaml. "
+                   "Validation и новый конкурсный test в подборе не используются.\n\n")
     table = ["## Результаты", "", "Все десять вариантов обработали по 100 изображений.", "",
              ("| Вариант | F1@0.5 | F1@0.75 | Precision@0.5 | Recall@0.5 | FP+FN | "
              "Технические ошибки | Отклонения JSON / схемы | Время обработки, с |"),

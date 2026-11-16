@@ -1,9 +1,10 @@
 source: hf
 repo_id: xartik/inaturalist_butterflies
 revision: main
+# Labeled: train (100, prompt tuning), validation (400, evaluation).
+# test contains unlabeled contest images; use mode=inference when explicitly needed.
 split: validation
 parquet_file: data/${.split}-00000-of-00001.parquet
 limit: null
 photo_ids: null
 shuffle: false
-

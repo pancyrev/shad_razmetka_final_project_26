@@ -1,0 +1,16 @@
+{
+  "images": 4,
+  "processing_seconds": 1.0956339679978555,
+  "mean_image_seconds": 0.2739084919994639,
+  "images_per_second": 3.650854315250501,
+  "data_load_seconds": 0.9351162590028252,
+  "model_load_seconds": 1.6460281379986554,
+  "wall_seconds": 5.902093501994386,
+  "torch_peak_allocated_mib": 804.28515625,
+  "device_peak_used_mib": 1786.0,
+  "processing_errors": 0,
+  "parsing_errors": 0,
+  "validation_errors": 0,
+  "runtime_errors": 0,
+  "total_attempts": 4
+}

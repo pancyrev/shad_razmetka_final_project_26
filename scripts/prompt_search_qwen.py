@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from omegaconf import OmegaConf
-from prompt_search_common import run_search
+from prompt_search_common import RESULTS, run_search
 
 BASELINE = OmegaConf.load(
     Path(__file__).resolve().parents[1] / "butterfly_bench/conf/model/qwen.yaml"
@@ -150,24 +150,18 @@ for variant in PROMPTS[3:]:
 
 def write_report(rows):
     root = Path(__file__).resolve().parents[1]
-    target = root / "model_results/prompt_search_2026-11-15/qwen"
+    target = RESULTS / "qwen"
     baseline = next(row for row in rows if row["name"] == "baseline")
     best = rows[0]
     previous = json.loads((root / "model_results/validation_2026-11-13/qwen/metrics.json").read_text())
     lines = [
         "# Qwen: перебор десяти промптов",
         "",
-        ("Исходные десять вариантов сохранены в `prompts_initial.json`. После полных "
-        "прогонов 1–3 остальные семь адаптированы: их геометрические стратегии "
-        "сохранены, а инструкция формата заменена на точный контракт исходного baseline "
-        "с дополнительным явным запретом code fences и требованием начать с `{` и "
-        "закончить `}`. Причина — массовые ответы с Markdown-обёрткой в вариантах 2–3. "
-        "Уже выполненные 1–3 не менялись. Финальный список — `prompts.json`, "
-        "время, причины и SHA256 ревизии — `prompt_revision.json`. "
-        "Ровно десять разных вариантов проверены по одному разу на полном наборе. Каждый проверен "
-        "на всех тех же 100 изображениях validation `xartik/inaturalist_butterflies` "
+        ("Десять вариантов взяты из архивного подбора 2026-11-15 и сохранены в `prompts.json`. "
+        "Каждый проверен на всех тех же 100 изображениях train `xartik/inaturalist_butterflies` "
         "(61 эталонная рамка, 58 положительных и 42 отрицательных изображения). "
-        "Порядок, данные и ревизии модели совпадают с исходным прогоном. "
+        "Train — прежний validation; ревизия переименованного датасета сохранена в config.yaml. "
+        "Порядок изображений, эталоны и ревизия модели совпадают с исходным прогоном. "
         "`Qwen/Qwen3-VL-2B-Instruct` работает через Transformers в BF16 без квантования. "
         "Seed=42; генерация, разрешение изображения, строгий парсер, проверка схемы и "
         "до трёх попыток с обратной связью остаются прежними. Меняется только текст промпта."),
@@ -233,7 +227,7 @@ def write_report(rows):
         "неполной; локальные файлы сохранены полностью, а SDK при необходимости "
         "сохраняет offline-архив для последующей синхронизации."),
         "",
-        ("Это результаты подбора промпта на validation, а не независимая оценка "
+        ("Это результаты подбора промпта на train, а не независимая оценка "
         "качества. Выбор лучшего из десяти повышает риск подгонки к этим 100 "
         "изображениям; для оценки переноса нужна отдельная выборка. "
         "Основные конфиги модели не изменялись."),

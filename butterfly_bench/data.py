@@ -8,7 +8,7 @@ from pathlib import Path
 import requests
 from PIL import Image
 
-from .schema import validate_boxes, validate_photo_id
+from .schema import ValidationError, validate_boxes, validate_photo_id
 
 
 @dataclass
@@ -41,6 +41,10 @@ def load_samples(cfg, mode, seed):
         path = hf_hub_download(cfg.repo_id, cfg.parquet_file, repo_type="dataset",
                                revision=revision, token=False)
         dataset = load_dataset("parquet", data_files={cfg.split: path}, split=cfg.split)
+        if mode == "test" and "boxes" not in dataset.column_names:
+            raise ValidationError(
+                f"HF split {cfg.split!r} has no ground-truth boxes; mode=test requires labeled data. "
+                "Select train/validation or use mode=inference for unlabeled images.")
         dataset = dataset.cast_column("image", HFImage(decode=False))
         metadata.update(repo_id=cfg.repo_id, revision=revision, split=cfg.split,
                         parquet_file=cfg.parquet_file)
@@ -85,6 +89,10 @@ def load_samples(cfg, mode, seed):
         raise ValueError("input data selection is empty")
     if mode == "test":
         for row in rows:
+            if row.truth is None:
+                raise ValidationError(
+                    f"photo_id={row.photo_id} has no ground-truth boxes; "
+                    "mode=test requires labels (an empty array is a valid negative example).")
             row.truth = validate_boxes(row.truth)
     metadata["photo_ids"] = [row.photo_id for row in rows]
     metadata["count"] = len(rows)
@@ -110,4 +118,3 @@ def open_sample(sample):
             temporary.replace(target)
         sample.payload["path"] = str(target)
     return sample.open_image()
-

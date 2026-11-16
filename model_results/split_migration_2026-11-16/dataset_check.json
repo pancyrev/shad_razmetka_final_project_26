@@ -1,0 +1,20 @@
+{
+  "revision": "863f76cfbcbcaf1563693b8a08e5128efa47a4c4",
+  "renamed_labeled_splits_verified": true,
+  "train_validation_disjoint": true,
+  "current_test_downloaded_or_used": false,
+  "splits": [
+    {
+      "split": "train",
+      "count": 100,
+      "ground_truth_boxes": 61,
+      "negative_images": 42
+    },
+    {
+      "split": "validation",
+      "count": 400,
+      "ground_truth_boxes": 241,
+      "negative_images": 180
+    }
+  ]
+}

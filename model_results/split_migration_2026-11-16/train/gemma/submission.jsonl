@@ -1,0 +1,4 @@
+{"photo_id": 755630032, "boxes": [{"left": 0.235, "top": 0.458, "width": 0.465, "height": 0.168}], "error": null}
+{"photo_id": 760199895, "boxes": [{"left": 0.065, "top": 0.095, "width": 0.435, "height": 0.405}], "error": null}
+{"photo_id": 760120082, "boxes": [{"left": 0.158, "top": 0.473, "width": 0.202, "height": 0.227}, {"left": 0.168, "top": 0.189, "width": 0.432, "height": 0.281}], "error": null}
+{"photo_id": 755819391, "boxes": [], "error": null}

@@ -1,0 +1,106 @@
+COMET INFO: Experiment is live on comet.com https://www.comet.com/ubileyka19/butterfly-bench/b6a91140cd5d41168ef71593a8adb784
+
+Loading weights:   0%|          | 0/978 [00:00<?, ?it/s]Loading weights: 100%|██████████| 978/978 [00:00<00:00, 21293.09it/s]
+2026-11-16 17:47:03,724 INFO 1/4 photo_id=751297785 boxes=1 attempts=1 seconds=0.487
+2026-11-16 17:47:03,907 INFO 2/4 photo_id=751308237 boxes=2 attempts=1 seconds=0.182
+2026-11-16 17:47:04,083 INFO 3/4 photo_id=751322667 boxes=1 attempts=1 seconds=0.176
+2026-11-16 17:47:04,259 INFO 4/4 photo_id=751391377 boxes=3 attempts=1 seconds=0.175
+2026-11-16 17:47:04,262 INFO Results: /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/split_migration_2026-11-16/validation/grounding_dino
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO: Comet.ml Experiment Summary
+COMET INFO: ---------------------------------------------------------------------------------------
+COMET INFO:   Data:
+COMET INFO:     display_summary_level : 1
+COMET INFO:     name                  : split-migration-validation-grounding_dino-4
+COMET INFO:     url                   : https://www.comet.com/ubileyka19/butterfly-bench/b6a91140cd5d41168ef71593a8adb784
+COMET INFO:   Metrics [count] (min, max):
+COMET INFO:     attempts                         : 1
+COMET INFO:     data_load_seconds                : 1.1002281699911691
+COMET INFO:     device_peak_used_mib             : 1552.0
+COMET INFO:     errors                           : 5
+COMET INFO:     f1                               : 0.5454545454545454
+COMET INFO:     fn                               : 1
+COMET INFO:     fp                               : 4
+COMET INFO:     image_failed                     : 0
+COMET INFO:     image_seconds [4]                : (0.17526045900012832, 0.4872641310066683)
+COMET INFO:     images                           : 4
+COMET INFO:     images_per_second                : 3.9192683434867908
+COMET INFO:     images_with_errors               : 3
+COMET INFO:     iou_0.5/errors                   : 5
+COMET INFO:     iou_0.5/f1                       : 0.5454545454545454
+COMET INFO:     iou_0.5/fn                       : 1
+COMET INFO:     iou_0.5/fp                       : 4
+COMET INFO:     iou_0.5/images_with_errors       : 3
+COMET INFO:     iou_0.5/negative_fp              : 1
+COMET INFO:     iou_0.5/negative_images_with_fp  : 1
+COMET INFO:     iou_0.5/precision                : 0.42857142857142855
+COMET INFO:     iou_0.5/recall                   : 0.75
+COMET INFO:     iou_0.5/tp                       : 3
+COMET INFO:     iou_0.75/errors                  : 5
+COMET INFO:     iou_0.75/f1                      : 0.5454545454545454
+COMET INFO:     iou_0.75/fn                      : 1
+COMET INFO:     iou_0.75/fp                      : 4
+COMET INFO:     iou_0.75/images_with_errors      : 3
+COMET INFO:     iou_0.75/negative_fp             : 1
+COMET INFO:     iou_0.75/negative_images_with_fp : 1
+COMET INFO:     iou_0.75/precision               : 0.42857142857142855
+COMET INFO:     iou_0.75/recall                  : 0.75
+COMET INFO:     iou_0.75/tp                      : 3
+COMET INFO:     mean_image_seconds               : 0.2551496637534001
+COMET INFO:     model_load_seconds               : 1.8508164169907104
+COMET INFO:     negative_fp                      : 1
+COMET INFO:     negative_images                  : 1
+COMET INFO:     negative_images_with_fp          : 1
+COMET INFO:     parsing_errors                   : 0
+COMET INFO:     precision                        : 0.42857142857142855
+COMET INFO:     processing_errors                : 0
+COMET INFO:     processing_seconds               : 1.0205986550136004
+COMET INFO:     recall                           : 0.75
+COMET INFO:     runtime_errors                   : 0
+COMET INFO:     torch_peak_allocated_mib         : 1777.27099609375
+COMET INFO:     total_attempts                   : 4
+COMET INFO:     tp                               : 3
+COMET INFO:     validation_errors                : 0
+COMET INFO:     wall_seconds                     : 6.124520978002693
+COMET INFO:   Others:
+COMET INFO:     Name : split-migration-validation-grounding_dino-4
+COMET INFO:   Parameters:
+COMET INFO:     comet.experiment_name     : split-migration-validation-grounding_dino-4
+COMET INFO:     comet.log_images          : 0
+COMET INFO:     comet.log_raw_responses   : True
+COMET INFO:     comet.mode                : auto
+COMET INFO:     comet.project_name        : butterfly-bench
+COMET INFO:     comet.tags                : ["butterfly-detection", "split-migration", "validation", "smoke"]
+COMET INFO:     comet.workspace           : None
+COMET INFO:     data.limit                : None
+COMET INFO:     data.parquet_file         : data/validation-00000-of-00001.parquet
+COMET INFO:     data.photo_ids            : [751297785, 751308237, 751322667, 751391377]
+COMET INFO:     data.repo_id              : xartik/inaturalist_butterflies
+COMET INFO:     data.revision             : 863f76cfbcbcaf1563693b8a08e5128efa47a4c4
+COMET INFO:     data.shuffle              : False
+COMET INFO:     data.source               : hf
+COMET INFO:     data.split                : validation
+COMET INFO:     deterministic             : True
+COMET INFO:     evaluation.iou_thresholds : [0.5, 0.75]
+COMET INFO:     evaluation.primary_iou    : 0.5
+COMET INFO:     mode                      : test
+COMET INFO:     model.backend             : transformers_detector
+COMET INFO:     model.clip_boxes          : True
+COMET INFO:     model.device              : cuda:0
+COMET INFO:     model.dtype               : float32
+COMET INFO:     model.name                : grounding_dino
+COMET INFO:     model.prompt              : butterfly
+COMET INFO:     model.repo_id             : IDEA-Research/grounding-dino-tiny
+COMET INFO:     model.revision            : a2bb814dd30d776dcf7e30523b00659f4f141c71
+COMET INFO:     model.text_threshold      : 0.25
+COMET INFO:     model.threshold           : 0.3
+COMET INFO:     output_dir                : /home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/split_migration_2026-11-16/validation/grounding_dino
+COMET INFO:     postprocess.nms_iou       : None
+COMET INFO:     retries.max_attempts      : 3
+COMET INFO:     seed                      : 42
+COMET INFO:   Uploads:
+COMET INFO:     asset : 9 (8.58 KB)
+COMET INFO: 
+COMET INFO: Please wait for assets to finish uploading (timeout is 60 seconds)
+COMET INFO: All assets have been sent, waiting for delivery confirmation
+{"output_dir": "/home/xartik/hse/26-27/shad_crowdsoursing_final_project/shad_razmetka_final_project_26/model_results/split_migration_2026-11-16/validation/grounding_dino", "metrics": {"images": 4, "processing_seconds": 1.0205986550136004, "mean_image_seconds": 0.2551496637534001, "images_per_second": 3.9192683434867908, "data_load_seconds": 1.1002281699911691, "model_load_seconds": 1.8508164169907104, "wall_seconds": 6.124520978002693, "torch_peak_allocated_mib": 1777.27099609375, "device_peak_used_mib": 1552.0, "processing_errors": 0, "parsing_errors": 0, "validation_errors": 0, "runtime_errors": 0, "total_attempts": 4, "iou_0.5/tp": 3, "iou_0.5/fp": 4, "iou_0.5/fn": 1, "iou_0.5/errors": 5, "iou_0.5/images_with_errors": 3, "iou_0.5/precision": 0.42857142857142855, "iou_0.5/recall": 0.75, "iou_0.5/f1": 0.5454545454545454, "iou_0.5/negative_fp": 1, "iou_0.5/negative_images_with_fp": 1, "tp": 3, "fp": 4, "fn": 1, "errors": 5, "images_with_errors": 3, "precision": 0.42857142857142855, "recall": 0.75, "f1": 0.5454545454545454, "negative_fp": 1, "negative_images_with_fp": 1, "iou_0.75/tp": 3, "iou_0.75/fp": 4, "iou_0.75/fn": 1, "iou_0.75/errors": 5, "iou_0.75/images_with_errors": 3, "iou_0.75/precision": 0.42857142857142855, "iou_0.75/recall": 0.75, "iou_0.75/f1": 0.5454545454545454, "iou_0.75/negative_fp": 1, "iou_0.75/negative_images_with_fp": 1, "negative_images": 1}, "status": "complete"}

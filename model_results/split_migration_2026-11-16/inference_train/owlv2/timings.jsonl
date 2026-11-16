@@ -1,0 +1,4 @@
+{"photo_id": 755630032, "attempts": 1, "parsing_errors": 0, "validation_errors": 0, "runtime_errors": 0, "scores": [0.7971751689910889], "seconds": 0.4672354929934954}
+{"photo_id": 760199895, "attempts": 1, "parsing_errors": 0, "validation_errors": 0, "runtime_errors": 0, "scores": [], "seconds": 0.20908450600109063}
+{"photo_id": 760120082, "attempts": 1, "parsing_errors": 0, "validation_errors": 0, "runtime_errors": 0, "scores": [0.7897740006446838, 0.7631847262382507], "seconds": 0.21050155500415713}
+{"photo_id": 755819391, "attempts": 1, "parsing_errors": 0, "validation_errors": 0, "runtime_errors": 0, "scores": [0.18903884291648865], "seconds": 0.20881241399911232}

@@ -1,4 +1,6 @@
 import json
+import sys
+from types import SimpleNamespace
 
 import pytest
 from PIL import Image
@@ -46,3 +48,60 @@ def test_same_seed_selects_same_ids_for_all_models(tmp_path):
         _, metadata = load_samples(cfg.data, "test", cfg.seed)
         selections.append(metadata["photo_ids"])
     assert all(ids == selections[0] for ids in selections)
+
+
+def fake_hf(monkeypatch, rows):
+    """Exercise the HF loader without downloading any split or image."""
+    requests = []
+
+    class Dataset:
+        @property
+        def column_names(self):
+            return list(rows[0])
+
+        def cast_column(self, *args):
+            return self
+
+        def __iter__(self):
+            return iter(rows)
+
+    def download(repo_id, filename, **kwargs):
+        requests.append(filename)
+        return filename
+
+    monkeypatch.setitem(sys.modules, "datasets", SimpleNamespace(
+        Image=lambda **kwargs: None, load_dataset=lambda *args, **kwargs: Dataset()))
+    monkeypatch.setitem(sys.modules, "huggingface_hub", SimpleNamespace(
+        HfApi=lambda: SimpleNamespace(dataset_info=lambda *args, **kwargs: SimpleNamespace(sha="pinned")),
+        hf_hub_download=download))
+    return requests
+
+
+@pytest.mark.parametrize("split", ["train", "validation"])
+def test_renamed_hf_labeled_splits_and_empty_negative_labels(monkeypatch, split):
+    requests = fake_hf(monkeypatch, [
+        {"photo_id": 1, "image": {"bytes": b"image"}, "boxes": []},
+        {"photo_id": 2, "image": {"bytes": b"image"},
+         "boxes": [{"left": 0.1, "top": 0.2, "width": 0.3, "height": 0.4}]},
+    ])
+    cfg = configure([f"data.split={split}"])
+    samples, metadata = load_samples(cfg.data, "test", 42)
+    assert requests == [f"data/{split}-00000-of-00001.parquet"]
+    assert metadata["split"] == split and metadata["revision"] == "pinned"
+    assert samples[0].truth == [] and len(samples[1].truth) == 1
+
+
+def test_hf_without_labels_requires_inference(monkeypatch):
+    fake_hf(monkeypatch, [{"photo_id": 1, "image": {"bytes": b"image"}}])
+    cfg = configure(["data.split=unlabeled"])
+    with pytest.raises(ValidationError, match="no ground-truth boxes"):
+        load_samples(cfg.data, "test", 42)
+    samples, _ = load_samples(cfg.data, "inference", 42)
+    assert samples[0].truth is None
+
+
+def test_hf_null_labels_are_not_treated_as_negative_examples(monkeypatch):
+    fake_hf(monkeypatch, [{"photo_id": 1, "image": {"bytes": b"image"}, "boxes": None}])
+    cfg = configure(["data.split=validation"])
+    with pytest.raises(ValidationError, match="photo_id=1 has no ground-truth"):
+        load_samples(cfg.data, "test", 42)

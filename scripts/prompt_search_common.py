@@ -16,8 +16,10 @@ from pathlib import Path
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "model_results/prompt_search_2026-11-15"
+RESULTS = Path(os.environ.get("BUTTERFLY_PROMPT_SEARCH_RESULTS", ROOT / "model_results/prompt_search_train")).resolve()
 BASELINE = ROOT / "model_results/validation_2026-11-13"
+DATASET_REVISION = "863f76cfbcbcaf1563693b8a08e5128efa47a4c4"
+LEGACY_DATASET_REVISION = "1316e3c7147d4399a03f90684e191aae4d798f09"
 GPU_LOCK = Path("/tmp/butterfly-prompt-search-gpu.lock")
 
 
@@ -35,6 +37,12 @@ def event(model, variant, state):
         handle.write(json.dumps({"time": datetime.now(UTC).isoformat(),
                                  "pid": os.getpid(), "model": model,
                                  "variant": variant, "state": state}) + "\n")
+
+
+def verify_training_config(cfg):
+    if (cfg.data.split != "train" or cfg.data.revision != DATASET_REVISION
+            or cfg.data.parquet_file != "data/train-00000-of-00001.parquet"):
+        raise ValueError("Prompt search requires the pinned train split; use a new results directory")
 
 
 @contextmanager
@@ -89,6 +97,9 @@ def run_search(model, prompts):
     for index, variant in enumerate(prompts):
         out = target / f"{index + 1:02d}_{variant['name']}"
         if (out / "metrics.json").exists():
+            from omegaconf import OmegaConf
+
+            verify_training_config(OmegaConf.load(out / "config.yaml"))
             print(f"Already evaluated: {out}", flush=True)
             continue
         if (out / "status.json").exists():
@@ -128,7 +139,9 @@ def summarize(model, prompts):
         if not (out / "metrics.json").exists():
             continue
         metrics = json.loads((out / "metrics.json").read_text())
-        actual = OmegaConf.load(out / "config.yaml").model.prompt
+        saved_cfg = OmegaConf.load(out / "config.yaml")
+        verify_training_config(saved_cfg)
+        actual = saved_cfg.model.prompt
         if actual != prompt["prompt"] or metrics["images"] != 100:
             raise ValueError(f"Prompt or image count mismatch in {out}")
         rows.append({"name": prompt["name"], "output_dir": str(out.relative_to(ROOT)),
@@ -144,24 +157,25 @@ def summarize(model, prompts):
     return rows
 
 
-def cached_validation(cfg, mode, seed):
-    """Read the original pinned HF parquet locally, without a Hub metadata request."""
+def cached_tuning(cfg, mode, seed):
+    """Read 100 train images, or the explicitly pinned historical validation split."""
     import pyarrow.parquet as pq
     from huggingface_hub import hf_hub_download
 
     from butterfly_bench.data import Sample
     from butterfly_bench.schema import validate_boxes
 
-    if mode != "test" or cfg.split != "validation" or cfg.limit is not None or cfg.shuffle:
-        raise ValueError("Search requires all 100 validation images in original order")
+    legacy = cfg.split == "validation" and cfg.revision == LEGACY_DATASET_REVISION
+    if mode != "test" or not (cfg.split == "train" or legacy) or cfg.limit is not None or cfg.shuffle:
+        raise ValueError("Search requires all 100 train images in original order")
     if cfg.photo_ids is not None:
         raise ValueError("Subset selection is forbidden for this search")
     path = Path(hf_hub_download(cfg.repo_id, cfg.parquet_file, repo_type="dataset",
-                               revision=cfg.revision, token=False, local_files_only=True))
+                               revision=cfg.revision, token=False, local_files_only=legacy))
     rows = pq.read_table(path).to_pylist()
     metadata = json.loads((BASELINE / "qwen/data.json").read_text())
     if [r["photo_id"] for r in rows] != metadata["photo_ids"] or len(rows) != 100:
-        raise ValueError("Cached validation differs from original 100 image benchmark")
+        raise ValueError("Tuning data differs from original 100 image benchmark")
     reference = {r["photo_id"]: r["boxes"] for r in map(json.loads, (
         ROOT / "annotations/worker_reference_first_pass.jsonl").read_text().splitlines())}
     samples = []
@@ -172,8 +186,13 @@ def cached_validation(cfg, mode, seed):
         payload = ({"bytes": image["bytes"]} if image.get("bytes") is not None
                    else {"path": image["path"]})
         samples.append(Sample(row["photo_id"], payload, validate_boxes(row["boxes"])))
-    metadata.update(count=len(samples), local_parquet_sha256=hashlib.sha256(path.read_bytes()).hexdigest())
+    metadata.update(revision=cfg.revision, split=cfg.split, parquet_file=cfg.parquet_file,
+                    count=len(samples), local_parquet_sha256=hashlib.sha256(path.read_bytes()).hexdigest())
     return samples, metadata
+
+
+# Archived experiment drivers import this name and pin the old dataset revision.
+cached_validation = cached_tuning
 
 
 def run_one(model, index, output):
@@ -189,21 +208,25 @@ def run_one(model, index, output):
     logging.getLogger("httpx2").setLevel(logging.WARNING)
     prompts = json.loads((RESULTS / model / "prompts.json").read_text())
     prompt = prompts[index]
-    # Reuse every original setting and exact model/dataset revisions, changing only prompt/name/output.
+    # Reuse model settings and the same 100 images under their new pinned train name.
     cfg = OmegaConf.load(BASELINE / model / "config.yaml")
+    cfg.data.revision = DATASET_REVISION
+    cfg.data.split = "train"
+    cfg.data.parquet_file = "data/train-00000-of-00001.parquet"
+    verify_training_config(cfg)
     cfg.output_dir = str(Path(output).resolve())
     cfg.model.prompt = prompt["prompt"]
     cfg.comet.experiment_name = f"prompt-search-{model}-{index + 1:02d}-{prompt['name']}"
-    cfg.comet.tags = [*cfg.comet.tags, "prompt-search", "validation-tuning"]
+    cfg.comet.tags = [*cfg.comet.tags, "prompt-search", "train-tuning"]
     if cfg.seed != 42 or cfg.mode != "test":
         raise ValueError("Unexpected baseline configuration")
     # Metadata resolution only is replaced; actual model, parser, retries, metrics and tracking are unchanged.
     with patch.object(pipeline, "resolve_model", lambda config: config.revision), patch.object(
-        pipeline, "load_samples", cached_validation
+        pipeline, "load_samples", cached_tuning
     ):
         result = pipeline.run(cfg)
     if result["metrics"]["images"] != 100:
-        raise ValueError("Incomplete validation evaluation")
+        raise ValueError("Incomplete train evaluation")
 
 
 if __name__ == "__main__":
