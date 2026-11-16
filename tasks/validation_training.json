@@ -1,0 +1,192 @@
+[
+  {
+    "input_values": {
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/760199895/original.jpg",
+      "photo_id": 760199895,
+      "source_assignment_id": "training-760199895",
+      "worker_status": "FOUND",
+      "boxes_json": "[{\"left\":0.053,\"top\":0.088,\"width\":0.467,\"height\":0.485}]"
+    },
+    "known_solutions": [
+      {
+        "output_values": {
+          "verdict": "OK"
+        },
+        "correctness_weight": 1
+      }
+    ],
+    "message_on_unknown_solution": "Каждая бабочка выделена отдельной рамкой по видимым частям. Ответ: «Разметка верна».",
+    "infinite_overlap": true
+  },
+  {
+    "input_values": {
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/760117819/original.jpg",
+      "photo_id": 760117819,
+      "source_assignment_id": "training-760117819",
+      "worker_status": "FOUND",
+      "boxes_json": "[{\"left\":0.484,\"top\":0.334,\"width\":0.331,\"height\":0.258}]"
+    },
+    "known_solutions": [
+      {
+        "output_values": {
+          "verdict": "OK"
+        },
+        "correctness_weight": 1
+      }
+    ],
+    "message_on_unknown_solution": "Каждая бабочка выделена отдельной рамкой по видимым частям. Ответ: «Разметка верна».",
+    "infinite_overlap": true
+  },
+  {
+    "input_values": {
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/760581893/original.jpg",
+      "photo_id": 760581893,
+      "source_assignment_id": "training-760581893",
+      "worker_status": "FOUND",
+      "boxes_json": "[{\"left\":0.184,\"top\":0.056,\"width\":0.614,\"height\":0.787}]"
+    },
+    "known_solutions": [
+      {
+        "output_values": {
+          "verdict": "OK"
+        },
+        "correctness_weight": 1
+      }
+    ],
+    "message_on_unknown_solution": "Каждая бабочка выделена отдельной рамкой по видимым частям. Ответ: «Разметка верна».",
+    "infinite_overlap": true
+  },
+  {
+    "input_values": {
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/755819391/original.jpg",
+      "photo_id": 755819391,
+      "source_assignment_id": "training-755819391",
+      "worker_status": "NONE",
+      "boxes_json": "[]"
+    },
+    "known_solutions": [
+      {
+        "output_values": {
+          "verdict": "OK"
+        },
+        "correctness_weight": 1
+      }
+    ],
+    "message_on_unknown_solution": "Целевых бабочек на фото нет; рамок нет и выбран ответ «Бабочек нет». Разметка верна.",
+    "infinite_overlap": true
+  },
+  {
+    "input_values": {
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/756059682/original.jpg",
+      "photo_id": 756059682,
+      "source_assignment_id": "training-756059682",
+      "worker_status": "NONE",
+      "boxes_json": "[]"
+    },
+    "known_solutions": [
+      {
+        "output_values": {
+          "verdict": "OK"
+        },
+        "correctness_weight": 1
+      }
+    ],
+    "message_on_unknown_solution": "Целевых бабочек на фото нет; рамок нет и выбран ответ «Бабочек нет». Разметка верна.",
+    "infinite_overlap": true
+  },
+  {
+    "input_values": {
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/760617662/original.jpg",
+      "photo_id": 760617662,
+      "source_assignment_id": "training-760617662",
+      "worker_status": "NONE",
+      "boxes_json": "[]"
+    },
+    "known_solutions": [
+      {
+        "output_values": {
+          "verdict": "BAD"
+        },
+        "correctness_weight": 1
+      }
+    ],
+    "message_on_unknown_solution": "На фото есть бабочка, но разметчик выбрал «Бабочек нет» и не выделил её. Разметка неверна.",
+    "infinite_overlap": true
+  },
+  {
+    "input_values": {
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/760585041/original.jpg",
+      "photo_id": 760585041,
+      "source_assignment_id": "training-760585041",
+      "worker_status": "FOUND",
+      "boxes_json": "[{\"left\":0,\"top\":0,\"width\":1,\"height\":1}]"
+    },
+    "known_solutions": [
+      {
+        "output_values": {
+          "verdict": "BAD"
+        },
+        "correctness_weight": 1
+      }
+    ],
+    "message_on_unknown_solution": "Рамка охватывает весь кадр и много лишнего фона. Она должна плотно охватывать видимые части бабочки. Разметка неверна.",
+    "infinite_overlap": true
+  },
+  {
+    "input_values": {
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/760775330/original.jpg",
+      "photo_id": 760775330,
+      "source_assignment_id": "training-760775330",
+      "worker_status": "FOUND",
+      "boxes_json": "[{\"left\":0.1,\"top\":0.1,\"width\":0.8,\"height\":0.8}]"
+    },
+    "known_solutions": [
+      {
+        "output_values": {
+          "verdict": "BAD"
+        },
+        "correctness_weight": 1
+      }
+    ],
+    "message_on_unknown_solution": "Целевых бабочек на фото нет. Разметчик создал лишнюю рамку и выбрал неверный ответ о наличии бабочек. Разметка неверна.",
+    "infinite_overlap": true
+  },
+  {
+    "input_values": {
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/755339961/original.jpg",
+      "photo_id": 755339961,
+      "source_assignment_id": "training-755339961",
+      "worker_status": "NONE",
+      "boxes_json": "[{\"left\":0.785,\"top\":0.325,\"width\":0.07,\"height\":0.115}]"
+    },
+    "known_solutions": [
+      {
+        "output_values": {
+          "verdict": "BAD"
+        },
+        "correctness_weight": 1
+      }
+    ],
+    "message_on_unknown_solution": "Бабочка обведена, но разметчик выбрал «Бабочек нет». Ответ и рамки проверяются вместе. Разметка неверна.",
+    "infinite_overlap": true
+  },
+  {
+    "input_values": {
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/760120082/original.jpg",
+      "photo_id": 760120082,
+      "source_assignment_id": "training-760120082",
+      "worker_status": "FOUND",
+      "boxes_json": "[{\"left\":0.156,\"top\":0.178,\"width\":0.45,\"height\":0.328}]"
+    },
+    "known_solutions": [
+      {
+        "output_values": {
+          "verdict": "BAD"
+        },
+        "correctness_weight": 1
+      }
+    ],
+    "message_on_unknown_solution": "На фото несколько бабочек; одна не выделена. Каждой нужна отдельная рамка. Разметка неверна.",
+    "infinite_overlap": true
+  }
+]

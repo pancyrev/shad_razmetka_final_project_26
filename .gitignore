@@ -17,3 +17,7 @@ tools/
 .ruff_cache/
 comet-offline/
 .cometml-runs/
+annotation_ids.json
+validation_ids.json
+reannotation_ids.json
+revalidation_ids.json

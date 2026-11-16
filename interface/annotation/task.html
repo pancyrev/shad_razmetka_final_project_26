@@ -1,0 +1,22 @@
+<div class="bbox-task">
+
+  <div class="bbox-prompt">
+    <b>Выделите всех взрослых бабочек прямоугольниками.</b><br>
+    Рамка должна плотно охватывать видимые части бабочки: крылья, тело, усики и лапки.
+    <b>Не захватывайте лишний фон.</b><br>
+    Если бабочек нет, не рисуйте рамки. Затем выберите один вариант ответа под фотографией.
+  </div>
+
+<div class="bbox-hint"><b>Размечайте только взрослых бабочек, включая толстоголовок. Моль не выделяйте.</b><br>У бабочек усики обычно заканчиваются утолщением — «булавой»; у толстоголовок кончик может быть загнут крючком. У моли усики чаще нитевидные или перистые.<br><b>Положение крыльев само по себе не определяет группу.</b> Если признаки не видны и объект трудно определить, выберите «Сомневаюсь в объекте».</div>
+  <div class="bbox-editor">
+    {{field type="image-annotation" name="annotations" src=image}}
+  </div>
+
+  <div class="bbox-decision">
+    {{field type="radio" name="status" value="FOUND" label="Бабочки есть, все обведены рамками" hotkey="1"}}
+    {{field type="radio" name="status" value="NONE" label="Бабочек нет" hotkey="2"}}
+    {{field type="radio" name="status" value="LOAD_ERROR" label="Ошибка загрузки изображения" hotkey="3"}}
+    {{field type="radio" name="status" value="UNCERTAIN" label="Сомневаюсь в объекте" hotkey="4"}}
+  </div>
+
+</div>

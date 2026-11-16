@@ -1,0 +1,35 @@
+.task {
+  display: block !important;
+  width: 1200px !important;
+  max-width: calc(100% - 32px) !important;
+  margin: 0 auto 24px !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+.bbox-prompt {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.image-annotation-editor__shape-polygon {
+  display: none;
+}
+
+.image-annotation-editor__annotation-layer {
+  height: max-content !important;
+  overflow: visible !important;
+}
+
+.image-annotation-editor__canvas-zoomer {
+  text-align: center;
+}
+
+.bbox-decision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+.bbox-hint { padding: 10px 12px; margin: 8px 0 12px; background: #fff5d6; border-left: 4px solid #dfac32; line-height: 1.45; }

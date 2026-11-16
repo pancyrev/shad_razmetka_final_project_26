@@ -1,0 +1,19 @@
+<div class="bbox-review-task">
+  <div class="bbox-review-prompt">
+    <strong>Верно ли выделены все взрослые бабочки?</strong>
+    <span class="bbox-review-worker-status"></span>
+  </div>
+  <button class="bbox-review-zoom" type="button">Увеличить фото</button>
+  <div class="bbox-review-stage">
+    <div class="bbox-review-image" data-boxes-json="{{boxes_json}}" data-worker-status="{{worker_status}}">
+      <img src="{{image}}" alt="Фотография для проверки рамок">
+      <svg viewBox="0 0 1 1" preserveAspectRatio="none" aria-hidden="true"></svg>
+    </div>
+  </div>
+  <div class="bbox-review-error" aria-live="polite"></div>
+  <div class="bbox-review-answers">
+    {{field type="radio" name="verdict" value="OK" label="Разметка верна" hotkey="1"}}
+    {{field type="radio" name="verdict" value="BAD" label="Разметка неверна" hotkey="2"}}
+    {{field type="radio" name="verdict" value="LOAD_ERROR" label="Изображение не загрузилось" hotkey="3"}}
+  </div>
+</div>
