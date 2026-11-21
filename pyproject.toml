@@ -15,7 +15,7 @@ crowd = ["requests>=2.32"]
 notebook = ["Pillow>=12", "ipykernel>=6", "nbformat>=5", "nbclient>=0.10", "jupyterlab>=4", "matplotlib>=3.10"]
 inference = [
   "Pillow>=12", "requests>=2.32", "torch>=2.7", "torchvision>=0.22", "transformers==5.23.0",
-  "huggingface-hub>=1.0", "datasets>=4", "comet-ml==3.58.12", "numpy>=2", "accelerate>=1.0",
+  "huggingface-hub>=1.0", "datasets>=4", "pyarrow>=21", "comet-ml==3.58.12", "numpy>=2", "accelerate>=1.0",
 ]
 dev = ["Pillow>=12", "requests>=2.32", "pytest>=8", "ruff>=0.12", "nbformat>=5", "nbclient>=0.10", "ipykernel>=6", "matplotlib>=3.10", "cmake>=3.28", "ninja>=1.11"]
 
