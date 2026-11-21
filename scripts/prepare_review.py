@@ -86,9 +86,11 @@ a{color:#0759b9}footer{margin-top:28px}
 
 
 def main() -> None:
+    root = Path(__file__).resolve().parents[1]
+    archive = root / "data/sampling/runs/20261108T001420_435829Z"
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--candidates", type=Path, default=Path("candidates_700.jsonl"))
-    parser.add_argument("--plan", type=Path, default=Path("sampling_plan.json"))
+    parser.add_argument("--candidates", type=Path, default=archive / "candidates_from_api.jsonl")
+    parser.add_argument("--plan", type=Path, default=root / "data/sampling/sampling_plan.json")
     parser.add_argument("--csv", type=Path, default=Path("selection_500_proposal.csv"))
     parser.add_argument("--gallery", type=Path, default=Path("candidate_gallery_500.html"))
     args = parser.parse_args()
@@ -102,6 +104,8 @@ def main() -> None:
     chosen = suggest(rows, plan)
     if len(chosen) != 500 or list(chosen.values()).count("main") != 400 or list(chosen.values()).count("worker_train_exam") != 100:
         raise ValueError(f"Expected 400 main and 100 training/exam photos, got {len(chosen)} total")
+    args.csv.parent.mkdir(parents=True, exist_ok=True)
+    args.gallery.parent.mkdir(parents=True, exist_ok=True)
     write_csv(rows, chosen, args.csv)
     write_gallery(rows, chosen, plan, args.gallery)
     print(f"Proposed {len(chosen)} photos: {dict(Counter(chosen.values()))}")

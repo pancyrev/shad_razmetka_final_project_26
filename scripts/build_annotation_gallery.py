@@ -12,7 +12,9 @@ from html import escape
 from io import BytesIO
 import json
 import math
+import os
 from pathlib import Path
+from urllib.parse import quote, urlsplit
 
 
 TEMPLATE = '''<!doctype html>
@@ -36,22 +38,72 @@ a{color:#0759b9}footer{margin-top:28px;font-size:13px}
 <div class="grid">
 __CARDS__
 </div>
-<footer>Разметка: <a href="annotations/worker_reference_first_pass.json">JSON</a> · <a href="annotations/worker_reference_first_pass.jsonl">JSONL</a></footer>
+<footer>Разметка: <a href="__ANNOTATIONS_LINK__">__FORMAT__</a></footer>
 </body></html>
 '''
 
 
-def main() -> None:
-    from PIL import Image, ImageOps
+CONTEST_HEADER = '''<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Фотографии Контеста</title>
+<style>
+body{font:16px/1.4 system-ui,sans-serif;margin:24px;background:#f7f7f5;color:#202020}
+h1{font-size:1.5rem}.hint{max-width:75ch}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+article{background:#fff;border:2px solid #ddd;border-radius:8px;padding:8px}
+img{display:block;width:100%;height:180px;object-fit:contain;background:#eee}
+.meta{font-size:13px;overflow-wrap:anywhere;margin-top:6px}
+a{color:#0759b9}
+</style></head><body>
+<h1>Фотографии Контеста</h1>
+<p class="hint">__TOTAL__ фотографий. Нажмите на изображение, чтобы открыть оригинал.</p>
+<div class="grid">
+'''
 
+
+def write_linked_gallery(rows: list[dict], output: Path) -> None:
+    """Generate the contest contact sheet from original URLs, without downloading photos."""
+    cards = []
+    for row in rows:
+        pid = row['photo_id']
+        if type(pid) is not int or urlsplit(row['photo_url']).scheme != 'https':
+            raise ValueError('Invalid photo ID or URL in the manifest')
+        url = escape(row['photo_url'], quote=True)
+        cards.append(
+            f'<article data-id="{pid}"><a href="{url}" target="_blank" rel="noopener noreferrer">'
+            f'<img src="{url}" loading="lazy" decoding="async" alt="Фото {pid}"></a>'
+            f'<div class="meta"><b>{pid}</b><br>'
+            f'<a href="{url}" target="_blank" rel="noopener noreferrer">Оригинал</a></div></article>'
+        )
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with output.open('w', encoding='utf-8') as stream:
+        stream.write(CONTEST_HEADER.replace('__TOTAL__', str(len(rows))))
+        stream.write('\n'.join(cards))
+        stream.write('\n</div>\n</body></html>\n')
+
+
+def main() -> None:
     root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--annotations', type=Path, default=root/'annotations/worker_reference_first_pass.json')
-    parser.add_argument('--images', type=Path, default=root/'images')
-    parser.add_argument('--output', type=Path, default=root/'worker_reference_annotated_gallery.html')
+    parser.add_argument('--annotations', type=Path, help='Annotation JSONL or legacy JSON array, or photo manifest for --urls-only')
+    parser.add_argument('--images', type=Path, default=root.parent/'downloads/final-project/images')
+    parser.add_argument('--output', type=Path)
     parser.add_argument('--max-size', type=int, default=1024)
+    parser.add_argument('--urls-only', action='store_true', help='Build a contest gallery from a photo manifest')
     args = parser.parse_args()
-    rows = json.loads(args.annotations.read_text(encoding='utf-8'))
+    if args.annotations is None:
+        dataset = 'contest_400/photos.jsonl' if args.urls_only else 'reference_100/annotations.jsonl'
+        args.annotations = root / 'data' / dataset
+    contents = args.annotations.read_text(encoding='utf-8')
+    if args.annotations.suffix.lower() == '.jsonl':
+        rows = [json.loads(line) for line in contents.splitlines() if line.strip()]
+    else:
+        rows = json.loads(contents)
+    if args.urls_only:
+        write_linked_gallery(rows, args.output or root/'outputs/contest_gallery.html')
+        return
+    from PIL import Image, ImageOps
+    args.output = args.output or root/'docs/reference_100.html'
     assert len({row['photo_id'] for row in rows}) == len(rows), 'Duplicate photo IDs'
     cards = []
     for row in rows:
@@ -64,7 +116,8 @@ def main() -> None:
             assert 0 <= box['left'] < 1 and 0 <= box['top'] < 1
             assert 0 < box['width'] <= 1 and 0 < box['height'] <= 1
             assert box['left'] + box['width'] <= 1 and box['top'] + box['height'] <= 1
-        with Image.open(args.images/f'{pid}.jpg') as original:
+        suffix = Path(urlsplit(row['photo_url']).path).suffix
+        with Image.open(args.images/f'{pid}{suffix}') as original:
             preview = ImageOps.exif_transpose(original).convert('RGB')
             preview.thumbnail((args.max_size, args.max_size), Image.Resampling.LANCZOS)
             width, height = preview.size
@@ -90,6 +143,9 @@ def main() -> None:
     word = 'рамка' if total_boxes % 10 == 1 and total_boxes % 100 != 11 else 'рамки' if total_boxes % 10 in (2, 3, 4) and total_boxes % 100 not in (12, 13, 14) else 'рамок'
     document = TEMPLATE.replace('__TOTAL__', str(len(rows))).replace('__BOXES__', str(total_boxes))
     document = document.replace(' рамка.', f' {word}.').replace('__CARDS__', '\n'.join(cards))
+    relative_annotations = os.path.relpath(args.annotations.resolve(), start=args.output.parent.resolve())
+    document = document.replace('__ANNOTATIONS_LINK__', quote(Path(relative_annotations).as_posix()))
+    document = document.replace('__FORMAT__', args.annotations.suffix[1:].upper())
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(document, encoding='utf-8')
     print(json.dumps({'output':str(args.output), 'photos':len(rows), 'boxes':total_boxes,

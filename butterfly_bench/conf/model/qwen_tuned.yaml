@@ -1,4 +1,4 @@
-# Selected on 100 train images (formerly validation); see model_results/prompt_search_2026-11-15.
+# Selected on 100 train images (formerly validation); see results/experiments/prompt_search_2026-11-15.
 defaults:
   - qwen
   - _self_

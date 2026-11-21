@@ -153,7 +153,7 @@ def write_report(rows):
     target = RESULTS / "qwen"
     baseline = next(row for row in rows if row["name"] == "baseline")
     best = rows[0]
-    previous = json.loads((root / "model_results/validation_2026-11-13/qwen/metrics.json").read_text())
+    previous = json.loads((root / "results/experiments/validation_2026-11-13/qwen/metrics.json").read_text())
     lines = [
         "# Qwen: перебор десяти промптов",
         "",

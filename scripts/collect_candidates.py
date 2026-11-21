@@ -169,9 +169,10 @@ def write_outputs(records: list[dict], output: Path, review: Path) -> None:
 
 
 def main() -> None:
+    root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--plan", type=Path, default=Path("sampling_plan.json"))
-    parser.add_argument("--exam", type=Path, default=Path("dataset.jsonl"))
+    parser.add_argument("--plan", type=Path, default=root / "data/sampling/sampling_plan.json")
+    parser.add_argument("--exam", type=Path, default=root / "data/contest_400/photos.jsonl")
     parser.add_argument("--output", type=Path, default=Path("candidates_700.jsonl"))
     parser.add_argument("--review", type=Path, default=Path("candidates_700_review.csv"))
     parser.add_argument("--dry-run", action="store_true")

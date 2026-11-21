@@ -16,8 +16,8 @@ from pathlib import Path
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
-RESULTS = Path(os.environ.get("BUTTERFLY_PROMPT_SEARCH_RESULTS", ROOT / "model_results/prompt_search_train")).resolve()
-BASELINE = ROOT / "model_results/validation_2026-11-13"
+RESULTS = Path(os.environ.get("BUTTERFLY_PROMPT_SEARCH_RESULTS", ROOT / "outputs/prompt_search_train")).resolve()
+BASELINE = ROOT / "results/experiments/validation_2026-11-13"
 DATASET_REVISION = "863f76cfbcbcaf1563693b8a08e5128efa47a4c4"
 LEGACY_DATASET_REVISION = "1316e3c7147d4399a03f90684e191aae4d798f09"
 GPU_LOCK = Path("/tmp/butterfly-prompt-search-gpu.lock")
@@ -144,7 +144,7 @@ def summarize(model, prompts):
         actual = saved_cfg.model.prompt
         if actual != prompt["prompt"] or metrics["images"] != 100:
             raise ValueError(f"Prompt or image count mismatch in {out}")
-        rows.append({"name": prompt["name"], "output_dir": str(out.relative_to(ROOT)),
+        rows.append({"name": prompt["name"], "output_dir": os.path.relpath(out, ROOT),
                      "prompt_sha256": hashlib.sha256(actual.encode()).hexdigest(),
                      **metrics})
     rows.sort(key=lambda r: (r["iou_0.5/f1"], r["iou_0.75/f1"],
@@ -159,17 +159,17 @@ def summarize(model, prompts):
 
 def cached_tuning(cfg, mode, seed):
     """Read 100 train images, or the explicitly pinned historical validation split."""
+    legacy = cfg.split == "validation" and cfg.revision == LEGACY_DATASET_REVISION
+    if mode != "test" or not (cfg.split == "train" or legacy) or cfg.limit is not None or cfg.shuffle:
+        raise ValueError("Search requires all 100 train images in original order")
+    if cfg.photo_ids is not None:
+        raise ValueError("Subset selection is forbidden for this search")
     import pyarrow.parquet as pq
     from huggingface_hub import hf_hub_download
 
     from butterfly_bench.data import Sample
     from butterfly_bench.schema import validate_boxes
 
-    legacy = cfg.split == "validation" and cfg.revision == LEGACY_DATASET_REVISION
-    if mode != "test" or not (cfg.split == "train" or legacy) or cfg.limit is not None or cfg.shuffle:
-        raise ValueError("Search requires all 100 train images in original order")
-    if cfg.photo_ids is not None:
-        raise ValueError("Subset selection is forbidden for this search")
     path = Path(hf_hub_download(cfg.repo_id, cfg.parquet_file, repo_type="dataset",
                                revision=cfg.revision, token=False, local_files_only=legacy))
     rows = pq.read_table(path).to_pylist()
@@ -177,7 +177,7 @@ def cached_tuning(cfg, mode, seed):
     if [r["photo_id"] for r in rows] != metadata["photo_ids"] or len(rows) != 100:
         raise ValueError("Tuning data differs from original 100 image benchmark")
     reference = {r["photo_id"]: r["boxes"] for r in map(json.loads, (
-        ROOT / "annotations/worker_reference_first_pass.jsonl").read_text().splitlines())}
+        ROOT / "data/reference_100/annotations.jsonl").read_text().splitlines())}
     samples = []
     for row in rows:
         if row["boxes"] != reference[row["photo_id"]]:
