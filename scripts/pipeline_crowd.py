@@ -312,11 +312,13 @@ class CrowdRun:
         _write_rows(self.folder / f"{name}.jsonl", result.values())
         return result
 
-    def annotate(self):
-        """03a: qualify annotators on a real reference exam, then collect their first answers."""
+    def qualify_annotators(self):
+        """Create the annotation project, run its exam and assign qualification skills."""
         with self._stage():
             project = self._project(False)
             skill, participation = self._skill("annotation_exam"), self._skill("annotator")
+            if qualification := self.ledger.state.get("annotation_qualification"):
+                return qualification
             qc = {
                 "configs": [
                     {
@@ -374,15 +376,30 @@ class CrowdRun:
                         )
                 self.ledger.state["qualified_workers"] = digest(scores)
                 self.ledger.save()
+            qualification = {
+                "project_id": project,
+                "exam_pool_id": pool,
+                "participants": len(scores),
+                "passed": len(passed),
+            }
+            self.ledger.state["annotation_qualification"] = qualification
+            self.ledger.save()
+            return qualification
+
+    def annotate(self, *, qualification=None):
+        """03a: collect one working annotation per photo after the exam."""
+        if qualification is None:
+            qualification = self.qualify_annotators()
+        with self._stage():
+            if qualification != self.ledger.state.get("annotation_qualification"):
+                raise ValueError("Результат экзамена не соответствует этому проекту разметки.")
+            project = qualification["project_id"]
+            skill = self._skill("annotation_exam")
             filters = [{"category": "skill", "key": skill, "operator": "GTE", "value": 80}]
             work = self._pool("annotation_work", project, 2, 1, filters, auto=False)
             return self._annotate_rows("annotation_work", work, self.main)
 
-    def _review_project(self):
-        project = self._project(True)
-        participant = self._skill("annotator")
-        exam_skill, quality = self._skill("review_exam"), self._skill("review_quality")
-        eligible = [{"category": "skill", "key": participant, "operator": "EQ"}]
+    def _review_training(self, project):
         training = self.ledger.resource(
             "review_training",
             "trainings",
@@ -403,47 +420,79 @@ class CrowdRun:
             task = _control(example, i % 2 == 0, training=True)
             self.ledger.resource(f"training/task/{i}", "tasks", dict(task, pool_id=training))
         self.ledger.open("trainings", training)
+        return training
 
-        def control_config(skills):
-            rules = [
-                {
-                    "conditions": [{"key": "golden_set_answers_count", "operator": "GTE", "value": 10}],
-                    "action": {
-                        "type": "SET_SKILL_FROM_OUTPUT_FIELD",
-                        "parameters": {"from_field": "golden_set_correct_answers_rate", "skill_id": s},
-                    },
-                }
-                for s in skills
-            ]
-            return {
-                "configs": [
-                    {
-                        "collector_config": {
-                            "type": "GOLDEN_SET",
-                            "uuid": self.meta["history"],
-                            "parameters": {"history_size": 10},
-                        },
-                        "rules": rules,
-                    }
-                ]
+    def open_reviewer_training(self):
+        """03b: create the independent review project and open its two-page training."""
+        with self._stage():
+            return self._review_training(self._project(True))
+
+    def _review_quality(self, skills):
+        rules = [
+            {
+                "conditions": [{"key": "golden_set_answers_count", "operator": "GTE", "value": 10}],
+                "action": {
+                    "type": "SET_SKILL_FROM_OUTPUT_FIELD",
+                    "parameters": {"from_field": "golden_set_correct_answers_rate", "skill_id": s},
+                },
             }
+            for s in skills
+        ]
+        return {
+            "configs": [
+                {
+                    "collector_config": {
+                        "type": "GOLDEN_SET",
+                        "uuid": self.meta["history"],
+                        "parameters": {"history_size": 10},
+                    },
+                    "rules": rules,
+                }
+            ]
+        }
 
-        exam_quality = control_config([exam_skill, quality])
+    def _reviewer_exam(self, training_id=None):
+        project = self._project(True)
+        participant = self._skill("annotator")
+        exam_skill, quality = self._skill("review_exam"), self._skill("review_quality")
+        eligible = [{"category": "skill", "key": participant, "operator": "EQ"}]
+        if training_id is None:
+            training_id = self._review_training(project)
+
+        exam_quality = self._review_quality([exam_skill, quality])
         exam_quality["training_requirement"] = {
-            "training_pool_id": training,
+            "training_pool_id": training_id,
             "training_passing_skill_value": 80,
         }
         exam = self._pool("review_exam", project, 1, 30, eligible, exam_quality)
         tasks = [_control(r, i % 2 == 0) for i, r in enumerate(self.reference[20:30])]
         self._publish_pages("review_exam", exam, [tasks], 30)
-        eligible += [
-            {"category": "skill", "key": s, "operator": "GTE", "value": 80} for s in (exam_skill, quality)
-        ]
-        return project, eligible, control_config([quality])
+        return exam
 
-    def _review(self, name, rows):
-        project, filters, quality = self._review_project()
-        pool = self._pool(name, project, 1, 3, filters, quality)
+    def open_reviewer_exam(self, *, training_id=None):
+        """03b: open the ten-task exam for reviewers who pass training."""
+        with self._stage():
+            if training_id is not None and (
+                self.ledger.state.get("review_training", {}).get("id") != training_id
+                or not self.ledger.state.get(f"open/trainings/{training_id}", {}).get("done")
+            ):
+                raise ValueError("Учебный пул не открыт в этом проекте проверки.")
+            return self._reviewer_exam(training_id=training_id)
+
+    def _review(self, name, rows, exam_id=None):
+        saved_exam = self.ledger.state.get("pool/review_exam", {}).get("id")
+        opened = self.ledger.state.get(f"open/pools/{saved_exam}", {}).get("done")
+        if exam_id is not None and (exam_id != saved_exam or not opened):
+            raise ValueError("Экзамен ревьюеров не открыт в этом проекте проверки.")
+        if not opened:
+            self._reviewer_exam()
+        quality = self._skill("review_quality")
+        filters = [
+            {"category": "skill", "key": self._skill("annotator"), "operator": "EQ"},
+            {"category": "skill", "key": self._skill("review_exam"), "operator": "GTE", "value": 80},
+            {"category": "skill", "key": quality, "operator": "GTE", "value": 80},
+        ]
+        pool = self._pool(name, self._project(True), 1, 3, filters, self._review_quality([quality]))
         pages = _chunks([_review_task(r) for r in rows.values()], 9)
         controls = self.reference[30:]
         for i, page in enumerate(pages):
@@ -485,11 +534,11 @@ class CrowdRun:
         _write_rows(self.folder / f"{name}.jsonl", (dict(photo_id=i, **r) for i, r in result.items()))
         return result
 
-    def review(self, first):
+    def review(self, first, *, exam_id=None):
         """03b: training, exam, and three independent reviews of each new annotation."""
         with self._stage():
             self._check_export("annotation_work", first)
-            return self._review("validation", first)
+            return self._review("validation", first, exam_id=exam_id)
 
     def reannotate(self, first, votes, extra_ids=()):
         """03c: a new annotation for each non-OK, uncertain, failed, or explicitly flagged image."""
@@ -519,8 +568,14 @@ class CrowdRun:
             pool = self._pool("reannotation", self._project(False), 2, 1, filters, auto=False)
             return self._annotate_rows("reannotation", pool, changed)
 
-    def finish(self, first, votes, revised):
-        """03d: independent re-review, wait for human adjudication of unresolved cases, export gold."""
+    def review_corrections(self, revised):
+        """03d: collect three independent verdicts for each corrected answer."""
+        with self._stage():
+            self._check_export("reannotation", revised)
+            return self._review("revalidation", revised) if revised else {}
+
+    def finish(self, first, votes, revised, *, second_votes=None):
+        """03d: finish any pending re-review, adjudicate unresolved cases and export gold."""
         with self._stage():
             self._check_export("annotation_work", first)
             self._check_export("validation", votes, reviews=True)
@@ -530,7 +585,13 @@ class CrowdRun:
             latest = first | revised
             if set(latest) != {r["photo_id"] for r in self.main}:
                 raise ValueError("Неполный набор фото для итогового эталона.")
-            reviews = votes | (self._review("revalidation", revised) if revised else {})
+            if second_votes is None:
+                second_votes = self._review("revalidation", revised) if revised else {}
+            elif revised:
+                self._check_export("revalidation", second_votes, reviews=True)
+            if second_votes.keys() != revised.keys():
+                raise ValueError("Повторные вердикты и набор переразмеченных фотографий различаются.")
+            reviews = votes | second_votes
             disputed = {
                 i: r
                 for i, r in latest.items()

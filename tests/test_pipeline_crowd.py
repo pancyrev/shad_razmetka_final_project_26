@@ -45,3 +45,18 @@ def test_revised_truth_cannot_reuse_paid_campaign(tmp_path):
     reference[0]["boxes"] = [{"left": 0.125, "top": 0.25, "width": 0.5, "height": 0.5}]
     with pytest.raises(ValueError, match="изменились"), CrowdRun(tmp_path, main, reference, api=Mock())._stage():
         pass
+
+
+def test_separate_notebook_stages_reject_foreign_results_before_api_calls(tmp_path):
+    api = Mock()
+    main = [{"photo_id": 100, "photo_url": "https://example.com/100"}]
+    reference = [{"photo_id": i, "photo_url": f"https://example.com/{i}", "boxes": []} for i in range(35)]
+    crowd = CrowdRun(tmp_path, main, reference, api=api)
+    with pytest.raises(ValueError, match="Результат экзамена"):
+        crowd.annotate(qualification={"project_id": "another-project"})
+    with pytest.raises(ValueError, match="Учебный пул"):
+        crowd.open_reviewer_exam(training_id="another-training")
+    (crowd.folder / "annotation_work.jsonl").write_text("")
+    with pytest.raises(ValueError, match="Экзамен ревьюеров"):
+        crowd.review({}, exam_id="another-exam")
+    assert not api.mock_calls

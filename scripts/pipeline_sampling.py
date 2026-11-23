@@ -61,7 +61,7 @@ def _freeze(path, content):
     """Do not mix different inputs, or invalidate annotations already in progress."""
     if path.exists():
         if path.read_text(encoding="utf-8") != content:
-            raise ValueError(f"Входы этого запуска изменились ({path}). Создайте новый RUN_ID.")
+            raise ValueError(f"Входы этого запуска изменились ({path}). Начните новый запуск с первой ячейки.")
     else:
         _store(path, content)
 
@@ -120,7 +120,7 @@ def collect_candidates(run_dir, plan, contest_rows, *, snapshot=None):
     return rows
 
 
-def select_photos(run_dir, candidates, plan):
+def select_photos(run_dir, candidates, plan, *, suggested=None):
     """Suggest 400 + 100 using notebook 01's seed; honor saved manual CSV edits."""
     run_dir = Path(run_dir)
     proposal = run_dir / "selection_500_proposal.csv"
@@ -129,8 +129,10 @@ def select_photos(run_dir, candidates, plan):
         if candidates != jsonl_rows(archive) or plan != json.loads((run_dir / "sampling_plan.json").read_text()):
             raise ValueError("План или список кандидатов отличается от этого запуска.")
         if not proposal.exists():
+            if suggested is None:
+                suggested = suggest(candidates, plan)
             with _atomic(proposal) as tmp:
-                write_csv(candidates, suggest(candidates, plan), tmp)
+                write_csv(candidates, suggested, tmp)
         selected = selected_records(archive, proposal, run_dir / "contest_photos.jsonl", run_dir / "sampling_plan.json")
         for row in selected:
             photo_id = row["photo_id"]
@@ -164,8 +166,8 @@ def _similarity_report(run_dir, hashes):
     return len(pairs)
 
 
-def download_photos(run_dir, selected, image_dir, *, expected_hashes=None, max_total_mib=1024, max_file_mib=20):
-    """Fetch original images, verify dimensions/checksums, write manifests and a dHash review."""
+def download_originals(run_dir, selected, image_dir, *, expected_hashes=None, max_total_mib=1024, max_file_mib=20):
+    """Download the selected images, verify dimensions and bytes, and write the audit JSONL."""
     run_dir, image_dir = Path(run_dir).resolve(), Path(image_dir).resolve()
     if image_dir == run_dir:
         raise ValueError("Укажите отдельный каталог для оригиналов.")
@@ -175,19 +177,17 @@ def download_photos(run_dir, selected, image_dir, *, expected_hashes=None, max_t
     selected_ids = set(_indexed(selected))
     if expected_hashes is not None and set(expected_hashes) != selected_ids:
         raise ValueError("ID в исходном журнале SHA-256 не совпадают с выбранными фотографиями.")
-    audited, content_ids, hashes = [], {}, []
+    audited, content_ids = [], {}
     with _lock(run_dir), _lock(image_dir):
-        manifests = {}
-        for purpose, directory in (("main", "main"), ("worker_train_exam", "reference")):
-            dest = run_dir / directory / "photos.jsonl"
-            manifest = [{"photo_id": row["photo_id"], "photo_url": row["photo_url"],
-                         "image_path": os.path.relpath(image_path(row, image_dir), dest.parent)}
-                        for row in selected if row["purpose"] == purpose]
-            if dest.exists() and jsonl_rows(dest) != manifest:
-                raise ValueError(f"Новые ID или каталог оригиналов не совпадают с {dest}. Смените RUN_ID.")
-            manifests[dest] = manifest
         prior = run_dir / "download_audit.jsonl"
-        prior_hashes = {r["photo_id"]: r["sha256"] for r in jsonl_rows(prior)} if prior.is_file() else {}
+        prior_rows = jsonl_rows(prior) if prior.is_file() else []
+        if prior_rows:
+            expected_files = {r["photo_id"]: (r["purpose"], image_path(r, image_dir)) for r in selected}
+            previous_files = {r["photo_id"]: (r["purpose"], (run_dir / r["local_path"]).resolve())
+                              for r in prior_rows}
+            if expected_files != previous_files:
+                raise ValueError("Для другого набора или каталога оригиналов начните новый запуск с первой ячейки.")
+        prior_hashes = {r["photo_id"]: r["sha256"] for r in prior_rows}
         new_bytes = 0
         for index, row in enumerate(selected, 1):
             target = image_path(row, image_dir)
@@ -206,22 +206,55 @@ def download_photos(run_dir, selected, image_dir, *, expected_hashes=None, max_t
             content_ids[digest] = pid
             audited.append({**row, "local_path": os.path.relpath(target, run_dir),
                             "sha256": digest, "bytes": target.stat().st_size})
-            hashes.append((pid, row["purpose"], dhash(target)))
             if index % 50 == 0:
                 print(f"Проверено оригиналов {index}/{len(selected)}")
-        pairs = _similarity_report(run_dir, hashes)
         _store(prior, _jsonl(audited))
-        for dest, manifest in manifests.items():
-            _freeze(dest, _jsonl(manifest))
+    return audited
+
+
+def review_similar_photos(run_dir, audit):
+    """Compare hashes of downloaded images and save candidate pairs for visual review."""
+    run_dir = Path(run_dir).resolve()
+    with _lock(run_dir):
+        if audit != jsonl_rows(run_dir / "download_audit.jsonl"):
+            raise ValueError("Проверьте оригиналы перед поиском похожих фотографий.")
+        hashes = [(r["photo_id"], r["purpose"], dhash(run_dir / r["local_path"])) for r in audit]
+        return _similarity_report(run_dir, hashes)
+
+
+def save_photo_manifests(run_dir, audit):
+    """Publish both photo manifests and the sampling report after the similarity check."""
+    run_dir = Path(run_dir).resolve()
+    with _lock(run_dir):
+        if audit != jsonl_rows(run_dir / "download_audit.jsonl"):
+            raise ValueError("Манифесты должны строиться по журналу текущей загрузки.")
+        with (run_dir / "similarity_review.csv").open(encoding="utf-8", newline="") as stream:
+            pairs = sum(1 for _ in csv.DictReader(stream))
+        counts = Counter(r["purpose"] for r in audit)
+        for purpose, dirname in (("main", "main"), ("worker_train_exam", "reference")):
+            path = run_dir / dirname / "photos.jsonl"
+            rows = [{"photo_id": r["photo_id"], "photo_url": r["photo_url"],
+                     "image_path": os.path.relpath(run_dir / r["local_path"], path.parent)}
+                    for r in audit if r["purpose"] == purpose]
+            _freeze(path, _jsonl(rows))
         report = {"candidate_count": len(jsonl_rows(run_dir / "candidates_from_api.jsonl")),
-                  "main_count": expected["main"], "reference_count": expected["worker_train_exam"],
+                  "main_count": counts["main"], "reference_count": counts["worker_train_exam"],
                   "similarity_pairs_for_review": pairs, "plan_sha256": checksum(run_dir / "sampling_plan.json"),
                   "selection_sha256": checksum(run_dir / "selection_500_proposal.csv"),
                   "main_sha256": checksum(run_dir / "main/photos.jsonl"),
                   "reference_sha256": checksum(run_dir / "reference/photos.jsonl")}
         _store(run_dir / "sampling_audit.json", json.dumps(report, indent=2) + "\n")
-    print(f"Пары с расстоянием dHash ≤ 4: {pairs}. Таблица: {run_dir / 'similarity_review.csv'}")
-    return audited
+    return report
+
+
+def download_photos(run_dir, selected, image_dir, *, expected_hashes=None, max_total_mib=1024, max_file_mib=20):
+    """Download, check similarity and write manifests together."""
+    audit = download_originals(run_dir, selected, image_dir, expected_hashes=expected_hashes,
+                               max_total_mib=max_total_mib, max_file_mib=max_file_mib)
+    pairs = review_similar_photos(run_dir, audit)
+    save_photo_manifests(run_dir, audit)
+    print(f"Пары с расстоянием dHash ≤ 4: {pairs}. Таблица: {Path(run_dir) / 'similarity_review.csv'}")
+    return audit
 
 
 def prepare_reference(run_dir):
@@ -282,7 +315,7 @@ def review_reference(run_dir):
         while True:
             answer = input("Рамки: ").strip()
             if answer.lower() == "pause":
-                raise InterruptedError(f"Ответы сохранены в {path}. Повторите Run All с тем же RUN_ID.")
+                raise InterruptedError(f"Ответы сохранены в {path}. Продолжите с этой ячейки в том же ядре.")
             try:
                 boxes = [] if answer.lower() == "none" else [
                     dict(zip(("left", "top", "width", "height"), map(float, item.split()), strict=True))
