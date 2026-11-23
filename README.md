@@ -8,18 +8,18 @@
 
 [Инструкция запуска](docs/reproduce.md) описывает Hydra-конфигурации OWLv2, Grounding DINO,
 Qwen3-VL и Gemma 4, режимы `test`/`inference`, валидацию JSONL, метрики и Comet ML.
-Интерактивные примеры — в [03_model_demo.ipynb](notebooks/models/03_model_demo.ipynb).
-Полная проверка на 100 изображениях нынешнего train, метрики, исходные ответы и
+Интерактивные примеры — в [04_model_demo.ipynb](notebooks/models/04_model_demo.ipynb).
+Полная проверка на 100 изображениях [train](https://huggingface.co/datasets/xartik/inaturalist_butterflies/viewer/default/train), метрики, исходные ответы и
 эксперимент с NMS — в [отчёте](results/experiments/validation_2026-11-13/README.md).
 
 ```bash
 python -m butterfly_bench -m model=owlv2,grounding_dino,qwen_tuned,gemma_tuned
 ```
 
-Команда последовательно оценивает четыре модели на полной HF validation (400 размеченных изображений);
+Команда последовательно оценивает четыре модели на полной HF [validation](https://huggingface.co/datasets/xartik/inaturalist_butterflies/viewer/default/validation) (400 размеченных изображений);
 окружение и CUDA-сборку llama.cpp сначала подготовьте по инструкции.
-HF train содержит 100 размеченных изображений для подбора; новый HF test —
-400 конкурсных изображений без разметки и пока не используется.
+HF [train](https://huggingface.co/datasets/xartik/inaturalist_butterflies/viewer/default/train) содержит 100 размеченных изображений для подбора; HF [test](https://huggingface.co/datasets/xartik/inaturalist_butterflies/viewer/default/test) —
+400 изображений без разметки из контеста.
 Проверки после переименования выборок — [в отчёте](results/experiments/split_migration_2026-11-16/README.md).
 
 ## Шаг 01. Формирование выборки
@@ -132,6 +132,14 @@ HF train содержит 100 размеченных изображений дл
 Установите зависимости командой `python -m pip install -e '.[crowd,notebook]'`, заполните `YANDEX_TASKS_OAUTH_TOKEN` в локальном `.env` и выполняйте ноутбуки из корня репозитория в порядке `03a` → `03b` → `03c` → `03d`. ID созданных проектов, навыков и пулов сохраняются в локальные JSON-файлы и передаются между этапами.
 
 Ноутбуки создают проекты и пулы и загружают задания; открытие пулов, проверка экзамена разметчиков, назначение навыков исполнителям и приёмка основной разметки выполняются отдельно. Файлы валидации содержат подготовленные ответы разметчиков с рамками и ID выдач; для проверки другого набора ответов эти входные файлы нужно обновить.
+
+## Шаг 04. Прогон моделей
+
+[04_model_demo.ipynb](notebooks/models/04_model_demo.ipynb) запускает OWLv2, Grounding DINO, Qwen3-VL и Gemma 4 последовательно на GPU. Подготовка окружения и параметры запуска описаны в [инструкции](docs/reproduce.md).
+
+Данные опубликованы на Hugging Face: [xartik/inaturalist_butterflies](https://huggingface.co/datasets/xartik/inaturalist_butterflies). Сплит [train](https://huggingface.co/datasets/xartik/inaturalist_butterflies/viewer/default/train) содержит 100 размеченных фотографий для подбора настроек, [validation](https://huggingface.co/datasets/xartik/inaturalist_butterflies/viewer/default/validation) — 400 размеченных фотографий для оценки, [test](https://huggingface.co/datasets/xartik/inaturalist_butterflies/viewer/default/test) — 400 конкурсных фотографий без разметки.
+
+В ноутбуке задайте `MODEL_NAMES`, `SPLIT` и `LIMIT`: по умолчанию Grounding DINO обрабатывает четыре фотографии из [train](https://huggingface.co/datasets/xartik/inaturalist_butterflies/viewer/default/train). Для оценки на всей размеченной выборке выберите `SPLIT="validation"` и `LIMIT=None`. Режим `MODE="test"` считает метрики по эталонным рамкам; для своих изображений без эталонов используйте `MODE="inference"` и `DATA_SOURCE="manifest"`. Ноутбук сохраняет предсказания, сырые ответы и ошибки, показывает метрики и фотографии с рамками.
 
 ## Галереи
 

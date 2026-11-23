@@ -43,7 +43,7 @@
 4. Режим inference проверен на четырёх изображениях train с OWLv2: эталоны
    игнорируются, метрики по разметке отсутствуют, JSONL создан без ошибок.
    Артефакты: [inference_train/owlv2](inference_train/owlv2).
-5. Все пять кодовых ячеек [демо-ноутбука](../../../notebooks/models/03_model_demo.ipynb) выполнены:
+5. Все пять кодовых ячеек [демо-ноутбука](../../../notebooks/models/04_model_demo.ipynb) выполнены:
    Grounding DINO, четыре изображения train, ошибок нет.
    Проверка и ссылка Comet: [notebook_check.json](notebook_check.json).
 

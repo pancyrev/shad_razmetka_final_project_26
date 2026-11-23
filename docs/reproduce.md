@@ -35,7 +35,7 @@ python -m jupyterlab notebooks/reproduce_saved_results.ipynb
 используют Transformers и FP32, Qwen3-VL — Transformers и BF16 без квантования,
 Gemma 4 — CUDA-сервер llama.cpp с UD-Q4_K_XL и визуальным проектором F16.
 Конфигурации находятся в `butterfly_bench/conf/`. Ноутбук
-[демонстрации моделей](../notebooks/models/03_model_demo.ipynb) использует тот же код, что и CLI.
+[демонстрации моделей](../notebooks/models/04_model_demo.ipynb) использует тот же код, что и CLI.
 
 ### Установка окружения для инференса
 

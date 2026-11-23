@@ -11,7 +11,7 @@ from nbclient import NotebookClient
 ROOT = Path(__file__).resolve().parents[3]
 HERE = Path(__file__).resolve().parent
 os.environ["PATH"] = str(ROOT / ".venv/bin") + os.pathsep + os.environ["PATH"]
-notebook_path = ROOT / "notebooks/models/03_model_demo.ipynb"
+notebook_path = ROOT / "notebooks/models/04_model_demo.ipynb"
 nb = nbformat.read(notebook_path, as_version=4)
 assert 'SPLIT = "train"' in nb.cells[3].source
 NotebookClient(nb, timeout=600, kernel_name="python3",
