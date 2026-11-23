@@ -9,7 +9,7 @@
 [Инструкция запуска](docs/reproduce.md) описывает Hydra-конфигурации OWLv2, Grounding DINO,
 Qwen3-VL и Gemma 4, режимы `test`/`inference`, валидацию JSONL, метрики и Comet ML.
 Интерактивные примеры — в [03_model_demo.ipynb](notebooks/models/03_model_demo.ipynb).
-Полная проверка на 100 изображениях нынешнего train (ранее validation), метрики, исходные ответы и
+Полная проверка на 100 изображениях нынешнего train, метрики, исходные ответы и
 эксперимент с NMS — в [отчёте](results/experiments/validation_2026-11-13/README.md).
 
 ```bash
