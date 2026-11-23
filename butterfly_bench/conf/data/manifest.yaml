@@ -1,5 +1,5 @@
 source: manifest
-path: dataset.jsonl
+path: data/contest_400/photos.jsonl
 image_root: images
 cache_dir: .cache/images
 limit: null

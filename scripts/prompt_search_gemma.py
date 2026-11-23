@@ -8,7 +8,7 @@ from omegaconf import OmegaConf
 from prompt_search_common import RESULTS
 
 ROOT = Path(__file__).resolve().parents[1]
-BASELINE = OmegaConf.load(ROOT / "model_results/validation_2026-11-13/gemma/config.yaml").model.prompt
+BASELINE = OmegaConf.load(ROOT / "results/experiments/validation_2026-11-13/gemma/config.yaml").model.prompt
 
 SCHEMA = (
     'Output exactly one line of valid JSON, without Markdown or explanation. '
@@ -114,6 +114,9 @@ def build_report():
     initial = rows[0]["metrics"]
     winner = best["metrics"]
     report_path = base / "report.md"
+    archive = ROOT / "results/experiments/prompt_search_2026-11-15/gemma"
+    startup_failure = archive / "startup_failures/2026-11-16T102234Z_baseline_oom"
+    failure_link = startup_failure.relative_to(base, walk_up=True).as_posix()
     methodology = ("# Gemma: перебор десяти промптов на train\n\n"
                    "Используются прежние 100 размеченных изображений (ранее validation). "
                    "Промпты сохранены в prompts.json, ревизии данных и весов — в config.yaml. "
@@ -146,17 +149,16 @@ def build_report():
                   ("Каталоги вариантов содержат `config.yaml`, `attempts.jsonl`, "
                   "`predictions.jsonl`, `metrics.json`, `data.json`, `model.json`, "
                   "`gpu.jsonl`, `llama-server.log`, `run.log` и данные Comet. "
-                  "Общая сводка — `summary.json`, лучший текст — `best_prompt.txt/json`."), "",
+                  "Сохранены [сводка](summary.json), [текст лучшего промпта](best_prompt.txt) "
+                  "и [его JSON-запись](best_prompt.json)."), "",
                   ("Comet использовал режим auto/online, но сервер ограничивал загрузку. "
                   "SDK сохранял offline ZIP для недоставленных данных. Полнота облачной "
                   "копии не подтверждена; локальные метрики и сырые ответы сохранены полностью. "
                   "Fallback первого запуска может находиться в `.cometml-runs/` в корне "
                   "репозитория, последующих — в `<variant>/comet-offline/`."), "",
-                  ("Первая попытка загрузки baseline завершилась CUDA OOM до обработки "
-                  "изображений из-за дополнительной ROS задачи на GPU. Её диагностика сохранена "
-                  "в `startup_failures/2026-11-16T102234Z_baseline_oom/` и не включается в "
-                  "таблицу. После разрешённой пользователем остановки ROS все варианты "
-                  "запускались с исходными параметрами."), ""])
+                  ("При исходном подборе в ноябре 2026 года первый запуск baseline завершился "
+                  "до обработки изображений из-за нехватки видеопамяти. "
+                  f"[Диагностика исходного запуска](<{failure_link}>)."), ""])
     table.extend(["## Причины отклонений по всем попыткам", "",
                   ("Столбцы ниже взаимоисключающие: если в рамке есть значение >1, "
                   "она попадает в первый столбец, даже если одновременно выходит за границы."), "",

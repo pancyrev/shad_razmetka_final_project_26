@@ -137,11 +137,13 @@ def write_jsonl(path: Path, rows: list[dict]) -> None:
 
 
 def main() -> None:
+    root = Path(__file__).resolve().parents[1]
+    archive = root / "data/sampling/runs/20261108T001420_435829Z"
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--candidates", type=Path, default=Path("candidates_700.jsonl"))
-    parser.add_argument("--selection", type=Path, default=Path("selection_500_proposal.csv"))
-    parser.add_argument("--exam", type=Path, default=Path("dataset.jsonl"))
-    parser.add_argument("--plan", type=Path, default=Path("sampling_plan.json"))
+    parser.add_argument("--candidates", type=Path, default=archive / "candidates_from_api.jsonl")
+    parser.add_argument("--selection", type=Path, default=archive / "selection_500_proposal.csv")
+    parser.add_argument("--exam", type=Path, default=root / "data/contest_400/photos.jsonl")
+    parser.add_argument("--plan", type=Path, default=root / "data/sampling/sampling_plan.json")
     parser.add_argument("--image-dir", type=Path, default=Path("images"))
     parser.add_argument("--limit", type=int, default=0, help="Smoke test with first N selected photos; 0 means all 500")
     parser.add_argument("--max-total-mib", type=int, default=1024)
